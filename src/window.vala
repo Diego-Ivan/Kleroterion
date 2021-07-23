@@ -19,11 +19,40 @@
 namespace Random {
 	[GtkTemplate (ui = "/page/codeberg/foreverxml/Random/window.ui")]
 	public class Window : Gtk.ApplicationWindow {
+	    // todo: fix error here
 		[GtkChild]
-		Gtk.Label label;
+		Gtk.Label endn;
+		[GtkChild]
+		Gtk.Label endt;
+		[GtkChild]
+		Gtk.Entry num1;
+		[GtkChild]
+		Gtk.Entry num2;
+		[GtkChild]
+		Gtk.Entry text;
+		[GtkChild]
+        Gtk.Button genn;
+        [GtkChild]
+        Gtk.Button gent;
 
 		public Window (Gtk.Application app) {
 			Object (application: app);
 		}
+
+		construct {
+		    GLib.Rand rand = new GLib.Rand();
+		    genn.clicked.connect (() => {
+	            int numb1 = int.parse(num1.get_text());
+	            int numb2 = int.parse(num2.get_text());
+	            string txt = rand.int_range(numb1, numb2).to_string();
+	            endn.set_label(txt);
+	        });
+	        gent.clicked.connect (() => {
+                string tex = text.get_text();
+                string[] texa = tex.split("/");
+                string txt = texa[rand.int_range(0, texa.length)];
+                endt.set_label(txt);
+	        });
+	    }
 	}
 }
