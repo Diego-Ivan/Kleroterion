@@ -1,0 +1,7 @@
+data/page.codeberg.foreverxml.Random.desktop.in
+data/page.codeberg.foreverxml.Random.appdata.xml.in
+data/page.codeberg.foreverxml.Random.gschema.xml
+src/window.ui
+src/main.vala
+src/window.vala
+

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="random">
+	<schema id="page.codeberg.foreverxml.Random" path="/page/codeberg/foreverxml/Random/">
+	</schema>
+</schemalist>
