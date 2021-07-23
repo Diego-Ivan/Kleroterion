@@ -1,8 +1,8 @@
 [Desktop Entry]
-Name=random
+Name=Random
 Exec=random
 Icon=page.codeberg.foreverxml.Random
 Terminal=false
 Type=Application
-Categories=GTK;
+Categories=GTK;GNOME;Utility;
 StartupNotify=true

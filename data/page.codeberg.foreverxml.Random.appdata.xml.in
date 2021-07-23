@@ -4,5 +4,6 @@
 	<metadata_license>CC0-1.0</metadata_license>
 	<project_license>AGPL-3.0-or-later</project_license>
 	<description>
+	    A tool to pick a randum number or list item
 	</description>
 </component>

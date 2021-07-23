@@ -42,17 +42,31 @@ namespace Random {
 		construct {
 		    GLib.Rand rand = new GLib.Rand();
 		    genn.clicked.connect (() => {
-	            int numb1 = int.parse(num1.get_text());
-	            int numb2 = int.parse(num2.get_text());
-	            string txt = rand.int_range(numb1, numb2).to_string();
-	            endn.set_label(txt);
+	            int numb1 = int.parse (num1.get_text ());
+	            int numb2 = int.parse (num2.get_text ());
+	            string txt = rand.int_range (numb1, numb2).to_string ();
+	            endn.set_label (txt);
 	        });
 	        gent.clicked.connect (() => {
-                string tex = text.get_text();
-                string[] texa = tex.split("/");
-                string txt = texa[rand.int_range(0, texa.length)];
-                endt.set_label(txt);
+                string tex = text.get_text ();
+                string[] texa = tex.split ("/");
+                string txt = texa[rand.int_range (0, texa.length)];
+                endt.set_label (txt);
 	        });
 	    }
+
+	    public void about() {
+	        string[] authors = {"Forever XML <foreverxml@tuta.io>"};
+	        Gtk.show_about_dialog (this,
+                program_name: "Random",
+                logo_icon_name: "page.codeberg.foreverxml.Random",
+                version: "0.01.devel",
+                comments: "Magic 8 ball, will I be happy today?",
+                copyright: "Copyright © 2021 Forever XML",
+                license_type: Gtk.License.AGPL_3_0,
+                authors: authors,
+                website: "https://codeberg.org/foreverxml/random",
+                website_label: "Repository");
+        }
 	}
 }
