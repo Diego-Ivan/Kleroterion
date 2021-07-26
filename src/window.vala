@@ -40,7 +40,7 @@ namespace Random {
 		}
 
 		construct {
-		    GLib.Rand rand = new GLib.Rand();
+		    GLib.Rand rand = new GLib.Rand ();
 		    genn.clicked.connect (() => {
 	            int numb1 = int.parse (num1.get_text ());
 	            int numb2 = int.parse (num2.get_text ());
@@ -55,7 +55,7 @@ namespace Random {
 	        });
 	    }
 
-	    public void about() {
+	    public void about () {
 	        string[] authors = {"Forever XML <foreverxml@tuta.io>"};
 	        Gtk.show_about_dialog (this,
                 program_name: "Random",
