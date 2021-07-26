@@ -30,7 +30,7 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "https://codeberg.org/foreverxml/random.git"
+                    "url" : "file:///home/forever/Projects/random"
                 }
             ]
         }
