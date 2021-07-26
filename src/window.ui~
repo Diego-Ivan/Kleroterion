@@ -180,7 +180,7 @@
                   <object class="GtkLabel">
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
-                    <property name="label" translatable="yes">Write your options here. Seperate them by a new line.</property>
+                    <property name="label" translatable="yes">Write your options here. Seperate them by a forward slash.</property>
                   </object>
                   <packing>
                     <property name="expand">False</property>
@@ -283,6 +283,24 @@
             <property name="icon-size">2</property>
             <property name="stack">stack1</property>
           </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="button1">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="action-name">app.menu</property>
+            <child>
+              <object class="GtkImage">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="icon-name">open-menu</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="pack-type">end</property>
+          </packing>
         </child>
       </object>
     </child>

@@ -4,5 +4,6 @@
 	<metadata_license>CC0-1.0</metadata_license>
 	<project_license>AGPL-3.0-or-later</project_license>
 	<description>
+	    A tool to pick a random number or list item. Pick what chore to do, a number between 1 and 100, whether or not to jump on your mom's bed, etc.
 	</description>
 </component>
