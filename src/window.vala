@@ -40,18 +40,18 @@ namespace Random {
 		}
 
 		construct {
-		    GLib.Rand rand = new GLib.Rand();
+		    GLib.Rand rand = new GLib.Rand ();
 		    genn.clicked.connect (() => {
-	            int numb1 = int.parse(num1.get_text());
-	            int numb2 = int.parse(num2.get_text());
-	            string txt = rand.int_range(numb1, numb2).to_string();
-	            endn.set_label(txt);
+	            int numb1 = int.parse (num1.get_text ());
+	            int numb2 = int.parse (num2.get_text ());
+	            string txt = rand.int_range (numb1, numb2).to_string ();
+	            endn.set_label (txt);
 	        });
 	        gent.clicked.connect (() => {
-                string tex = text.get_text();
-                string[] texa = tex.split("/");
-                string txt = texa[rand.int_range(0, texa.length)];
-                endt.set_label(txt);
+                string tex = text.get_text ();
+                string[] texa = tex.split ("/");
+                string txt = texa[rand.int_range (0, texa.length)];
+                endt.set_label (txt);
 	        });
 	    }
 

@@ -18,10 +18,17 @@
 
 int main (string[] args) {
 	var app = new Gtk.Application ("page.codeberg.foreverxml.Random", ApplicationFlags.FLAGS_NONE);
+	var action = new GLib.SimpleAction ("about", null);
+    app.add_action (action);
+
 	app.activate.connect (() => {
 		var win = app.active_window;
 		if (win == null) {
 			win = new Random.Window (app);
+			action.activate.connect (() => {
+                ((Random.Window) win).about ();
+            });
+
 		}
 		win.present ();
 	});
