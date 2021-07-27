@@ -64,7 +64,7 @@ namespace Random {
 	        Gtk.show_about_dialog (this,
                 program_name: "Random",
                 logo_icon_name: "page.codeberg.foreverxml.Random",
-                version: "0.1",
+                version: "0.2.devel",
                 comments: "It's that thing with the slashes and stuff.",
                 copyright: "Copyright © 2021 Forever XML",
                 license_type: Gtk.License.AGPL_3_0,
