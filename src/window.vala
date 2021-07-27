@@ -19,7 +19,7 @@
 namespace Random {
 	[GtkTemplate (ui = "/page/codeberg/foreverxml/Random/window.ui")]
 	public class Window : Gtk.ApplicationWindow {
-	    // todo: fix error here
+	    // TODO: fix error here
 		[GtkChild]
 		Gtk.Label endn;
 		[GtkChild]
@@ -40,6 +40,10 @@ namespace Random {
 		}
 
 		construct {
+		    // TODO: make cli option
+		    // this will help with:
+		    // TODO: make search provider
+		    // make hig n stuff
 		    GLib.Rand rand = new GLib.Rand ();
 		    genn.clicked.connect (() => {
 	            int numb1 = int.parse (num1.get_text ());
@@ -61,7 +65,7 @@ namespace Random {
                 program_name: "Random",
                 logo_icon_name: "page.codeberg.foreverxml.Random",
                 version: "0.1",
-                comments: "Magic 8 ball, will I be happy today?",
+                comments: "It's that thing with the slashes and stuff.",
                 copyright: "Copyright © 2021 Forever XML",
                 license_type: Gtk.License.AGPL_3_0,
                 authors: authors,
