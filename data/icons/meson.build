@@ -1,6 +1,6 @@
 scalable_dir = join_paths('hicolor', 'scalable', 'apps')
 install_data(
-  join_paths(scalable_dir, 'page.codeberg.foreverxml.Random.Devel.svg'),
+  join_paths(scalable_dir, 'page.codeberg.foreverxml.Random.svg'),
   install_dir: join_paths(get_option('datadir'), 'icons', scalable_dir)
 )
 

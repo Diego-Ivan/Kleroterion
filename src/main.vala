@@ -19,9 +19,6 @@
 int main (string[] args) {
 	var app = new Gtk.Application ("page.codeberg.foreverxml.Random", ApplicationFlags.FLAGS_NONE);
 	app.startup.connect (() => {
-	    // init libhandy
-	    Hdy.init ();
-
 	    // dark theme
 	    var gtk_settings = Gtk.Settings.get_default ();
         gtk_settings.gtk_application_prefer_dark_theme = true;

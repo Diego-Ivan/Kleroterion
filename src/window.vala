@@ -34,6 +34,14 @@ namespace Random {
         Gtk.Button genn;
         [GtkChild]
         Gtk.Button gent;
+        [GtkChild]
+        Gtk.Entry cphr;
+        [GtkChild]
+        Gtk.Entry ctxt;
+        [GtkChild]
+        Gtk.Button genc;
+        [GtkChild]
+        Gtk.Label endc;
 
 		public Window (Gtk.Application app) {
 			Object (application: app);
@@ -56,6 +64,12 @@ namespace Random {
                 string[] texa = tex.split ("/");
                 string txt = texa[rand.int_range (0, texa.length)];
                 endt.set_label (txt);
+	        });
+	        genc.clicked.connect (() => {
+	            string tex = ctxt.get_text ();
+	            string[] texa = tex.split (cphr.get_text ());
+	            string txt = texa[rand.int_range (0, texa.length)];
+                endc.set_label (txt);
 	        });
 	    }
 
