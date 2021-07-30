@@ -18,25 +18,15 @@
 
 int main (string[] args) {
 	var app = new Gtk.Application ("page.codeberg.foreverxml.Random", ApplicationFlags.FLAGS_NONE);
-	app.startup.connect (() => {
-	    // dark theme
-	    var gtk_settings = Gtk.Settings.get_default ();
-        gtk_settings.gtk_application_prefer_dark_theme = true;
-	});
 	var action = new GLib.SimpleAction ("about", null);
     app.add_action (action);
-
 	app.activate.connect (() => {
 		var win = app.active_window;
 		if (win == null) {
 			win = new Random.Window (app);
-			action.activate.connect (() => {
-                ((Random.Window) win).about ();
-            });
-
+			action.activate.connect (() => {((Random.Window) win).about ();});
 		}
 		win.present ();
 	});
-
 	return app.run (args);
 }

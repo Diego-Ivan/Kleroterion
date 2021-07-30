@@ -23,17 +23,11 @@ namespace Random {
 		[GtkChild]
 		Gtk.Label endn;
 		[GtkChild]
-		Gtk.Label endt;
-		[GtkChild]
 		Gtk.Entry num1;
 		[GtkChild]
+		Gtk.Button genn;
+		[GtkChild]
 		Gtk.Entry num2;
-		[GtkChild]
-		Gtk.Entry text;
-		[GtkChild]
-        Gtk.Button genn;
-        [GtkChild]
-        Gtk.Button gent;
         [GtkChild]
         Gtk.Entry cphr;
         [GtkChild]
@@ -58,12 +52,6 @@ namespace Random {
 	            int numb2 = int.parse (num2.get_text ());
 	            string txt = rand.int_range (numb1, numb2).to_string ();
 	            endn.set_label (txt);
-	        });
-	        gent.clicked.connect (() => {
-                string tex = text.get_text ();
-                string[] texa = tex.split ("/");
-                string txt = texa[rand.int_range (0, texa.length)];
-                endt.set_label (txt);
 	        });
 	        genc.clicked.connect (() => {
 	            string tex = ctxt.get_text ();
