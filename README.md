@@ -9,16 +9,5 @@ Random is a random number generator that can randomly pick from a list, written 
 - Anything
 ## Building
 Use GNOME Builder to build this. Else, you can use `flatpak-builder` or `meson` and `ninja`.
-## Roadmap
-### For first release
-- [x] Core functionality
-- [x] App icon
-- [ ] Working app icon
-### For second release
-- [ ] libhandy
-- [ ] Search provider
-- [ ] following HIG
-- [ ] maybe better icon?
-### For third release
-- [ ] libadwaita + GTK 4
-- [ ] `random-cli`
+## Downloading and using
+Head on over to the [Releases](https://codeberg.org/foreverxml/random/releases) page and grab the latest Flatpak, then install it.
