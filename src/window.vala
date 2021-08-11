@@ -36,6 +36,10 @@ namespace Random {
         Gtk.Button genc;
         [GtkChild]
         Gtk.Label endc;
+        [GtkChild]
+        Gtk.Button cf;
+        [GtkChild]
+        Gtk.Label cl;
 
 
 		public Window (Gtk.Application app) {
@@ -43,14 +47,10 @@ namespace Random {
 		}
 
 		construct {
-		    // TODO: make cli option
-		    // this will help with:
-		    // TODO: make search provider
-		    // make hig n stuff
 		    GLib.Rand rand = new GLib.Rand ();
 		    genn.clicked.connect (() => {
 	            int numb1 = int.parse (num1.get_text ());
-	            int numb2 = int.parse (num2.get_text ());
+	            int numb2 = int.parse (num2.get_text ()) + 1;
 	            string txt = rand.int_range (numb1, numb2).to_string ();
 	            endn.set_label (txt);
 	        });
@@ -60,6 +60,14 @@ namespace Random {
 	            string txt = texa[rand.int_range (0, texa.length)];
                 endc.set_label (txt);
 	        });
+	        cf.clicked.connect (() => {
+	            int r = rand.int_range (0, 2);
+	            string t = "You got heads!";
+	            if (r == 1) {
+	                t = "You got tails!";
+	            }
+	            cl.set_label (t);
+	        });
 	    }
 
 	    public void about () {
@@ -68,7 +76,7 @@ namespace Random {
                 program_name: "Random",
                 logo_icon_name: "page.codeberg.foreverxml.Random",
                 version: "0.3.devel",
-                comments: "It's that thing with the slashes and stuff.",
+                comments: "Flippy flip.",
                 copyright: "Copyright © 2021 Forever XML",
                 license_type: Gtk.License.AGPL_3_0,
                 authors: authors,

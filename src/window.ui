@@ -23,7 +23,7 @@
               <object class="HdyViewSwitcherTitle">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
-                <property name="tooltip-text" translatable="yes">Switch between picking a number, spinning a wheel, rolling a die, or flpping a coin.</property>
+                <property name="tooltip-text" translatable="yes">Switch between picking a number, spinning a wheel, or flipping a coin.</property>
                 <property name="stack">stack1</property>
                 <property name="title" translatable="yes">Random</property>
               </object>
@@ -220,7 +220,7 @@
               <packing>
                 <property name="name">page0</property>
                 <property name="title" translatable="yes">Number</property>
-                <property name="icon-name">input-dialpad</property>
+                <property name="icon-name">dialpad-symbolic</property>
               </packing>
             </child>
             <child>
@@ -406,6 +406,89 @@
                 <property name="title" translatable="yes">Roulette</property>
                 <property name="icon-name">roulette-symbolic</property>
                 <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="HdyClamp">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="maximum-size">400</property>
+                <child>
+                  <object class="HdyClamp">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="orientation">vertical</property>
+                    <property name="maximum-size">300</property>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">Click the button to flip the coin!</property>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                                <property name="padding">2</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="cf">
+                                <property name="label" translatable="yes">Flip</property>
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="receives-default">True</property>
+                                <property name="tooltip-text" translatable="yes">Flip the coin.</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="padding">2</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="padding">2</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="cl">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="label" translatable="yes">You haven't flipped yet!</property>
+                            <style>
+                              <class name="title-1"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">True</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="name">page1</property>
+                <property name="title" translatable="yes">Coin</property>
+                <property name="icon-name">coin-symbolic</property>
+                <property name="position">2</property>
               </packing>
             </child>
           </object>
