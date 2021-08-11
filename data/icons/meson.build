@@ -9,3 +9,13 @@ install_data(
   join_paths(symbolic_dir, 'page.codeberg.foreverxml.Random-symbolic.svg'),
   install_dir: join_paths(get_option('datadir'), 'icons', symbolic_dir)
 )
+
+install_data(
+  join_paths(symbolic_dir, 'roulette-symbolic.svg'),
+  install_dir: join_paths(get_option('datadir'), 'icons', symbolic_dir)
+)
+
+install_data(
+  join_paths(symbolic_dir, 'dialpad-symbolic.svg'),
+  install_dir: join_paths(get_option('datadir'), 'icons', symbolic_dir)
+)
