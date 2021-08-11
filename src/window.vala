@@ -37,6 +37,7 @@ namespace Random {
         [GtkChild]
         Gtk.Label endc;
 
+
 		public Window (Gtk.Application app) {
 			Object (application: app);
 		}
