@@ -75,7 +75,7 @@ namespace Random {
 	        Gtk.show_about_dialog (this,
                 program_name: "Random",
                 logo_icon_name: "page.codeberg.foreverxml.Random",
-                version: "0.3.devel",
+                version: "0.4.devel",
                 comments: "Flippy flip.",
                 copyright: "Copyright © 2021 Forever XML",
                 license_type: Gtk.License.AGPL_3_0,
