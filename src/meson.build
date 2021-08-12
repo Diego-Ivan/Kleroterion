@@ -16,7 +16,7 @@ random_sources += gnome.compile_resources('random-resources',
   c_name: 'random'
 )
 
-executable('random', random_sources,
+executable('randomgtk', random_sources,
   vala_args: '--target-glib=2.50',  dependencies: random_deps,
   install: true,
 )
