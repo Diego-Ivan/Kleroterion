@@ -58,6 +58,9 @@ namespace Random {
 	            string tex = ctxt.get_text ();
 	            string[] texa = tex.split (cphr.get_text ());
 	            string txt = texa[rand.int_range (0, texa.length)];
+	            if (tex == "Hey adora") {
+	                txt = "Catra!? What are you doing here?";
+	            }
                 endc.set_label (txt);
 	        });
 	        cf.clicked.connect (() => {
