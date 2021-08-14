@@ -1,6 +1,6 @@
 <interface>
   <requires lib="gtk" version="4.0"/>
-  <requires lib="libhandy" version="0.0"/>
+  <requires lib="libadwaita-1" version="0.0"/>
   <template class="RandomWindow" parent="AdwApplicationWindow">
     <property name="title" translatable="yes">Random</property>
     <property name="default-width">450</property>
