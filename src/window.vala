@@ -18,7 +18,7 @@
 
 namespace Random {
 	[GtkTemplate (ui = "/page/codeberg/foreverxml/Random/window.ui")]
-	public class Window : Hdy.ApplicationWindow {
+	public class Window : Adw.ApplicationWindow {
 	    // TODO: fix error here
 		[GtkChild]
 		Gtk.Label endn;

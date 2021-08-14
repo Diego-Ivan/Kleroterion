@@ -21,7 +21,9 @@ int main (string[] args) {
 	var action = new GLib.SimpleAction ("about", null);
 
 	app.startup.connect (() => {
-	    Hdy.init ();
+	    var gtk_settings = Gtk.Settings.get_default ();
+        gtk_settings.gtk_application_prefer_dark_theme = true;
+	    Adw.init ();
 	});
 
     app.add_action (action);
