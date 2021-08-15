@@ -3,7 +3,7 @@
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "40",
     "sdk" : "org.gnome.Sdk",
-    "command" : "random",
+    "command" : "randomgtk",
     "finish-args" : [
         "--share=network",
         "--share=ipc",
@@ -65,7 +65,7 @@
             ]
         },
         {
-            "name" : "random",
+            "name" : "randomgtk",
             "builddir" : true,
             "buildsystem" : "meson",
             "sources" : [
