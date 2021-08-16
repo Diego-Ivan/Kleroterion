@@ -15,11 +15,11 @@ if desktop_utils.found()
 endif
 
 appstream_file = i18n.merge_file(
-  input: 'page.codeberg.foreverxml.Random.appdata.xml.in',
-  output: 'page.codeberg.foreverxml.Random.appdata.xml',
+  input: 'page.codeberg.foreverxml.Random.metainfo.xml.in',
+  output: 'page.codeberg.foreverxml.Random.metainfo.xml',
   po_dir: '../po',
   install: true,
-  install_dir: join_paths(get_option('datadir'), 'appdata')
+  install_dir: join_paths(get_option('datadir'), 'share')
 )
 
 appstream_util = find_program('appstream-util', required: false)
