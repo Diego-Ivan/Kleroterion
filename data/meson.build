@@ -17,7 +17,6 @@ endif
 appstream_file = i18n.merge_file(
   input: 'page.codeberg.foreverxml.Random.appdata.xml.in',
   output: 'page.codeberg.foreverxml.Random.appdata.xml',
-  po_dir: '../po',
   install: true,
   install_dir: join_paths(get_option('datadir'), 'appdata')
 )
