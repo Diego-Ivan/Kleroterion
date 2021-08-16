@@ -5,7 +5,7 @@
     "sdk" : "org.gnome.Sdk",
     "command" : "randomgtk",
     "tag": "0.4",
-    "commit": "cb85ae961252a7ef562e7c9810035180cc245e92",
+    "commit": "609ed200a2f804b900bc961647df8c1fe8836a3a",
     "finish-args" : [
         "--share=network",
         "--share=ipc",
@@ -67,7 +67,7 @@
             ]
         },
         {
-            "name" : "randomgtk",
+            "name" : "random",
             "builddir" : true,
             "buildsystem" : "meson",
             "sources" : [
