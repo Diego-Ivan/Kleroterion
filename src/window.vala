@@ -18,7 +18,7 @@
 
 namespace Random {
 	[GtkTemplate (ui = "/page/codeberg/foreverxml/Random/window.ui")]
-	public class Window : Hdy.ApplicationWindow {
+	public class Window : Adw.ApplicationWindow {
 	    // TODO: fix error here
 		[GtkChild]
 		Gtk.Label endn;
@@ -78,7 +78,7 @@ namespace Random {
 	        Gtk.show_about_dialog (this,
                 program_name: "Random",
                 logo_icon_name: "page.codeberg.foreverxml.Random",
-                version: "0.4.devel",
+                version: "0.4",
                 comments: "Flippy flip.",
                 copyright: "Copyright © 2021 Forever XML",
                 license_type: Gtk.License.AGPL_3_0,

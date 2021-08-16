@@ -3,7 +3,9 @@
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "40",
     "sdk" : "org.gnome.Sdk",
-    "command" : "random",
+    "command" : "randomgtk",
+    "tag": "0.4",
+    "commit": "cb85ae961252a7ef562e7c9810035180cc245e92",
     "finish-args" : [
         "--share=network",
         "--share=ipc",
@@ -24,7 +26,48 @@
     ],
     "modules" : [
         {
-            "name" : "random",
+            "name" : "libsass",
+            "buildsystem" : "meson",
+            "builddir" : true,
+            "config-opts" : [
+                "--libdir=/app/lib"
+            ],
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://github.com/lazka/libsass.git",
+                    "branch" : "meson"
+                }
+            ]
+        },
+        {
+            "name" : "sassc",
+            "buildsystem" : "meson",
+            "builddir" : true,
+            "config-opts" : [
+                "--libdir=/app/lib"
+            ],
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://github.com/lazka/sassc.git",
+                    "branch" : "meson"
+                }
+            ]
+        },
+        {
+            "name" : "libadwaita",
+            "buildsystem" : "meson",
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://gitlab.gnome.org/GNOME/libadwaita.git",
+                    "branch" : "main"
+                }
+            ]
+        },
+        {
+            "name" : "randomgtk",
             "builddir" : true,
             "buildsystem" : "meson",
             "sources" : [
