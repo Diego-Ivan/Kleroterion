@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2021 Forever XML -->
+<component type="desktop-application">
+	<id>page.codeberg.foreverxml.Random.desktop</id>
+  <launchable type="desktop-id">page.codeberg.foreverxml.Random.desktop</launchable>
+	<metadata_license>CC0-1.0</metadata_license>
+  <name>Random</name>
+  <summary>A randomization app for GNOME</summary>
+	<project_license>AGPL-3.0-or-later</project_license>
+	<description>
+	    <p>
+	      A tool to pick a random number or list item. Pick what chore to do, a number between 1 and 100, whether or not to jump on your mom's bed, etc.
+	    </p>
+	    <p>
+	      All while being free.
+	    </p>
+	</description>
+  <content_rating type="oars-1.1" />
+  <screenshots>
+    <screenshot type="default">
+      <caption>Number</caption>
+      <image>https://codeberg.org/foreverxml/random/raw/branch/main/screenshots/number.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://codeberg.org/foreverxml/random/raw/branch/main/screenshots/roulette.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://codeberg.org/foreverxml/random/raw/branch/main/screenshots/coin.png</image>
+    </screenshot>
+  </screenshots>
+  <url type="homepage">https://codeberg.org/foreverxml/random</url>
+  <releases>
+    <release version="0.4" date="2021-07-15">
+      <p>First Flathub release with GTK 4</p>
+    </release>
+  </releases>
+</component>
