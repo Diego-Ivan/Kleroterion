@@ -4,10 +4,7 @@
     "runtime-version" : "40",
     "sdk" : "org.gnome.Sdk",
     "command" : "randomgtk",
-    "tag": "0.4",
-    "commit": "d6819a104c7e0546f398c81eb7d70b24fa9be446",
     "finish-args" : [
-        "--share=network",
         "--share=ipc",
         "--socket=fallback-x11",
         "--socket=wayland"
@@ -26,43 +23,49 @@
     ],
     "modules" : [
         {
-            "name" : "libsass",
-            "buildsystem" : "meson",
-            "builddir" : true,
-            "config-opts" : [
-                "--libdir=/app/lib"
-            ],
-            "sources" : [
+            "name": "libsass",
+            "sources": [
                 {
-                    "type" : "git",
-                    "url" : "https://github.com/lazka/libsass.git",
-                    "branch" : "meson"
+                    "type" : "archive",
+                    "url" : "https://github.com/sass/libsass/archive/3.6.4.tar.gz",
+                    "sha256": "f9484d9a6df60576e791566eab2f757a97fd414fce01dd41fc0a693ea5db2889"
+                },
+                {
+                    "type" : "script",
+                    "dest-filename" : "autogen.sh",
+                    "commands" : [ "autoreconf -si" ]
                 }
             ]
         },
         {
-            "name" : "sassc",
-            "buildsystem" : "meson",
-            "builddir" : true,
-            "config-opts" : [
-                "--libdir=/app/lib"
-            ],
-            "sources" : [
+            "name": "sassc",
+            "sources": [
                 {
-                    "type" : "git",
-                    "url" : "https://github.com/lazka/sassc.git",
-                    "branch" : "meson"
+                    "type" : "archive",
+                    "url" : "https://github.com/sass/sassc/archive/3.6.1.tar.gz",
+                    "sha256": "8cee391c49a102b4464f86fc40c4ceac3a2ada52a89c4c933d8348e3e4542a60"
+                },
+                {
+                    "type" : "script",
+                    "dest-filename" : "autogen.sh",
+                    "commands" : [ "autoreconf -si" ]
                 }
             ]
         },
         {
             "name" : "libadwaita",
-            "buildsystem" : "meson",
+            "buildsystem": "meson",
+            "config-opts" : [
+                "-Dvapi=false",
+                "-Dexamples=false",
+                "-Dtests=false"
+            ],
             "sources" : [
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/GNOME/libadwaita.git",
-                    "branch" : "main"
+                    "branch" : "main",
+                    "commit" : "65ac5258cdcd1c1bfdf2d8f29c9518e16bcca445"
                 }
             ]
         },
@@ -73,7 +76,8 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "https://codeberg.org/foreverxml/random.git"
+                    "url" : "https://codeberg.org/foreverxml/random.git",
+                    "tag": "v0.4"
                 }
             ]
         }
