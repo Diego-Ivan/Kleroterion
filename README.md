@@ -1,5 +1,5 @@
 # Random
-![icon for Random](https://codeberg.org/foreverxml/random/raw/branch/hig/data/icons/hicolor/scalable/apps/page.codeberg.foreverxml.Random.svg)   
+![icon for Random](https://codeberg.org/foreverxml/random/raw/branch/main/data/icons/hicolor/scalable/apps/page.codeberg.foreverxml.Random.svg)   
 Random is a random number generator that can randomly pick from a list, written in Vala.
 ## Uses
 - Choose what to do for a date
