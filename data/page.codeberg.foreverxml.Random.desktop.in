@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Random
-Exec=random
+Exec=randomgtk
 Icon=page.codeberg.foreverxml.Random
 Terminal=false
 Type=Application
