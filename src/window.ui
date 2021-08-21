@@ -1,6 +1,5 @@
 <interface>
   <requires lib="gtk" version="4.0"/>
-  <requires lib="libadwaita-1" version="0.0"/>
   <template class="RandomWindow" parent="AdwApplicationWindow">
     <property name="title" translatable="yes">Random</property>
     <property name="default-width">375</property>
@@ -23,7 +22,7 @@
             <child>
               <object class="GtkButton">
                 <property name="receives-default">1</property>
-                <property name="tooltip-text" translatable="yes">Show the about page for this app, “Random”</property>
+                <property name="tooltip-text" translatable="yes">Show the About page</property>
                 <property name="action-name">app.about</property>
                 <child>
                   <object class="GtkImage">
