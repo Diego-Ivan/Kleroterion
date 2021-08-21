@@ -24,3 +24,8 @@ install_data(
   join_paths(symbolic_dir, 'coin-symbolic.svg'),
   install_dir: join_paths(get_option('datadir'), 'icons', symbolic_dir)
 )
+
+install_data(
+  join_paths(symbolic_dir, 'menu-symbolic.svg'),
+  install_dir: join_paths(get_option('datadir'), 'icons', symbolic_dir)
+)

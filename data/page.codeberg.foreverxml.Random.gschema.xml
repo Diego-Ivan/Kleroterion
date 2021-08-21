@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="random">
 	<schema id="page.codeberg.foreverxml.Random" path="/page/codeberg/foreverxml/Random/">
+	  <key name="dark" type="b">
+	    <default>false</default>
+	    <description>
+	      Turns on force dark theme in GTK.
+	    </description>
+	  </key>
 	</schema>
 </schemalist>
