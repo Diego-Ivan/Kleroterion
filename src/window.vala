@@ -56,11 +56,10 @@ namespace Random {
 	        });
 	        genc.clicked.connect (() => {
 	            string tex = ctxt.get_text ();
-	            try {
-	                string[] texa = tex.split (cphr.get_text ());
-	            } catch {
-	                string[] texa = tex.split ("/");
+	            if (cphr.get_text () == "" | cphr.get_text () == null) {
+	                cphr.set_text ("/");
 	            }
+	            string[] texa = tex.split (cphr.get_text ());
 	            string txt = texa[rand.int_range (0, texa.length)];
 	            if (tex == "Hey adora") {
 	                txt = "Catra!? What are you doing here?";
