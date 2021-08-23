@@ -1,3 +1,4 @@
+gnome = import('gnome')
 desktop_file = i18n.merge_file(
   input: 'page.codeberg.foreverxml.Random.desktop.in',
   output: 'page.codeberg.foreverxml.Random.desktop',
@@ -30,8 +31,9 @@ if appstream_util.found()
 endif
 
 install_data('page.codeberg.foreverxml.Random.gschema.xml',
-  install_dir: join_paths(get_option('datadir'), 'glib-2.0/schemas')
+  install_dir: join_paths(get_option('datadir'), '/glib-2.0/schemas')
 )
+gnome.compile_schemas(depend_files: files('page.codeberg.foreverxml.Random.gschema.xml'))
 
 compile_schemas = find_program('glib-compile-schemas', required: false)
 if compile_schemas.found()

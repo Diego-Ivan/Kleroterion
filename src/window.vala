@@ -15,31 +15,21 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
+using Gtk;
 namespace Random {
 	[GtkTemplate (ui = "/page/codeberg/foreverxml/Random/window.ui")]
 	public class Window : Adw.ApplicationWindow {
 	    // TODO: fix error here
-		[GtkChild]
-		Gtk.Label endn;
-		[GtkChild]
-		Gtk.Entry num1;
-		[GtkChild]
-		Gtk.Button genn;
-		[GtkChild]
-		Gtk.Entry num2;
-        [GtkChild]
-        Gtk.Entry cphr;
-        [GtkChild]
-        Gtk.Entry ctxt;
-        [GtkChild]
-        Gtk.Button genc;
-        [GtkChild]
-        Gtk.Label endc;
-        [GtkChild]
-        Gtk.Button cf;
-        [GtkChild]
-        Gtk.Label cl;
+		[GtkChild] private unowned Label endn;
+		[GtkChild] private unowned Entry num1;
+		[GtkChild] private unowned Button genn;
+		[GtkChild] private unowned Entry num2;
+        [GtkChild] private unowned Entry cphr;
+        [GtkChild] private unowned Entry ctxt;
+        [GtkChild] private unowned Button genc;
+        [GtkChild] private unowned Label endc;
+        [GtkChild] private unowned Button cf;
+        [GtkChild] private unowned Label cl;
 
 
 		public Window (Gtk.Application app) {
@@ -47,6 +37,7 @@ namespace Random {
 		}
 
 		construct {
+		    try {
 		    GLib.Rand rand = new GLib.Rand ();
 		    genn.clicked.connect (() => {
 	            int numb1 = int.parse (num1.get_text ());
@@ -74,6 +65,9 @@ namespace Random {
 	            }
 	            cl.set_label (t);
 	        });
+	        } catch (Error e) {
+	            print (e.message);
+	        }
 	    }
 
 	    public void about () {
@@ -91,15 +85,16 @@ namespace Random {
         }
 
         public void toggle () {
-            Settings settings = new Settings ("page.codeberg.foreverxml.Random");
-            Gtk.Settings setter = Gtk.Settings.get_default ();
+            try {
+            GLib.Settings settings = new GLib.Settings ("page.codeberg.foreverxml.Random");
             bool dark = settings.get_boolean ("dark");
             if (!dark) {
-                setter.gtk_application_prefer_dark_theme = false;
                 settings.set_boolean ("dark", false);
             } else {
-                setter.gtk_application_prefer_dark_theme = true;
                 settings.set_boolean ("dark", true);
+            }
+            } catch (Error e) {
+                print (e.message);
             }
         }
 	}

@@ -14,11 +14,11 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
+using GLib;
 int main (string[] args) {
 	Gtk.Application app = new Gtk.Application ("page.codeberg.foreverxml.Random", ApplicationFlags.FLAGS_NONE);
-	GLib.SimpleAction about = new GLib.SimpleAction ("about", null);
-	GLib.SimpleAction toggle = new GLib.SimpleAction ("toggle", null);
+	SimpleAction about = new SimpleAction ("about", null);
+	SimpleAction toggle = new SimpleAction ("toggle", null);
 
 	app.startup.connect (() => {
 	    Gtk.Settings setter = Gtk.Settings.get_default ();
@@ -27,7 +27,7 @@ int main (string[] args) {
 	    if (dark) {
             setter.gtk_application_prefer_dark_theme = true;
 	    }
-	    settings.changed.connect ( () => {
+	    settings.changed["dark"].connect ( () => {
 	        dark = settings.get_boolean ("dark");
 	        if (dark) {
                 setter.gtk_application_prefer_dark_theme = true;
