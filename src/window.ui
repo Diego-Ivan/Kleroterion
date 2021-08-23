@@ -20,20 +20,12 @@
               </object>
             </child>
             <child>
-              <object class="GtkButton">
-                <property name="receives-default">1</property>
-                <property name="tooltip-text" translatable="yes">Show the About page</property>
-                <property name="action-name">app.about</property>
-                <child>
-                  <object class="GtkImage">
-                    <property name="icon-name">help-about-symbolic</property>
-                  </object>
-                </child>
+              <object class="GtkMenuButton">
+                <property name="icon-name">open-menu-symbolic</property>
+                <property name="menu-model">menu</property>
+                <property name="tooltip-text" translatable="yes">Open the Menu</property>
               </object>
             </child>
-            <style>
-              <class name=".devel"/>
-            </style>
           </object>
         </child>
         <child>
@@ -305,5 +297,16 @@
       </object>
     </child>
   </template>
+  <menu id="menu">
+    <section>
+      <item>
+        <attribute name="action">app.toggle</attribute>
+        <attribute name="label" translatable="yes">Toggle Dark Mode</attribute>
+      </item>
+      <item>
+        <attribute name="action">app.about</attribute>
+        <attribute name="label" translatable="yes">About Random</attribute>
+      </item>
+    </section>
+  </menu>
 </interface>
-

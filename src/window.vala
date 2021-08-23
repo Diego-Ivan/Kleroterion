@@ -89,5 +89,18 @@ namespace Random {
                 website: "https://codeberg.org/foreverxml/random",
                 website_label: "Repository");
         }
+
+        public void toggle () {
+            Settings settings = new Settings ("page.codeberg.foreverxml.Random");
+            Gtk.Settings setter = Gtk.Settings.get_default ();
+            bool dark = settings.get_boolean ("dark");
+            if (!dark) {
+                setter.gtk_application_prefer_dark_theme = false;
+                settings.set_boolean ("dark", false);
+            } else {
+                setter.gtk_application_prefer_dark_theme = true;
+                settings.set_boolean ("dark", true);
+            }
+        }
 	}
 }
