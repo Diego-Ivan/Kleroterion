@@ -18,7 +18,6 @@ using GLib;
 int main (string[] args) {
 	Gtk.Application app = new Gtk.Application ("page.codeberg.foreverxml.Random", ApplicationFlags.FLAGS_NONE);
 	SimpleAction about = new SimpleAction ("about", null);
-	SimpleAction toggle = new SimpleAction ("toggle", null);
 
 	app.startup.connect (() => {
 	    Gtk.Settings setter = Gtk.Settings.get_default ();
@@ -39,13 +38,11 @@ int main (string[] args) {
 	});
 
     app.add_action (about);
-    app.add_action (toggle);
 	app.activate.connect (() => {
 		var win = app.active_window;
 		if (win == null) {
 			win = new Random.Window (app);
 			about.activate.connect (() => {((Random.Window) win).about ();});
-			toggle.activate.connect (() => {((Random.Window) win).toggle ();});
 		}
 		win.present ();
 	});

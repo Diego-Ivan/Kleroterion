@@ -300,10 +300,6 @@
   <menu id="menu">
     <section>
       <item>
-        <attribute name="action">app.toggle</attribute>
-        <attribute name="label" translatable="yes">Toggle Dark Mode</attribute>
-      </item>
-      <item>
         <attribute name="action">app.about</attribute>
         <attribute name="label" translatable="yes">About Random</attribute>
       </item>

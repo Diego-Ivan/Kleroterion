@@ -83,19 +83,5 @@ namespace Random {
                 website: "https://codeberg.org/foreverxml/random",
                 website_label: "Repository");
         }
-
-        public void toggle () {
-            try {
-            GLib.Settings settings = new GLib.Settings ("page.codeberg.foreverxml.Random");
-            bool dark = settings.get_boolean ("dark");
-            if (!dark) {
-                settings.set_boolean ("dark", false);
-            } else {
-                settings.set_boolean ("dark", true);
-            }
-            } catch (Error e) {
-                print (e.message);
-            }
-        }
 	}
 }
