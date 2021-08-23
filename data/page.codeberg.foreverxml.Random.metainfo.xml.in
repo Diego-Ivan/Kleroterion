@@ -30,6 +30,9 @@
   </screenshots>
   <url type="homepage">https://codeberg.org/foreverxml/random</url>
   <releases>
+    <release version="0.5" date="2021-07-23">
+      <p>Adds a menu and some bugfixes.</p>
+    </release>
     <release version="0.4" date="2021-07-15">
       <p>First Flathub release with GTK 4</p>
     </release>
