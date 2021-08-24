@@ -36,4 +36,11 @@
       <p>First Flathub release with GTK 4</p>
     </release>
   </releases>
+  <provides>
+    <binary>randomgtk</binary>
+  </provides>
+  <requires>
+    <control>touch</control>
+  </requires>
+  <developer_name>Forever XML</developer_name>
 </component>
