@@ -41,6 +41,7 @@
   </provides>
   <requires>
     <control>touch</control>
+    <control>pointing</control>
   </requires>
   <developer_name>Forever XML</developer_name>
 </component>

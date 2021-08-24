@@ -16,6 +16,7 @@
  */
 using GLib;
 int main (string[] args) {
+<<<<<<< HEAD
 	Gtk.Application app = new Gtk.Application ("page.codeberg.foreverxml.Random", ApplicationFlags.FLAGS_NONE);
 	SimpleAction about = new SimpleAction ("about", null);
 
@@ -26,6 +27,7 @@ int main (string[] args) {
 	    if (dark) {
             setter.gtk_application_prefer_dark_theme = true;
 	    }
+<<<<<<< HEAD
 	    settings.changed["dark"].connect ( () => {
 	        dark = settings.get_boolean ("dark");
 	        if (dark) {
