@@ -158,12 +158,12 @@
                                     <child>
                                       <object class="GtkLabel">
                                         <property name="hexpand">1</property>
-                                        <property name="label" translatable="yes">Write your options below. Seperate them with:</property>
+                                        <property name="label" translatable="yes">Write your options below. Separate them with:</property>
                                       </object>
                                     </child>
                                     <child>
                                       <object class="GtkEntry" id="cphr">
-                                        <property name="tooltip-text" translatable="yes">Type your seperator here (for example, “/” for list “GNOME/KDE/XFCE”.)</property>
+                                        <property name="tooltip-text" translatable="yes">Type your separator here (for example, “/” for list “GNOME/KDE/XFCE”.)</property>
                                         <property name="width-chars">3</property>
                                         <property name="text" translatable="yes">/</property>
                                       </object>
@@ -186,7 +186,7 @@
                                     <child>
                                       <object class="GtkEntry" id="ctxt">
                                         <property name="hexpand">1</property>
-                                        <property name="tooltip-text" translatable="yes">Type your list here (for example, “GNOME/KDE/XFCE” with seperator “/”.)</property>
+                                        <property name="tooltip-text" translatable="yes">Type your list here (for example, “GNOME/KDE/XFCE” with separator “/”.)</property>
                                         <property name="text" translatable="yes">One/Two/Three</property>
                                         <property name="secondary-icon-name">face-smile-symbolic</property>
                                         <property name="secondary-icon-tooltip-text" translatable="yes">Insert Emoji</property>

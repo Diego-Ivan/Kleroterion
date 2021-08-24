@@ -1,0 +1,169 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Random v0.6\n"
+"POT-Creation-Date: 2021-08-23 21:40-0600\n"
+"PO-Revision-Date: 2021-08-23 22:10-0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: translatable=\"true\";\"\n"
+"X-Poedit-SearchPath-0: data/page.codeberg.foreverxml.Random.desktop.in\n"
+"X-Poedit-SearchPath-1: data/page.codeberg.foreverxml.Random.metainfo.xml.in\n"
+"X-Poedit-SearchPath-2: src/window.vala\n"
+"X-Poedit-SearchPath-3: src/window.ui\n"
+
+#: src/window.ui:4 src/window.ui:19
+#: data/page.codeberg.foreverxml.Random.desktop.in:2 src/window.vala:77
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:7
+msgid "Random"
+msgstr ""
+
+#: src/window.ui:17
+msgid "Switch between picking a number, spinning a wheel, or flipping a coin."
+msgstr ""
+
+#: src/window.ui:26
+msgid "Open the Menu"
+msgstr ""
+
+#: src/window.ui:38
+msgid "Number"
+msgstr ""
+
+#: src/window.ui:63
+msgid " Pick a number from "
+msgstr ""
+
+#: src/window.ui:68
+msgid "Put the lower number in your number range here (for example, put a 1 here if you want to generate a number from 1 to 10)"
+msgstr ""
+
+#: src/window.ui:70
+msgid "1"
+msgstr ""
+
+#: src/window.ui:77
+msgid " to "
+msgstr ""
+
+#: src/window.ui:82
+msgid "Put the higher number in your number range here (for example, put a 10 here if you want to generate a number from 1 to 10)"
+msgstr ""
+
+#: src/window.ui:84
+msgid "10"
+msgstr ""
+
+#: src/window.ui:97
+msgid "Generate"
+msgstr ""
+
+#: src/window.ui:99
+msgid "Generate a random number, and show it below."
+msgstr ""
+
+#: src/window.ui:106 src/window.ui:155 src/window.ui:173 src/window.ui:183
+#: src/window.ui:206 src/window.ui:266
+msgid " "
+msgstr ""
+
+#: src/window.ui:114
+msgid "You haven't generated yet!"
+msgstr ""
+
+#: src/window.ui:131
+msgid "Roulette"
+msgstr ""
+
+#: src/window.ui:161
+msgid "Write your options below. separate them with:"
+msgstr ""
+
+#: src/window.ui:166
+msgid "Type your separator here (for example, “/” for list “GNOME/KDE/XFCE”.)"
+msgstr ""
+
+#: src/window.ui:168
+msgid "/"
+msgstr ""
+
+#: src/window.ui:189
+msgid "Type your list here (for example, “GNOME/KDE/XFCE” with separator “/”.)"
+msgstr ""
+
+#: src/window.ui:190
+msgid "One/Two/Three"
+msgstr ""
+
+#: src/window.ui:192 src/window.ui:193
+msgid "Insert Emoji"
+msgstr ""
+
+#: src/window.ui:199
+msgid "Pick"
+msgstr ""
+
+#: src/window.ui:201
+msgid "Spin the wheel and see what it lands on!"
+msgstr ""
+
+#: src/window.ui:216
+msgid "You haven't rolled yet!"
+msgstr ""
+
+#: src/window.ui:233
+msgid "Coin"
+msgstr ""
+
+#: src/window.ui:254
+msgid "Click the button to flip the coin!"
+msgstr ""
+
+#: src/window.ui:259
+msgid "Flip"
+msgstr ""
+
+#: src/window.ui:261
+msgid "Flip the coin."
+msgstr ""
+
+#: src/window.ui:274
+msgid "You haven't flipped yet!"
+msgstr ""
+
+#: src/window.ui:304
+msgid "About Random"
+msgstr ""
+
+#: src/window.vala:62
+msgid "You got heads!"
+msgstr ""
+
+#: src/window.vala:64
+msgid "You got tails!"
+msgstr ""
+
+#: src/window.vala:84
+msgid "Repository"
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.desktop.in:7
+msgid "GTK;GNOME;Utility;"
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:8
+msgid "A randomization app for GNOME"
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:12
+msgid "A tool to pick a random number or list item. Pick what chore to do, a number between 1 and 100, whether or not to jump on your mom's bed, etc."
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:15
+msgid "All while being free."
+msgstr ""
