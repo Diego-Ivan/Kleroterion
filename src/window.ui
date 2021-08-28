@@ -126,7 +126,7 @@
               </object>
             </child>
             <child>
-              <object class="AdwViewStackPage">
+              <object class="AdwViewStackPage" id="rou">
                 <property name="name">Roulette</property>
                 <property name="title" translatable="yes">Roulette</property>
                 <property name="icon-name">roulette-symbolic</property>
@@ -299,6 +299,14 @@
   </template>
   <menu id="menu">
     <section>
+      <item>
+        <attribute name="action">app.number</attribute>
+        <attribute name="label" translatable="yes">Number to Roulette</attribute>
+      </item>
+      <item>
+        <attribute name="action">app.remove</attribute>
+        <attribute name="label" translatable="yes">Remove Picked Item</attribute>
+      </item>
       <item>
         <attribute name="action">app.about</attribute>
         <attribute name="label" translatable="yes">About Random</attribute>

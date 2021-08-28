@@ -30,6 +30,8 @@ namespace Random {
         [GtkChild] private unowned Label endc;
         [GtkChild] private unowned Button cf;
         [GtkChild] private unowned Label cl;
+        [GtkChild] private unowned Adw.ViewStackPage rou;
+        [GtkChild] private unowned Adw.ViewStack stack1;
 
 
 		public Window (Gtk.Application app) {
@@ -82,6 +84,22 @@ namespace Random {
                 authors: authors,
                 website: "https://codeberg.org/foreverxml/random",
                 website_label: "Repository");
+        }
+
+        public void number () {
+            int numb1 = int.parse (num1.get_text ());
+	        int numb2 = int.parse (num2.get_text ()) + 1;
+	        string list = num1.get_text ();
+	        for (int i = numb1 + 1; i < numb2; i++) {
+                list = list + "/" + i.to_string ();
+	        }
+	        ctxt.set_text (list);
+	        cphr.set_text ("/");
+            stack1.set_visible_child (rou.get_child ());
+        }
+
+        public void remove () {
+
         }
 	}
 }

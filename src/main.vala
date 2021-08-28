@@ -16,35 +16,22 @@
  */
 using GLib;
 int main (string[] args) {
-<<<<<<< HEAD
 	Gtk.Application app = new Gtk.Application ("page.codeberg.foreverxml.Random", ApplicationFlags.FLAGS_NONE);
 	SimpleAction about = new SimpleAction ("about", null);
+	SimpleAction number = new SimpleAction ("number", null);
 
 	app.startup.connect (() => {
-	    Gtk.Settings setter = Gtk.Settings.get_default ();
-	    Settings settings = new Settings ("page.codeberg.foreverxml.Random");
-	    bool dark = settings.get_boolean ("dark");
-	    if (dark) {
-            setter.gtk_application_prefer_dark_theme = true;
-	    }
-<<<<<<< HEAD
-	    settings.changed["dark"].connect ( () => {
-	        dark = settings.get_boolean ("dark");
-	        if (dark) {
-                setter.gtk_application_prefer_dark_theme = true;
-	        } else {
-                setter.gtk_application_prefer_dark_theme = false;
-	        }
-	    });
 	    Adw.init ();
 	});
 
     app.add_action (about);
+    app.add_action (number);
 	app.activate.connect (() => {
 		var win = app.active_window;
 		if (win == null) {
 			win = new Random.Window (app);
 			about.activate.connect (() => {((Random.Window) win).about ();});
+			number.activate.connect (() => {((Random.Window) win).number ();});
 		}
 		win.present ();
 	});
