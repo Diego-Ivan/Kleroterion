@@ -17,3 +17,11 @@ Download it from Flathub by clicking the really big button above, or head on ove
 I don't support anything but Flatpak. You will have to run this app through WSL, although Windows is such a privacy nightmare I do not support WSL. The app may be broken on Windows too. My reccomendation is to use this app on GNOME *NIX systems.
 ## Translations
 Help me make some po files! I'm not very fluent in any language except English, so translations would be appreciated. Do NOT include .mo files, I will reject your PR if so.
+## Roadmap
+- [ ] More options in menu
+- [ ] Number to Roulette
+- [ ] Generate + remove
+- [ ] Keyboard shortcuts
+- [ ] More translations
+### Unimportant
+- [ ] Windows package (LTS)
