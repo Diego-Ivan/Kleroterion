@@ -29,6 +29,9 @@
   </screenshots>
   <url type="homepage">https://codeberg.org/foreverxml/random</url>
   <releases>
+    <release version="0.6" date="2021-07-29">
+      <p>This release adds tons of new actions and keyboard shortcuts too.</p>
+    </release>
     <release version="0.5" date="2021-07-23">
       <p>Adds a menu and some bugfixes.</p>
     </release>
