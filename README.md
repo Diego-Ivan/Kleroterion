@@ -18,10 +18,10 @@ I don't support anything but Flatpak. You will have to run this app through WSL,
 ## Translations
 Help me make some po files! I'm not very fluent in any language except English, so translations would be appreciated. Do NOT include .mo files, I will reject your PR if so.
 ## Roadmap
-- [ ] More options in menu
-- [ ] Number to Roulette
-- [ ] Generate + remove
-- [ ] Keyboard shortcuts
+- [x] More options in menu
+- [x] Number to Roulette
+- [x] Generate + remove
+- [x] Keyboard shortcuts
 - [ ] More translations
 ### Unimportant
 - [ ] Windows package (LTS)
