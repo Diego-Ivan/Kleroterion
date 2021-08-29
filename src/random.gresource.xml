@@ -2,5 +2,6 @@
 <gresources>
   <gresource prefix="/page/codeberg/foreverxml/Random">
     <file>window.ui</file>
+    <file>shortcut.ui</file>
   </gresource>
 </gresources>

@@ -16,6 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 using Gtk;
+using GLib;
 namespace Random {
 	[GtkTemplate (ui = "/page/codeberg/foreverxml/Random/window.ui")]
 	public class Window : Adw.ApplicationWindow {
@@ -31,75 +32,155 @@ namespace Random {
         [GtkChild] private unowned Button cf;
         [GtkChild] private unowned Label cl;
         [GtkChild] private unowned Adw.ViewStackPage rou;
+        [GtkChild] private unowned Adw.ViewStackPage numstack;
         [GtkChild] private unowned Adw.ViewStack stack1;
+        private Rand rand = new Rand ();
+        private ShortcutsWindow shortcuts_window;
 
 
 		public Window (Gtk.Application app) {
 			Object (application: app);
 		}
 
+		private void rands () {
+		    string tex = ctxt.get_text ();
+	        if (cphr.get_text () == "" | cphr.get_text () == null) {
+	            cphr.set_text ("/");
+	        }
+	        string[] texa = tex.split (cphr.get_text ());
+	        string txt = texa[rand.int_range (0, texa.length)];
+	        if (tex == "Hey adora") {
+	            txt = "Catra!? What are you doing here?";
+	        }
+            endc.set_label (txt);
+		}
+
+		private void randn () {
+		    int numb1 = int.parse (num1.get_text ());
+	        int numb2 = int.parse (num2.get_text ()) + 1;
+	        string txt = rand.int_range (numb1, numb2).to_string ();
+	        endn.set_label (txt);
+		}
+
+		private void coins () {
+            int r = rand.int_range (0, 2);
+	        string t = "You got heads!";
+	        if (r == 1) {
+	            t = "You got tails!";
+	        }
+	        cl.set_label (t);
+		}
+
 		construct {
-		    try {
-		    GLib.Rand rand = new GLib.Rand ();
 		    genn.clicked.connect (() => {
-	            int numb1 = int.parse (num1.get_text ());
-	            int numb2 = int.parse (num2.get_text ()) + 1;
-	            string txt = rand.int_range (numb1, numb2).to_string ();
-	            endn.set_label (txt);
+	            randn ();
 	        });
 	        genc.clicked.connect (() => {
-	            string tex = ctxt.get_text ();
-	            if (cphr.get_text () == "" | cphr.get_text () == null) {
-	                cphr.set_text ("/");
-	            }
-	            string[] texa = tex.split (cphr.get_text ());
-	            string txt = texa[rand.int_range (0, texa.length)];
-	            if (tex == "Hey adora") {
-	                txt = "Catra!? What are you doing here?";
-	            }
-                endc.set_label (txt);
+	            rands ();
 	        });
 	        cf.clicked.connect (() => {
-	            int r = rand.int_range (0, 2);
-	            string t = "You got heads!";
-	            if (r == 1) {
-	                t = "You got tails!";
-	            }
-	            cl.set_label (t);
+	            coins ();
 	        });
-	        } catch (Error e) {
-	            print (e.message);
-	        }
 	    }
 
 	    public void about () {
 	        string[] authors = {"Forever XML <foreverxml@tuta.io>"};
-	        Gtk.show_about_dialog (this,
+	        string translators = """Forever XML <foreverxml@tuta.io>"""; //translators: add your names and emails to this table, one per line
+	        show_about_dialog (this,
                 program_name: "Random",
                 logo_icon_name: "page.codeberg.foreverxml.Random",
                 version: "0.6",
                 comments: "Smoooth.",
                 copyright: "Copyright © 2021 Forever XML",
-                license_type: Gtk.License.AGPL_3_0,
+                license_type: License.AGPL_3_0,
                 authors: authors,
+                translator_credits: translators,
                 website: "https://codeberg.org/foreverxml/random",
                 website_label: "Repository");
         }
 
         public void number () {
-            int numb1 = int.parse (num1.get_text ());
-	        int numb2 = int.parse (num2.get_text ()) + 1;
-	        string list = num1.get_text ();
-	        for (int i = numb1 + 1; i < numb2; i++) {
-                list = list + "/" + i.to_string ();
-	        }
-	        ctxt.set_text (list);
-	        cphr.set_text ("/");
-            stack1.set_visible_child (rou.get_child ());
+            if (stack1.get_visible_child () != numstack.get_child ()) {
+                stack1.set_visible_child (numstack.get_child ());
+            } else {
+                int numb1 = int.parse (num1.get_text ());
+	            int numb2 = int.parse (num2.get_text ()) + 1;
+	            string list = num1.get_text ();
+	            for (int i = numb1 + 1; i < numb2; i++) {
+                    list = list + "/" + i.to_string ();
+	            }
+	            try {
+	                ctxt.set_text (list);
+	                cphr.set_text ("/");
+                    stack1.set_visible_child (rou.get_child ());
+                } catch (Error e) {
+                    warning ("In public void number: " + e.message);
+                }
+            }
         }
 
         public void remove () {
+            if (stack1.get_visible_child () != rou.get_child ()) {
+                stack1.set_visible_child (rou.get_child ());
+            } else {
+                rands();
+                string tex = ctxt.get_text ();
+                string split = cphr.get_text ();
+	            string end = endc.get_label ();
+                string[] texa = tex.split (split);
+                try {
+                    for (int i = 0; i < texa.length; i++) {
+                        if (texa[i] == end) {
+                            for (int k = i; k < texa.length - 1; k++) {
+                                texa[k] = texa[k+1];
+                                texa[k+1] = null;
+                            }
+                        }
+                    }
+                } catch (Error e) {
+                    warning ("In public void remove: " + e.message);
+                }
+                texa.resize (texa.length-1);
+                string enda = texa[0];
+                for (int j = 1; j < texa.length; j++) {
+                    enda = enda + split + texa[j];
+                }
+                ctxt.set_text (enda);
+            }
+        }
+
+        public void generate () {
+            if (stack1.get_visible_child () == rou.get_child ()) {
+                rands ();
+            } else if (stack1.get_visible_child () == numstack.get_child ()) {
+                randn ();
+            } else {
+                coins ();
+            }
+        }
+
+        public void shortcuts () {
+            Builder builder = new Builder ();
+            if (shortcuts_window == null) {
+                try {
+                    builder.add_from_resource ("/page/codeberg/foreverxml/Random/shortcut.ui");
+                } catch (Error e) {
+                    error ("Error loading shortcuts window UI: %s", e.message);
+                }
+            }
+
+            shortcuts_window = builder.get_object ("shortcutting") as ShortcutsWindow;
+            shortcuts_window.close.connect ((event) => {
+                shortcuts_window.destroy ();
+                shortcuts_window = null;
+            });
+
+            if (this != shortcuts_window.get_transient_for ()) {
+                shortcuts_window.set_transient_for (this);
+            }
+            shortcuts_window.present ();
 
         }
+        // TODO: public void quit + shortcut + ref in win
 	}
 }

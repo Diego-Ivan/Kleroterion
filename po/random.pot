@@ -136,8 +136,16 @@ msgstr ""
 msgid "You haven't flipped yet!"
 msgstr ""
 
-#: src/window.ui:304
+#: src/window.ui:312
 msgid "About Random"
+msgstr ""
+
+#: src/window.ui:304
+msgid "Number to Roulette"
+msgstr ""
+
+#: src/window.ui:308
+msgid "Remove Picked Item"
 msgstr ""
 
 #: src/window.vala:62

@@ -17,8 +17,12 @@
 using GLib;
 int main (string[] args) {
 	Gtk.Application app = new Gtk.Application ("page.codeberg.foreverxml.Random", ApplicationFlags.FLAGS_NONE);
+
 	SimpleAction about = new SimpleAction ("about", null);
 	SimpleAction number = new SimpleAction ("number", null);
+	SimpleAction remove = new SimpleAction ("remove", null);
+	SimpleAction generate = new SimpleAction ("generate", null);
+	SimpleAction shortcuts = new SimpleAction ("shortcuts", null);
 
 	app.startup.connect (() => {
 	    Adw.init ();
@@ -26,12 +30,22 @@ int main (string[] args) {
 
     app.add_action (about);
     app.add_action (number);
+    app.set_accels_for_action ("app.number", {"<Primary>m"});
+    app.add_action (remove);
+    app.set_accels_for_action ("app.remove", {"<Primary>r"});
+    app.add_action (generate);
+    app.set_accels_for_action ("app.generate", {"<Primary>g"});
+    app.add_action (shortcuts);
+    app.set_accels_for_action ("app.shortcuts", {"<Primary>question"});
 	app.activate.connect (() => {
 		var win = app.active_window;
 		if (win == null) {
 			win = new Random.Window (app);
 			about.activate.connect (() => {((Random.Window) win).about ();});
 			number.activate.connect (() => {((Random.Window) win).number ();});
+			remove.activate.connect (() => {((Random.Window) win).remove ();});
+			generate.activate.connect (() => {((Random.Window) win).generate ();});
+			shortcuts.activate.connect (() => {((Random.Window) win).shortcuts ();});
 		}
 		win.present ();
 	});

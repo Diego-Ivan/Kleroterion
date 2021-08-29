@@ -33,7 +33,7 @@
             <property name="vexpand">1</property>
             <property name="interpolate-size">1</property>
             <child>
-              <object class="AdwViewStackPage">
+              <object class="AdwViewStackPage" id="numstack">
                 <property name="name">Number</property>
                 <property name="title" translatable="yes">Number</property>
                 <property name="icon-name">dialpad-symbolic</property>
@@ -306,6 +306,12 @@
       <item>
         <attribute name="action">app.remove</attribute>
         <attribute name="label" translatable="yes">Remove Picked Item</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="action">app.shortcuts</attribute>
+        <attribute name="label" translatable="yes">Keyboard Shortcuts</attribute>
       </item>
       <item>
         <attribute name="action">app.about</attribute>
