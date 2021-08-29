@@ -228,7 +228,7 @@
               </object>
             </child>
             <child>
-              <object class="AdwViewStackPage">
+              <object class="AdwViewStackPage" id="coinpage">
                 <property name="name">Coin</property>
                 <property name="title" translatable="yes">Coin</property>
                 <property name="icon-name">coin-symbolic</property>

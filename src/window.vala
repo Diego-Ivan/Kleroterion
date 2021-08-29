@@ -20,7 +20,6 @@ using GLib;
 namespace Random {
 	[GtkTemplate (ui = "/page/codeberg/foreverxml/Random/window.ui")]
 	public class Window : Adw.ApplicationWindow {
-	    // TODO: fix error here
 		[GtkChild] private unowned Label endn;
 		[GtkChild] private unowned Entry num1;
 		[GtkChild] private unowned Button genn;
@@ -33,6 +32,7 @@ namespace Random {
         [GtkChild] private unowned Label cl;
         [GtkChild] private unowned Adw.ViewStackPage rou;
         [GtkChild] private unowned Adw.ViewStackPage numstack;
+        [GtkChild] private unowned Adw.ViewStackPage coinpage;
         [GtkChild] private unowned Adw.ViewStack stack1;
         private Rand rand = new Rand ();
         private ShortcutsWindow shortcuts_window;
@@ -90,7 +90,7 @@ namespace Random {
                 program_name: "Random",
                 logo_icon_name: "page.codeberg.foreverxml.Random",
                 version: "0.6",
-                comments: "Smoooth.",
+                comments: "Finally! No more null pointers.",
                 copyright: "Copyright © 2021 Forever XML",
                 license_type: License.AGPL_3_0,
                 authors: authors,
@@ -113,7 +113,7 @@ namespace Random {
 	                ctxt.set_text (list);
 	                cphr.set_text ("/");
                     stack1.set_visible_child (rou.get_child ());
-                } catch (Error e) {
+                } catch (Error e) { // FIXME: unreachable catch clause
                     warning ("In public void number: " + e.message);
                 }
             }
@@ -137,7 +137,7 @@ namespace Random {
                             }
                         }
                     }
-                } catch (Error e) {
+                } catch (Error e) { // FIXME: unreachable catch clause
                     warning ("In public void remove: " + e.message);
                 }
                 texa.resize (texa.length-1);
@@ -181,6 +181,20 @@ namespace Random {
             shortcuts_window.present ();
 
         }
-        // TODO: public void quit + shortcut + ref in win
+
+        public void quit () {
+            this.close ();
+            this.destroy ();
+        }
+
+        public void change () {
+            if (stack1.get_visible_child () == rou.get_child ()) {
+                stack1.set_visible_child (coinpage.get_child ());
+            } else if (stack1.get_visible_child () == coinpage.get_child ()) {
+                stack1.set_visible_child (numstack.get_child ());
+            } else {
+                stack1.set_visible_child (rou.get_child ());
+            }
+        }
 	}
 }

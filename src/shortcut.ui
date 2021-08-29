@@ -13,6 +13,12 @@
                 <property name="title" translatable="yes">View this window</property>
               </object>
             </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">&lt;Primary&gt;Q</property>
+                <property name="title" translatable="yes">Quit Random</property>
+              </object>
+            </child>
           </object>
         </child>
         <child>
@@ -34,6 +40,12 @@
               <object class="GtkShortcutsShortcut">
                 <property name="accelerator">&lt;Primary&gt;G</property>
                 <property name="title" translatable="yes">Pick, spin, or flip</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">&lt;Primary&gt;Tab</property>
+                <property name="title" translatable="yes">Switch views</property>
               </object>
             </child>
           </object>

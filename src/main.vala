@@ -18,34 +18,33 @@ using GLib;
 int main (string[] args) {
 	Gtk.Application app = new Gtk.Application ("page.codeberg.foreverxml.Random", ApplicationFlags.FLAGS_NONE);
 
-	SimpleAction about = new SimpleAction ("about", null);
-	SimpleAction number = new SimpleAction ("number", null);
-	SimpleAction remove = new SimpleAction ("remove", null);
-	SimpleAction generate = new SimpleAction ("generate", null);
-	SimpleAction shortcuts = new SimpleAction ("shortcuts", null);
-
+    string[] actionx = {"about", "number", "remove", "generate", "shortcuts", "quit", "change"};
+    SimpleAction[] actions = new SimpleAction[5];
+    for (int i = 0; i < actionx.length; i++) {
+        actions[i] = new SimpleAction (actionx[i], null);
+        app.add_action (actions[i]);
+    }
 	app.startup.connect (() => {
 	    Adw.init ();
 	});
 
-    app.add_action (about);
-    app.add_action (number);
     app.set_accels_for_action ("app.number", {"<Primary>m"});
-    app.add_action (remove);
     app.set_accels_for_action ("app.remove", {"<Primary>r"});
-    app.add_action (generate);
     app.set_accels_for_action ("app.generate", {"<Primary>g"});
-    app.add_action (shortcuts);
     app.set_accels_for_action ("app.shortcuts", {"<Primary>question"});
+    app.set_accels_for_action ("app.quit", {"<Primary>q"});
+    app.set_accels_for_action ("app.change", {"<Primary>Tab"});
 	app.activate.connect (() => {
 		var win = app.active_window;
 		if (win == null) {
 			win = new Random.Window (app);
-			about.activate.connect (() => {((Random.Window) win).about ();});
-			number.activate.connect (() => {((Random.Window) win).number ();});
-			remove.activate.connect (() => {((Random.Window) win).remove ();});
-			generate.activate.connect (() => {((Random.Window) win).generate ();});
-			shortcuts.activate.connect (() => {((Random.Window) win).shortcuts ();});
+			actions[0].activate.connect (() => {((Random.Window) win).about ();});
+			actions[1].activate.connect (() => {((Random.Window) win).number ();});
+			actions[2].activate.connect (() => {((Random.Window) win).remove ();});
+			actions[3].activate.connect (() => {((Random.Window) win).generate ();});
+			actions[4].activate.connect (() => {((Random.Window) win).shortcuts ();});
+			actions[5].activate.connect (() => {((Random.Window) win).quit ();});
+			actions[6].activate.connect (() => {((Random.Window) win).change ();});
 		}
 		win.present ();
 	});
