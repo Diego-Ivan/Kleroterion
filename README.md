@@ -25,3 +25,5 @@ Help me make some po files! I'm not very fluent in any language except English, 
 - [ ] More translations
 ### Unimportant
 - [ ] Windows package (LTS)
+## Donations
+I am well off and do not need donations. Instead, donate [to trans people in need](https://nitter.snopyta.org/search?q=%23TransCrowdFund).
