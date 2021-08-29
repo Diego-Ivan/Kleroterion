@@ -16,11 +16,11 @@
                 <property name="visible">True</property>
                 <property name="tooltip-text" translatable="yes">Switch between picking a number, spinning a wheel, or flipping a coin.</property>
                 <property name="stack">stack1</property>
-                <property name="title" translatable="yes">Random</property>
+                <property name="title" translatable="yes" comments="Translators: This is a noun and not a verb.">Random</property>
               </object>
             </child>
             <child>
-              <object class="GtkMenuButton">
+              <object class="GtkMenuButton" id="menus">
                 <property name="icon-name">open-menu-symbolic</property>
                 <property name="menu-model">menu</property>
                 <property name="tooltip-text" translatable="yes">Open the Menu</property>
@@ -89,7 +89,7 @@
                                     <child>
                                       <object class="GtkLabel">
                                         <property name="hexpand">1</property>
-                                        <property name="label"> </property>
+                                        <property name="label" translatable="no"> </property>
                                       </object>
                                     </child>
                                     <child>
@@ -103,7 +103,7 @@
                                 </child>
                                 <child>
                                   <object class="GtkLabel">
-                                    <property name="label" translatable="yes"> </property>
+                                    <property name="label" translatable="no"> </property>
                                   </object>
                                 </child>
                               </object>
@@ -203,7 +203,7 @@
                                     </child>
                                     <child>
                                       <object class="GtkLabel">
-                                        <property name="label" translatable="yes"> </property>
+                                        <property name="label" translatable="no"> </property>
                                       </object>
                                     </child>
                                   </object>
@@ -263,7 +263,7 @@
                                 </child>
                                 <child>
                                   <object class="GtkLabel">
-                                    <property name="label" translatable="yes"> </property>
+                                    <property name="label" translatable="no"> </property>
                                   </object>
                                 </child>
                               </object>
@@ -301,11 +301,11 @@
     <section>
       <item>
         <attribute name="action">app.number</attribute>
-        <attribute name="label" translatable="yes">Number to Roulette</attribute>
+        <attribute name="label" translatable="yes">Nu_mber to Roulette</attribute>
       </item>
       <item>
         <attribute name="action">app.remove</attribute>
-        <attribute name="label" translatable="yes">Remove Picked Item</attribute>
+        <attribute name="label" translatable="yes">_Delete Picked Item</attribute>
       </item>
     </section>
     <section>

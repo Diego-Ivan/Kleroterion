@@ -68,11 +68,6 @@ msgstr "Generieren"
 msgid "Generate a random number, and show it below."
 msgstr "Generieren Sie eine Zufallszahl und zeigen Sie sie unten an."
 
-#: src/window.ui:106 src/window.ui:155 src/window.ui:173 src/window.ui:183
-#: src/window.ui:206 src/window.ui:266
-msgid " "
-msgstr " "
-
 #: src/window.ui:114
 msgid "You haven't generated yet!"
 msgstr "Sie haben noch nicht generiert!"

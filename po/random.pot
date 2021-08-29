@@ -67,11 +67,6 @@ msgstr ""
 msgid "Generate a random number, and show it below."
 msgstr ""
 
-#: src/window.ui:106 src/window.ui:155 src/window.ui:173 src/window.ui:183
-#: src/window.ui:206 src/window.ui:266
-msgid " "
-msgstr ""
-
 #: src/window.ui:114
 msgid "You haven't generated yet!"
 msgstr ""
@@ -136,8 +131,12 @@ msgstr ""
 msgid "You haven't flipped yet!"
 msgstr ""
 
-#: src/window.ui:312
+#: src/window.ui:318
 msgid "About Random"
+msgstr ""
+
+#: src/window.ui:314
+msgid "Keyboard Shortcuts"
 msgstr ""
 
 #: src/window.ui:304

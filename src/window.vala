@@ -34,6 +34,7 @@ namespace Random {
         [GtkChild] private unowned Adw.ViewStackPage numstack;
         [GtkChild] private unowned Adw.ViewStackPage coinpage;
         [GtkChild] private unowned Adw.ViewStack stack1;
+        [GtkChild] private unowned MenuButton menus;
         private Rand rand = new Rand ();
         private ShortcutsWindow shortcuts_window;
 
@@ -42,44 +43,33 @@ namespace Random {
 			Object (application: app);
 		}
 
-		private void rands () {
-		    string tex = ctxt.get_text ();
-	        if (cphr.get_text () == "" | cphr.get_text () == null) {
-	            cphr.set_text ("/");
-	        }
-	        string[] texa = tex.split (cphr.get_text ());
-	        string txt = texa[rand.int_range (0, texa.length)];
-	        if (tex == "Hey adora") {
-	            txt = "Catra!? What are you doing here?";
-	        }
-            endc.set_label (txt);
-		}
-
-		private void randn () {
-		    int numb1 = int.parse (num1.get_text ());
-	        int numb2 = int.parse (num2.get_text ()) + 1;
-	        string txt = rand.int_range (numb1, numb2).to_string ();
-	        endn.set_label (txt);
-		}
-
-		private void coins () {
-            int r = rand.int_range (0, 2);
-	        string t = "You got heads!";
-	        if (r == 1) {
-	            t = "You got tails!";
-	        }
-	        cl.set_label (t);
-		}
-
 		construct {
 		    genn.clicked.connect (() => {
-	            randn ();
+	            int numb1 = int.parse (num1.get_text ());
+	            int numb2 = int.parse (num2.get_text ()) + 1;
+	            string txt = rand.int_range (numb1, numb2).to_string ();
+	            endn.set_label (txt);
 	        });
 	        genc.clicked.connect (() => {
-	            rands ();
+	            string tex = ctxt.get_text ();
+	            if (cphr.get_text () == "" | cphr.get_text () == null) {
+	                cphr.set_text ("/");
+	                debug ("Setting seperator to /; no seperator found.");
+	            }
+	            string[] texa = tex.split (cphr.get_text ());
+	            string txt = texa[rand.int_range (0, texa.length)];
+	            if (tex == "Hey adora") {
+	                txt = "Catra!? What are you doing here?";
+	            }
+                endc.set_label (txt);
 	        });
 	        cf.clicked.connect (() => {
-	            coins ();
+	            int r = rand.int_range (0, 2);
+	            string t = "You got heads!";
+	            if (r == 1) {
+	                t = "You got tails!";
+	            }
+	            cl.set_label (t);
 	        });
 	    }
 
@@ -87,6 +77,7 @@ namespace Random {
 	        string[] authors = {"Forever XML <foreverxml@tuta.io>"};
 	        string translators = """Forever XML <foreverxml@tuta.io>"""; //translators: add your names and emails to this table, one per line
 	        show_about_dialog (this,
+	            // Translators: This is a noun and not a verb.
                 program_name: "Random",
                 logo_icon_name: "page.codeberg.foreverxml.Random",
                 version: "0.6",
@@ -123,25 +114,29 @@ namespace Random {
             if (stack1.get_visible_child () != rou.get_child ()) {
                 stack1.set_visible_child (rou.get_child ());
             } else {
-                rands();
+                genc.activate ();
                 string tex = ctxt.get_text ();
+                if (tex == "") { return; }
                 string split = cphr.get_text ();
 	            string end = endc.get_label ();
                 string[] texa = tex.split (split);
-                try {
-                    for (int i = 0; i < texa.length; i++) {
-                        if (texa[i] == end) {
-                            for (int k = i; k < texa.length - 1; k++) {
-                                texa[k] = texa[k+1];
-                                texa[k+1] = null;
-                            }
+                string enda;
+                for (int i = 0; i < texa.length; i++) {
+                    if (texa[i] == end) {
+                        for (int k = i; k < texa.length - 1; k++) {
+                            texa[k] = texa[k+1];
+                            texa[k+1] = null;
                         }
+                        break;
                     }
-                } catch (Error e) { // FIXME: unreachable catch clause
-                    warning ("In public void remove: " + e.message);
+                }
+                if (texa.length == 1) {
+                    texa[0] = null;
+                    ctxt.set_text ("");
+                    return;
                 }
                 texa.resize (texa.length-1);
-                string enda = texa[0];
+                enda = texa[0];
                 for (int j = 1; j < texa.length; j++) {
                     enda = enda + split + texa[j];
                 }
@@ -151,11 +146,11 @@ namespace Random {
 
         public void generate () {
             if (stack1.get_visible_child () == rou.get_child ()) {
-                rands ();
+                genc.activate ();
             } else if (stack1.get_visible_child () == numstack.get_child ()) {
-                randn ();
+                genn.activate ();
             } else {
-                coins ();
+                cf.activate ();
             }
         }
 
@@ -195,6 +190,10 @@ namespace Random {
             } else {
                 stack1.set_visible_child (rou.get_child ());
             }
+        }
+
+        public void menuopener () {
+            menus.popup ();
         }
 	}
 }
