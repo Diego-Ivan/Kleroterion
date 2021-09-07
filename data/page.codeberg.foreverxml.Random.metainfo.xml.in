@@ -5,14 +5,11 @@
   <launchable type="desktop-id">page.codeberg.foreverxml.Random.desktop</launchable>
 	<metadata_license>CC0-1.0</metadata_license>
   <name>Random</name>
-  <summary>A randomization app for GNOME</summary>
+  <summary>Make randomization easy</summary>
 	<project_license>AGPL-3.0-or-later</project_license>
 	<description>
 	    <p>
 	      A tool to pick a random number or list item. Pick what chore to do, a number between 1 and 100, whether or not to jump on your mom's bed, etc.
-	    </p>
-	    <p>
-	      All while being free.
 	    </p>
 	</description>
   <content_rating type="oars-1.1" />
@@ -43,8 +40,12 @@
     <binary>randomgtk</binary>
   </provides>
   <requires>
+    <display_length compare="ge">375</display_length>
+  </requires>
+  <reccomends>
     <control>touch</control>
     <control>pointing</control>
-  </requires>
+    <control>keyboard</control>
+  </reccomends>
   <developer_name>Forever XML</developer_name>
 </component>

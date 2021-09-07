@@ -2,7 +2,7 @@
   <requires lib="gtk" version="4.0"/>
   <template class="RandomWindow" parent="AdwApplicationWindow">
     <property name="title" translatable="yes">Random</property>
-    <property name="default-width">375</property>
+    <property name="default-width">500</property>
     <property name="default-height">375</property>
     <property name="icon-name">page.codeberg.foreverxml.Random</property>
     <child>
