@@ -1,6 +1,8 @@
 # Random
 <a href='https://flathub.org/apps/details/page.codeberg.foreverxml.Random'><img width='240' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.png'/></a>
 
+[![Please do not theme this app](https://stopthemingmy.app/badge.svg)](https://stopthemingmy.app)
+
 Random is a random number generator that can randomly pick from a list, written in Vala.
 ## Uses
 - Choose what to do for a date
@@ -15,6 +17,8 @@ Use GNOME Builder to build this. If you don't want it in Flatpak, you can figure
 Download it from Flathub by clicking the really big button above, or head on over to the [Releases](https://codeberg.org/foreverxml/random/releases) page and grab the latest Flatpak, then install it.
 ### Windows
 I don't support anything but Flatpak. You will have to run this app through WSL, although Windows is such a privacy nightmare I do not support WSL. The app may be broken on Windows too. My reccomendation is to use this app on GNOME *NIX systems.
+## Issues
+When reporting an issue, it must affect the app as it comes. If you're using a different visual stylesheet (if so, you really hacked it on) I will not help you with your "issue".
 ## Translations
 Help me make some po files! I'm not very fluent in any language except English, so translations would be appreciated. Do NOT include .mo files, I will reject your PR if so.
 ## Roadmap
@@ -22,6 +26,7 @@ Help me make some po files! I'm not very fluent in any language except English, 
 - [x] Number to Roulette
 - [x] Generate + remove
 - [x] Keyboard shortcuts
+- [ ] Random accents
 - [ ] More translations
 ### Unimportant
 - [ ] Windows package (LTS)

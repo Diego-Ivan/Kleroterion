@@ -37,6 +37,7 @@ namespace Random {
         [GtkChild] private unowned MenuButton menus;
         private Rand rand = new Rand ();
         private ShortcutsWindow shortcuts_window;
+        private CssProvider css = new CssProvider ();
 
 
 		public Window (Gtk.Application app) {
@@ -44,6 +45,10 @@ namespace Random {
 		}
 
 		construct {
+
+		    string cssf = rand.int_range (1, 7).to_string ();
+		    css.load_from_resource ("/page/codeberg/foreverxml/Random/" + cssf + ".css");
+		    StyleContext.add_provider_for_display(Gdk.Display.get_default (), css, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 		    genn.clicked.connect (() => {
 	            int numb1 = int.parse (num1.get_text ());
 	            int numb2 = int.parse (num2.get_text ()) + 1;
@@ -80,8 +85,8 @@ namespace Random {
 	            // Translators: This is a noun and not a verb.
                 program_name: "Random",
                 logo_icon_name: "page.codeberg.foreverxml.Random",
-                version: "0.6",
-                comments: "Finally! No more null pointers.",
+                version: "0.7",
+                comments: "Is it brown, green, blue...",
                 copyright: "Copyright © 2021 Forever XML",
                 license_type: License.AGPL_3_0,
                 authors: authors,

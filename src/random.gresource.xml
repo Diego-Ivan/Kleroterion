@@ -3,5 +3,12 @@
   <gresource prefix="/page/codeberg/foreverxml/Random">
     <file>window.ui</file>
     <file>shortcut.ui</file>
+    <file>1.css</file>
+    <file>2.css</file>
+    <file>3.css</file>
+    <file>4.css</file>
+    <file>5.css</file>
+    <file>6.css</file>
+    <file>7.css</file>
   </gresource>
 </gresources>
