@@ -5,13 +5,13 @@
     <property name="default-width">500</property>
     <property name="default-height">375</property>
     <property name="icon-name">page.codeberg.foreverxml.Random</property>
+
     <child>
       <object class="GtkBox">
         <property name="orientation">vertical</property>
         <child>
           <object class="AdwHeaderBar" id="headerBar">
             <property name="visible">True</property>
-
             <child type="title">
               <object class="AdwViewSwitcherTitle">
                 <property name="visible">True</property>
@@ -25,6 +25,9 @@
                 <property name="icon-name">open-menu-symbolic</property>
                 <property name="menu-model">menu</property>
                 <property name="tooltip-text" translatable="yes">Open the Menu</property>
+                <style>
+                  <class name="flat" />
+                </style>
               </object>
             </child>
           </object>

@@ -24,42 +24,38 @@
     ],
     "modules" : [
         {
-            "name" : "libsass",
-            "sources" : [
+            "name": "libsass",
+            "sources": [
                 {
                     "type" : "archive",
                     "url" : "https://github.com/sass/libsass/archive/3.6.4.tar.gz",
-                    "sha256" : "f9484d9a6df60576e791566eab2f757a97fd414fce01dd41fc0a693ea5db2889"
+                    "sha256": "f9484d9a6df60576e791566eab2f757a97fd414fce01dd41fc0a693ea5db2889"
                 },
                 {
                     "type" : "script",
                     "dest-filename" : "autogen.sh",
-                    "commands" : [
-                        "autoreconf -si"
-                    ]
+                    "commands" : [ "autoreconf -si" ]
                 }
             ]
         },
         {
-            "name" : "sassc",
-            "sources" : [
+            "name": "sassc",
+            "sources": [
                 {
                     "type" : "archive",
                     "url" : "https://github.com/sass/sassc/archive/3.6.1.tar.gz",
-                    "sha256" : "8cee391c49a102b4464f86fc40c4ceac3a2ada52a89c4c933d8348e3e4542a60"
+                    "sha256": "8cee391c49a102b4464f86fc40c4ceac3a2ada52a89c4c933d8348e3e4542a60"
                 },
                 {
                     "type" : "script",
                     "dest-filename" : "autogen.sh",
-                    "commands" : [
-                        "autoreconf -si"
-                    ]
+                    "commands" : [ "autoreconf -si" ]
                 }
             ]
         },
         {
             "name" : "libadwaita",
-            "buildsystem" : "meson",
+            "buildsystem": "meson",
             "config-opts" : [
                 "-Dexamples=false",
                 "-Dtests=false"
@@ -80,12 +76,9 @@
                 {
                     "type" : "git",
                     "url" : "https://codeberg.org/foreverxml/random.git",
-                    "branch" : "main"
+                    "branch": "main"
                 }
             ]
         }
-    ],
-    "build-options" : {
-        "env" : {        }
-    }
+    ]
 }

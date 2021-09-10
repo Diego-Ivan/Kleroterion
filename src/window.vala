@@ -85,7 +85,7 @@ namespace Random {
 	            // Translators: This is a noun and not a verb.
                 program_name: "Random",
                 logo_icon_name: "page.codeberg.foreverxml.Random",
-                version: "0.7",
+                version: "0.8.devel",
                 comments: "Is it brown, green, blue...",
                 copyright: "Copyright © 2021 Forever XML",
                 license_type: License.AGPL_3_0,
@@ -105,13 +105,9 @@ namespace Random {
 	            for (int i = numb1 + 1; i < numb2; i++) {
                     list = list + "/" + i.to_string ();
 	            }
-	            try {
-	                ctxt.set_text (list);
-	                cphr.set_text ("/");
-                    stack1.set_visible_child (rou.get_child ());
-                } catch (Error e) { // FIXME: unreachable catch clause
-                    warning ("In public void number: " + e.message);
-                }
+	            ctxt.set_text (list);
+	            cphr.set_text ("/");
+                stack1.set_visible_child (rou.get_child ());
             }
         }
 
