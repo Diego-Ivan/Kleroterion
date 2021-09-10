@@ -26,13 +26,6 @@ int main (string[] args) {
     }
 	app.startup.connect (() => {
 	    Adw.init ();
-	    Settings setting = new Settings ("page.codeberg.foreverxml.Random");
-	    bool theme = setting.get_boolean ("dark");
-	    var gtk_settings = Gtk.Settings.get_default ();
-	    debug (theme.to_string ());
-	    if (theme) {
-            gtk_settings.gtk_application_prefer_dark_theme = true;
-		}
 	});
     app.set_accels_for_action ("app.number", {"<Primary>m"});
     app.set_accels_for_action ("app.remove", {"<Primary>d"});

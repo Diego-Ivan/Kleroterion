@@ -27,7 +27,7 @@
   <url type="homepage">https://codeberg.org/foreverxml/random</url>
   <releases>
     <release version="0.7" date="2021-08-09">
-      <p>Hopefully, a working dark mode, and some nice random colors.</p>
+      <p>Some nice random colors.</p>
     </release>
     <release version="0.6" date="2021-07-29">
       <p>This release adds tons of new actions and keyboard shortcuts too.</p>
