@@ -11,8 +11,6 @@
   </shortdesc>
   <description xml:lang="en">
       A tool to pick a random number or list item. Pick what chore to do, a number between 1 and 100, whether or not to jump on your mom's bed, etc.
-
-    NOTE: This app has hard-coded dark mode. This will likely change in GNOME 41.
   </description>
   <homepage rdf:resource="https://codeberg.org/foreverxml/random" />
   <bug-database rdf:resource="https://codeberg.org/foreverxml/random/issues" />

@@ -5,7 +5,6 @@
     <property name="default-width">500</property>
     <property name="default-height">375</property>
     <property name="icon-name">page.codeberg.foreverxml.Random</property>
-
     <child>
       <object class="GtkBox">
         <property name="orientation">vertical</property>
@@ -20,10 +19,11 @@
                 <property name="title" translatable="yes" comments="Translators: This is a noun and not a verb.">Random</property>
               </object>
             </child>
-            <child>
+            <child type="end">
               <object class="GtkMenuButton" id="menus">
                 <property name="icon-name">open-menu-symbolic</property>
                 <property name="menu-model">menu</property>
+                <property name="valign">center</property>
                 <property name="tooltip-text" translatable="yes">Open the Menu</property>
                 <style>
                   <class name="flat" />

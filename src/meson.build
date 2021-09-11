@@ -4,9 +4,11 @@ random_sources = [
 ]
 
 random_deps = [
-  dependency('gio-2.0', version: '>= 2.50'),
+  dependency('glib-2.0', version: '>= 2.66'),
+  dependency('gio-2.0', version: '>= 2.66'),
+  dependency('gdk-pixbuf-2.0'),
   dependency('gtk4', version: '>= 4.2.0'),
-  dependency('libadwaita-1') # FIXME: newer GTK and adw
+  dependency('libadwaita-1', version: '>= 1.0.0') # FIXME: newer GTK and adw
 ]
 
 gnome = import('gnome')

@@ -97,7 +97,7 @@ namespace Random {
 
         public void number () {
             if (stack1.get_visible_child () != numstack.get_child ()) {
-                stack1.set_visible_child (numstack.get_child ());
+                stack1.set_visible_child (numstack.get_child ()); // TODO bigger menu btn
             } else {
                 int numb1 = int.parse (num1.get_text ());
 	            int numb2 = int.parse (num2.get_text ()) + 1;
