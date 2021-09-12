@@ -84,7 +84,7 @@ namespace Random {
                 program_name: "Random",
                 logo_icon_name: "page.codeberg.foreverxml.Random",
                 version: "0.8.devel",
-                comments: "Is it brown, green, blue...",
+                comments: "What is the icon on this time?",
                 copyright: "Copyright © 2021 Forever XML",
                 license_type: License.AGPL_3_0,
                 authors: authors,
