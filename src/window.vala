@@ -45,9 +45,7 @@ namespace Random {
 		}
 
 		construct {
-
-		    string cssf = rand.int_range (1, 7).to_string ();
-		    css.load_from_resource ("/page/codeberg/foreverxml/Random/" + cssf + ".css");
+		    css.load_from_resource ("/page/codeberg/foreverxml/Random/style.css");
 		    StyleContext.add_provider_for_display(Gdk.Display.get_default (), css, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 		    genn.clicked.connect (() => {
 	            int numb1 = int.parse (num1.get_text ());
