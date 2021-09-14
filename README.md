@@ -5,7 +5,7 @@ Make randomization easy
 
 [![Please do not theme this app](https://stopthemingmy.app/badge.svg)](https://stopthemingmy.app) [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
-<p align="center"><img width='240' style="width: 90%;" alt='Screenshot of main UI' src='https://codeberg.org/foreverxml/random/raw/branch/main/screenshots/number.png'/></p>
+<img width='240' style="width: 100%;" alt='Screenshot of main UI' src='https://codeberg.org/foreverxml/random/raw/branch/main/screenshots/number.png'/>
 
 <p align="center"><a href='https://flathub.org/apps/details/page.codeberg.foreverxml.Random'><img width='240' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.png'/></a></p>
 
