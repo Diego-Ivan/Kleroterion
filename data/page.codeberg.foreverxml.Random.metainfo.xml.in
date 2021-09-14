@@ -27,16 +27,24 @@
   <url type="homepage">https://codeberg.org/foreverxml/random</url>
   <releases>
     <release version="0.7" date="2021-08-09">
-      <p>Some nice random colors.</p>
+      Version 0.7 "Circus":
+      
+      Adds some nice random colors.
     </release>
     <release version="0.6" date="2021-07-29">
-      <p>This release adds tons of new actions and keyboard shortcuts too.</p>
+      Version 0.6 "Advancing":
+
+      Adds tons of new actions and keyboard shortcuts too.
     </release>
     <release version="0.5" date="2021-07-23">
-      <p>Adds a menu and some bugfixes.</p>
+      Version 0.5 "Caterpillar":
+      
+      Adds a menu and some bugfixes.
     </release>
     <release version="0.4" date="2021-07-15">
-      <p>First Flathub release with GTK 4</p>
+      Version 0.4 "Flat":
+
+      First Flathub release with GTK 4.
     </release>
   </releases>
   <provides>
