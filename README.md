@@ -1,11 +1,11 @@
-<img align="left" style="vertical-align: middle" width="128" height="128" src="https://codeberg.org/foreverxml/random/raw/branch/main/data/icon.png">
+<img align="left" style="vertical-align: middle;" width="160" height="160" src="https://codeberg.org/foreverxml/random/raw/branch/main/data/icon.png">
 
 # Random
 Make randomization easy
 
-[![Please do not theme this app](https://stopthemingmy.app/badge.svg)](https://stopthemingmy.app) [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+[![Please do not theme this app](https://stopthemingmy.app/badge.svg)](https://stopthemingmy.app) [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://codeberg.org/foreverxml/random/src/branch/main/COPYING)
 
-![Screenshot of startup UI of Random](screenshots/number.png)
+<p align="center"><img alt="A screenshot of the main chrome of Random" src="https://codeberg.org/foreverxml/random/raw/branch/main/screenshots/number.png" /></p>
 
 <p align="center"><a href='https://flathub.org/apps/details/page.codeberg.foreverxml.Random'><img width='240' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.png'/></a></p>
 
@@ -18,12 +18,10 @@ Make randomization easy
 - Anything
 ## Building
 Use GNOME Builder to build this. If you don't want it in Flatpak, you can figure that out.
-## Downloading and using
+## Downloading & using
 Download it from Flathub by clicking the really big button above, or head on over to the [Releases](https://codeberg.org/foreverxml/random/releases) page and grab the latest Flatpak, then install it.
 ### Windows
 I don't support anything but Flatpak. You will have to run this app through WSL, although Windows is such a privacy nightmare I do not support WSL. The app may be broken on Windows too. My reccomendation is to use this app on GNOME *NIX systems.
-## Issues
-When reporting an issue, it must affect the app as it comes. If you're using a different visual stylesheet (if so, you really hacked it on) I will not help you with your "issue". 
 ## Translations
 Help me make some po files! I'm not very fluent in any language except English, so translations would be appreciated. Do NOT include .mo files, I will reject your PR if so.
 ## Roadmap
