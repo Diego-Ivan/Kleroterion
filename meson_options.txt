@@ -1,4 +1,0 @@
-option('devel',
-       type: 'boolean', value: true,
-       description: 'Turn on devel markings')
-       # FIXME: make this WORK JYGJMH
