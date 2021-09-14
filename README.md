@@ -22,11 +22,7 @@ When reporting an issue, it must affect the app as it comes. If you're using a d
 ## Translations
 Help me make some po files! I'm not very fluent in any language except English, so translations would be appreciated. Do NOT include .mo files, I will reject your PR if so.
 ## Roadmap
-- [x] More options in menu
-- [x] Number to Roulette
-- [x] Generate + remove
-- [x] Keyboard shortcuts
-- [ ] Random accents
+- [x] ~~Random accents~~ Orange accent
 - [ ] More translations
 ### Unimportant
 - [ ] Windows package (LTS)
