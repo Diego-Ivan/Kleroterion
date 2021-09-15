@@ -1,7 +1,9 @@
-<img align="left" style="vertical-align: middle; margin-top: 10px;" width="150" height="150" src="https://codeberg.org/foreverxml/random/raw/branch/main/data/icon.png">
+<img align="left" style="vertical-align: middle;" width="150" height="150" src="https://codeberg.org/foreverxml/random/raw/branch/main/data/icon.png">
 
 # Random
 Make randomization easy
+
+
 
 [![Please do not theme this app](https://stopthemingmy.app/badge.svg)](https://stopthemingmy.app) [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://codeberg.org/foreverxml/random/src/branch/main/COPYING)
 
