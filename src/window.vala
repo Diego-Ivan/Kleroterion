@@ -83,8 +83,8 @@ namespace Random {
 	            // Translators: This is a noun and not a verb.
                 program_name: "Random",
                 logo_icon_name: "page.codeberg.foreverxml.Random",
-                version: "0.8.devel",
-                comments: "What is the icon on this time?",
+                version: "0.8",
+                comments: "So you're telling me it was the SAME DAY?",
                 copyright: "Copyright © 2021 Forever XML",
                 license_type: License.AGPL_3_0,
                 authors: authors,
