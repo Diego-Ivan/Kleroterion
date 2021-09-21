@@ -19,15 +19,12 @@
                 <property name="title" translatable="yes" comments="Translators: This is a noun and not a verb.">Random</property>
               </object>
             </child>
-            <child type="end">
+            <child type="start">
               <object class="GtkMenuButton" id="menus">
                 <property name="icon-name">open-menu-symbolic</property>
                 <property name="menu-model">menu</property>
                 <property name="valign">center</property>
                 <property name="tooltip-text" translatable="yes">Open the Menu</property>
-                <style>
-                  <class name="flat" />
-                </style>
               </object>
             </child>
           </object>
