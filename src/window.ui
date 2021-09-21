@@ -294,7 +294,6 @@
         <child>
           <object class="AdwViewSwitcherBar">
             <property name="visible">True</property>
-            <property name="policy">auto</property>
             <property name="stack">stack1</property>
           </object>
         </child>
