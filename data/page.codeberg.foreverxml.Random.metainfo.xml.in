@@ -27,9 +27,9 @@
   <url type="homepage">https://codeberg.org/foreverxml/random</url>
   <releases>
     <release version="0.8" date="2021-09-22">
-      Version 0.7 "Sync":
+      Version 0.8 "Sync":
 
-      Makes some things more stable... but wait! GNOME 41 day has come on the same day as this.
+      Removes the random colors for a noticable identity, and uses the latest GNOME 41 things, that came out on the same day as this.
     </release>
     <release version="0.7" date="2021-08-09">
       Version 0.7 "Circus":
