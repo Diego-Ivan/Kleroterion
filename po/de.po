@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Random v0.6\n"
 "POT-Creation-Date: 2021-08-23 21:40-0600\n"
-"PO-Revision-Date: 2021-08-23 22:18-0600\n"
+"PO-Revision-Date: 2021-09-21 17:04-0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -19,16 +19,18 @@ msgstr ""
 "X-Poedit-SearchPath-3: src/window.ui\n"
 
 #: src/window.ui:4 src/window.ui:19
-#: data/page.codeberg.foreverxml.Random.desktop.in:2 src/window.vala:77
+#: data/page.codeberg.foreverxml.Random.desktop.in:2 src/window.vala:84
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:7
 msgid "Random"
 msgstr "Willkürlich"
 
 #: src/window.ui:17
 msgid "Switch between picking a number, spinning a wheel, or flipping a coin."
-msgstr "Wechseln Sie zwischen dem Wählen einer Zahl, dem Drehen eines Rades oder dem Werfen einer Münze."
+msgstr ""
+"Wechseln Sie zwischen dem Wählen einer Zahl, dem Drehen eines Rades oder dem "
+"Werfen einer Münze."
 
-#: src/window.ui:26
+#: src/window.ui:27
 msgid "Open the Menu"
 msgstr "Öffnen Sie das Menü"
 
@@ -36,123 +38,140 @@ msgstr "Öffnen Sie das Menü"
 msgid "Number"
 msgstr "Nummer"
 
-#: src/window.ui:63
+#: src/window.ui:64
 msgid " Pick a number from "
 msgstr " Wähle eine Nummer aus "
 
-#: src/window.ui:68
-msgid "Put the lower number in your number range here (for example, put a 1 here if you want to generate a number from 1 to 10)"
-msgstr "Geben Sie hier die niedrigere Zahl in Ihrem Nummernkreis ein (geben Sie beispielsweise hier eine 1 ein, wenn Sie eine Zahl von 1 bis 10 generieren möchten)"
+#: src/window.ui:69
+msgid ""
+"Put the lower number in your number range here (for example, put a 1 here if "
+"you want to generate a number from 1 to 10)"
+msgstr ""
+"Geben Sie hier die niedrigere Zahl in Ihrem Nummernkreis ein (geben Sie "
+"beispielsweise hier eine 1 ein, wenn Sie eine Zahl von 1 bis 10 generieren "
+"möchten)"
 
-#: src/window.ui:70
+#: src/window.ui:71
 msgid "1"
 msgstr "1"
 
-#: src/window.ui:77
-msgid " to "
+#: src/window.ui:78
+msgid "to"
 msgstr " zu "
 
-#: src/window.ui:82
-msgid "Put the higher number in your number range here (for example, put a 10 here if you want to generate a number from 1 to 10)"
-msgstr "Geben Sie hier die höhere Zahl in Ihrem Nummernkreis ein (geben Sie beispielsweise hier eine 10 ein, wenn Sie eine Zahl von 1 bis 10 generieren möchten)"
+#: src/window.ui:83
+msgid ""
+"Put the higher number in your number range here (for example, put a 10 here "
+"if you want to generate a number from 1 to 10)"
+msgstr ""
+"Geben Sie hier die höhere Zahl in Ihrem Nummernkreis ein (geben Sie "
+"beispielsweise hier eine 10 ein, wenn Sie eine Zahl von 1 bis 10 generieren "
+"möchten)"
 
-#: src/window.ui:84
+#: src/window.ui:85
 msgid "10"
 msgstr "10"
 
-#: src/window.ui:97
+#: src/window.ui:98
 msgid "Generate"
 msgstr "Generieren"
 
-#: src/window.ui:99
+#: src/window.ui:100
 msgid "Generate a random number, and show it below."
 msgstr "Generieren Sie eine Zufallszahl und zeigen Sie sie unten an."
 
-#: src/window.ui:114
+#: src/window.ui:115
 msgid "You haven't generated yet!"
 msgstr "Sie haben noch nicht generiert!"
 
-#: src/window.ui:131
+#: src/window.ui:132
 msgid "Roulette"
 msgstr "Roulette"
 
-#: src/window.ui:161
+#: src/window.ui:162
 msgid "Write your options below. separate them with:"
 msgstr "Schreiben Sie Ihre Optionen unten. Trennen Sie sie mit:"
 
-#: src/window.ui:166
+#: src/window.ui:167
 msgid "Type your separator here (for example, “/” for list “GNOME/KDE/XFCE”.)"
-msgstr "Geben Sie hier Ihr Trennzeichen ein (zum Beispiel „/“ für die Liste „GNOME/KDE/XFCE“.)"
+msgstr ""
+"Geben Sie hier Ihr Trennzeichen ein (zum Beispiel „/“ für die Liste „GNOME/"
+"KDE/XFCE“.)"
 
-#: src/window.ui:168
+#: src/window.ui:169
 msgid "/"
 msgstr "/"
 
-#: src/window.ui:189
-msgid "Type your list here (for example, “GNOME/KDE/XFCE” with separator “/”.)"
-msgstr "Geben Sie hier Ihre Liste ein (z. B. „GNOME/KDE/XFCE“ mit Trennzeichen „/“.)"
-
 #: src/window.ui:190
+msgid "Type your list here (for example, “GNOME/KDE/XFCE” with separator “/”.)"
+msgstr ""
+"Geben Sie hier Ihre Liste ein (z. B. „GNOME/KDE/XFCE“ mit Trennzeichen „/“.)"
+
+#: src/window.ui:191
 msgid "One/Two/Three"
 msgstr "Eins/Zwei/Drei"
 
-#: src/window.ui:192 src/window.ui:193
+#: src/window.ui:194 src/window.ui:193
 msgid "Insert Emoji"
 msgstr "Emoji einfügen"
 
-#: src/window.ui:199
+#: src/window.ui:200
 msgid "Pick"
 msgstr "Wählen"
 
-#: src/window.ui:201
+#: src/window.ui:202
 msgid "Spin the wheel and see what it lands on!"
 msgstr "Drehen Sie das Rad und sehen Sie, worauf es landet!"
 
-#: src/window.ui:216
+#: src/window.ui:217
 msgid "You haven't rolled yet!"
 msgstr "Du hast noch nicht gewürfelt!"
 
-#: src/window.ui:233
+#: src/window.ui:234
 msgid "Coin"
 msgstr "Münze"
 
-#: src/window.ui:254
+#: src/window.ui:255
 msgid "Click the button to flip the coin!"
 msgstr "Klicken Sie auf die Schaltfläche, um die Münze zu werfen!"
 
-#: src/window.ui:259
+#: src/window.ui:260
 msgid "Flip"
 msgstr "Umdrehen"
 
-#: src/window.ui:261
+#: src/window.ui:262
 msgid "Flip the coin."
 msgstr "Die Münze umdrehen."
 
-#: src/window.ui:274
+#: src/window.ui:275
 msgid "You haven't flipped yet!"
 msgstr "Du hast noch nicht umgedreht!"
 
-#: src/window.ui:312
+#: src/window.ui:319
 msgid "About Random"
 msgstr "Über Willkürlich"
 
-#: src/window.ui:304
+#: src/window.ui:315
+msgid "Keyboard Shortcuts"
+msgstr "Tastatürkürzel"
+
+#: src/window.ui:305
 msgid "Number to Roulette"
-msgstr ""
+msgstr "Nummer zum Roulette"
 
-#: src/window.ui:308
+#: src/window.ui:309
 msgid "Remove Picked Item"
-msgstr ""
+msgstr "Ausgewählten Artikel entfernen"
 
-#: src/window.vala:62
+#: src/window.vala:71
 msgid "You got heads!"
 msgstr "Du hast Köpfe!"
 
-#: src/window.vala:64
+#: src/window.vala:73
 msgid "You got tails!"
 msgstr "Du hast Schwänze!"
 
-#: src/window.vala:84
+#: src/window.vala:93
 msgid "Repository"
 msgstr "Repository"
 
@@ -161,13 +180,33 @@ msgid "GTK;GNOME;Utility;"
 msgstr "GTK;GNOME;Dienstprogramm;"
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:8
-msgid "A randomization app for GNOME"
-msgstr "Eine Randomisierungs-App für GNOME"
+msgid "Make randomization easy"
+msgstr "Machen Sie die Randomisierung einfach"
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:12
-msgid "A tool to pick a random number or list item. Pick what chore to do, a number between 1 and 100, whether or not to jump on your mom's bed, etc."
-msgstr "Ein Werkzeug zum Auswählen einer Zufallszahl oder eines Listenelements. Wählen Sie aus, was Sie tun möchten, eine Zahl zwischen 1 und 100, ob Sie auf das Bett Ihrer Mutter springen oder nicht, usw."
+msgid ""
+"A tool to pick a random number or list item. Pick what chore to do, a number "
+"between 1 and 100, whether or not to jump on your mom's bed, etc."
+msgstr ""
+"Ein Werkzeug zum Auswählen einer Zufallszahl oder eines Listenelements. "
+"Wählen Sie aus, was Sie tun möchten, eine Zahl zwischen 1 und 100, ob Sie "
+"auf das Bett Ihrer Mutter springen oder nicht, usw."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:15
-msgid "All while being free."
-msgstr "Und das alles, während Sie frei sind."
+#: src/shortcut.ui:13
+msgid "Convert from Number to Roulette"
+msgstr "Von Nummer in Roulette umwandeln"
+
+#: src/shortcut.ui:19
+msgid "Spin Roulette and delete selected"
+msgstr "Roulette drehen und ausgewählte löschen"
+
+#: src/shortcut.ui:25
+msgid "Pick, spin, or flip"
+msgstr "Wählen, drehen oder umdrehen"
+
+#: src/shortcut.ui:31
+msgid "Switch views"
+msgstr "Ansichten wechseln"
+
+#~ msgid "All while being free."
+#~ msgstr "Und das alles, während Sie frei sind."

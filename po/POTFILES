@@ -4,4 +4,4 @@ data/page.codeberg.foreverxml.Random.gschema.xml
 src/window.ui
 src/main.vala
 src/window.vala
-
+src/shortcut.ui

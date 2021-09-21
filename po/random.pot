@@ -170,3 +170,19 @@ msgstr ""
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:12
 msgid "A tool to pick a random number or list item. Pick what chore to do, a number between 1 and 100, whether or not to jump on your mom's bed, etc."
 msgstr ""
+
+#: src/shortcut.ui:13
+msgid "Convert from Number to Roulette"
+msgstr ""
+
+#: src/shortcut.ui:19
+msgid "Spin Roulette and delete selected"
+msgstr ""
+
+#: src/shortcut.ui:25
+msgid "Pick, spin, or flip"
+msgstr ""
+
+#: src/shortcut.ui:31
+msgid "Switch views"
+msgstr ""
