@@ -1,7 +1,7 @@
 {
     "app-id" : "page.codeberg.foreverxml.Random",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "41rc",
+    "runtime-version" : "master",
     "sdk" : "org.gnome.Sdk",
     "command" : "randomgtk",
     "finish-args" : [
