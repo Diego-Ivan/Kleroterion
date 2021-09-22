@@ -78,8 +78,8 @@ namespace Random {
 
 	    public void about () {
 	        string[] authors = {"Forever XML <foreverxml@tuta.io>"};
-	        string translators = """Forever XML <foreverxml@tuta.io>
-                                    Teackot <k.qovekt@gmail.com>"""; //translators: add your names and emails to this table, one per line
+	        string[] translators = "Forever XML <foreverxml@tuta.io>",
+                                   "Teackot <k.qovekt@gmail.com>"; //translators: add your names and emails to this table, one per line
 	        show_about_dialog (this,
 	            // Translators: This is a noun and not a verb.
                 program_name: "Random",
