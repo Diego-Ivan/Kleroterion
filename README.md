@@ -28,6 +28,7 @@ Help me make some po files! I'm not very fluent in any language except English, 
 - [x] ~~Random accents~~ Orange accent
 - [x] Codenames for releases
 - [x] Newer libadwaita design
+- [ ] GitHub and GNOME GitLab mirrors
 - [ ] Copy result keyboard shortcut and menu item
 - [ ] More translations
 ### Unimportant
