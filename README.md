@@ -27,6 +27,8 @@ Help me make some po files! I'm not very fluent in any language except English, 
 ## Roadmap
 - [x] ~~Random accents~~ Orange accent
 - [x] Codenames for releases
+- [x] Newer libadwaita design
+- [ ] Copy result keyboard shortcut and menu item
 - [ ] More translations
 ### Unimportant
 - [ ] Windows package (LTS)
