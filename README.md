@@ -28,8 +28,10 @@ Help me make some po files! I'm not very fluent in any language except English, 
 - [x] ~~Random accents~~ Orange accent
 - [x] Codenames for releases
 - [x] Newer libadwaita design
-- [ ] GitHub and GNOME GitLab mirrors
+- [x] GNOME GitLab mirror
+- [ ] GitHub mirror
 - [ ] Copy result keyboard shortcut and menu item
+- [x] Working translations (thanks to [teackot](https://codeberg.org/teackot)
 - [ ] More translations
 ### Unimportant
 - [ ] Windows package (LTS)
