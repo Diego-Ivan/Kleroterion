@@ -1,16 +1,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Random v0.6\n"
-"POT-Creation-Date: 2021-08-23 21:40-0600\n"
-"PO-Revision-Date: 2021-08-23 22:10-0600\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2021-09-22 21:27+0300\n"
+"PO-Revision-Date: 2021-09-22 22:58+0300\n"
+"Last-Translator: teackot\n"
 "Language-Team: \n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.0\n"
 "X-Poedit-Basepath: ..\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "X-Poedit-KeywordsList: translatable=\"true\";\"\n"
 "X-Poedit-SearchPath-0: data/page.codeberg.foreverxml.Random.desktop.in\n"
 "X-Poedit-SearchPath-1: data/page.codeberg.foreverxml.Random.metainfo.xml.in\n"
@@ -25,24 +27,27 @@ msgstr ""
 #: src/window.ui:17
 msgid "Switch between picking a number, spinning a wheel, or flipping a coin."
 msgstr ""
+"Переключение между выбором числа, вращением колеса и подбрасыванием монеты."
 
 #: src/window.ui:27
 msgid "Open the Menu"
-msgstr ""
+msgstr "Открыть меню"
 
 #: src/window.ui:39
 msgid "Number"
-msgstr ""
+msgstr "Число"
 
 #: src/window.ui:64
 msgid " Pick a number from "
-msgstr ""
+msgstr " Сгенерировать число от "
 
 #: src/window.ui:69
 msgid ""
 "Put the lower number in your number range here (for example, put a 1 here if "
 "you want to generate a number from 1 to 10)"
 msgstr ""
+"Введите минимальное число вашего диапазона (например, введите 1, если вы "
+"хотите сгенерировать число от 1 до 10)"
 
 #: src/window.ui:71
 msgid "1"
@@ -50,13 +55,15 @@ msgstr ""
 
 #: src/window.ui:78
 msgid " to "
-msgstr ""
+msgstr " до "
 
 #: src/window.ui:83
 msgid ""
 "Put the higher number in your number range here (for example, put a 10 here "
 "if you want to generate a number from 1 to 10)"
 msgstr ""
+"Введите максимальное число вашего диапазона (например, введите 10, если вы "
+"хотите сгенерировать число от 1 до 10)"
 
 #: src/window.ui:85
 msgid "10"
@@ -64,19 +71,19 @@ msgstr ""
 
 #: src/window.ui:98
 msgid "Generate"
-msgstr ""
+msgstr "Генерировать"
 
 #: src/window.ui:100
 msgid "Generate a random number, and show it below."
-msgstr ""
+msgstr "Сгенерировать случайное число и показать его ниже."
 
 #: src/window.ui:115
 msgid "You haven't generated yet!"
-msgstr ""
+msgstr " Вы ещё ничего не генерировали! "
 
 #: src/window.ui:132
 msgid "Roulette"
-msgstr ""
+msgstr "Рулетка"
 
 #: src/window.ui:156 src/window.ui:174 src/window.ui:184
 msgid " "
@@ -84,11 +91,12 @@ msgstr ""
 
 #: src/window.ui:162
 msgid "Write your options below. Separate them with:"
-msgstr ""
+msgstr "Введите свои варианты ниже. Разделяйте их с помощью:"
 
 #: src/window.ui:167
 msgid "Type your separator here (for example, “/” for list “GNOME/KDE/XFCE”.)"
 msgstr ""
+"Введите свой разделитель (например, \"/\" для списка “GNOME/KDE/XFCE”.)"
 
 #: src/window.ui:169
 msgid "/"
@@ -97,10 +105,11 @@ msgstr ""
 #: src/window.ui:190
 msgid "Type your list here (for example, “GNOME/KDE/XFCE” with separator “/”.)"
 msgstr ""
+"Введите свой список здесь (например, “GNOME/KDE/XFCE” с разделителем \"/\".)"
 
 #: src/window.ui:191
 msgid "One/Two/Three"
-msgstr ""
+msgstr "Один/Два/Три"
 
 #: src/window.ui:193 src/window.ui:194
 msgid "Insert Emoji"
@@ -108,63 +117,63 @@ msgstr ""
 
 #: src/window.ui:200
 msgid "Pick"
-msgstr ""
+msgstr "Крутить"
 
 #: src/window.ui:202
 msgid "Spin the wheel and see what it lands on!"
-msgstr ""
+msgstr "Раскрутите колесо и посмотрите, что вам выпадет!"
 
 #: src/window.ui:217
 msgid "You haven't rolled yet!"
-msgstr ""
+msgstr "Вы ещё не запускали рулетку!"
 
 #: src/window.ui:234
 msgid "Coin"
-msgstr ""
+msgstr "Монетка"
 
 #: src/window.ui:255
 msgid "Click the button to flip the coin!"
-msgstr ""
+msgstr "Нажмите, чтобы подбросить монетку!"
 
 #: src/window.ui:260
 msgid "Flip"
-msgstr ""
+msgstr "Подбросить"
 
 #: src/window.ui:262
 msgid "Flip the coin."
-msgstr ""
+msgstr "Подбросить монетку."
 
 #: src/window.ui:275
 msgid "You haven't flipped yet!"
-msgstr ""
+msgstr " Вы ещё не подбрасывали монетку! "
 
 #: src/window.ui:304
 msgid "Nu_mber to Roulette"
-msgstr ""
+msgstr "Преобразовать числа в рулетку"
 
 #: src/window.ui:308
 msgid "_Delete Picked Item"
-msgstr ""
+msgstr "Удалить выбранный вариант"
 
 #: src/window.ui:314
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Комбинации клавиш"
 
 #: src/window.ui:318
 msgid "About Random"
-msgstr ""
+msgstr "О приложении"
 
 #: src/window.vala:71
 msgid "You got heads!"
-msgstr ""
+msgstr "Орёл!"
 
 #: src/window.vala:73
 msgid "You got tails!"
-msgstr ""
+msgstr "Решка!"
 
 #: src/window.vala:93
 msgid "Repository"
-msgstr ""
+msgstr "Репозиторий"
 
 #: data/page.codeberg.foreverxml.Random.desktop.in:7
 msgid "GTK;GNOME;Utility;"
@@ -172,24 +181,24 @@ msgstr ""
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:8
 msgid "Make randomization easy"
-msgstr ""
+msgstr "Рандомизация ещё никогда не была такой простой"
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:12
 msgid "A tool to pick a random number or list item. Pick what chore to do, a number between 1 and 100, whether or not to jump on your mom's bed, etc."
-msgstr ""
+msgstr "Инструмент для генерации случайных чисел или выбора случайного элемента списка. Выберите чем вам заняться, число от 1 до 100, попрыгать ли на маминой кровати, и т. д."
 
 #: src/shortcut.ui:13
 msgid "Convert from Number to Roulette"
-msgstr ""
+msgstr "Преобразовать числа в рулетку"
 
 #: src/shortcut.ui:19
 msgid "Spin Roulette and delete selected"
-msgstr ""
+msgstr "Крутить колесо и удалить выпавший элемент"
 
 #: src/shortcut.ui:25
 msgid "Pick, spin, or flip"
-msgstr ""
+msgstr "Генерировать, крутить или подбросить"
 
 #: src/shortcut.ui:31
 msgid "Switch views"
-msgstr ""
+msgstr "Переключить режимы"

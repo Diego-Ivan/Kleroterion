@@ -8,6 +8,8 @@ project('random', ['c', 'vala'],
 i18n = import('i18n')
 gnome = import('gnome')
 
+localedir = join_paths(get_option('prefix'), get_option('localedir'))
+
 subdir('data')
 subdir('src')
 subdir('po')

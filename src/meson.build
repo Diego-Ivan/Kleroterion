@@ -1,6 +1,7 @@
 random_sources = [
   'main.vala',
   'window.vala',
+  'config.vapi',
 ]
 
 random_deps = [
@@ -19,6 +20,10 @@ random_sources += gnome.compile_resources('random-resources',
 )
 
 executable('randomgtk', random_sources,
+  c_args: [
+    '-DGETTEXT_PACKAGE="randomgtk"',
+    '-DLOCALEDIR="@0@"'.format(localedir),
+  ],
   vala_args: '--target-glib=2.50',  dependencies: random_deps,
   install: true,
 )

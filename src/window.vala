@@ -68,9 +68,9 @@ namespace Random {
 	        });
 	        cf.clicked.connect (() => {
 	            int r = rand.int_range (0, 2);
-	            string t = "You got heads!";
+	            string t = _("You got heads!");
 	            if (r == 1) {
-	                t = "You got tails!";
+	                t = _("You got tails!");
 	            }
 	            cl.set_label (t);
 	        });
@@ -78,7 +78,8 @@ namespace Random {
 
 	    public void about () {
 	        string[] authors = {"Forever XML <foreverxml@tuta.io>"};
-	        string translators = """Forever XML <foreverxml@tuta.io>"""; //translators: add your names and emails to this table, one per line
+	        string translators = """Forever XML <foreverxml@tuta.io>
+                                    Teackot <k.qovekt@gmail.com>"""; //translators: add your names and emails to this table, one per line
 	        show_about_dialog (this,
 	            // Translators: This is a noun and not a verb.
                 program_name: "Random",
@@ -90,7 +91,7 @@ namespace Random {
                 authors: authors,
                 translator_credits: translators,
                 website: "https://codeberg.org/foreverxml/random",
-                website_label: "Repository");
+                website_label: _("Repository"));
         }
 
         public void number () {

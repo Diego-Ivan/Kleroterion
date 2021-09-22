@@ -17,6 +17,12 @@
 using GLib;
 // TODO better close button
 int main (string[] args) {
+	// Init gettext
+	Intl.setlocale (LocaleCategory.ALL, "");
+	Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
+	Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+	Intl.textdomain (GETTEXT_PACKAGE);
+
 	Gtk.Application app = new Gtk.Application ("page.codeberg.foreverxml.Random", ApplicationFlags.FLAGS_NONE);
 
     string[] actionx = {"about", "number", "remove", "generate", "shortcuts", "quit", "change", "menuopener"};
