@@ -18,9 +18,12 @@ msgstr ""
 "X-Poedit-SearchPath-1: data/page.codeberg.foreverxml.Random.metainfo.xml.in\n"
 "X-Poedit-SearchPath-2: src/window.vala\n"
 "X-Poedit-SearchPath-3: src/window.ui\n"
+"X-Poedit-SearchPath-4: src/shortcut.ui\n"
 
 #. Translators: This is a noun and not a verb.
 #: src/window.ui:4 src/window.ui:19
+#: data/page.codeberg.foreverxml.Random.desktop.in:2 src/window.vala:85
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:7
 msgid "Random"
 msgstr ""
 
