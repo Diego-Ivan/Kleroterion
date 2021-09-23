@@ -79,13 +79,13 @@ namespace Random {
 	    public void about () {
 	        string[] authors = {"Forever XML <foreverxml@tuta.io>"};
 	        string[] translators = "Forever XML <foreverxml@tuta.io>",
-                                   "Teackot <k.qovekt@gmail.com>"; //translators: add your names and emails to this table, one per line
+                                   "Teackot <k.qovekt@gmail.com>"; //translators: add your names and emails to this table, one per line as shown
 	        show_about_dialog (this,
 	            // Translators: This is a noun and not a verb.
-                program_name: "Random",
+                program_name: _("Random"),
                 logo_icon_name: "page.codeberg.foreverxml.Random",
-                version: "0.8",
-                comments: "So you're telling me it was the SAME DAY?",
+                version: "0.9",
+                comments: "Where are you from?",
                 copyright: "Copyright © 2021 Forever XML",
                 license_type: License.AGPL_3_0,
                 authors: authors,
