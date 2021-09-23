@@ -25,7 +25,7 @@ msgstr ""
 #: data/page.codeberg.foreverxml.Random.desktop.in:2 src/window.vala:85
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:7
 msgid "Random"
-msgstr ""
+msgstr "Случайный"
 
 #: src/window.ui:17
 msgid "Switch between picking a number, spinning a wheel, or flipping a coin."
