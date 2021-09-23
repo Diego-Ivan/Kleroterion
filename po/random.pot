@@ -19,6 +19,8 @@ msgstr ""
 
 #. Translators: This is a noun and not a verb.
 #: src/window.ui:4 src/window.ui:19
+#: data/page.codeberg.foreverxml.Random.desktop.in:2 src/window.vala:85
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:7
 msgid "Random"
 msgstr ""
 
