@@ -19,7 +19,7 @@ msgstr ""
 "X-Poedit-SearchPath-3: src/window.ui\n"
 
 #: src/window.ui:4 src/window.ui:19
-#: data/page.codeberg.foreverxml.Random.desktop.in:2 src/window.vala:84
+#: data/page.codeberg.foreverxml.Random.desktop.in:2 src/window.vala:85
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:7
 msgid "Random"
 msgstr "Willkürlich"
