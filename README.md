@@ -3,7 +3,7 @@
 # Random
 Make randomization easy
 
-[![Please do not theme this app](https://stopthemingmy.app/badge.svg)](https://stopthemingmy.app) [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://codeberg.org/foreverxml/random/src/branch/main/COPYING)
+[![Please do not theme this app](https://stopthemingmy.app/badge.svg)](https://stopthemingmy.app) [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://codeberg.org/foreverxml/random/src/branch/main/COPYING) [![Matrix](https://img.shields.io/matrix/randomgtk:matrix.org?label=Chat&server_fqdn=matrix.org)](https://matrix.to/#/#randomgtk:matrix.org)
 
 <p align="center"><img alt="A screenshot of the main chrome of Random" src="https://codeberg.org/foreverxml/random/raw/branch/main/screenshots/number.png" /></p>
 
