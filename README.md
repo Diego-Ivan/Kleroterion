@@ -3,7 +3,7 @@
 # Random
 Make randomization easy
 
-[![Please do not theme this app](https://stopthemingmy.app/badge.svg)](https://stopthemingmy.app) [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://codeberg.org/foreverxml/random/src/branch/main/COPYING)
+[![Please do not theme this app](https://stopthemingmy.app/badge.svg)](https://stopthemingmy.app) [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://codeberg.org/foreverxml/random/src/branch/main/COPYING) [![Matrix](https://img.shields.io/matrix/randomgtk:matrix.org?label=Chat&server_fqdn=matrix.org)](https://matrix.to/#/#randomgtk:matrix.org)
 
 <p align="center"><img alt="A screenshot of the main chrome of Random" src="https://codeberg.org/foreverxml/random/raw/branch/main/screenshots/number.png" /></p>
 
@@ -17,7 +17,7 @@ Make randomization easy
 - For science!
 - Anything
 ## Building
-Use GNOME Builder to build this. If you don't want it in Flatpak, you can figure that out.
+Use GNOME Builder >= 3.28 to build this. If you don't want it in Flatpak, you can figure that out.
 ## Downloading & using
 Download it from Flathub by clicking the really big button above, or head on over to the [Releases](https://codeberg.org/foreverxml/random/releases) page and grab the latest Flatpak, then install it.
 ### Windows
@@ -31,9 +31,13 @@ Help me make some po files! I'm not very fluent in any language except English, 
 - [x] GNOME GitLab mirror
 - [ ] GitHub mirror
 - [ ] Copy result keyboard shortcut and menu item
-- [x] Working translations (thanks to [teackot](https://codeberg.org/teackot))
+- [x] Working translations (thanks to [teackot](https://codeberg.org/teackot) and [DiegoIvan](https://codeberg.org/DiegoIvan)) 
 - [ ] More translations
 ### Unimportant
 - [ ] Windows package (LTS)
+## Contributors
+Look in [CONTRIBUTORS.md](https://codeberg.org/foreverxml/random/src/branch/main/CONTRIBUTORS.md). If you are a contributor, open an issue or PR adding yourself to CONTRIBUTORS.md.
+## Conduct
+This project follows the [GNOME Code of Conduct](https://wiki.gnome.org/Foundation/CodeOfConduct).
 ## Donations
 I am well off and do not need donations. Instead, donate [to trans people in need](https://nitter.snopyta.org/search?q=%23TransCrowdFund).
