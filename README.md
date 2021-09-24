@@ -31,7 +31,7 @@ Help me make some po files! I'm not very fluent in any language except English, 
 - [x] GNOME GitLab mirror
 - [ ] GitHub mirror
 - [ ] Copy result keyboard shortcut and menu item
-- [x] Working translations (thanks to [teackot](https://codeberg.org/teackot))
+- [x] Working translations (thanks to [teackot](https://codeberg.org/teackot) and [DiegoIvan](https://codeberg.org/DiegoIvan)) 
 - [ ] More translations
 ### Unimportant
 - [ ] Windows package (LTS)
