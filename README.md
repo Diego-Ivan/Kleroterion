@@ -20,6 +20,8 @@ Make randomization easy
 Use GNOME Builder >= 3.28 to build this. If you don't want it in Flatpak, you can figure that out.
 ## Downloading & using
 Download it from Flathub by clicking the really big button above, or head on over to the [Releases](https://codeberg.org/foreverxml/random/releases) page and grab the latest Flatpak, then install it.
+### A note
+You can get it through the user-submitted AUR repo, but that will usually be out of date. The method I support the most is Flathub/Flatpak.
 ### Windows
 I don't support anything but Flatpak. You will have to run this app through WSL, although Windows is such a privacy nightmare I do not support WSL. The app may be broken on Windows too. My reccomendation is to use this app on GNOME *NIX systems.
 ## Translations
