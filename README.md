@@ -36,10 +36,6 @@ Help me make some po files! I'm not very fluent in any language except English, 
 ### Unimportant
 - [ ] Windows package (LTS)
 ## Contributors
-[![Avatar for codeberg user foreverxml](https://codeberg.org/avatars/4c7e2bd23686887461866119ce0285d8?size=500)](https://codeberg.org/foreverxml)|[![Avatar for codeberg user teackot](https://codeberg.org/avatars/f67529aade56ea65c1b260770485d969?size=500)](https://codeberg.org/teackot)|
----|---
-🎨🤔🚧👀🌍💻|🌍
-
-Uses [emoji key](https://allcontributors.org/docs/en/emoji-key).
+Look in [CONTRIBUTORS.md](https://codeberg.org/foreverxml/random/src/branch/main/CONTRIBUTORS.md). If you are a contributor, open an issue or PR adding yourself to CONTRIBUTORS.md - 
 ## Donations
 I am well off and do not need donations. Instead, donate [to trans people in need](https://nitter.snopyta.org/search?q=%23TransCrowdFund).
