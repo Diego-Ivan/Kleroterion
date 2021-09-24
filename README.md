@@ -17,7 +17,7 @@ Make randomization easy
 - For science!
 - Anything
 ## Building
-Use GNOME Builder to build this. If you don't want it in Flatpak, you can figure that out.
+Use GNOME Builder >= 3.28 to build this. If you don't want it in Flatpak, you can figure that out.
 ## Downloading & using
 Download it from Flathub by clicking the really big button above, or head on over to the [Releases](https://codeberg.org/foreverxml/random/releases) page and grab the latest Flatpak, then install it.
 ### Windows
