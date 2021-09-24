@@ -36,6 +36,8 @@ Help me make some po files! I'm not very fluent in any language except English, 
 ### Unimportant
 - [ ] Windows package (LTS)
 ## Contributors
-Look in [CONTRIBUTORS.md](https://codeberg.org/foreverxml/random/src/branch/main/CONTRIBUTORS.md). If you are a contributor, open an issue or PR adding yourself to CONTRIBUTORS.md - 
+Look in [CONTRIBUTORS.md](https://codeberg.org/foreverxml/random/src/branch/main/CONTRIBUTORS.md). If you are a contributor, open an issue or PR adding yourself to CONTRIBUTORS.md.
+## Conduct
+This project follows the [GNOME Code of Conduct](https://wiki.gnome.org/Foundation/CodeOfConduct).
 ## Donations
 I am well off and do not need donations. Instead, donate [to trans people in need](https://nitter.snopyta.org/search?q=%23TransCrowdFund).
