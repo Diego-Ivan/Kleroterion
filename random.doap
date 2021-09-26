@@ -21,6 +21,12 @@
     <foaf:Person>
       <foaf:name>Forever XML</foaf:name>
       <foaf:mbox rdf:resource="mailto:foreverxml@tuta.io" />
+      <foaf:account>
+        <foaf:OnlineAccount>
+          <foaf:accountServiceHomepage rdf:resource="https://codeberg.org"/>
+          <foaf:accountName>foreverxml</foaf:accountName>
+        </foaf:OnlineAccount>
+      </foaf:account>
     </foaf:Person>
   </maintainer>
 </Project>
