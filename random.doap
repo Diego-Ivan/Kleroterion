@@ -7,14 +7,13 @@
 
   <name xml:lang="en">Random</name>
   <shortdesc xml:lang="en">
-      Random number/list picker
+      Make randomization easy
   </shortdesc>
   <description xml:lang="en">
       A tool to pick a random number or list item. Pick what chore to do, a number between 1 and 100, whether or not to jump on your mom's bed, etc.
   </description>
   <homepage rdf:resource="https://codeberg.org/foreverxml/random" />
   <bug-database rdf:resource="https://codeberg.org/foreverxml/random/issues" />
-
   <category rdf:resource="http://api.gnome.org/doap-extensions#apps" />
   <programming-language>Vala</programming-language>
 
