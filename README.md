@@ -21,19 +21,19 @@ Make randomization easy
 - Choose what to do for a date
 - Play a number-guess game
 - Choose between coffee or tea
-- Pick what to greet your step-aunt with
 - For science!
-- Anything
-## Downloading & using
-Download it from Flathub by clicking the really big button above, or head on over to the [Releases](https://codeberg.org/foreverxml/random/releases) page and grab the latest Flatpak, then install it.
+## Download Random!
+Download it from Flathub by clicking the really big button above.
 ## Techy stuff
 <details>
 <summary>Show the techy stuff</summary>
 
+## Another way to download
+Head on over to the [Releases](https://codeberg.org/foreverxml/random/releases) page and grab the latest Flatpak, then install it.
+### A note for downloading & using
+You can get it through the user-submitted AUR repo, but that will usually be out of date. The method I support the most is Flathub/Flatpak.
 ## Building
 Use GNOME Builder >= 3.28 to build this. If you don't want it in Flatpak, you can figure that out.
-## A note for downloading & using
-You can get it through the user-submitted AUR repo, but that will usually be out of date. The method I support the most is Flathub/Flatpak.
 ### Windows
 I don't support anything but Flatpak. You will have to run this app through WSL, although Windows is such a privacy nightmare I do not support WSL. The app may be broken on Windows too. My reccomendation is to use this app on GNOME *NIX systems.
 ## Translations
