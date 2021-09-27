@@ -63,6 +63,24 @@
         <p>First Flathub release with GTK 4.</p>
       </description>
     </release>
+    <release version="0.3" date="2021-08-15">
+      <description>
+        <p>Version 0.3 "Penny":</p>
+        <p>Adds a coin flip view and an improved UI.</p>
+      </description>
+    </release>
+    <release version="0.2" date="2021-07-31">
+      <description>
+        <p>Version 0.2 "Makeover":</p>
+        <p>Follows the GNOME HIG and uses libhandy.</p>
+      </description>
+    </release>
+    <release version="0.1" date="2021-07-31">
+      <description>
+        <p>Version 0.1 "Beginning":</p>
+        <p>The first release, welcome to the world!</p>
+      </description>
+    </release>
   </releases>
   <provides>
     <binary>randomgtk</binary>
