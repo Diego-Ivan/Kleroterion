@@ -68,7 +68,7 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/GNOME/libadwaita.git",
-                    "commit" : "facaa00ccba548b31608d6d746f25fda1ba48af4"
+                    "commit" : "23f15dd6f6c2ed6bbd028623f5f31323ea293a5f"
                 }
             ]
         },
@@ -78,9 +78,8 @@
             "buildsystem" : "meson",
             "sources" : [
                 {
-                    "type" : "git",
-                    "url" : "https://codeberg.org/foreverxml/random.git",
-                    "branch" : "main"
+                    "type" : "dir",
+                    "path" : "."
                 }
             ]
         }
