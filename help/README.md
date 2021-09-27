@@ -1,19 +1,20 @@
 # Random
 Random aims to make randomization easy. But, just in case it is not easy, these help pages will make using Random very easy.
 ## Contents
-[How to pick a number](#how-to-pick-a-number)
-[How to pick a number](#how-to-pick-an-item-in-roulette)
+* [How to pick a number](#how-to-pick-a-number)
+* [How to pick an item in Roulette](#how-to-pick-an-item-in-roulette)
+    + [Why the separator?](#why-the-separator)
+* [Switching between the views](#switching-between-the-views)
 ## How to pick a number
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. ut enim mortis metu omnis quietae vitae status perturbatur, et ut succumbere doloribus eosque humili animo inbecilloque ferre miserum est, ob eamque causam.
+Random will launch in the *Number* view, denoted by a keypad in the view switcher. To generate a number, you need to have a range of numbers; for this example, that range is from 15 to 30. You put your lower number in the **first box** and the higher number in the **second box**. For our exaple, 15 goes in the first box and 30 goes into the second. Then, click the *Generate* button to generate a number, or press `Ctrl` + `G` on your keyboard. You can see how it's done below:
 
-Dubium, quin id sit summum atque extremum bonorum omnium, beateque vivere nihil aliud sit nisi cum voluptate vivere. Huic certae stabilique sententiae quae sint coniuncta explicabo brevi. nullus in ipsis error est finibus bonorum et malorum fere a nobis explicatam esse his litteris arbitramur, in quibus, quantum potuimus, non modo nullam captet, sed etiam effectrices sunt voluptatum tam.
-
-Hoc, qui eum unum secutus esset, nollem vituperatum. Iam in altera philosophiae parte. quae est quaerendi ac disserendi, quae logikh dicitur, iste vester plane, ut mihi quidem nulli satis eruditi videntur, quibus nostra ignota sunt.
-
-Ne iustitiam quidem recte quis dixerit per se ipsa allicit nec patientia nec assiduitas nec vigiliae nec ea ipsa, quae laudatur, industria, ne fortitudo quidem, sed ista sequimur, ut sine cura metuque vivamus animumque et corpus, quantum efficere possimus, molestia liberemus. ut enim aeque doleamus.
-
-Consequamur? clamat Epicurus, is quem vos nimis voluptatibus esse deditum dicitis; non posse iucunde vivi, nisi sapienter, honeste iusteque vivatur, nec sapienter, honeste, iuste, nisi iucunde. Neque enim civitas in seditione beata esse potest nec in.
-
-Summo bono, dolorem aspernari ut summum malum et, quantum possit, a se ipse dissidens secumque discordans gustare partem ullam liquidae voluptatis et liberae potest. atqui pugnantibus et contrariis studiis consiliisque semper utens nihil quieti videre, nihil tranquilli potest. Quodsi corporis gravioribus morbis vitae iucunditas impeditur, quanto magis animi morbis impediri necesse est! animi autem.
+![Generating a number in Random](./screenshots/number.gif)
 ## How to pick an item in Roulette
-[a](#random)
+You will have to [switch views](#switching-between-the-views) to use the *Roulette* view. To roll the *Roulette* wheel, you have to have a list, and a separator. Let's consider the list `A, B, C, D`. That list would be the list, and the separator would be `, ` with that extra space. Paste or write your list in the long box, and in the short box write in your separator. Then, click the *Pick* button, or press `Ctrl` + `G` to spin the *Roulette* wheel. You can see how it's done below:
+
+![Spinning the Roulette wheel in Random](./screenshots/roulette.gif)
+### Why the separator?
+Due to how *Random* works, you need a separator to separate the contents of the list. *Random* cannot automatically detect your separator.
+## How to flip a coin
+
+## Switching between the views
