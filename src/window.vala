@@ -46,7 +46,7 @@ namespace Random {
 
 		construct {
 		    css.load_from_resource ("/page/codeberg/foreverxml/Random/style.css");
-		    StyleContext.add_provider_for_display(Gdk.Display.get_default (), css, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+		    StyleContext.add_provider_for_display (Gdk.Display.get_default (), css, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 		    genn.clicked.connect (() => {
 	            int numb1 = int.parse (num1.get_text ());
 	            int numb2 = int.parse (num2.get_text ()) + 1;
@@ -57,7 +57,6 @@ namespace Random {
 	            string tex = ctxt.get_text ();
 	            if (cphr.get_text () == "" | cphr.get_text () == null) {
 	                cphr.set_text ("/");
-	                debug ("Setting seperator to /; no seperator found.");
 	            }
 	            string[] texa = tex.split (cphr.get_text ());
 	            string txt = texa[rand.int_range (0, texa.length)];
@@ -196,6 +195,22 @@ namespace Random {
 
         public void menuopener () {
             menus.popup ();
+        }
+
+        public void copy () {
+            Gdk.Clipboard clip = get_clipboard ();
+            if (stack1.get_visible_child () == rou.get_child ()) {
+                clip.set_text (endc.get_label ());
+            } else if (stack1.get_visible_child () == coinpage.get_child ()) {
+                string cfres = cf.get_label ();
+                if (cfres == _("You got heads!")) {
+                    clip.set_text (_("Heads"));
+                } else if (cfres == _("You got tails!")) {
+                    clip.set_text (_("Tails"));
+                }
+            } else {
+                clip.set_text (endn.get_label ());
+            }
         }
 	}
 }

@@ -157,12 +157,20 @@ msgstr ""
 msgid "About Random"
 msgstr ""
 
-#: src/window.vala:71
+#: src/window.vala:71 src/window.vala:206
 msgid "You got heads!"
 msgstr ""
 
-#: src/window.vala:73
+#: src/window.vala:73 src/window.vala:208
 msgid "You got tails!"
+msgstr ""
+
+#: src/window.vala:207
+msgid "Heads"
+msgstr ""
+
+#: src/window.vala:209
+msgid "Tails"
 msgstr ""
 
 #: src/window.vala:93
