@@ -28,34 +28,40 @@
   <url type="bugtracker">https://codeberg.org/foreverxml/random/issues</url>
   <releases>
     <release version="0.9" date="2021-09-23">
-      Version 0.9 "Global":
-
-      Translated into German and Russian.
+      <description>
+        <p>Version 0.9 "Global":</p>
+        <p>Translated into German and Russian.</p>
+      </description>
     </release>
     <release version="0.8" date="2021-09-22">
-      Version 0.8 "Sync":
-
-      Removes the random colors for a noticable identity, and uses the latest GNOME 41 things, that came out on the same day as this.
+      <description>
+        <p>Version 0.8 "Sync":</p>
+        <p>Removes the random colors for a noticable identity, and uses the latest GNOME 41 things, that came out on the same day as this.</p>
+      </description>
     </release>
     <release version="0.7" date="2021-09-09">
-      Version 0.7 "Circus":
-      
-      Adds some nice random colors.
+      <description>
+        <p>Version 0.7 "Circus":</p>
+        <p>Adds some nice random colors.</p>
+      </description>
     </release>
     <release version="0.6" date="2021-08-29">
-      Version 0.6 "Advancing":
-
-      Adds tons of new actions and keyboard shortcuts too.
+      <description>
+        <p>Version 0.6 "Advancing":</p>
+        <p>Adds tons of new actions and keyboard shortcuts too.</p>
+      </description>
     </release>
     <release version="0.5" date="2021-08-23">
-      Version 0.5 "Caterpillar":
-      
-      Adds a menu and some bugfixes.
+      <description>
+        <p>Version 0.5 "Caterpillar":</p>
+        <p>Adds a menu and some bugfixes.</p>
+      </description>
     </release>
     <release version="0.4" date="2021-08-15">
-      Version 0.4 "Flat":
-
-      First Flathub release with GTK 4.
+      <description>
+        <p>Version 0.4 "Flat":</p>
+        <p>First Flathub release with GTK 4.</p>
+      </description>
     </release>
   </releases>
   <provides>
