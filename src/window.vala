@@ -114,33 +114,37 @@ namespace Random {
             if (stack1.get_visible_child () != rou.get_child ()) {
                 stack1.set_visible_child (rou.get_child ());
             } else {
-                genc.activate ();
-                string tex = ctxt.get_text ();
-                if (tex == "") { return; }
-                string split = cphr.get_text ();
-	            string end = endc.get_label ();
-                string[] texa = tex.split (split);
-                string enda;
-                for (int i = 0; i < texa.length; i++) {
-                    if (texa[i] == end) {
-                        for (int k = i; k < texa.length - 1; k++) {
-                            texa[k] = texa[k+1];
-                            texa[k+1] = null;
+                if (endc.get_text () == _("You haven't rolled yet!")) {
+                    genc.activate ();
+                } else {
+                    genc.activate ();
+                    string tex = ctxt.get_text ();
+                    if (tex == "") { return; }
+                    string split = cphr.get_text ();
+	                string end = endc.get_label ();
+                    string[] texa = tex.split (split);
+                    string enda;
+                    for (int i = 0; i < texa.length; i++) {
+                        if (texa[i] == end) {
+                            for (int k = i; k < texa.length - 1; k++) {
+                                texa[k] = texa[k+1];
+                                texa[k+1] = null;
+                            }
+                            break;
                         }
-                        break;
                     }
+                    if (texa.length == 1) {
+                        texa[0] = null;
+                        ctxt.set_text ("");
+                        return;
+                    }
+                    texa.resize (texa.length-1);
+                    enda = texa[0];
+                    for (int j = 1; j < texa.length; j++) {
+                        enda = enda + split + texa[j];
+                    }
+                    ctxt.set_text (enda);
                 }
-                if (texa.length == 1) {
-                    texa[0] = null;
-                    ctxt.set_text ("");
-                    return;
-                }
-                texa.resize (texa.length-1);
-                enda = texa[0];
-                for (int j = 1; j < texa.length; j++) {
-                    enda = enda + split + texa[j];
-                }
-                ctxt.set_text (enda);
             }
         }
 
@@ -188,6 +192,12 @@ namespace Random {
         }
 
         public void copy () {
+            if (num1.has_focus ||
+                num2.has_focus ||
+                cphr.has_focus ||
+                ctxt.has_focus ) {
+                    return;
+            }
             Gdk.Clipboard clip = get_clipboard ();
             if (stack1.get_visible_child () == rou.get_child ()) {
                 clip.set_text (endc.get_label ());
@@ -201,6 +211,10 @@ namespace Random {
             } else {
                 clip.set_text (endn.get_label ());
             }
+        }
+
+        public void help () {
+            Gtk.show_uri (this, "https://codeberg.org/foreverxml/random/src/branch/main/help/README.md", Gdk.CURRENT_TIME);
         }
 	}
 }

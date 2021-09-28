@@ -25,8 +25,8 @@ int main (string[] args) {
 
 	Gtk.Application app = new Gtk.Application ("page.codeberg.foreverxml.Random", ApplicationFlags.FLAGS_NONE);
 
-    string[] actionx = {"about", "number", "remove", "generate", "shortcuts", "quit", "change", "menuopener"};
-    SimpleAction[] actions = new SimpleAction[7];
+    string[] actionx = {"about", "number", "remove", "generate", "shortcuts", "quit", "change", "menuopener", "help", "copy"};
+    SimpleAction[] actions = new SimpleAction[9];
     for (int i = 0; i < actionx.length; i++) {
         actions[i] = new SimpleAction (actionx[i], null);
         app.add_action (actions[i]);
@@ -41,6 +41,7 @@ int main (string[] args) {
     app.set_accels_for_action ("app.quit", {"<Primary>q", "<Primary>w"});
     app.set_accels_for_action ("app.change", {"<Primary>Tab"});
     app.set_accels_for_action ("app.menuopener", {"F10"});
+    app.set_accels_for_action ("app.copy", {"<Primary><Shift>c"});
 	app.activate.connect (() => {
 		var win = app.active_window;
 		if (win == null) {
@@ -53,6 +54,8 @@ int main (string[] args) {
 			actions[5].activate.connect (() => {((Random.Window) win).quit ();});
 			actions[6].activate.connect (() => {((Random.Window) win).change ();});
 			actions[7].activate.connect (() => {((Random.Window) win).menuopener ();});
+			actions[8].activate.connect (() => {((Random.Window) win).help ();});
+			actions[9].activate.connect (() => {((Random.Window) win).copy ();});
 		}
 		win.present ();
 	});

@@ -31,6 +31,12 @@
                 <property name="title" translatable="yes">Switch views</property>
               </object>
             </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;C</property>
+                <property name="title" translatable="yes">Copy result</property>
+              </object>
+            </child>
           </object>
         </child>
       </object>

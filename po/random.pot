@@ -117,7 +117,7 @@ msgstr ""
 msgid "Spin the wheel and see what it lands on!"
 msgstr ""
 
-#: src/window.ui:217
+#: src/window.ui:217 src/window.vala:117
 msgid "You haven't rolled yet!"
 msgstr ""
 
@@ -154,6 +154,10 @@ msgid "Keyboard Shortcuts"
 msgstr ""
 
 #: src/window.ui:318
+msgid "Help"
+msgstr ""
+
+#: src/window.ui:322
 msgid "About Random"
 msgstr ""
 
@@ -203,4 +207,8 @@ msgstr ""
 
 #: src/shortcut.ui:31
 msgid "Switch views"
+msgstr ""
+
+#: src/shortcut.ui:37
+msgid "Copy result"
 msgstr ""
