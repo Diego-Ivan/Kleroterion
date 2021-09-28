@@ -36,7 +36,6 @@ namespace Random {
         [GtkChild] private unowned Adw.ViewStack stack1;
         [GtkChild] private unowned MenuButton menus;
         private Rand rand = new Rand ();
-        private ShortcutsWindow shortcuts_window;
         private CssProvider css = new CssProvider ();
 
 
@@ -156,25 +155,16 @@ namespace Random {
         }
 
         public void shortcuts () {
-            Builder builder = new Builder ();
-            if (shortcuts_window == null) {
-                try {
-                    builder.add_from_resource ("/page/codeberg/foreverxml/Random/shortcut.ui");
-                } catch (Error e) {
-                    error ("Error loading shortcuts window UI: %s", e.message);
-                }
-            }
+            try {
+                var ui_builder = new Gtk.Builder ();
+                ui_builder.add_from_resource ("/page/codeberg/foreverxml/Random/shortcut.ui");
+                var shortcuts_window = ui_builder.get_object ("shortcutting") as ShortcutsWindow;
 
-            shortcuts_window = builder.get_object ("shortcutting") as ShortcutsWindow;
-            shortcuts_window.close.connect ((event) => {
-                shortcuts_window.destroy ();
-                shortcuts_window = null;
-            });
-
-            if (this != shortcuts_window.get_transient_for ()) {
                 shortcuts_window.set_transient_for (this);
+                shortcuts_window.show ();
+            } catch (Error e) {
+                critical ("An error occured while loading shortcuts window: %s", e.message);
             }
-            shortcuts_window.present ();
 
         }
 
