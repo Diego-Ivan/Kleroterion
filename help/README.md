@@ -17,5 +17,21 @@ You will have to [switch views](#switching-between-the-views) to use the *Roulet
 ### Why the separator?
 Due to how *Random* works, you need a separator to separate the contents of the list. *Random* cannot automatically detect your separator.
 ## How to flip a coin
+You will have to [switch views](#switching-between-the-views) to use the *Coin* view. To flip a coin in Random, you simply press the "Flip" button or `Ctrl` + `G` , and it will flip the coin and give you a result of heads or tails. You can see how it's done below (click on the image for a moving version):
 
+![Flipping a coin in Random](./screenshots/coin.gif)
 ## Switching between the views
+In *Random*, there are 3 ways to switch between the views. Here are those 3 ways.
+### 1: With the Mouse
+Click on the views in the View switcher.
+
+![Method 1](./screenshots/switch-mouse.gif)
+### 2: With Tab and Enter
+You can use `Tab` or the arrow keys to switch between focus on the view buttons and press `Enter` to select that view.
+
+![Method 2](./screenshots/switch-tab-enter.gif)
+### 3: Using a keyboard shortcut
+You can use `Ctrl` + `Tab` to switch between views.
+
+![Method 3](./screenshots/switch-ctrl-tab.gif)
+## Converting from Number to Roulette
