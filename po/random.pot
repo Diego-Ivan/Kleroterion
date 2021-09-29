@@ -105,6 +105,7 @@ msgstr ""
 msgid "One/Two/Three"
 msgstr ""
 
+# Please use header case here! (e.g. Instead of "Insert emoji", do "Insert Emoji")
 #: src/window.ui:193 src/window.ui:194
 msgid "Insert Emoji"
 msgstr ""
@@ -141,26 +142,32 @@ msgstr ""
 msgid "You haven't flipped yet!"
 msgstr ""
 
+# Please use header case here! (e.g. Instead of "Insert emoji", do "Insert Emoji"). Also remember to add a mnemonic here (with an underscore before the mnemonic letter).
 #: src/window.ui:306
 msgid "Number to _Roulette"
 msgstr ""
 
+# Please use header case here! (e.g. Instead of "Insert emoji", do "Insert Emoji"). Also remember to add a mnemonic here (with an underscore before the mnemonic letter).
 #: src/window.ui:310
 msgid "_Delete Picked Item"
 msgstr ""
 
+# Please use header case here! (e.g. Instead of "Insert emoji", do "Insert Emoji"). Also remember to add a mnemonic here (with an underscore before the mnemonic letter).
 #: src/window.ui:314
 msgid "_Copy Item"
 msgstr ""
 
+# Please use header case here! (e.g. Instead of "Insert emoji", do "Insert Emoji"). Also remember to add a mnemonic here (with an underscore before the mnemonic letter).
 #: src/window.ui:320
 msgid "_Keyboard Shortcuts"
 msgstr ""
 
+# Please use header case here! (e.g. Instead of "Insert emoji", do "Insert Emoji"). Also remember to add a mnemonic here (with an underscore before the mnemonic letter).
 #: src/window.ui:324
 msgid "_Help"
 msgstr ""
 
+# Please use header case here! (e.g. Instead of "Insert emoji", do "Insert Emoji"). Also remember to add a mnemonic here (with an underscore before the mnemonic letter).
 #: src/window.ui:328
 msgid "_About Random"
 msgstr ""
@@ -197,10 +204,12 @@ msgstr ""
 msgid "A tool to pick a random number or list item. Pick what chore to do, a number between 1 and 100, whether or not to jump on your mom's bed, etc."
 msgstr ""
 
+# Make sure to capitalize Number and Roulette.
 #: src/shortcut.ui:13
 msgid "Convert from Number to Roulette"
 msgstr ""
 
+# Make sure to capitalize Roulette.
 #: src/shortcut.ui:19
 msgid "Spin Roulette and delete selected"
 msgstr ""
