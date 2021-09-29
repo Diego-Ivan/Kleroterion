@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Random v0.6\n"
-"POT-Creation-Date: 2021-09-22 21:27+0300\n"
-"PO-Revision-Date: 2021-09-22 22:58+0300\n"
+"POT-Creation-Date: 2021-08-23 21:40-0600\n"
+"PO-Revision-Date: 2021-09-28 20:55-0600\n"
 "Last-Translator: teackot\n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -82,7 +82,7 @@ msgstr "Сгенерировать случайное число и показа
 
 #: src/window.ui:115
 msgid "You haven't generated yet!"
-msgstr " Вы ещё ничего не генерировали! "
+msgstr "Вы ещё ничего не генерировали!"
 
 #: src/window.ui:132
 msgid "Roulette"
@@ -116,7 +116,7 @@ msgstr "Один/Два/Три"
 
 #: src/window.ui:193 src/window.ui:194
 msgid "Insert Emoji"
-msgstr ""
+msgstr "Вставить Смайлики"
 
 #: src/window.ui:200
 msgid "Pick"
@@ -126,7 +126,7 @@ msgstr "Крутить"
 msgid "Spin the wheel and see what it lands on!"
 msgstr "Раскрутите колесо и посмотрите, что вам выпадет!"
 
-#: src/window.ui:217
+#: src/window.ui:217 src/window.vala:117
 msgid "You haven't rolled yet!"
 msgstr "Вы ещё не запускали рулетку!"
 
@@ -148,31 +148,47 @@ msgstr "Подбросить монетку."
 
 #: src/window.ui:275
 msgid "You haven't flipped yet!"
-msgstr " Вы ещё не подбрасывали монетку! "
+msgstr "Вы ещё не подбрасывали монетку!"
 
-#: src/window.ui:304
-msgid "Nu_mber to Roulette"
-msgstr "Преобразовать числа в рулетку"
+#: src/window.ui:306
+msgid "Number to _Roulette"
+msgstr "Преобразовать Числа в _Рулетку"
 
-#: src/window.ui:308
+#: src/window.ui:310
 msgid "_Delete Picked Item"
-msgstr "Удалить выбранный вариант"
+msgstr "_Удалить Выбранный Вариант"
 
 #: src/window.ui:314
-msgid "Keyboard Shortcuts"
-msgstr "Комбинации клавиш"
+msgid "_Copy Item"
+msgstr "_Копировать Элемент"
 
-#: src/window.ui:318
-msgid "About Random"
-msgstr "О приложении"
+#: src/window.ui:320
+msgid "_Keyboard Shortcuts"
+msgstr "Комбинации К_лавиш"
 
-#: src/window.vala:71
+#: src/window.ui:324
+msgid "_Help"
+msgstr "_Помощь"
+
+#: src/window.ui:328
+msgid "_About Random"
+msgstr "_О Приложении"
+
+#: src/window.vala:71 src/window.vala:206
 msgid "You got heads!"
 msgstr "Орёл!"
 
-#: src/window.vala:73
+#: src/window.vala:73 src/window.vala:208
 msgid "You got tails!"
 msgstr "Решка!"
+
+#: src/window.vala:207
+msgid "Heads"
+msgstr "Орёл!"
+
+#: src/window.vala:209
+msgid "Tails"
+msgstr "Решка"
 
 #: src/window.vala:93
 msgid "Repository"
@@ -187,8 +203,13 @@ msgid "Make randomization easy"
 msgstr "Рандомизация ещё никогда не была такой простой"
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:12
-msgid "A tool to pick a random number or list item. Pick what chore to do, a number between 1 and 100, whether or not to jump on your mom's bed, etc."
-msgstr "Инструмент для генерации случайных чисел или выбора случайного элемента списка. Выберите чем вам заняться, число от 1 до 100, попрыгать ли на маминой кровати, и т. д."
+msgid ""
+"A tool to pick a random number or list item. Pick what chore to do, a number "
+"between 1 and 100, whether or not to jump on your mom's bed, etc."
+msgstr ""
+"Инструмент для генерации случайных чисел или выбора случайного элемента "
+"списка. Выберите чем вам заняться, число от 1 до 100, попрыгать ли на "
+"маминой кровати, и т. д."
 
 #: src/shortcut.ui:13
 msgid "Convert from Number to Roulette"
@@ -205,3 +226,7 @@ msgstr "Генерировать, крутить или подбросить"
 #: src/shortcut.ui:31
 msgid "Switch views"
 msgstr "Переключить режимы"
+
+#: src/shortcut.ui:37
+msgid "Copy result"
+msgstr "Копировать Результат"

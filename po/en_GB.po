@@ -2,8 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Random v0.6\n"
 "POT-Creation-Date: 2021-08-23 21:40-0600\n"
-"PO-Revision-Date: 2021-09-23 21:31-0600\n"
+"PO-Revision-Date: 2021-09-28 20:41-0600\n"
+"Last-Translator: \n"
 "Language-Team: \n"
+"Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,8 +13,6 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: translatable=\"true\";\"\n"
-"Last-Translator: \n"
-"Language: en_GB\n"
 "X-Poedit-SearchPath-0: data/page.codeberg.foreverxml.Random.desktop.in\n"
 "X-Poedit-SearchPath-1: data/page.codeberg.foreverxml.Random.metainfo.xml.in\n"
 "X-Poedit-SearchPath-2: src/window.vala\n"
@@ -123,7 +123,7 @@ msgstr "Pick"
 msgid "Spin the wheel and see what it lands on!"
 msgstr "Spin the wheel and see what it lands on!"
 
-#: src/window.ui:217
+#: src/window.ui:217 src/window.vala:117
 msgid "You haven't rolled yet!"
 msgstr "You haven't rolled yet!"
 
@@ -147,29 +147,45 @@ msgstr "Flip the coin."
 msgid "You haven't flipped yet!"
 msgstr "You haven't flipped yet!"
 
-#: src/window.ui:304
-msgid "Nu_mber to Roulette"
-msgstr "Nu_mber to Roulette"
+#: src/window.ui:306
+msgid "Number to _Roulette"
+msgstr "Number to _Roulette"
 
-#: src/window.ui:308
+#: src/window.ui:310
 msgid "_Delete Picked Item"
 msgstr "_Delete Picked Item"
 
 #: src/window.ui:314
-msgid "Keyboard Shortcuts"
-msgstr "Keyboard Shortcuts"
+msgid "_Copy Item"
+msgstr "_Copy Item"
 
-#: src/window.ui:318
-msgid "About Random"
-msgstr "About Random"
+#: src/window.ui:320
+msgid "_Keyboard Shortcuts"
+msgstr "_Keyboard Shortcuts"
 
-#: src/window.vala:71
+#: src/window.ui:324
+msgid "_Help"
+msgstr "_Help"
+
+#: src/window.ui:328
+msgid "_About Random"
+msgstr "_About Random"
+
+#: src/window.vala:71 src/window.vala:206
 msgid "You got heads!"
-msgstr ""
+msgstr "You got heads!"
 
-#: src/window.vala:73
+#: src/window.vala:73 src/window.vala:208
 msgid "You got tails!"
-msgstr ""
+msgstr "You got tails!"
+
+#: src/window.vala:207
+msgid "Heads"
+msgstr "Heads"
+
+#: src/window.vala:209
+msgid "Tails"
+msgstr "Tails"
 
 #: src/window.vala:93
 msgid "Repository"
@@ -206,3 +222,7 @@ msgstr "Pick, spin, or flip"
 #: src/shortcut.ui:31
 msgid "Switch views"
 msgstr "Switch views"
+
+#: src/shortcut.ui:37
+msgid "Copy result"
+msgstr "Copy result"

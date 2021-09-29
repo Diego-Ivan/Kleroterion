@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Random v0.6\n"
 "POT-Creation-Date: 2021-08-23 21:40-0600\n"
-"PO-Revision-Date: 2021-09-21 17:04-0600\n"
+"PO-Revision-Date: 2021-09-28 20:40-0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -18,6 +18,7 @@ msgstr ""
 "X-Poedit-SearchPath-2: src/window.vala\n"
 "X-Poedit-SearchPath-3: src/window.ui\n"
 
+#. Translators: This is a noun and not a verb.
 #: src/window.ui:4 src/window.ui:19
 #: data/page.codeberg.foreverxml.Random.desktop.in:2 src/window.vala:85
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:7
@@ -34,7 +35,7 @@ msgstr ""
 msgid "Open the Menu"
 msgstr "Öffnen Sie das Menü"
 
-#: src/window.ui:38
+#: src/window.ui:39
 msgid "Number"
 msgstr "Nummer"
 
@@ -88,8 +89,12 @@ msgstr "Sie haben noch nicht generiert!"
 msgid "Roulette"
 msgstr "Roulette"
 
+#: src/window.ui:156 src/window.ui:174 src/window.ui:184
+msgid " "
+msgstr ""
+
 #: src/window.ui:162
-msgid "Write your options below. separate them with:"
+msgid "Write your options below. Separate them with:"
 msgstr "Schreiben Sie Ihre Optionen unten. Trennen Sie sie mit:"
 
 #: src/window.ui:167
@@ -111,7 +116,7 @@ msgstr ""
 msgid "One/Two/Three"
 msgstr "Eins/Zwei/Drei"
 
-#: src/window.ui:194 src/window.ui:193
+#: src/window.ui:193 src/window.ui:194
 msgid "Insert Emoji"
 msgstr "Emoji einfügen"
 
@@ -123,7 +128,7 @@ msgstr "Wählen"
 msgid "Spin the wheel and see what it lands on!"
 msgstr "Drehen Sie das Rad und sehen Sie, worauf es landet!"
 
-#: src/window.ui:217
+#: src/window.ui:217 src/window.vala:117
 msgid "You haven't rolled yet!"
 msgstr "Du hast noch nicht gewürfelt!"
 
@@ -147,29 +152,45 @@ msgstr "Die Münze umdrehen."
 msgid "You haven't flipped yet!"
 msgstr "Du hast noch nicht umgedreht!"
 
-#: src/window.ui:319
-msgid "About Random"
-msgstr "Über Willkürlich"
+#: src/window.ui:306
+msgid "Number to _Roulette"
+msgstr "Nummer zum _Roulette"
 
-#: src/window.ui:315
-msgid "Keyboard Shortcuts"
-msgstr "Tastatürkürzel"
+#: src/window.ui:310
+msgid "_Delete Picked Item"
+msgstr "Ausgewählten Artikel _entfernen"
 
-#: src/window.ui:305
-msgid "Number to Roulette"
-msgstr "Nummer zum Roulette"
+#: src/window.ui:314
+msgid "_Copy Item"
+msgstr "Artikel _Kopieren"
 
-#: src/window.ui:309
-msgid "Remove Picked Item"
-msgstr "Ausgewählten Artikel entfernen"
+#: src/window.ui:320
+msgid "_Keyboard Shortcuts"
+msgstr "_Tastatürkürzel"
 
-#: src/window.vala:71
+#: src/window.ui:324
+msgid "_Help"
+msgstr "_Hilfe"
+
+#: src/window.ui:328
+msgid "_About Random"
+msgstr "Über _Willkürlich"
+
+#: src/window.vala:71 src/window.vala:206
 msgid "You got heads!"
 msgstr "Du hast Köpfe!"
 
-#: src/window.vala:73
+#: src/window.vala:73 src/window.vala:208
 msgid "You got tails!"
 msgstr "Du hast Schwänze!"
+
+#: src/window.vala:207
+msgid "Heads"
+msgstr "Köpfe"
+
+#: src/window.vala:209
+msgid "Tails"
+msgstr "Schwänze"
 
 #: src/window.vala:93
 msgid "Repository"
@@ -207,6 +228,10 @@ msgstr "Wählen, drehen oder umdrehen"
 #: src/shortcut.ui:31
 msgid "Switch views"
 msgstr "Ansichten wechseln"
+
+#: src/shortcut.ui:37
+msgid "Copy result"
+msgstr "Ergebnis kopieren"
 
 #~ msgid "All while being free."
 #~ msgstr "Und das alles, während Sie frei sind."

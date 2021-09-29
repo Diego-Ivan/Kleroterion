@@ -34,7 +34,7 @@ int main (string[] args) {
 	app.startup.connect (() => {
 	    Adw.init ();
 	});
-    app.set_accels_for_action ("app.number", {"<Primary>m"});
+    app.set_accels_for_action ("app.number", {"<Primary><Shift>r"});
     app.set_accels_for_action ("app.remove", {"<Primary>d"});
     app.set_accels_for_action ("app.generate", {"<Primary>g"});
     app.set_accels_for_action ("app.shortcuts", {"<Primary>question"});
