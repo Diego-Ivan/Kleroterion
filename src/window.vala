@@ -202,12 +202,7 @@ namespace Random {
             if (stack1.get_visible_child () == rou.get_child ()) {
                 clip.set_text (endc.get_label ());
             } else if (stack1.get_visible_child () == coinpage.get_child ()) {
-                string cfres = cf.get_label ();
-                if (cfres == _("You got heads!")) {
-                    clip.set_text (_("Heads"));
-                } else if (cfres == _("You got tails!")) {
-                    clip.set_text (_("Tails"));
-                }
+                clip.set_text (cf.get_label ());
             } else {
                 clip.set_text (endn.get_label ());
             }

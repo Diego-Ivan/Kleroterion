@@ -26,7 +26,7 @@ msgid "Random"
 msgstr ""
 
 #: src/window.ui:17
-msgid "Switch between picking a number, spinning a wheel, or flipping a coin."
+msgid "Switch between views"
 msgstr ""
 
 #: src/window.ui:27
@@ -70,7 +70,7 @@ msgid "Generate"
 msgstr ""
 
 #: src/window.ui:100
-msgid "Generate a random number, and show it below."
+msgid "Generate a random number"
 msgstr ""
 
 #: src/window.ui:115
@@ -115,7 +115,7 @@ msgid "Pick"
 msgstr ""
 
 #: src/window.ui:202
-msgid "Spin the wheel and see what it lands on!"
+msgid "Spin the wheel"
 msgstr ""
 
 #: src/window.ui:217 src/window.vala:117
@@ -135,7 +135,7 @@ msgid "Flip"
 msgstr ""
 
 #: src/window.ui:262
-msgid "Flip the coin."
+msgid "Flip the coin"
 msgstr ""
 
 #: src/window.ui:275
