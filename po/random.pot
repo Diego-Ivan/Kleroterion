@@ -141,23 +141,23 @@ msgstr ""
 msgid "You haven't flipped yet!"
 msgstr ""
 
-#: src/window.ui:304
+#: src/window.ui:306
 msgid "Nu_mber to Roulette"
 msgstr ""
 
-#: src/window.ui:308
+#: src/window.ui:310
 msgid "_Delete Picked Item"
 msgstr ""
 
-#: src/window.ui:314
+#: src/window.ui:316
 msgid "Keyboard Shortcuts"
 msgstr ""
 
-#: src/window.ui:318
+#: src/window.ui:320
 msgid "Help"
 msgstr ""
 
-#: src/window.ui:322
+#: src/window.ui:324
 msgid "About Random"
 msgstr ""
 
