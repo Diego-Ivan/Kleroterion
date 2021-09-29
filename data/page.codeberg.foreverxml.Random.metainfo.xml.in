@@ -86,7 +86,7 @@
     <binary>randomgtk</binary>
   </provides>
   <requires>
-    <display_length compare="ge">375</display_length>
+    <display_length compare="ge">416</display_length>
   </requires>
   <reccomends>
     <control>touch</control>

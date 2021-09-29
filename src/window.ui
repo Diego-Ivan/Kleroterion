@@ -12,7 +12,7 @@
           <object class="AdwHeaderBar" id="headerBar">
             <property name="visible">True</property>
             <child type="title">
-              <object class="AdwViewSwitcherTitle">
+              <object class="AdwViewSwitcherTitle" id="title">
                 <property name="visible">True</property>
                 <property name="tooltip-text" translatable="yes">Switch between picking a number, spinning a wheel, or flipping a coin.</property>
                 <property name="stack">stack1</property>
@@ -290,8 +290,10 @@
         </child>
         <child>
           <object class="AdwViewSwitcherBar">
-            <property name="visible">True</property>
             <property name="stack">stack1</property>
+            <binding name="reveal">
+              <lookup name="title-visible">title</lookup>
+            </binding>
           </object>
         </child>
       </object>
