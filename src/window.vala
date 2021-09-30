@@ -202,7 +202,7 @@ namespace Random {
             if (stack1.get_visible_child () == rou.get_child ()) {
                 clip.set_text (endc.get_label ());
             } else if (stack1.get_visible_child () == coinpage.get_child ()) {
-                clip.set_text (cf.get_label ());
+                clip.set_text (cl.get_label ());
             } else {
                 clip.set_text (endn.get_label ());
             }
