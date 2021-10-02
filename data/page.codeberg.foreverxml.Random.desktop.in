@@ -6,3 +6,6 @@ Terminal=false
 Type=Application
 Categories=GTK;GNOME;Utility;
 StartupNotify=true
+Keywords=Random;Roulette;Coin;Number;
+# Translators: these are enums; do NOT translate!
+X-Purism-FormFactor=Workstation;Mobile;

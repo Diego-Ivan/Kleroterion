@@ -101,4 +101,8 @@
     <control>keyboard</control>
   </reccomends>
   <developer_name>Forever XML</developer_name>
+  <custom>
+    <value key="Purism::form_factor">workstation</value>
+    <value key="Purism::form_factor">mobile</value>
+  </custom>
 </component>
