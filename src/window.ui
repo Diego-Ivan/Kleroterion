@@ -313,28 +313,34 @@
     <section>
       <item>
         <attribute name="action">app.number</attribute>
+        <!-- Translators: Remember to add a mnemonic and use header case here. -->
         <attribute name="label" translatable="yes">Number to _Roulette</attribute>
       </item>
       <item>
         <attribute name="action">app.remove</attribute>
+        <!-- Translators: Remember to add a mnemonic and use header case here. -->
         <attribute name="label" translatable="yes">_Delete Picked Item</attribute>
       </item>
       <item>
         <attribute name="action">app.copy</attribute>
+        <!-- Translators: Remember to add a mnemonic and use header case here. -->
         <attribute name="label" translatable="yes">_Copy Item</attribute>
       </item>
     </section>
     <section>
       <item>
         <attribute name="action">app.shortcuts</attribute>
+        <!-- Translators: Remember to add a mnemonic and use header case here. -->
         <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
       </item>
       <item>
         <attribute name="action">app.help</attribute>
+        <!-- Translators: Remember to add a mnemonic and use header case here. -->
         <attribute name="label" translatable="yes">_Help ↗</attribute>
       </item>
       <item>
         <attribute name="action">app.about</attribute>
+        <!-- Translators: Remember to add a mnemonic and use header case here. -->
         <attribute name="label" translatable="yes">_About Random</attribute>
       </item>
     </section>
