@@ -33,18 +33,22 @@ Head on over to the [Releases](https://codeberg.org/foreverxml/random/releases) 
 ### A note
 You can get it through the user-submitted AUR repo, but that will usually be out of date. The method I support the most is Flathub/Flatpak.
 ## Building Random
-Use GNOME Builder >= 3.28 to build this. If you don't want it in Flatpak, you can figure that out.
+### Flatpak
+Clone this repo on GNOME Builder >= 3.28, open it, and click the *Build* button.
+### Native / Host
+Clone this repo, and in the cloned directory run these commands:
+```sh
+meson _build --prefix=/usr && cd _build
+sudo ninja install
+```
 ### Windows
 I don't support anything but Flatpak. You will have to run this app through WSL, although Windows is such a privacy nightmare I do not support WSL. The app may be broken on Windows too. My reccomendation is to use this app on GNOME *NIX systems.
 ## Translating Random
 Help me make some po files! I'm not very fluent in any language except English, so translations would be appreciated. Do NOT include .mo files, I will reject your PR if so.
 ## Roadmap for Random
-- [x] ~~Random accents~~ Orange accent
-- [x] Codenames for releases
-- [x] Newer libadwaita design
-- [x] GNOME GitLab mirror
-- [ ] GitHub mirror
-- [ ] Copy result keyboard shortcut and menu item
+- [x] [GNOME GitLab mirror](https://gitlab.gnome.org/foreverxml/random)
+- [x] [GitHub mirror](https://github.com/foreverxml/random)
+- [x] Copy result keyboard shortcut and menu item
 - [x] Working translations (thanks to [teackot](https://codeberg.org/teackot) and [DiegoIvan](https://codeberg.org/DiegoIvan)) 
 - [ ] More translations
 ### Unimportant
