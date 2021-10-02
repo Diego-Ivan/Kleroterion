@@ -17,22 +17,22 @@ Make randomization easy
 <img alt="Coin UI of Random" src="https://codeberg.org/foreverxml/random/raw/branch/main/screenshots/coin.png" />
 </details>
 
-## Uses
+## 🎰 Uses
 - Choose what to do for a date
 - Play a number-guess game
 - Choose between coffee or tea
 - For science!
-## Download Random!
+## 📩 Download Random!
 Download it from Flathub by clicking the really big button above.
-## Techy stuff
+## 👩‍💻️ Techy stuff
 <details>
 <summary>Show the techy stuff</summary>
 
-## Another way to download
+## 📲 Another way to download
 Head on over to the [Releases](https://codeberg.org/foreverxml/random/releases) page and grab the latest Flatpak, then install it.
-### A note
+### 📝 A note
 You can get it through the user-submitted AUR repo, but that will usually be out of date. The method I support the most is Flathub/Flatpak.
-## Building Random
+## 🛠️ Building Random
 ### Flatpak
 Clone this repo on GNOME Builder >= 3.28, open it, and click the *Build* button.
 ### Native / Host
@@ -43,9 +43,9 @@ sudo ninja install
 ```
 ### Windows
 I don't support anything but Flatpak. You will have to run this app through WSL, although Windows is such a privacy nightmare I do not support WSL. The app may be broken on Windows too. My reccomendation is to use this app on GNOME *NIX systems.
-## Translating Random
+## 🌐 Translating Random
 Help me make some po files! I'm not very fluent in any language except English, so translations would be appreciated. Do NOT include .mo files, I will reject your PR if so.
-## Roadmap for Random
+## 🛣️ Roadmap for Random
 - [x] [GNOME GitLab mirror](https://gitlab.gnome.org/foreverxml/random)
 - [x] [GitHub mirror](https://github.com/foreverxml/random)
 - [x] Copy result keyboard shortcut and menu item
@@ -53,7 +53,7 @@ Help me make some po files! I'm not very fluent in any language except English, 
 - [ ] More translations
 ### Unimportant
 - [ ] Windows package (LTS)
-## How to contribute to Random
+## 👩‍💻️ How to contribute to Random
 <details>
 <summary>Contributing</summary>
 Hey there! So, you want to contribute to Random.
@@ -64,11 +64,11 @@ Hey there! So, you want to contribute to Random.
     - Something too advanced for this simple app And don't forget to test before your PR! Have a great day.
 </details>
 
-## Conduct
+## 🤝 Conduct
 This project follows the [GNOME Code of Conduct](https://wiki.gnome.org/Foundation/CodeOfConduct).
 </details>
 
-## Contributors to Random
+## 👥 Contributors to Random
 <details>
 <summary>See the Contributors</summary>
 
@@ -78,5 +78,5 @@ This project follows the [GNOME Code of Conduct](https://wiki.gnome.org/Foundati
 </details>
 
 Uses the [All Contributors Emoji Key](https://allcontributors.org/docs/en/emoji-key).
-## Donations
+## 💸 Donations
 I am well off and do not need donations. Instead, donate [to trans people in need](https://nitter.snopyta.org/search?q=%23TransCrowdFund).
