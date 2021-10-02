@@ -41,6 +41,16 @@ Clone this repo, and in the cloned directory run these commands:
 meson _build --prefix=/usr && cd _build
 sudo ninja install
 ```
+You will need to install:
+```
+gdk-pixbuf2
+glib2
+gtk4
+libadwaita
+appstream-glib
+meson
+vala
+```
 ### Windows
 I don't support anything but Flatpak. You will have to run this app through WSL, although Windows is such a privacy nightmare I do not support WSL. The app may be broken on Windows too. My reccomendation is to use this app on GNOME *NIX systems.
 ## 🌐 Translating Random
