@@ -37,21 +37,59 @@ namespace Random {
         [GtkChild] private unowned MenuButton menus;
         private Rand rand = new Rand ();
         private CssProvider css = new CssProvider ();
+        private ActionEntry[] actions;
+        private SimpleActionGroup actionc = new SimpleActionGroup ();
+        public Gtk.Application app { get; construct; }
 
 
 		public Window (Gtk.Application app) {
-			Object (application: app);
+			Object (
+			    application: app,
+			    app: app
+			);
 		}
 
 		construct {
+		    Adw.init ();
+
+		    // css
 		    css.load_from_resource ("/page/codeberg/foreverxml/Random/style.css");
 		    StyleContext.add_provider_for_display (Gdk.Display.get_default (), css, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+
+            // actions
+		    actions = {
+                {"about", about},
+                {"number", number},
+                {"remove", remove},
+                {"generate", generate},
+                {"shortcuts", shortcuts},
+                {"quit", quit},
+                {"change", change},
+                {"menuopener", menuopener},
+                {"help", help},
+                {"copy", copy}
+            };
+            actionc.add_action_entries (actions, this);
+            insert_action_group ("app", actionc);
+
+            app.set_accels_for_action ("app.number", {"<Primary><Shift>r"});
+            app.set_accels_for_action ("app.remove", {"<Primary>d"});
+            app.set_accels_for_action ("app.generate", {"<Primary>g"});
+            app.set_accels_for_action ("app.shortcuts", {"<Primary>question"});
+            app.set_accels_for_action ("app.quit", {"<Primary>q", "<Primary>w"});
+            app.set_accels_for_action ("app.change", {"<Primary>Tab"});
+            app.set_accels_for_action ("app.menuopener", {"F10"});
+            app.set_accels_for_action ("app.copy", {"<Primary><Shift>c"});
+
+            // number
 		    genn.clicked.connect (() => {
 	            int numb1 = int.parse (num1.get_text ());
 	            int numb2 = int.parse (num2.get_text ()) + 1;
 	            string txt = rand.int_range (numb1, numb2).to_string ();
 	            endn.set_label (txt);
 	        });
+
+	        // roulette
 	        genc.clicked.connect (() => {
 	            string tex = ctxt.get_text ();
 	            if (cphr.get_text () == "" | cphr.get_text () == null) {
@@ -64,6 +102,8 @@ namespace Random {
 	            }
                 endc.set_label (txt);
 	        });
+
+	        // coinflip
 	        cf.clicked.connect (() => {
 	            int r = rand.int_range (0, 2);
 	            string t = _("You got heads!");
@@ -72,6 +112,7 @@ namespace Random {
 	            }
 	            cl.set_label (t);
 	        });
+	        this.present ();
 	    }
 
 	    public void about () {
@@ -209,7 +250,7 @@ namespace Random {
         }
 
         public void help () {
-            Gtk.show_uri (this, "https://codeberg.org/foreverxml/random/src/branch/main/help/README.md", Gdk.CURRENT_TIME);
+            show_uri (this, "https://codeberg.org/foreverxml/random/src/branch/main/help/README.md", Gdk.CURRENT_TIME);
         }
 	}
 }
