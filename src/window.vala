@@ -115,7 +115,7 @@ namespace Random {
 	        this.present ();
 	    }
 
-	    public void about () {
+	    private void about () {
 	        string[] authors = {"Forever XML <foreverxml@tuta.io>"};
 	        string translators = """Forever XML <foreverxml@tuta.io>
 	                                Teackot <k.qovekt@gmail.com>
@@ -135,7 +135,7 @@ namespace Random {
                 website_label: _("Repository"));
         }
 
-        public void number () {
+        private void number () {
             if (stack1.get_visible_child () != numstack.get_child ()) {
                 stack1.set_visible_child (numstack.get_child ()); // TODO bigger menu btn
             } else {
@@ -151,7 +151,7 @@ namespace Random {
             }
         }
 
-        public void remove () {
+        private void remove () {
             if (stack1.get_visible_child () != rou.get_child ()) {
                 stack1.set_visible_child (rou.get_child ());
             } else {
@@ -189,7 +189,7 @@ namespace Random {
             }
         }
 
-        public void generate () {
+        private void generate () {
             if (stack1.get_visible_child () == rou.get_child ()) {
                 genc.activate ();
             } else if (stack1.get_visible_child () == numstack.get_child ()) {
@@ -199,7 +199,7 @@ namespace Random {
             }
         }
 
-        public void shortcuts () {
+        private void shortcuts () {
             try {
                 var ui_builder = new Gtk.Builder ();
                 ui_builder.add_from_resource ("/page/codeberg/foreverxml/Random/shortcut.ui");
@@ -213,12 +213,12 @@ namespace Random {
 
         }
 
-        public void quit () {
+        private void quit () {
             this.close ();
             this.destroy ();
         }
 
-        public void change () {
+        private void change () {
             if (stack1.get_visible_child () == rou.get_child ()) {
                 stack1.set_visible_child (coinpage.get_child ());
             } else if (stack1.get_visible_child () == coinpage.get_child ()) {
@@ -228,11 +228,11 @@ namespace Random {
             }
         }
 
-        public void menuopener () {
+        private void menuopener () {
             menus.popup ();
         }
 
-        public void copy () {
+        private void copy () {
             if (num1.has_focus ||
                 num2.has_focus ||
                 cphr.has_focus ||
@@ -249,7 +249,7 @@ namespace Random {
             }
         }
 
-        public void help () {
+        private void help () {
             show_uri (this, "https://codeberg.org/foreverxml/random/src/branch/main/help/README.md", Gdk.CURRENT_TIME);
         }
 	}
