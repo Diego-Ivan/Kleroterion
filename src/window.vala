@@ -36,7 +36,6 @@ namespace Random {
         [GtkChild] private unowned Adw.ViewStack stack1;
         [GtkChild] private unowned MenuButton menus;
         private Rand rand = new Rand ();
-        private CssProvider css = new CssProvider ();
         private ActionEntry[] actions;
         private SimpleActionGroup actionc = new SimpleActionGroup ();
         public Gtk.Application app { get; construct; }
@@ -50,12 +49,6 @@ namespace Random {
 		}
 
 		construct {
-		    Adw.init ();
-
-		    // css
-		    css.load_from_resource ("/page/codeberg/foreverxml/Random/style.css");
-		    StyleContext.add_provider_for_display (Gdk.Display.get_default (), css, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-
             // actions
 		    actions = {
                 {"about", about},
