@@ -57,7 +57,7 @@ I don't support anything but Flatpak. You will have to run this app through WSL,
 Help me make some po files! I'm not very fluent in any language except English, so translations would be appreciated. Do NOT include .mo files, I will reject your PR if so.
 ## 🛣️ Roadmap for Random
 - [x] [GNOME GitLab mirror](https://gitlab.gnome.org/foreverxml/random)
-- [x] [GitHub mirror](https://github.com/foreverxml/random)
+- [x] ~~GitHub mirror~~ Ewww, GitHub? No thanks.
 - [x] Copy result keyboard shortcut and menu item
 - [x] Working translations (thanks to [teackot](https://codeberg.org/teackot) and [DiegoIvan](https://codeberg.org/DiegoIvan)) 
 - [ ] More translations
