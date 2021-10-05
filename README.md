@@ -61,6 +61,9 @@ Help me make some po files! I'm not very fluent in any language except English, 
 - [x] Copy result keyboard shortcut and menu item
 - [x] Working translations (thanks to [teackot](https://codeberg.org/teackot) and [DiegoIvan](https://codeberg.org/DiegoIvan)) 
 - [ ] More translations
+### Roadmap for 1.1 - 1.2
+- [ ] DBus search
+    - [ ] *Open in Random* prefills fields
 ### Unimportant
 - [ ] Windows package (LTS)
 ## 👩‍💻️ How to contribute to Random
