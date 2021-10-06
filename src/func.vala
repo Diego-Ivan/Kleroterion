@@ -8,7 +8,7 @@ namespace Random {
     }
     class Func : Object {
         private Rand rand = new Rand ();
-        public int? NumberString (string int1, string int2, bool return-number) {
+        public int? NumberString (string int1, string int2, bool return-number = true) {
             int numb1 = int.parse (int1);
             int numb2 = int.parse (int2) + 1;
             int random-number = rand.int_range (numb1, numb2);
@@ -18,7 +18,7 @@ namespace Random {
             return random-number.to_string ();
         }
         
-        public int? Number (int numb, int numb2, bool return-number) {
+        public int? Number (int numb, int numb2, bool return-number = true) {
             int random-number = rand.int_range (numb1, (numb2 + 1));
             if (return-number) {
                 return random-number;
@@ -26,12 +26,14 @@ namespace Random {
             return random-number.to_string ();
         }
         
-        public string Roulette (string list, string sep) {
-            
+        public string Roulette (string list, string sep = /) {
+            string[] texa = list.split (sep);
+            string txt = texa[rand.int_range (0, texa.length)];
+            return txt;
         }
         
-        public string[] DeleteRoulette (string list, string sep) {
-            
+        public string[] DeleteRoulette (string list, string sep = /) {
+            string SpinnedRoulette = this.Roulette (list, sep);
         }
         
         public string Coin (string string1, string string2) {
