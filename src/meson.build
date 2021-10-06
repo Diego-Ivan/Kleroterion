@@ -1,6 +1,8 @@
 random_sources = [
   'main.vala',
   'window.vala',
+  'sp.vala',
+  'func.vala',
   'config.vapi',
 ]
 
