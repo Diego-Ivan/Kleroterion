@@ -22,27 +22,28 @@ namespace Random {
         DELETE_ROULETTE,
         COIN,
         NUMBER,
-        STRING_NUMBER
+        NUMBER_STRING,
+        NUMBER_ROULETTE
     }
     class Func : Object {
         private Rand rand = new Rand ();
         
-        public int? NumberString (string int1, string int2, bool returnumber = true) {
+        public int NumberString (string int1, string int2) {
             int numb1 = int.parse (int1);
-            int numb2 = int.parse (int2) + 1;
-            int randomnumber = rand.int_range (numb1, numb2);
-            if (returnumber) {
-                return randomnumber;
+            int numb2 = int.parse (int2);
+            if (numb1 > numb2) {
+                return rand.int_range (numb2, (numb1 + 1));
+            } else {
+                return rand.int_range (numb1, (numb2 + 1));
             }
-            return randomnumber.to_string ();
         }
         
-        public int? Number (int numb1, int numb2, bool returnumber = true) {
-            int randomnumber = rand.int_range (numb1, (numb2 + 1));
-            if (returnumber) {
-                return randomnumber;
+        public int Number (int numb1, int numb2) {
+            if (numb1 > numb2) {
+                return rand.int_range (numb2, (numb1 + 1));
+            } else {
+                return rand.int_range (numb1, (numb2 + 1));
             }
-            return randomnumber.to_string ();
         }
         
         public string Roulette (string list, string sep = "/") {
@@ -84,29 +85,8 @@ namespace Random {
             return string1;
         }
         
-        public string? Randomize (Random.RandomType rande, ...) {
-            string? res;
-            switch (rande) {
-                case Random.RandomType.COIN:
-                    res = this.Coin (...);
-                    break;
-                case Random.RandomType.NUMBER:
-                    res = this.Number (...);
-                    break;
-                case Random.RandomType.ROULETTE:
-                    res = this.Roulette (...);
-                    break;
-                case Random.RandomType.DELETE_ROULETTE:
-                    res = this.DeleteRoulette (...);
-                    break;
-                case Random.RandomType.STRING_NUMBER:
-                    res = this.NumberString (...);
-                    break;
-                default:
-                    res = null;
-                    break;
-            }
-            return res;    
+        public string NumberRoulette (int num1, int num2, string sep = "/") {
+            
         }
     }
 }
