@@ -28,14 +28,14 @@ Download it from Flathub by clicking the really big button above.
 <details>
 <summary>Show the techy stuff</summary>
 
-## 📲 Another way to download
+### 📲 Another way to download
 Head on over to the [Releases](https://codeberg.org/foreverxml/random/releases) page and grab the latest Flatpak, then install it.
-### 📝 A note
+#### 📝 A note
 You can get it through the user-submitted AUR repo, but that will usually be out of date. The method I support the most is Flathub/Flatpak.
-## 🛠️ Building Random
-### Flatpak
+### 🛠️ Building Random
+#### Flatpak
 Clone this repo on GNOME Builder >= 3.28, open it, and click the *Build* button.
-### Native / Host
+#### Native / Host
 Clone this repo, and in the cloned directory run these commands:
 ```sh
 meson _build --prefix=/usr && cd _build
@@ -51,23 +51,23 @@ appstream-glib
 meson
 vala
 ```
-### Windows
+#### Windows
 I don't support anything but Flatpak. You will have to run this app through WSL, although Windows is such a privacy nightmare I do not support WSL. The app may be broken on Windows too. My reccomendation is to use this app on GNOME *NIX systems.
-## 🌐 Translating Random
+### 🌐 Translating Random
 Help me make some po files! I'm not very fluent in any language except English, so translations would be appreciated. Do NOT include .mo files, I will reject your PR if so.
-## 🛣️ Roadmap for Random
+### 🛣️ Roadmap for Random
 - [x] [GNOME GitLab mirror](https://gitlab.gnome.org/foreverxml/random)
 - [x] ~~GitHub mirror~~ Ewww, GitHub? No thanks.
 - [x] Copy result keyboard shortcut and menu item
 - [x] Working translations (thanks to [teackot](https://codeberg.org/teackot) and [DiegoIvan](https://codeberg.org/DiegoIvan)) 
 - [ ] More translations
-### Roadmap for 1.1 - 1.2
+#### Roadmap for 1.1 - 1.2
 - [x] Move Randomization functionality to different file
 - [ ] DBus search
     - [ ] *Open in Random* prefills fields
-### Unimportant
+#### Unimportant
 - [ ] Windows package (LTS)
-## 👩‍💻️ How to contribute to Random
+### 👩‍💻️ How to contribute to Random
 <details>
 <summary>Contributing</summary>
 Hey there! So, you want to contribute to Random.
