@@ -86,7 +86,11 @@ namespace Random {
         }
         
         public string NumberRoulette (int num1, int num2, string sep = "/") {
-            
+            string list = num1.to_string ();
+            for (i = num1 + 1; i <= num2; i++) {
+                list = list + sep + i.to_string ();
+            }
+            return list;
         }
     }
 }
