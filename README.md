@@ -59,7 +59,7 @@ Help me make some po files! I'm not very fluent in any language except English, 
 - [x] [GNOME GitLab mirror](https://gitlab.gnome.org/foreverxml/random)
 - [x] ~~GitHub mirror~~ Ewww, GitHub? No thanks.
 - [x] Copy result keyboard shortcut and menu item
-- [x] Working translations (thanks to [teackot](https://codeberg.org/teackot) and [DiegoIvan](https://codeberg.org/DiegoIvan)) 
+- [x] Working translations (thanks to [teackot](https://codeberg.org/teackot) and [dimmednerd](https://codeberg.org/DiegoIvan)) 
 - [ ] More translations
 #### Roadmap for 1.1 - 1.2
 - [x] Move Randomization functionality to different file
@@ -88,7 +88,7 @@ This project follows the [GNOME Code of Conduct](https://wiki.gnome.org/Foundati
 
 - [foreverxml](https://codeberg.org/foreverxml) - 🐛🎨🤔🚧👀🌍⚠️💻
 - [teackot](https://codeberg.org/teackot) - 🐛🌍⚠️💻
-- [DiegoIvan](https://codeberg.org/DiegoIvan) - 🐛🌍⚠️💻
+- [dimmednerd](https://codeberg.org/DiegoIvan) - 🐛🌍⚠️💻
 </details>
 
 Uses the [All Contributors Emoji Key](https://allcontributors.org/docs/en/emoji-key).
