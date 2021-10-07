@@ -62,6 +62,7 @@ Help me make some po files! I'm not very fluent in any language except English, 
 - [x] Working translations (thanks to [teackot](https://codeberg.org/teackot) and [DiegoIvan](https://codeberg.org/DiegoIvan)) 
 - [ ] More translations
 ### Roadmap for 1.1 - 1.2
+- [x] Move Randomization functionality to different file
 - [ ] DBus search
     - [ ] *Open in Random* prefills fields
 ### Unimportant
@@ -76,10 +77,10 @@ Hey there! So, you want to contribute to Random.
     - Anything against GNOME HIG
     - Something too advanced for this simple app And don't forget to test before your PR! Have a great day.
 </details>
+</details>
 
 ## 🤝 Conduct
 This project follows the [GNOME Code of Conduct](https://wiki.gnome.org/Foundation/CodeOfConduct).
-</details>
 
 ## 👥 Contributors to Random
 <details>
@@ -91,5 +92,20 @@ This project follows the [GNOME Code of Conduct](https://wiki.gnome.org/Foundati
 </details>
 
 Uses the [All Contributors Emoji Key](https://allcontributors.org/docs/en/emoji-key).
+## 🖥️ Supported OS?
+
+<details><summary>Long thing about OS support</summary>
+
+### 🐧 Linux
+Already supported; this is the main support!
+### 🪟 Windows
+Not for right now. Check the Roadmap for details on Windows support. And if you do want Windows, get ready to build it yourself.
+### 🍏 MacOS and/or iOS
+No, never. I am against all Apple platforms, and Random will never have a Mac package. I don't think GTK is supported on iOS either, though.
+### 🤖 Android
+GTK isn't supported yet, but I would publish on [F-Droid](https://fdroid.org).
+
+</details>
+
 ## 💸 Donations
 I am well off and do not need donations. Instead, donate [to trans people in need](https://nitter.snopyta.org/search?q=%23TransCrowdFund).
