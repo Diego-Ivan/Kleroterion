@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=page.codeberg.foreverxml.Random.SearchProvider
+Exec=@pkgdatadir@/randomgtk-sp
