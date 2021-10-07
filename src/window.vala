@@ -35,7 +35,7 @@ namespace Random {
         [GtkChild] private unowned Adw.ViewStackPage coinpage;
         [GtkChild] private unowned Adw.ViewStack stack1;
         [GtkChild] private unowned MenuButton menus;
-        private Rand rand = new Rand ();
+        private Random.Func Randomize = new Random.Func ();
         private ActionEntry[] actions;
         private SimpleActionGroup actionc = new SimpleActionGroup ();
         public Gtk.Application app { get; construct; }
@@ -76,34 +76,22 @@ namespace Random {
 
             // number
 		    genn.clicked.connect (() => {
-	            int numb1 = int.parse (num1.get_text ());
-	            int numb2 = int.parse (num2.get_text ()) + 1;
-	            string txt = rand.int_range (numb1, numb2).to_string ();
+	            string txt = Randomize.Number (num1.get_text (), num2.get_text (), false);
 	            endn.set_label (txt);
 	        });
 
 	        // roulette
 	        genc.clicked.connect (() => {
-	            string tex = ctxt.get_text ();
-	            if (cphr.get_text () == "" | cphr.get_text () == null) {
-	                cphr.set_text ("/");
-	            }
-	            string[] texa = tex.split (cphr.get_text ());
-	            string txt = texa[rand.int_range (0, texa.length)];
-	            if (tex == "Hey adora") {
+	            if (txt == "Hey adora") {
 	                txt = "Catra!? What are you doing here?";
 	            }
+	            string txt = Randomize.Roulette (ctxt.get_text (), cphr.get_text ());
                 endc.set_label (txt);
 	        });
 
 	        // coinflip
 	        cf.clicked.connect (() => {
-	            int r = rand.int_range (0, 2);
-	            string t = _("You got heads!");
-	            if (r == 1) {
-	                t = _("You got tails!");
-	            }
-	            cl.set_label (t);
+	            cl.set_label (Randomize.Coin (_("You got heads!"), _("You got tails!")));
 	        });
 	        this.present ();
 	    }

@@ -27,39 +27,31 @@ namespace Random {
     class Func : Object {
         private Rand rand = new Rand ();
         
-        public int? NumberString (string int1, string int2, bool return-number = true) 
-        requires (int.parse (int1) < int.parse (int2)) 
-        ensures (result <= int.parse (int2) && result >= int.parse (int1)) {
+        public int? NumberString (string int1, string int2, bool returnumber = true) {
             int numb1 = int.parse (int1);
             int numb2 = int.parse (int2) + 1;
-            int random-number = rand.int_range (numb1, numb2);
-            if (return-number) {
-                return random-number;
+            int randomnumber = rand.int_range (numb1, numb2);
+            if (returnumber) {
+                return randomnumber;
             }
-            return random-number.to_string ();
+            return randomnumber.to_string ();
         }
         
-        public int? Number (int numb1, int numb2, bool return-number = true)
-        requires (numb1 < numb2)
-        ensures (result <= int2 && result >= int1) {
-            int random-number = rand.int_range (numb1, (numb2 + 1));
-            if (return-number) {
-                return random-number;
+        public int? Number (int numb1, int numb2, bool returnumber = true) {
+            int randomnumber = rand.int_range (numb1, (numb2 + 1));
+            if (returnumber) {
+                return randomnumber;
             }
-            return random-number.to_string ();
+            return randomnumber.to_string ();
         }
         
-        public string Roulette (string list, string sep = /)
-        requires (string != "")
-        ensures (result in list) {
+        public string Roulette (string list, string sep = "/") {
             string[] texa = list.split (sep);
             string txt = texa[rand.int_range (0, texa.length)];
             return txt;
         }
         
-        public string[] DeleteRoulette (string tex, string split = /)
-        requires (string != "") 
-        ensures (!(result in tex)) {
+        public string[] DeleteRoulette (string tex, string split = "/") {
             string end = this.Roulette (list, sep);
             string[] texa = tex.split (split);
             string enda;
@@ -84,9 +76,7 @@ namespace Random {
             return { end, enda };
         }
         
-        public string Coin (string string1 = "Heads", string string2 = "Tails")
-        requires (string1 != string2)
-        ensures (result == string1 && result == string2) {
+        public string Coin (string string1 = "Heads", string string2 = "Tails") {
             int hey = this.Number(0, 1, true);
             if (hey == 1) {
                 return string2;
