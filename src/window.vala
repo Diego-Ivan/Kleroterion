@@ -1,6 +1,6 @@
 /* window.vala
  *
- * Copyright 2021 <?xml>
+ * Copyright 2021 Forever XML
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -120,12 +120,7 @@ namespace Random {
             if (stack1.get_visible_child () != numstack.get_child ()) {
                 stack1.set_visible_child (numstack.get_child ()); // TODO bigger menu btn
             } else {
-                int numb1 = int.parse (num1.get_text ());
-	            int numb2 = int.parse (num2.get_text ()) + 1;
-	            string list = num1.get_text ();
-	            for (int i = numb1 + 1; i < numb2; i++) {
-                    list = list + "/" + i.to_string ();
-	            }
+	            string list = Randomize.NumberRoulette (int.parse (num1.get_text ()), int.parse (num2.get_text ()));
 	            ctxt.set_text (list);
 	            cphr.set_text ("/");
                 stack1.set_visible_child (rou.get_child ());
