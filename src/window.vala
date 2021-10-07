@@ -139,33 +139,9 @@ namespace Random {
                 if (endc.get_text () == _("You haven't rolled yet!")) {
                     genc.activate ();
                 } else {
-                    genc.activate ();
-                    string tex = ctxt.get_text ();
-                    if (tex == "") { return; }
-                    string split = cphr.get_text ();
-	                string end = endc.get_label ();
-                    string[] texa = tex.split (split);
-                    string enda;
-                    for (int i = 0; i < texa.length; i++) {
-                        if (texa[i] == end) {
-                            for (int k = i; k < texa.length - 1; k++) {
-                                texa[k] = texa[k+1];
-                                texa[k+1] = null;
-                            }
-                            break;
-                        }
-                    }
-                    if (texa.length == 1) {
-                        texa[0] = null;
-                        ctxt.set_text ("");
-                        return;
-                    }
-                    texa.resize (texa.length-1);
-                    enda = texa[0];
-                    for (int j = 1; j < texa.length; j++) {
-                        enda = enda + split + texa[j];
-                    }
-                    ctxt.set_text (enda);
+	                string[] enda = Randomize.DeleteRoulette (ctxt.get_text (), cphr.get_text ());
+                    endc.set_label (enda[0])
+                    ctxt.set_text (enda[1]);
                 }
             }
         }
