@@ -20,8 +20,6 @@ Initializes the window, translations, and search request.
 Handles window-related stuff, such as changing views, about page, grabbing text and setting text, ect.
 ### `func.vala`
 Handles randomization functionality.
-### `sp.vala`
-Will handle the search provider app.
 ### `window.ui`
 Contains the UI template for the Random main window and Random main menu.
 ### `shortcut.ui`
