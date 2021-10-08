@@ -26,4 +26,7 @@ Will handle the search provider app.
 Contains the UI template for the Random main window and Random main menu.
 ### `shortcut.ui`
 Handles the keyboard shortcut window.
+### `style.css`
+Contains style info for the Random window.
+
 </details>
