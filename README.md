@@ -63,8 +63,7 @@ Help me make some po files! I'm not very fluent in any language except English, 
 - [ ] More translations
 #### Roadmap for 1.1 - 1.2
 - [x] Move Randomization functionality to different file
-- [ ] DBus search
-    - [ ] *Open in Random* prefills fields
+- [ ] `random:` links
 #### Unimportant
 - [ ] Windows package (LTS)
 ### 👩‍💻️ How to contribute to Random
