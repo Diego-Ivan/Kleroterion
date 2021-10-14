@@ -63,19 +63,22 @@ Help me make some po files! I'm not very fluent in any language except English, 
 - [ ] More translations
 #### Roadmap for 1.1 - 1.2
 - [x] Move Randomization functionality to different file
-- [ ] DBus search
-    - [ ] *Open in Random* prefills fields
+- [ ] `random:` links
 #### Unimportant
 - [ ] Windows package (LTS)
 ### 👩‍💻️ How to contribute to Random
 <details>
 <summary>Contributing</summary>
-Hey there! So, you want to contribute to Random.
+
+#### 🚀 A starting guide
 
 - Make a PR (or message me on Matrix) adding yourself to the Contributors section in this README.
 - Next, here are some things I will label as wontfix.
     - Anything against GNOME HIG
     - Something too advanced for this simple app And don't forget to test before your PR! Have a great day.
+#### 🤓 EditorConfig
+Make sure to follow the EditorConfig guidelines specified in the `.editorconfig` file. And check the [EditorConfig website](https://editorconfig.org/) to see if your IDE is compatible!
+
 </details>
 </details>
 
@@ -86,12 +89,15 @@ This project follows the [GNOME Code of Conduct](https://wiki.gnome.org/Foundati
 <details>
 <summary>See the Contributors</summary>
 
+### 👥 The Contributors
+
 - [foreverxml](https://codeberg.org/foreverxml) - 🐛🎨🤔🚧👀🌍⚠️💻
 - [teackot](https://codeberg.org/teackot) - 🐛🌍⚠️💻
 - [dimmednerd](https://codeberg.org/DiegoIvan) - 🐛🌍⚠️💻
-</details>
 
 Uses the [All Contributors Emoji Key](https://allcontributors.org/docs/en/emoji-key).
+</details>
+
 ## 🖥️ Supported OS?
 
 <details><summary>Long thing about OS support</summary>
