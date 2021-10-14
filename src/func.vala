@@ -53,12 +53,12 @@ namespace Random {
         }
         
         public string[] DeleteRoulette (string tex, string split = "/") {
-            string end = this.Roulette (list, sep);
+            string end = this.Roulette (tex, split);
             string[] texa = tex.split (split);
             string enda;
-            for (int i = 0; i < texa.length; i++) {
-                if (texa[i] == end) {
-                    for (int k = i; k < texa.length - 1; k++) {
+            for (int t = 0; t < texa.length; t++) {
+                if (texa[t] == end) {
+                    for (int k = t; k < texa.length - 1; k++) {
                         texa[k] = texa[k+1];
                         texa[k+1] = null;
                     }
@@ -78,7 +78,7 @@ namespace Random {
         }
         
         public string Coin (string string1 = "Heads", string string2 = "Tails") {
-            int hey = this.Number(0, 1, true);
+            int hey = this.Number(0, 1);
             if (hey == 1) {
                 return string2;
             }
@@ -87,7 +87,7 @@ namespace Random {
         
         public string NumberRoulette (int num1, int num2, string sep = "/") {
             string list = num1.to_string ();
-            for (i = num1 + 1; i <= num2; i++) {
+            for (int i = num1 + 1; i <= num2; i++) {
                 list = list + sep + i.to_string ();
             }
             return list;

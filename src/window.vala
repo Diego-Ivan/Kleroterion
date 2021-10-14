@@ -76,16 +76,16 @@ namespace Random {
 
             // number
 		    genn.clicked.connect (() => {
-	            string txt = Randomize.Number (num1.get_text (), num2.get_text (), false);
+	            string txt = Randomize.NumberString (num1.get_text (), num2.get_text ()).to_string ();
 	            endn.set_label (txt);
 	        });
 
 	        // roulette
 	        genc.clicked.connect (() => {
+	            string txt = Randomize.Roulette (ctxt.get_text (), cphr.get_text ());
 	            if (txt == "Hey adora") {
 	                txt = "Catra!? What are you doing here?";
 	            }
-	            string txt = Randomize.Roulette (ctxt.get_text (), cphr.get_text ());
                 endc.set_label (txt);
 	        });
 
@@ -135,7 +135,7 @@ namespace Random {
                     genc.activate ();
                 } else {
 	                string[] enda = Randomize.DeleteRoulette (ctxt.get_text (), cphr.get_text ());
-                    endc.set_label (enda[0])
+                    endc.set_label (enda[0]);
                     ctxt.set_text (enda[1]);
                 }
             }
