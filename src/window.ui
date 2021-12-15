@@ -72,7 +72,7 @@
                                       <object class="GtkEntry" id="num1"><property name="vexpand">0</property>
                                         <property name="tooltip-text" translatable="yes">Put the lower number in your number range here (for example, put a 1 here if you want to generate a number from 1 to 10)</property>
                                         <property name="max-width-chars">3</property>
-                                        <property name="text" translatable="yes">1</property>
+                                        <property name="text">1</property>
                                         <property name="input-hints">GTK_INPUT_HINT_NO_SPELLCHECK | GTK_INPUT_HINT_NO_EMOJI | GTK_INPUT_HINT_NONE</property>
                                       </object>
                                     </child>
@@ -87,7 +87,7 @@
                                         <property name="vexpand">0</property>
                                         <property name="tooltip-text" translatable="yes">Put the higher number in your number range here (for example, put a 10 here if you want to generate a number from 1 to 10)</property>
                                         <property name="max-width-chars">3</property>
-                                        <property name="text" translatable="yes">10</property>
+                                        <property name="text">10</property>
                                         <property name="input-purpose">number</property>
                                         <property name="input-hints">GTK_INPUT_HINT_NO_SPELLCHECK | GTK_INPUT_HINT_NO_EMOJI | GTK_INPUT_HINT_NONE</property>
                                       </object>
@@ -174,12 +174,12 @@
                                       <object class="GtkEntry" id="cphr">
                                         <property name="tooltip-text" translatable="yes">Type your separator here (for example, “/” for list “GNOME/KDE/XFCE”.)</property>
                                         <property name="max-width-chars">3</property><property name="vexpand">0</property>
-                                        <property name="text" translatable="yes">/</property>
+                                        <property name="text">/</property>
                                       </object>
                                     </child>
                                     <child>
                                       <object class="GtkLabel">
-                                        <property name="label" translatable="yes"> </property>
+                                        <property name="label"> </property>
                                       </object>
                                     </child>
                                   </object>
@@ -189,7 +189,7 @@
                                     <property name="spacing">5</property>
                                     <child>
                                       <object class="GtkLabel">
-                                        <property name="label" translatable="yes"> </property>
+                                        <property name="label"> </property>
                                       </object>
                                     </child>
                                     <child>
