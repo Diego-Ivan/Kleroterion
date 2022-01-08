@@ -24,4 +24,16 @@
 Congrats, you translated Random!
 
 ## 📜 Also, updating the POT file.
-If you made translations in other places, you have to hand-update the POT file. Running a gettext update will remove some of the translations which would kinda... make everything bug out? We don't want that... at all.
+If you made translations in other places, you should either:
+- Hand-update the POT file
+- Run `meson _build --prefix=/usr && meson compile -C _build randomgtk-pot`
+
+## This is so slow...
+Compiling all of Random, just for the PO files? That's not... great. Instead of doing that, run:
+
+```sh
+meson _build --prefix=/usr
+meson compile -C _build randomgtk-update-po
+```
+
+###### *This was made by help from ocsfdezdz. Thank you!*
