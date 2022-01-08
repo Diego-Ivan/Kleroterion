@@ -28,7 +28,7 @@ If you made translations in other places, you should either:
 - Hand-update the POT file
 - Run `meson _build --prefix=/usr && meson compile -C _build randomgtk-pot`
 
-## This is so slow...
+## 😕 This is so slow...
 Compiling all of Random, just for the PO files? That's not... great. Instead of doing that, run:
 
 ```sh

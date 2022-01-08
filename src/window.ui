@@ -32,7 +32,6 @@
         <child>
           <object class="AdwViewStack" id="stack1">
             <property name="vexpand">1</property>
-            <property name="interpolate-size">1</property>
             <property name="margin-start">5</property>
             <property name="margin-end">5</property>
             <property name="margin-top">5</property>

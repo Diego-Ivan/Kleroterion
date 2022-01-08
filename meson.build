@@ -1,5 +1,5 @@
 project('random', ['c', 'vala'],
-          version: '1.0',
+          version: '1.1',
     meson_version: '>= 0.50.0',
   default_options: [ 'warning_level=2',
                    ],

@@ -1,6 +1,6 @@
 /* window.vala
  *
- * Copyright 2021 Forever XML
+ * Copyright 2021-2022 Forever XML
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -107,7 +107,7 @@ namespace Random {
                 program_name: _("Random"),
                 logo_icon_name: "page.codeberg.foreverxml.Random",
                 version: "1.1",
-                comments: "Random shmandom...",
+                comments: "Ooh, cool new icon!",
                 copyright: "Copyright © 2021 Forever XML",
                 license_type: License.AGPL_3_0,
                 authors: authors,
