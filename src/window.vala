@@ -102,6 +102,7 @@ namespace Random {
 	        string translators = """Forever XML <foreverxml@tuta.io>
 	                                Teackot <k.qovekt@gmail.com>
 	                                Diego Iván <diegoivan.mae@gmail.com>""";
+	        string[] artists = {"Forever XML <foreverxml@tuta.io>", "Jakub Steiner <jimmac@gmail.com>"};
 	        show_about_dialog (this,
 	            // Translators: This is a noun and not a verb.
                 program_name: _("Random"),
@@ -111,6 +112,7 @@ namespace Random {
                 copyright: "Copyright © 2021 Forever XML",
                 license_type: License.AGPL_3_0,
                 authors: authors,
+                artists: artists,
                 translator_credits: translators,
                 website: "https://codeberg.org/foreverxml/random",
                 website_label: _("Repository"));
