@@ -94,6 +94,8 @@ This project follows the [GNOME Code of Conduct](https://wiki.gnome.org/Foundati
 - [foreverxml](https://codeberg.org/foreverxml) - 🐛🎨🤔🚧👀🌍⚠️💻
 - [teackot](https://codeberg.org/teackot) - 🐛🌍⚠️💻
 - [dimmednerd](https://codeberg.org/DiegoIvan) - 🐛🌍⚠️💻
+- [oscfdezdz](https://codeberg.org/oscfdezdz) - 🐛⚠️💻
+- [jimmac](https://codeberg.org/jimmac) - 🎨
 
 Uses the [All Contributors Emoji Key](https://allcontributors.org/docs/en/emoji-key).
 </details>
