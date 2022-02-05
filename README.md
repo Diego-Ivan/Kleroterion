@@ -1,4 +1,4 @@
-<img align="left" style="vertical-align: middle;" width="160" height="160" src="https://codeberg.org/foreverxml/random/raw/branch/main/data/icon.png">
+<img align="left" style="vertical-align: middle;" width="160" height="160" src="https://codeberg.org/foreverxml/random/raw/branch/main/data/icons/hicolor/scalable/apps/page.codeberg.foreverxml.Random.svg">
 
 # Random
 Make randomization easy
