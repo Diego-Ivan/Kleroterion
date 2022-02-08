@@ -9,7 +9,6 @@
         "--socket=fallback-x11",
         "--socket=wayland",
         "--device=dri",
-        "--env=GTK_PATH=/app/lib/gtk-4.0"
     ],
     "cleanup" : [
         "/include",
