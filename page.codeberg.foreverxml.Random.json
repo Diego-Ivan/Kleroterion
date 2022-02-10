@@ -60,7 +60,8 @@
             "buildsystem": "meson",
             "config-opts": [
                 "-Dbuild-tests=false",
-                "-Dbuild-examples=false"
+                "-Dbuild-examples=false",
+                "-Dbuildtype=debugoptimized"
             ],
             "sources": [{
                 "type": "git",
@@ -84,8 +85,7 @@
             "sources": [{
                 "type": "git",
                 "url": "https://gitlab.gnome.org/GNOME/libadwaita.git",
-                "tag": "1.0.1",
-                "commit": "b274a0c32c51a92692e3b282f04e88f033ba73b1"
+                "branch": "main"
             }]
         },
         {
