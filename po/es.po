@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: randomgtk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-29 18:21+0100\n"
-"PO-Revision-Date: 2021-11-29 18:21+0100\n"
+"PO-Revision-Date: 2022-02-09 23:08-0700\n"
 "Last-Translator: Diego Iván <diegoivan.mae@gmail.com>\n"
 "Language-Team: Spanish - Mexico <diegoivan.mae@gmail.com>\n"
 "Language: es_MX\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. Translators: This is a noun and not a verb.
 #: data/page.codeberg.foreverxml.Random.desktop.in:3
@@ -144,11 +144,11 @@ msgstr "Abrir menú"
 msgid "Number"
 msgstr "Número"
 
-#: src/window.ui:68
+#: src/window.ui:67
 msgid " Pick a number from "
 msgstr " Escoger un número del "
 
-#: src/window.ui:73
+#: src/window.ui:72
 msgid ""
 "Put the lower number in your number range here (for example, put a 1 here if "
 "you want to generate a number from 1 to 10)"
@@ -156,11 +156,11 @@ msgstr ""
 "Coloque el límite inferior aquí (por ejemplo, ponga un 1 aquí si quiere "
 "generar un número del 1 al 10)"
 
-#: src/window.ui:82
+#: src/window.ui:81
 msgid " to "
 msgstr " al "
 
-#: src/window.ui:88
+#: src/window.ui:87
 msgid ""
 "Put the higher number in your number range here (for example, put a 10 here "
 "if you want to generate a number from 1 to 10)"
@@ -168,11 +168,11 @@ msgstr ""
 "Coloque el límite superior aquí (por ejemplo, ponga un 10 si quiere generar "
 "un número del 1 al 10)"
 
-#: src/window.ui:103
+#: src/window.ui:98
 msgid "Generate"
 msgstr "Generar"
 
-#: src/window.ui:106
+#: src/window.ui:99
 msgid "Generate a random number"
 msgstr "Generar un número aleatorio"
 
@@ -180,93 +180,93 @@ msgstr "Generar un número aleatorio"
 msgid "You haven't generated yet!"
 msgstr "¡Aún no ha generado ningún número!"
 
-#: src/window.ui:139
+#: src/window.ui:138
 msgid "Roulette"
 msgstr "Ruleta"
 
-#: src/window.ui:170
+#: src/window.ui:160
 msgid "Write your options below. Separate them with:"
 msgstr "Escriba sus opciones a continuación. Sepárelas con:"
 
-#: src/window.ui:175
+#: src/window.ui:165
 msgid "Type your separator here (for example, “/” for list “GNOME/KDE/XFCE”.)"
 msgstr ""
 "Escriba su separador aquí (por ejemplo, \"/\" para la lista \"GNOME/KDE/XFCE"
 "\".)"
 
-#: src/window.ui:198
+#: src/window.ui:188
 msgid "Type your list here (for example, “GNOME/KDE/XFCE” with separator “/”.)"
 msgstr ""
 "Escriba su lista aquí (por ejemplo: \"GNOME/KDE/XFCE\" con el separador \"/"
 "\".)"
 
-#: src/window.ui:199
+#: src/window.ui:189
 msgid "One/Two/Three"
 msgstr "Uno/Dos/Tres"
 
-#: src/window.ui:201 src/window.ui:202
+#: src/window.ui:191 src/window.ui:192
 msgid "Insert Emoji"
 msgstr "Insertar emoji"
 
-#: src/window.ui:208
+#: src/window.ui:198
 msgid "Pick"
 msgstr "Escoger"
 
-#: src/window.ui:210
+#: src/window.ui:200
 msgid "Spin the wheel"
 msgstr "Gira la ruleta"
 
-#: src/window.ui:226 src/window.vala:134
+#: src/window.ui:216 src/window.vala:134
 msgid "You haven't rolled yet!"
 msgstr "¡Aún no ha girado la ruleta!"
 
-#: src/window.ui:243
+#: src/window.ui:233
 msgid "Coin"
 msgstr "Moneda"
 
-#: src/window.ui:265
+#: src/window.ui:255
 msgid "Click the button to flip the coin!"
 msgstr "¡Haga clic en el botón para lanzar la moneda!"
 
-#: src/window.ui:270
+#: src/window.ui:280
 msgid "Flip"
 msgstr "Lanzar"
 
-#: src/window.ui:272
+#: src/window.ui:262
 msgid "Flip the coin"
 msgstr "Lanzar la moneda"
 
-#: src/window.ui:285
+#: src/window.ui:275
 msgid "You haven't flipped yet!"
 msgstr "¡Aún no ha lanzado la moneda!"
 
 #. Translators: Remember to add a mnemonic and use header case here.
-#: src/window.ui:317
+#: src/window.ui:307
 msgid "Number to _Roulette"
 msgstr "Número a _ruleta"
 
 #. Translators: Remember to add a mnemonic and use header case here.
-#: src/window.ui:322
+#: src/window.ui:312
 msgid "_Delete Picked Item"
 msgstr "_Borrar el elemento elegido"
 
 #. Translators: Remember to add a mnemonic and use header case here.
-#: src/window.ui:327
+#: src/window.ui:317
 msgid "_Copy Item"
 msgstr "_Copiar elemento"
 
 #. Translators: Remember to add a mnemonic and use header case here.
-#: src/window.ui:334
+#: src/window.ui:324
 msgid "_Keyboard Shortcuts"
 msgstr "Atajos del _teclado"
 
 #. Translators: Remember to add a mnemonic and use header case here.
-#: src/window.ui:339
+#: src/window.ui:329
 msgid "_Help ↗"
 msgstr "Ayu_da ↗"
 
 #. Translators: Remember to add a mnemonic and use header case here.
-#: src/window.ui:344
+#: src/window.ui:334
 msgid "_About Random"
 msgstr "_Acerca de Aleatorio"
 

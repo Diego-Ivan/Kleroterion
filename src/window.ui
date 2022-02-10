@@ -78,7 +78,7 @@
                                     <child>
                                       <object class="GtkLabel"><property name="wrap">1</property>
                                         <property name="hexpand">1</property>
-                                        <property name="label" translatable="yes">to</property>
+                                        <property name="label" translatable="yes"> to </property>
                                       </object>
                                     </child>
                                     <child>
