@@ -1,326 +1,392 @@
 <interface>
-  <requires lib="gtk" version="4.0"/>
-  <template class="RandomWindow" parent="AdwApplicationWindow">
-    <property name="title" translatable="yes">Random</property>
-    <property name="default-width">500</property>
-    <property name="default-height">375</property>
-    <property name="icon-name">page.codeberg.foreverxml.Random</property>
-    <child>
-      <object class="GtkBox">
-        <property name="orientation">vertical</property>
+    <requires lib="gtk" version="4.0"/>
+    <template class="RandomWindow" parent="AdwApplicationWindow">
+        <property name="title" translatable="yes">Random</property>
+        <property name="default-width">500</property>
+        <property name="default-height">375</property>
+        <property name="icon-name">page.codeberg.foreverxml.Random</property>
         <child>
-          <object class="AdwHeaderBar" id="headerBar">
-            <property name="visible">True</property>
-            <property name="centering-policy">strict</property>
-            <child type="title">
-              <object class="AdwViewSwitcherTitle" id="title">
-                <property name="visible">True</property>
-                <property name="tooltip-text" translatable="yes">Switch between views</property>
-                <property name="stack">stack1</property>
-                <property name="title" translatable="yes" comments="Translators: This is a noun and not a verb.">Random</property>
-              </object>
-            </child>
-            <child type="end">
-              <object class="GtkMenuButton" id="menus">
-                <property name="icon-name">open-menu-symbolic</property>
-                <property name="menu-model">menu</property>
-                <property name="valign">center</property>
-                <property name="tooltip-text" translatable="yes">Open the Menu</property>
-              </object>
-            </child>
-          </object>
-        </child>
-        <child>
-          <object class="AdwViewStack" id="stack1">
-            <property name="vexpand">1</property>
-            <property name="margin-start">5</property>
-            <property name="margin-end">5</property>
-            <property name="margin-top">5</property>
-            <property name="margin-bottom">5</property>
-            <child>
-              <object class="AdwViewStackPage" id="numstack">
-                <property name="name">Number</property>
-                <property name="title" translatable="yes">Number</property>
-                <property name="icon-name">dialpad-symbolic</property>
-                <property name="child">
-                  <object class="AdwClamp">
-                    <property name="visible">True</property>
-                    <property name="maximum-size">420</property>
-                    <child>
-                      <object class="AdwClamp">
+            <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <child>
+                    <object class="AdwHeaderBar" id="headerBar">
                         <property name="visible">True</property>
-                        <property name="orientation">vertical</property>
-                        <property name="maximum-size">300</property>
+                        <property name="centering-policy">strict</property>
+                        <child type="title">
+                            <object class="AdwViewSwitcherTitle" id="title">
+                                <property name="visible">True</property>
+                                <property name="tooltip-text" translatable="yes">Switch between views</property>
+                                <property name="stack">stack1</property>
+                                <property name="title" translatable="yes" comments="Translators: This is a noun and not a verb.">Random</property>
+                            </object>
+                        </child>
+                        <child type="end">
+                            <object class="GtkMenuButton" id="menus">
+                                <property name="icon-name">open-menu-symbolic</property>
+                                <property name="menu-model">menu</property>
+                                <property name="valign">center</property>
+                                <property name="tooltip-text" translatable="yes">Open the Menu</property>
+                            </object>
+                        </child>
+                    </object>
+                </child>
+                <child>
+                    <object class="AdwViewStack" id="stack1">
+                        <property name="vexpand">1</property>
+                        <property name="margin-start">5</property>
+                        <property name="margin-end">5</property>
+                        <property name="margin-top">5</property>
+                        <property name="margin-bottom">5</property>
                         <child>
-                          <object class="GtkBox" id="clampbox1">
-                            <property name="spacing">6</property>
-                            <property name="orientation">vertical</property>
-                            <child>
-                              <object class="GtkLabel" id="endn">
-                                <property name="vexpand">1</property>
-                                <property name="label" translatable="yes">5</property>
-                                <style><class name="number" /><class name="numeric" /></style>
-                              </object>
-                            </child>
-                            <child>
-                              <object class="GtkBox">
-                                <property name="spacing">6</property>
-                                <property name="vexpand">0</property>
-                                <child>
-                                  <object class="GtkBox">
-                                    <property name="spacing">10</property>
-                                    <property name="hexpand">1</property><property name="vexpand">0</property>
-                                    <property name="orientation">vertical</property>
-                                    <child><object class="AdwClamp"><property name="vexpand">0</property><property name="hexpand">0</property><property name="visible">True</property><property name="maximum-size">250</property><property name="orientation">horizontal</property><child><object class="GtkListBox"><style><class name="boxed-list" /></style><property name="selection-mode">none</property><child><object class="AdwActionRow"><property name="title">From:</property>
-                                    <child>
-                                      <object class="GtkSpinButton" id="num1"><property name="vexpand">0</property><property name="hexpand">0</property><property name="valign">center</property><property name="numeric">True</property>
-                                        <property name="tooltip-text" translatable="yes">Put the lower number in your number range here (for example, put a 1 here if you want to generate a number from 1 to 10)</property>
-                                        <property name="max-width-chars">3</property><property name="climb-rate">1</property><property name="digits">0</property>
-                                        <property name="adjustment"><object class="GtkAdjustment"><property name="page-increment">10</property><property name="step-increment">1</property><property name="lower">-2000000</property><property name="upper">2000000</property><property name="value">1</property></object></property>
-                                      </object>
-                                  </child></object></child><child><object class="AdwActionRow"><property name="title">To:</property>
-                                    <child>
-                                      <object class="GtkSpinButton" id="num2">
-                                        <property name="vexpand">0</property><property name="hexpand">0</property>
-                                        <property name="climb-rate">1</property><property name="valign">center</property><property name="digits">0</property><property name="numeric">True</property>
-                                        <property name="tooltip-text" translatable="yes">Put the higher number in your number range here (for example, put a 10 here if you want to generate a number from 1 to 10)</property>
-                                        <property name="max-width-chars">3</property><property name="value">10</property>
-                                        <property name="adjustment"><object class="GtkAdjustment"><property name="page-increment">10</property><property name="step-increment">1</property><property name="lower">-2000000</property><property name="upper">2000000</property><property name="value">10</property></object></property>
-                                      </object>
-                                  </child></object></child></object></child></object></child>
-                                    <child>
-                                      <object class="GtkBox"><property name="hexpand">1</property><property name="vexpand">0</property><property name="spacing">6</property><property name="halign">center</property>
+                            <object class="AdwViewStackPage" id="numstack">
+                                <property name="name">Number</property>
+                                <property name="title" translatable="yes">Number</property>
+                                <property name="icon-name">dialpad-symbolic</property>
+                                <property name="child">
+                                    <object class="AdwClamp">
+                                        <property name="visible">True</property>
+                                        <property name="maximum-size">420</property>
                                         <child>
-                                          <object class="GtkButton" id="genn">
-                                            <property name="label" translatable="yes">Generate</property><property name="halign">center</property>
-                                            <property name="tooltip-text" translatable="yes">Generate a random number</property>
-                                            <style><class name="pill" /><class name="suggested" /></style>
-                                          </object>
+                                            <object class="AdwClamp">
+                                                <property name="visible">True</property>
+                                                <property name="orientation">vertical</property>
+                                                <property name="maximum-size">300</property>
+                                                <child>
+                                                    <object class="GtkBox" id="clampbox1">
+                                                        <property name="spacing">6</property>
+                                                        <property name="orientation">vertical</property>
+                                                        <child>
+                                                            <object class="GtkLabel" id="endn">
+                                                                <property name="vexpand">1</property>
+                                                                <property name="label" translatable="yes">5</property>
+                                                                <style>
+                                                                    <class name="number" />
+                                                                    <class name="numeric" />
+                                                                </style>
+                                                            </object>
+                                                        </child>
+                                                        <child>
+                                                            <object class="GtkBox">
+                                                                <property name="spacing">6</property>
+                                                                <property name="vexpand">0</property>
+                                                                <child>
+                                                                    <object class="GtkBox">
+                                                                        <property name="spacing">10</property>
+                                                                        <property name="hexpand">1</property>
+                                                                        <property name="vexpand">0</property>
+                                                                        <property name="orientation">vertical</property>
+                                                                        <child>
+                                                                            <object class="AdwClamp">
+                                                                                <property name="vexpand">0</property>
+                                                                                <property name="hexpand">0</property>
+                                                                                <property name="visible">True</property>
+                                                                                <property name="maximum-size">250</property>
+                                                                                <property name="orientation">horizontal</property>
+                                                                                <child>
+                                                                                    <object class="GtkListBox">
+                                                                                        <style>
+                                                                                            <class name="boxed-list" />
+                                                                                        </style>
+                                                                                        <property name="selection-mode">none</property>
+                                                                                        <child>
+                                                                                            <object class="AdwActionRow">
+                                                                                                <property name="title">From:</property>
+                                                                                                <child>
+                                                                                                    <object class="GtkSpinButton" id="num1">
+                                                                                                        <property name="vexpand">0</property>
+                                                                                                        <property name="hexpand">0</property>
+                                                                                                        <property name="valign">center</property>
+                                                                                                        <property name="numeric">True</property>
+                                                                                                        <property name="tooltip-text" translatable="yes">Put the lower number in your number range here (for example, put a 1 here if you want to generate a number from 1 to 10)</property>
+                                                                                                        <property name="max-width-chars">3</property>
+                                                                                                        <property name="climb-rate">1</property>
+                                                                                                        <property name="digits">0</property>
+                                                                                                        <property name="adjustment">
+                                                                                                            <object class="GtkAdjustment">
+                                                                                                                <property name="page-increment">10</property>
+                                                                                                                <property name="step-increment">1</property>
+                                                                                                                <property name="lower">-2000000</property>
+                                                                                                                <property name="upper">2000000</property>
+                                                                                                                <property name="value">1</property>
+                                                                                                            </object>
+                                                                                                        </property>
+                                                                                                    </object>
+                                                                                                </child>
+                                                                                            </object>
+                                                                                        </child>
+                                                                                        <child>
+                                                                                            <object class="AdwActionRow">
+                                                                                                <property name="title">To:</property>
+                                                                                                <child>
+                                                                                                    <object class="GtkSpinButton" id="num2">
+                                                                                                        <property name="vexpand">0</property>
+                                                                                                        <property name="hexpand">0</property>
+                                                                                                        <property name="climb-rate">1</property>
+                                                                                                        <property name="valign">center</property>
+                                                                                                        <property name="digits">0</property>
+                                                                                                        <property name="numeric">True</property>
+                                                                                                        <property name="tooltip-text" translatable="yes">Put the higher number in your number range here (for example, put a 10 here if you want to generate a number from 1 to 10)</property>
+                                                                                                        <property name="max-width-chars">3</property>
+                                                                                                        <property name="value">10</property>
+                                                                                                        <property name="adjustment">
+                                                                                                            <object class="GtkAdjustment">
+                                                                                                                <property name="page-increment">10</property>
+                                                                                                                <property name="step-increment">1</property>
+                                                                                                                <property name="lower">-2000000</property>
+                                                                                                                <property name="upper">2000000</property>
+                                                                                                                <property name="value">10</property>
+                                                                                                            </object>
+                                                                                                        </property>
+                                                                                                    </object>
+                                                                                                </child>
+                                                                                            </object>
+                                                                                        </child>
+                                                                                    </object>
+                                                                                </child>
+                                                                            </object>
+                                                                        </child>
+                                                                        <child>
+                                                                            <object class="GtkBox">
+                                                                                <property name="hexpand">1</property>
+                                                                                <property name="vexpand">0</property>
+                                                                                <property name="spacing">6</property>
+                                                                                <property name="halign">center</property>
+                                                                                <child>
+                                                                                    <object class="GtkButton" id="genn">
+                                                                                        <property name="label" translatable="yes">Generate</property>
+                                                                                        <property name="halign">center</property>
+                                                                                        <property name="tooltip-text" translatable="yes">Generate a random number</property>
+                                                                                        <style>
+                                                                                            <class name="pill" />
+                                                                                            <class name="suggested" />
+                                                                                        </style>
+                                                                                    </object>
+                                                                                </child>
+                                                                            </object>
+                                                                        </child>
+                                                                    </object>
+                                                                </child>
+                                                            </object>
+                                                        </child>
+                                                    </object>
+                                                </child>
+                                            </object>
                                         </child>
-                                      </object>
-                                    </child>
-                                  </object>
-                                </child>
-                              </object>
-                            </child>
-                          </object>
+                                    </object>
+                                </property>
+                            </object>
                         </child>
-                      </object>
-                    </child>
-                  </object>
-                </property>
-              </object>
-            </child>
-            <child>
-              <object class="AdwViewStackPage" id="rou">
-                <property name="name">Roulette</property>
-                <property name="title" translatable="yes">Roulette</property>
-                <property name="icon-name">roulette-symbolic</property>
-                <property name="child">
-                  <object class="AdwClamp">
-                    <property name="visible">True</property>
-                    <property name="maximum-size">420</property>
-                    <child>
-                      <object class="AdwClamp">
-                        <property name="visible">True</property>
-                        <property name="orientation">vertical</property>
-                        <property name="maximum-size">300</property>
                         <child>
-                          <object class="GtkBox" id="clampbox2">
-                            <property name="spacing">6</property>
-                            <property name="orientation">vertical</property>
-                            <child>
-                              <object class="GtkBox">
-                                <property name="spacing">6</property>
-                                <property name="orientation">vertical</property>
-                                <child>
-                                  <object class="GtkBox">
-                                    <property name="spacing">6</property>
-                                    <child>
-                                      <object class="GtkLabel">
-                                        <property name="label" translatable="no"> </property>
-                                      </object>
-                                    </child>
-                                    <child>
-                                      <object class="GtkLabel">
-                                        <property name="hexpand">1</property>
-                                        <property name="wrap">1</property>
-                                        <property name="label" translatable="yes">Separate the below list with </property>
-                                      </object>
-                                    </child>
-                                    <child>
-                                      <object class="GtkEntry" id="cphr">
-                                        <property name="tooltip-text" translatable="yes">Type your separator here (for example, “/” for list “GNOME/KDE/XFCE”.)</property>
-                                        <property name="max-width-chars">3</property><property name="vexpand">0</property>
-                                        <property name="text">/</property>
-                                      </object>
-                                    </child>
-                                    <child>
-                                      <object class="GtkLabel">
-                                        <property name="label"> </property>
-                                      </object>
-                                    </child>
-                                  </object>
-                                </child>
-                                <child>
-                                  <object class="GtkBox">
-                                    <property name="spacing">6</property>
-                                    <child>
-                                      <object class="GtkLabel">
-                                        <property name="label"> </property>
-                                      </object>
-                                    </child>
-                                    <child>
-                                      <object class="GtkEntry" id="ctxt">
-                                        <property name="hexpand">1</property>
-                                        <property name="tooltip-text" translatable="yes">Type your list here (for example, “GNOME/KDE/XFCE” with separator “/”.)</property>
-                                        <property name="text" translatable="yes">One/Two/Three</property>
-                                        <property name="secondary-icon-name">face-smile-symbolic</property>
-                                        <property name="secondary-icon-tooltip-text" translatable="yes">Insert Emoji</property>
-                                        <property name="secondary-icon-tooltip-markup" translatable="yes">Insert Emoji</property>
-                                        <property name="show-emoji-icon">1</property>
-                                      </object>
-                                    </child>
-                                    <child>
-                                      <object class="GtkButton" id="genc">
-                                        <property name="label" translatable="yes">Pick</property>
-                                        <property name="receives-default">1</property>
-                                        <property name="tooltip-text" translatable="yes">Spin the wheel</property>
-                                      </object>
-                                    </child>
-                                    <child>
-                                      <object class="GtkLabel">
-                                        <property name="label" translatable="no"> </property>
-                                      </object>
-                                    </child>
-                                  </object>
-                                </child>
-                              </object>
-                            </child>
-                            <child>
-                              <object class="GtkLabel" id="endc">
-                                <property name="vexpand">1</property>
-                                <property name="wrap">1</property>
-                                <property name="label" translatable="yes">You haven&apos;t rolled yet!</property>
-                                <style>
-                                  <class name="large-title"/>
-                                </style>
-                              </object>
-                            </child>
-                          </object>
+                            <object class="AdwViewStackPage" id="rou">
+                                <property name="name">Roulette</property>
+                                <property name="title" translatable="yes">Roulette</property>
+                                <property name="icon-name">roulette-symbolic</property>
+                                <property name="child">
+                                    <object class="AdwClamp">
+                                        <property name="visible">True</property>
+                                        <property name="maximum-size">420</property>
+                                        <child>
+                                            <object class="AdwClamp">
+                                                <property name="visible">True</property>
+                                                <property name="orientation">vertical</property>
+                                                <property name="maximum-size">300</property>
+                                                <child>
+                                                    <object class="GtkBox" id="clampbox2">
+                                                        <property name="spacing">6</property>
+                                                        <property name="orientation">vertical</property>
+                                                        <child>
+                                                            <object class="GtkBox">
+                                                                <property name="spacing">6</property>
+                                                                <property name="orientation">vertical</property>
+                                                                <child>
+                                                                    <object class="GtkBox">
+                                                                        <property name="spacing">6</property>
+                                                                        <child>
+                                                                            <object class="GtkLabel">
+                                                                                <property name="label" translatable="no"></property>
+                                                                            </object>
+                                                                        </child>
+                                                                        <child>
+                                                                            <object class="GtkLabel">
+                                                                                <property name="hexpand">1</property>
+                                                                                <property name="wrap">1</property>
+                                                                                <property name="label" translatable="yes">Separate the below list with </property>
+                                                                            </object>
+                                                                        </child>
+                                                                        <child>
+                                                                            <object class="GtkEntry" id="cphr">
+                                                                                <property name="tooltip-text" translatable="yes">Type your separator here (for example, “/” for list “GNOME/KDE/XFCE”.)</property>
+                                                                                <property name="max-width-chars">3</property>
+                                                                                <property name="vexpand">0</property>
+                                                                                <property name="text">/</property>
+                                                                            </object>
+                                                                        </child>
+                                                                        <child>
+                                                                            <object class="GtkLabel">
+                                                                                <property name="label"></property>
+                                                                            </object>
+                                                                        </child>
+                                                                    </object>
+                                                                </child>
+                                                                <child>
+                                                                    <object class="GtkBox">
+                                                                        <property name="spacing">6</property>
+                                                                        <child>
+                                                                            <object class="GtkLabel">
+                                                                                <property name="label"></property>
+                                                                            </object>
+                                                                        </child>
+                                                                        <child>
+                                                                            <object class="GtkEntry" id="ctxt">
+                                                                                <property name="hexpand">1</property>
+                                                                                <property name="tooltip-text" translatable="yes">Type your list here (for example, “GNOME/KDE/XFCE” with separator “/”.)</property>
+                                                                                <property name="text" translatable="yes">One/Two/Three</property>
+                                                                                <property name="secondary-icon-name">face-smile-symbolic</property>
+                                                                                <property name="secondary-icon-tooltip-text" translatable="yes">Insert Emoji</property>
+                                                                                <property name="secondary-icon-tooltip-markup" translatable="yes">Insert Emoji</property>
+                                                                                <property name="show-emoji-icon">1</property>
+                                                                            </object>
+                                                                        </child>
+                                                                        <child>
+                                                                            <object class="GtkButton" id="genc">
+                                                                                <property name="label" translatable="yes">Pick</property>
+                                                                                <property name="receives-default">1</property>
+                                                                                <property name="tooltip-text" translatable="yes">Spin the wheel</property>
+                                                                            </object>
+                                                                        </child>
+                                                                        <child>
+                                                                            <object class="GtkLabel">
+                                                                                <property name="label" translatable="no"></property>
+                                                                            </object>
+                                                                        </child>
+                                                                    </object>
+                                                                </child>
+                                                            </object>
+                                                        </child>
+                                                        <child>
+                                                            <object class="GtkLabel" id="endc">
+                                                                <property name="vexpand">1</property>
+                                                                <property name="wrap">1</property>
+                                                                <property name="label" translatable="yes">You haven&apos;t rolled yet!</property>
+                                                                <style>
+                                                                    <class name="large-title"/>
+                                                                </style>
+                                                            </object>
+                                                        </child>
+                                                    </object>
+                                                </child>
+                                            </object>
+                                        </child>
+                                    </object>
+                                </property>
+                            </object>
                         </child>
-                      </object>
-                    </child>
-                  </object>
-                </property>
-              </object>
-            </child>
-            <child>
-              <object class="AdwViewStackPage" id="coinpage">
-                <property name="name">Coin</property>
-                <property name="title" translatable="yes">Coin</property>
-                <property name="icon-name">coin-symbolic</property>
-                <property name="child">
-                  <object class="AdwClamp">
-                    <property name="visible">True</property>
-                    <property name="maximum-size">420</property>
-                    <child>
-                      <object class="AdwClamp">
-                        <property name="visible">True</property>
-                        <property name="orientation">vertical</property>
-                        <property name="maximum-size">300</property>
                         <child>
-                          <object class="GtkBox" id="clampbox3">
-                            <property name="spacing">6</property>
-                            <property name="orientation">vertical</property>
-                            <child>
-                              <object class="GtkBox">
-                                <property name="spacing">6</property>
-                                <child>
-                                  <object class="GtkLabel">
-                                    <property name="wrap">1</property>
-                                    <property name="hexpand">1</property>
-                                    <property name="label" translatable="yes">Click the button to flip the coin!</property>
-                                  </object>
-                                </child>
-                                <child>
-                                  <object class="GtkButton" id="cf">
-                                    <property name="label" translatable="yes">Flip</property>
-                                    <property name="receives-default">1</property>
-                                    <property name="tooltip-text" translatable="yes">Flip the coin</property>
-                                  </object>
-                                </child>
-                                <child>
-                                  <object class="GtkLabel">
-                                    <property name="label" translatable="no"> </property>
-                                  </object>
-                                </child>
-                              </object>
-                            </child>
-                            <child>
-                              <object class="GtkLabel" id="cl">
-                                <property name="vexpand">1</property>
-                                <property name="label" translatable="yes">You haven&apos;t flipped yet!</property>
-                                <style>
-                                  <class name="large-title"/>
-                                </style>
-                              </object>
-                            </child>
-                          </object>
+                            <object class="AdwViewStackPage" id="coinpage">
+                                <property name="name">Coin</property>
+                                <property name="title" translatable="yes">Coin</property>
+                                <property name="icon-name">coin-symbolic</property>
+                                <property name="child">
+                                    <object class="AdwClamp">
+                                        <property name="visible">True</property>
+                                        <property name="maximum-size">420</property>
+                                        <child>
+                                            <object class="AdwClamp">
+                                                <property name="visible">True</property>
+                                                <property name="orientation">vertical</property>
+                                                <property name="maximum-size">300</property>
+                                                <child>
+                                                    <object class="GtkBox" id="clampbox3">
+                                                        <property name="spacing">6</property>
+                                                        <property name="orientation">vertical</property>
+                                                        <child>
+                                                            <object class="GtkBox">
+                                                                <property name="spacing">6</property>
+                                                                <child>
+                                                                    <object class="GtkLabel">
+                                                                        <property name="wrap">1</property>
+                                                                        <property name="hexpand">1</property>
+                                                                        <property name="label" translatable="yes">Click the button to flip the coin!</property>
+                                                                    </object>
+                                                                </child>
+                                                                <child>
+                                                                    <object class="GtkButton" id="cf">
+                                                                        <property name="label" translatable="yes">Flip</property>
+                                                                        <property name="receives-default">1</property>
+                                                                        <property name="tooltip-text" translatable="yes">Flip the coin</property>
+                                                                    </object>
+                                                                </child>
+                                                                <child>
+                                                                    <object class="GtkLabel">
+                                                                        <property name="label" translatable="no"></property>
+                                                                    </object>
+                                                                </child>
+                                                            </object>
+                                                        </child>
+                                                        <child>
+                                                            <object class="GtkLabel" id="cl">
+                                                                <property name="vexpand">1</property>
+                                                                <property name="label" translatable="yes">You haven&apos;t flipped yet!</property>
+                                                                <style>
+                                                                    <class name="large-title"/>
+                                                                </style>
+                                                            </object>
+                                                        </child>
+                                                    </object>
+                                                </child>
+                                            </object>
+                                        </child>
+                                    </object>
+                                </property>
+                            </object>
                         </child>
-                      </object>
-                    </child>
-                  </object>
-                </property>
-              </object>
-            </child>
-          </object>
+                    </object>
+                </child>
+                <child>
+                    <object class="AdwViewSwitcherBar">
+                        <property name="stack">stack1</property>
+                        <binding name="reveal">
+                            <lookup name="title-visible">title</lookup>
+                        </binding>
+                    </object>
+                </child>
+            </object>
         </child>
-        <child>
-          <object class="AdwViewSwitcherBar">
-            <property name="stack">stack1</property>
-            <binding name="reveal">
-              <lookup name="title-visible">title</lookup>
-            </binding>
-          </object>
-        </child>
-      </object>
-    </child>
-  </template>
-  <menu id="menu">
-    <section>
-      <item>
-        <attribute name="action">app.number</attribute>
-        <!-- Translators: Remember to add a mnemonic and use header case here. -->
-        <attribute name="label" translatable="yes">Number to _Roulette</attribute>
-      </item>
-      <item>
-        <attribute name="action">app.remove</attribute>
-        <!-- Translators: Remember to add a mnemonic and use header case here. -->
-        <attribute name="label" translatable="yes">_Delete Picked Item</attribute>
-      </item>
-      <item>
-        <attribute name="action">app.copy</attribute>
-        <!-- Translators: Remember to add a mnemonic and use header case here. -->
-        <attribute name="label" translatable="yes">_Copy Item</attribute>
-      </item>
-    </section>
-    <section>
-      <item>
-        <attribute name="action">app.shortcuts</attribute>
-        <!-- Translators: Remember to add a mnemonic and use header case here. -->
-        <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
-      </item>
-      <item>
-        <attribute name="action">app.help</attribute>
-        <!-- Translators: Remember to add a mnemonic and use header case here. -->
-        <attribute name="label" translatable="yes">_Help ↗</attribute>
-      </item>
-      <item>
-        <attribute name="action">app.about</attribute>
-        <!-- Translators: Remember to add a mnemonic and use header case here. -->
-        <attribute name="label" translatable="yes">_About Random</attribute>
-      </item>
-    </section>
-  </menu>
+    </template>
+    <menu id="menu">
+        <section>
+            <item>
+                <attribute name="action">app.number</attribute>
+                <!-- Translators: Remember to add a mnemonic and use header case here. -->
+                <attribute name="label" translatable="yes">Number to _Roulette</attribute>
+            </item>
+            <item>
+                <attribute name="action">app.remove</attribute>
+                <!-- Translators: Remember to add a mnemonic and use header case here. -->
+                <attribute name="label" translatable="yes">_Delete Picked Item</attribute>
+            </item>
+            <item>
+                <attribute name="action">app.copy</attribute>
+                <!-- Translators: Remember to add a mnemonic and use header case here. -->
+                <attribute name="label" translatable="yes">_Copy Item</attribute>
+            </item>
+        </section>
+        <section>
+            <item>
+                <attribute name="action">app.shortcuts</attribute>
+                <!-- Translators: Remember to add a mnemonic and use header case here. -->
+                <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
+            </item>
+            <item>
+                <attribute name="action">app.help</attribute>
+                <!-- Translators: Remember to add a mnemonic and use header case here. -->
+                <attribute name="label" translatable="yes">_Help ↗</attribute>
+            </item>
+            <item>
+                <attribute name="action">app.about</attribute>
+                <!-- Translators: Remember to add a mnemonic and use header case here. -->
+                <attribute name="label" translatable="yes">_About Random</attribute>
+            </item>
+        </section>
+    </menu>
 </interface>
