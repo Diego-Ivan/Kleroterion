@@ -21,9 +21,9 @@ namespace Random {
 	[GtkTemplate (ui = "/page/codeberg/foreverxml/Random/window.ui")]
 	public class Window : Adw.ApplicationWindow {
 		[GtkChild] private unowned Label endn;
-		[GtkChild] private unowned Entry num1;
+		[GtkChild] private unowned SpinButton num1;
 		[GtkChild] private unowned Button genn;
-		[GtkChild] private unowned Entry num2;
+		[GtkChild] private unowned SpinButton num2;
         [GtkChild] private unowned Entry cphr;
         [GtkChild] private unowned Entry ctxt;
         [GtkChild] private unowned Button genc;
@@ -76,7 +76,7 @@ namespace Random {
 
             // number
 		    genn.clicked.connect (() => {
-	            string txt = Randomize.NumberString (num1.get_text (), num2.get_text ()).to_string ();
+	            string txt = Randomize.NumberString (num1.get_value_as_int ().to_string (), num2.get_value_as_int ().to_string ()).to_string ();
 	            endn.set_label (txt);
 	        });
 
@@ -94,6 +94,9 @@ namespace Random {
 	            cl.set_label (Randomize.Coin (_("You got heads!"), _("You got tails!")));
 	        });
 	        this.present ();
+
+	        string txt = Randomize.NumberString (num1.get_value_as_int ().to_string (), num2.get_value_as_int ().to_string ()).to_string ();
+	        endn.set_label (txt);
 	    }
 
 	    private void about () {
@@ -122,7 +125,7 @@ namespace Random {
             if (stack1.get_visible_child () != numstack.get_child ()) {
                 stack1.set_visible_child (numstack.get_child ()); // TODO bigger menu btn
             } else {
-	            string list = Randomize.NumberRoulette (int.parse (num1.get_text ()), int.parse (num2.get_text ()));
+	            string list = Randomize.NumberRoulette (num1.get_value_as_int (), num2.get_value_as_int ());
 	            ctxt.set_text (list);
 	            cphr.set_text ("/");
                 stack1.set_visible_child (rou.get_child ());

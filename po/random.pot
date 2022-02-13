@@ -135,7 +135,7 @@ msgid "Number"
 msgstr ""
 
 #: src/window.ui:67
-msgid " Pick a number from "
+msgid "From: "
 msgstr ""
 
 #: src/window.ui:72
@@ -145,7 +145,7 @@ msgid ""
 msgstr ""
 
 #: src/window.ui:81
-msgid " to "
+msgid " To: "
 msgstr ""
 
 #: src/window.ui:87

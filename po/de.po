@@ -140,8 +140,8 @@ msgid "Number"
 msgstr "Nummer"
 
 #: src/window.ui:67
-msgid " Pick a number from "
-msgstr " Wähle eine Nummer aus "
+msgid "From: "
+msgstr "Von: "
 
 #: src/window.ui:72
 msgid ""
@@ -153,8 +153,8 @@ msgstr ""
 "möchten)"
 
 #: src/window.ui:81
-msgid " to "
-msgstr " zu "
+msgid " To: "
+msgstr " Bis: "
 
 #: src/window.ui:87
 msgid ""
