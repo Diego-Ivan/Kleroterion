@@ -24,7 +24,7 @@
       <image>https://codeberg.org/foreverxml/random/raw/branch/main/screenshots/coin.png</image>
     </screenshot>
   </screenshots>
-  <url type="homepage">https://codeberg.org/foreverxml/random</url>
+  <url type="homepage">https://foreverxml.codeberg.page</url>
   <url type="bugtracker">https://codeberg.org/foreverxml/random/issues</url>
   <releases>
       <release version="1.1" date="2022-01-08">
