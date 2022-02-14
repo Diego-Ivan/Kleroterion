@@ -27,6 +27,13 @@
   <url type="homepage">https://foreverxml.codeberg.page</url>
   <url type="bugtracker">https://codeberg.org/foreverxml/random/issues</url>
   <releases>
+      <release version="1.2" date="2022-01-14">
+      <description>
+        <p>Version 1.2 "Flipped":</p>
+        <p>A completely revamped UI is the star of this release.</p>
+      </description>
+    </release>
+
       <release version="1.1" date="2022-01-08">
       <description>
         <p>Version 1.1 "Fix-Behind":</p>

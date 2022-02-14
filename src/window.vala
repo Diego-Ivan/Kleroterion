@@ -24,7 +24,6 @@ namespace Random {
 		[GtkChild] private unowned SpinButton num1;
 		[GtkChild] private unowned Button genn;
 		[GtkChild] private unowned SpinButton num2;
-        [GtkChild] private unowned Entry cphr;
         [GtkChild] private unowned Entry ctxt;
         [GtkChild] private unowned Button genc;
         [GtkChild] private unowned Label endc;
@@ -76,13 +75,13 @@ namespace Random {
 
             // number
 		    genn.clicked.connect (() => {
-	            string txt = Randomize.NumberString (num1.get_value_as_int ().to_string (), num2.get_value_as_int ().to_string ()).to_string ();
+	            string txt = Randomize.Number (num1.get_value_as_int (), num2.get_value_as_int ()).to_string ();
 	            endn.set_label (txt);
 	        });
 
 	        // roulette
 	        genc.clicked.connect (() => {
-	            string txt = Randomize.Roulette (ctxt.get_text (), cphr.get_text ());
+	            string txt = Randomize.Roulette (ctxt.get_text (), "/");
 	            if (txt == "Hey adora") {
 	                txt = "Catra!? What are you doing here?";
 	            }
@@ -91,7 +90,7 @@ namespace Random {
 
 	        // coinflip
 	        cf.clicked.connect (() => {
-	            cl.set_label (Randomize.Coin (_("You got heads!"), _("You got tails!")));
+	            cl.set_label (Randomize.Coin (_("Heads"), _("Tails")));
 	        });
 	        this.present ();
 
@@ -110,8 +109,8 @@ namespace Random {
 	            // Translators: This is a noun and not a verb.
                 program_name: _("Random"),
                 logo_icon_name: "page.codeberg.foreverxml.Random",
-                version: "1.1",
-                comments: "Ooh, cool new icon!",
+                version: "1.2",
+                comments: "Flipped and changed all around.",
                 copyright: "Copyright © 2021 Forever XML",
                 license_type: License.AGPL_3_0,
                 authors: authors,
@@ -127,7 +126,6 @@ namespace Random {
             } else {
 	            string list = Randomize.NumberRoulette (num1.get_value_as_int (), num2.get_value_as_int ());
 	            ctxt.set_text (list);
-	            cphr.set_text ("/");
                 stack1.set_visible_child (rou.get_child ());
             }
         }
@@ -136,13 +134,9 @@ namespace Random {
             if (stack1.get_visible_child () != rou.get_child ()) {
                 stack1.set_visible_child (rou.get_child ());
             } else {
-                if (endc.get_text () == _("You haven't rolled yet!")) {
-                    genc.activate ();
-                } else {
-	                string[] enda = Randomize.DeleteRoulette (ctxt.get_text (), cphr.get_text ());
-                    endc.set_label (enda[0]);
-                    ctxt.set_text (enda[1]);
-                }
+                string[] enda = Randomize.DeleteRoulette (ctxt.get_text (), "/");
+                endc.set_label (enda[0]);
+                ctxt.set_text (enda[1]);
             }
         }
 
@@ -192,7 +186,6 @@ namespace Random {
         private void copy () {
             if (num1.has_focus ||
                 num2.has_focus ||
-                cphr.has_focus ||
                 ctxt.has_focus ) {
                     return;
             }

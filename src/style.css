@@ -3,6 +3,13 @@
 .number {
   font-size: 50pt;
 }
+.rl {
+  font-size: 35pt;
+}
 .pill {
-  margin-top: 18px;
+  margin: 18px;
+}
+.margins {
+  margin-left: 36px;
+  margin-right: 36px;
 }
