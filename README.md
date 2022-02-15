@@ -53,7 +53,7 @@ vala
 #### Windows
 I don't support anything but Flatpak. You will have to run this app through WSL, although Windows is such a privacy nightmare I do not support WSL. The app may be broken on Windows too. My reccomendation is to use this app on GNOME *NIX systems.
 ### 🌐 Translating Random
-Use [Weblate](https://hosted.weblate.org/randomgtk/random) to translate.
+Check out the [po folder](https://codeberg.org/foreverxml/random/src/branch/main/po).
 ### 🛣️ Roadmap for Random
 - [x] [GNOME GitLab mirror](https://gitlab.gnome.org/foreverxml/random)
 - [x] ~~GitHub mirror~~ Ewww, GitHub? No thanks.
