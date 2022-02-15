@@ -101,16 +101,14 @@ namespace Random {
 	    private void about () {
 	        string[] authors = {"Forever XML <foreverxml@tuta.io>"};
 	        // Translators: add your names and emails to this table, one per line as shown
-	        string translators = """Forever XML <foreverxml@tuta.io>
-	                                Teackot <k.qovekt@gmail.com>
-	                                Diego Iván <diegoivan.mae@gmail.com>""";
+	        string translators = _("translator-credits");
 	        string[] artists = {"Forever XML <foreverxml@tuta.io>", "Jakub Steiner <jimmac@gmail.com>"};
 	        show_about_dialog (this,
 	            // Translators: This is a noun and not a verb.
                 program_name: _("Random"),
                 logo_icon_name: "page.codeberg.foreverxml.Random",
                 version: "1.2",
-                comments: "Flipped and changed all around.",
+                comments: _("Flipped and changed all around."),
                 copyright: "Copyright © 2021 Forever XML",
                 license_type: License.AGPL_3_0,
                 authors: authors,
