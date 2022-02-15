@@ -1,17 +1,17 @@
 # Spanish translations for randomgtk package.
 # Copyright (C) 2021 THE randomgtk'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the randomgtk package.
-# Automatically generated, 2021.
 # Diego Iván <diegoivan.mae@gmail.com>, 2021.
+# Óscar Fernández Díaz <oscfdezdz@tuta.io>, 2021-2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: randomgtk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-13 18:13-0700\n"
-"PO-Revision-Date: 2022-02-13 18:28-0700\n"
-"Last-Translator: Diego Iván <diegoivan.mae@gmail.com>\n"
-"Language-Team: Spanish - Mexico <diegoivan.mae@gmail.com>\n"
+"POT-Creation-Date: 2022-02-15 00:42+0100\n"
+"PO-Revision-Date: 2022-02-15 00:48+0100\n"
+"Last-Translator: Óscar Fernández Díaz <oscfdezdz@tuta.io>\n"
+"Language-Team: \n"
 "Language: es_MX\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,42 +19,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.0.1\n"
 
-#: src/shortcut.ui:9
-msgid "Controls"
-msgstr "Controles"
-
-#: src/shortcut.ui:13
-msgid "Convert from Number to Roulette"
-msgstr "Convertir de número a ruleta"
-
-#: src/shortcut.ui:19
-msgid "Spin Roulette and delete selected"
-msgstr "Girar la ruleta y eliminar lo seleccionado"
-
-#: src/shortcut.ui:25
-msgid "Pick, spin, or flip"
-msgstr "Escoger, girar o lanzar"
-
-#: src/shortcut.ui:31
-msgid "Switch views"
-msgstr "Cambiar vistas"
-
-#: src/shortcut.ui:37
-msgid "Copy result"
-msgstr "Copiar resultado"
-
 #. Translators: This is a noun and not a verb.
-#: src/window.ui:4 src/window.ui:20 src/window.vala:110
-#: data/page.codeberg.foreverxml.Random.desktop.in:2
-#: data/page.codeberg.foreverxml.Random.metainfo.xml:7
+#: data/page.codeberg.foreverxml.Random.desktop.in:3
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:7 src/window.ui:4
+#: src/window.ui:20 src/window.vala:108
 msgid "Random"
 msgstr "Aleatorio"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml:8
-msgid "Make randomization easy"
-msgstr "Aleatorización fácil"
+#: data/page.codeberg.foreverxml.Random.desktop.in:10
+msgid "Random;Roulette;Coin;Number;"
+msgstr "Random;Roulette;Coin;Number;Aleatorio;Ruleta;Moneda;Número;"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml:12
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:8
+msgid "Make randomization easy"
+msgstr "Simplifica la aleatorización"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:11
 msgid ""
 "A tool to pick a random number or list item. Pick what chore to do, a number "
 "between 1 and 100, whether or not to jump on your mom's bed, etc."
@@ -63,13 +43,120 @@ msgstr ""
 "manera aleatoria. Elegir algún deber, escoger un número entre el 1 o el 100, "
 "decidir si usted debería o no saltar sobre la cama de su mamá, etc."
 
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:32
+msgid "Version 1.2 \"Flipped\":"
+msgstr "Version 1.2 \"Volteada\":"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:33
+msgid "A completely revamped UI is the star of this release."
+msgstr ""
+"Una interfaz de usuario completamente renovada es la protagonista de esta "
+"versión."
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:39
+msgid "Version 1.1 \"Fix-Behind\":"
+msgstr "Version 1.1 \"Post-Corrección\":"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:40
+msgid ""
+"A much better Spanish translation, a new icon, and many more improvements "
+"from the past 3 months are included."
+msgstr ""
+"Se incluye una traducción al español mucho mejor, un icono nuevo y muchas "
+"más mejoras de los últimos 3 meses."
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:46
+msgid "Version 1.0 \"Adapting\":"
+msgstr "Versión 1.0 \"Adaptación\":"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:47
+msgid ""
+"Adds a new Spanish translation, help docs, revamps keyboard shortcuts, and "
+"makes the UI more adaptive."
+msgstr ""
+"Añade una nueva traducción al español, documentos de ayuda, renueva los "
+"atajos del teclado y hace que la interfaz de usuario sea más adaptable."
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:53
+msgid "Version 0.9 \"Global\":"
+msgstr "Versión 0.9 \"Global\":"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:54
+msgid "Translated into German and Russian."
+msgstr "Traducido al alemán y al ruso."
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:59
+msgid "Version 0.8 \"Sync\":"
+msgstr "Version 0.8 \"Sincronización\":"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:60
+msgid ""
+"Removes the random colors for a noticable identity, and uses the latest "
+"GNOME 41 things, that came out on the same day as this."
+msgstr ""
+"Elimina los colores aleatorios para una identidad notable, y usa las últimas "
+"cosas de GNOME 41, que salieron el mismo día que esto."
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:65
+msgid "Version 0.7 \"Circus\":"
+msgstr "Version 0.7 \"Circo\":"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:66
+msgid "Adds some nice random colors."
+msgstr "Añade unos bonitos colores aleatorios."
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:71
+msgid "Version 0.6 \"Advancing\":"
+msgstr "Versión 0.6 \"Avanzando\":"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:72
+msgid "Adds tons of new actions and keyboard shortcuts too."
+msgstr "Añade toneladas de nuevas acciones y atajos del teclado."
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:77
+msgid "Version 0.5 \"Caterpillar\":"
+msgstr "Versión 0.5 \"Oruga\":"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:78
+msgid "Adds a menu and some bugfixes."
+msgstr "Añade un menú y algunas correcciones de errores."
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:83
+msgid "Version 0.4 \"Flat\":"
+msgstr "Versión 0.4 \"Plana\":"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:84
+msgid "First Flathub release with GTK 4."
+msgstr "Primera versión de Flathub con GTK 4."
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:89
+msgid "Version 0.3 \"Penny\":"
+msgstr "Versión 0.3 \"Penny\":"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:90
+msgid "Adds a coin flip view and an improved UI."
+msgstr ""
+"Añade una vista de lanzamiento de monedas y una interfaz de usuario mejorada."
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:95
+msgid "Version 0.2 \"Makeover\":"
+msgstr "Versión 0.2 \"Renovación\":"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:96
+msgid "Follows the GNOME HIG and uses libhandy."
+msgstr "Sigue el HIG de GNOME y usa libhandy."
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:101
+msgid "Version 0.1 \"Beginning\":"
+msgstr "Versión 0.1 \"Inicio\":"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:102
+msgid "The first release, welcome to the world!"
+msgstr "La primera versión, ¡bienvenida al mundo!"
+
 #: src/window.ui:42
 msgid "Number"
 msgstr "Número"
-
-#: src/window.ui:51
-msgid "5"
-msgstr "5"
 
 #: src/window.ui:83
 msgid "From:"
@@ -89,7 +176,7 @@ msgstr "Ruleta"
 
 #: src/window.ui:177
 msgid "Waiting..."
-msgstr "Espera..."
+msgstr "Esperando..."
 
 #: src/window.ui:195
 msgid "Example: Layla/Rose/Cleveland/Lampy"
@@ -109,7 +196,7 @@ msgstr "Moneda"
 
 #: src/window.ui:229 src/window.vala:93
 msgid "Tails"
-msgstr "Cola"
+msgstr "Cruz"
 
 #: src/window.ui:237
 msgid "Flip the coin"
@@ -145,157 +232,47 @@ msgstr "Ayu_da ↗"
 msgid "_About Random"
 msgstr "_Acerca de Aleatorio"
 
+#. coinflip
 #: src/window.vala:93
 msgid "Heads"
-msgstr "Cabeza"
+msgstr "Cara"
 
-#: src/window.vala:120
+#. Translators: add your names and emails to this table, one per line as shown
+#: src/window.vala:104
+msgid "translator-credits"
+msgstr ""
+"Diego Iván <diegoivan.mae@gmail.com>\n"
+"Forever XML <foreverxml@tuta.io>\n"
+"Óscar Fernández Díaz <oscfdezdz@tuta.io>"
+
+#: src/window.vala:111
+msgid "Flipped and changed all around."
+msgstr "Volteada y cambiada por todos lados."
+
+#: src/window.vala:118
 msgid "Repository"
-msgstr "Repostorio"
+msgstr "Repositorio"
 
-#~ msgid "Random;Roulette;Coin;Number;"
-#~ msgstr "Random;Roulette;Coin;Number;Aleatorio;Ruleta;Moneda;Número;"
+#: src/shortcut.ui:9
+msgid "Controls"
+msgstr "Controles"
 
-#~ msgid "Version 1.0 \"Adapting\":"
-#~ msgstr "Versión 1.0 \"Adaptación\":"
+#: src/shortcut.ui:13
+msgid "Convert from Number to Roulette"
+msgstr "Convertir de número a ruleta"
 
-#~ msgid ""
-#~ "Adds a new Spanish translation, help docs, revamps keyboard shortcuts, "
-#~ "and makes the UI more adaptive."
-#~ msgstr ""
-#~ "Añade una nueva traducción al español, documentos de ayuda, renueva los "
-#~ "atajos del teclado y hace que la interfaz de usuario sea más adaptable."
+#: src/shortcut.ui:19
+msgid "Spin Roulette and delete selected"
+msgstr "Girar la ruleta y eliminar lo seleccionado"
 
-#~ msgid "Version 0.9 \"Global\":"
-#~ msgstr "Versión 0.9 \"Global\":"
+#: src/shortcut.ui:25
+msgid "Pick, spin, or flip"
+msgstr "Escoger, girar o lanzar"
 
-#~ msgid "Translated into German and Russian."
-#~ msgstr "Traducido al alemán y al ruso."
+#: src/shortcut.ui:31
+msgid "Switch views"
+msgstr "Cambiar vistas"
 
-#~ msgid "Version 0.8 \"Sync\":"
-#~ msgstr "Versión 0.8 \"Sincronización\":"
-
-#~ msgid ""
-#~ "Removes the random colors for a noticable identity, and uses the latest "
-#~ "GNOME 41 things, that came out on the same day as this."
-#~ msgstr ""
-#~ "Elimina los colores aleatorios para una identidad notable, y utiliza las "
-#~ "últimas cosas de GNOME 41, que salieron el mismo día que esto."
-
-#~ msgid "Version 0.7 \"Circus\":"
-#~ msgstr "Versión 0.7 \"Circo\":"
-
-#~ msgid "Adds some nice random colors."
-#~ msgstr "Añade unos bonitos colores aleatorios."
-
-#~ msgid "Version 0.6 \"Advancing\":"
-#~ msgstr "Versión 0.6 \"Avanzando\":"
-
-#~ msgid "Adds tons of new actions and keyboard shortcuts too."
-#~ msgstr "También añade toneladas de nuevas acciones y atajos del teclado."
-
-#~ msgid "Version 0.5 \"Caterpillar\":"
-#~ msgstr "Versión 0.5 \"Oruga\":"
-
-#~ msgid "Adds a menu and some bugfixes."
-#~ msgstr "Añade un menú y algunas correcciones de errores."
-
-#~ msgid "Version 0.4 \"Flat\":"
-#~ msgstr "Versión 0.4 \"Plana\":"
-
-#~ msgid "First Flathub release with GTK 4."
-#~ msgstr "Primera versión de Flathub con GTK 4."
-
-#~ msgid "Version 0.3 \"Penny\":"
-#~ msgstr "Versión 0.3 \"Penny\":"
-
-#~ msgid "Adds a coin flip view and an improved UI."
-#~ msgstr ""
-#~ "Añade una vista de lanzamiento de monedas y una interfaz de usuario "
-#~ "mejorada."
-
-#~ msgid "Version 0.2 \"Makeover\":"
-#~ msgstr "Versión 0.2 \"Renovación\":"
-
-#~ msgid "Follows the GNOME HIG and uses libhandy."
-#~ msgstr "Sigue el HIG de GNOME y usa libhandy."
-
-#~ msgid "Version 0.1 \"Beginning\":"
-#~ msgstr "Versión 0.1 \"Inicio\":"
-
-#~ msgid "The first release, welcome to the world!"
-#~ msgstr "La primera versión, ¡bienvenida al mundo!"
-
-#~ msgid "Switch between views"
-#~ msgstr "Cambiar entre vistas"
-
-#~ msgid "Open the Menu"
-#~ msgstr "Abrir menú"
-
-#~ msgid " Pick a number from "
-#~ msgstr " Escoger un número del "
-
-#~ msgid ""
-#~ "Put the lower number in your number range here (for example, put a 1 here "
-#~ "if you want to generate a number from 1 to 10)"
-#~ msgstr ""
-#~ "Coloque el límite inferior aquí (por ejemplo, ponga un 1 aquí si quiere "
-#~ "generar un número del 1 al 10)"
-
-#~ msgid " to "
-#~ msgstr " al "
-
-#~ msgid ""
-#~ "Put the higher number in your number range here (for example, put a 10 "
-#~ "here if you want to generate a number from 1 to 10)"
-#~ msgstr ""
-#~ "Coloque el límite superior aquí (por ejemplo, ponga un 10 si quiere "
-#~ "generar un número del 1 al 10)"
-
-#~ msgid "Generate a random number"
-#~ msgstr "Generar un número aleatorio"
-
-#~ msgid "You haven't generated yet!"
-#~ msgstr "¡Aún no ha generado ningún número!"
-
-#~ msgid "Write your options below. Separate them with:"
-#~ msgstr "Escriba sus opciones a continuación. Sepárelas con:"
-
-#~ msgid ""
-#~ "Type your separator here (for example, “/” for list “GNOME/KDE/XFCE”.)"
-#~ msgstr ""
-#~ "Escriba su separador aquí (por ejemplo, \"/\" para la lista \"GNOME/KDE/"
-#~ "XFCE\".)"
-
-#~ msgid ""
-#~ "Type your list here (for example, “GNOME/KDE/XFCE” with separator “/”.)"
-#~ msgstr ""
-#~ "Escriba su lista aquí (por ejemplo: \"GNOME/KDE/XFCE\" con el separador "
-#~ "\"/\".)"
-
-#~ msgid "One/Two/Three"
-#~ msgstr "Uno/Dos/Tres"
-
-#~ msgid "Insert Emoji"
-#~ msgstr "Insertar emoji"
-
-#~ msgid "Spin the wheel"
-#~ msgstr "Gira la ruleta"
-
-#~ msgid "You haven't rolled yet!"
-#~ msgstr "¡Aún no ha girado la ruleta!"
-
-#~ msgid "Click the button to flip the coin!"
-#~ msgstr "¡Haga clic en el botón para lanzar la moneda!"
-
-#~ msgid "Flip"
-#~ msgstr "Lanzar"
-
-#~ msgid "You haven't flipped yet!"
-#~ msgstr "¡Aún no ha lanzado la moneda!"
-
-#~ msgid "You got heads!"
-#~ msgstr "¡Obtuvo cara!"
-
-#~ msgid "You got tails!"
-#~ msgstr "¡Obtuvo cruz!"
+#: src/shortcut.ui:37
+msgid "Copy result"
+msgstr "Copiar resultado"
