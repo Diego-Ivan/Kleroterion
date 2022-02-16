@@ -17,14 +17,6 @@
 
 using GLib;
 namespace Random {
-    enum RandomType {
-        ROULETTE,
-        DELETE_ROULETTE,
-        COIN,
-        NUMBER,
-        NUMBER_STRING,
-        NUMBER_ROULETTE
-    }
     class Func : Object {
         private Rand rand = new Rand ();
         
