@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Random\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-13 18:13-0700\n"
+"POT-Creation-Date: 2022-02-15 20:28-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -26,50 +26,131 @@ msgstr ""
 "X-Poedit-SearchPath-6: data/page.codeberg.foreverxml.Random.gschema.xml\n"
 "X-Poedit-SearchPath-7: data/page.codeberg.foreverxml.Random.metainfo.xml.in\n"
 
-#: src/shortcut.ui:9
-msgid "Controls"
-msgstr ""
-
-#: src/shortcut.ui:13
-msgid "Convert from Number to Roulette"
-msgstr ""
-
-#: src/shortcut.ui:19
-msgid "Spin Roulette and delete selected"
-msgstr ""
-
-#: src/shortcut.ui:25
-msgid "Pick, spin, or flip"
-msgstr ""
-
-#: src/shortcut.ui:31
-msgid "Switch views"
-msgstr ""
-
-#: src/shortcut.ui:37
-msgid "Copy result"
-msgstr ""
-
 #. Translators: This is a noun and not a verb.
-#: src/window.ui:4 src/window.ui:20 src/window.vala:110 data/page.codeberg.foreverxml.Random.desktop.in:2
-#: data/page.codeberg.foreverxml.Random.metainfo.xml:7
+#: data/page.codeberg.foreverxml.Random.desktop.in:3
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:7 src/window.ui:4
+#: src/window.ui:20 src/window.vala:108
 msgid "Random"
 msgstr ""
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml:8
+#: data/page.codeberg.foreverxml.Random.desktop.in:10
+msgid "Random;Roulette;Coin;Number;"
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:8
 msgid "Make randomization easy"
 msgstr ""
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml:12
-msgid "A tool to pick a random number or list item. Pick what chore to do, a number between 1 and 100, whether or not to jump on your mom's bed, etc."
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:11
+msgid ""
+"A tool to pick a random number or list item. Pick what chore to do, a number "
+"between 1 and 100, whether or not to jump on your mom's bed, etc."
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:33
+msgid "Version 1.2 \"Flipped\":"
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:34
+msgid "A completely revamped UI is the star of this release."
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:40
+msgid "Version 1.1 \"Fix-Behind\":"
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:41
+msgid ""
+"A much better Spanish translation, a new icon, and many more improvements "
+"from the past 3 months are included."
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:47
+msgid "Version 1.0 \"Adapting\":"
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:48
+msgid ""
+"Adds a new Spanish translation, help docs, revamps keyboard shortcuts, and "
+"makes the UI more adaptive."
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:54
+msgid "Version 0.9 \"Global\":"
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:55
+msgid "Translated into German and Russian."
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:60
+msgid "Version 0.8 \"Sync\":"
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:61
+msgid ""
+"Removes the random colors for a noticable identity, and uses the latest "
+"GNOME 41 things, that came out on the same day as this."
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:66
+msgid "Version 0.7 \"Circus\":"
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:67
+msgid "Adds some nice random colors."
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:72
+msgid "Version 0.6 \"Advancing\":"
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:73
+msgid "Adds tons of new actions and keyboard shortcuts too."
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:78
+msgid "Version 0.5 \"Caterpillar\":"
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:79
+msgid "Adds a menu and some bugfixes."
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:84
+msgid "Version 0.4 \"Flat\":"
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:85
+msgid "First Flathub release with GTK 4."
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:90
+msgid "Version 0.3 \"Penny\":"
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:91
+msgid "Adds a coin flip view and an improved UI."
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:96
+msgid "Version 0.2 \"Makeover\":"
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:97
+msgid "Follows the GNOME HIG and uses libhandy."
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:102
+msgid "Version 0.1 \"Beginning\":"
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:103
+msgid "The first release, welcome to the world!"
 msgstr ""
 
 #: src/window.ui:42
 msgid "Number"
-msgstr ""
-
-#: src/window.ui:51
-msgid "5"
 msgstr ""
 
 #: src/window.ui:83
@@ -146,10 +227,44 @@ msgstr ""
 msgid "_About Random"
 msgstr ""
 
+#. coinflip
 #: src/window.vala:93
 msgid "Heads"
 msgstr ""
 
-#: src/window.vala:120
+#. Translators: add your names and emails to this table, one per line as shown
+#: src/window.vala:104
+msgid "translator-credits"
+msgstr ""
+
+#: src/window.vala:111
+msgid "Randomizing made easy."
+msgstr ""
+
+#: src/window.vala:118
 msgid "Repository"
+msgstr ""
+
+#: src/shortcut.ui:9
+msgid "Controls"
+msgstr ""
+
+#: src/shortcut.ui:13
+msgid "Convert from Number to Roulette"
+msgstr ""
+
+#: src/shortcut.ui:19
+msgid "Spin Roulette and delete selected"
+msgstr ""
+
+#: src/shortcut.ui:25
+msgid "Pick, spin, or flip"
+msgstr ""
+
+#: src/shortcut.ui:31
+msgid "Switch views"
+msgstr ""
+
+#: src/shortcut.ui:37
+msgid "Copy result"
 msgstr ""

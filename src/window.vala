@@ -104,8 +104,8 @@ namespace Random {
 	            // Translators: This is a noun and not a verb.
                 program_name: _("Random"),
                 logo_icon_name: "page.codeberg.foreverxml.Random",
-                version: "1.2",
-                comments: _("Flipped and changed all around."),
+                version: "1.3",
+                comments: _("Randomizing made easy"),
                 copyright: "Copyright © 2021 Forever XML",
                 license_type: License.AGPL_3_0,
                 authors: authors,

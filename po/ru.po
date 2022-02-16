@@ -2,16 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Random v0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-15 00:03+0100\n"
-"PO-Revision-Date: 2022-02-13 18:22-0700\n"
-"Last-Translator: teackot\n"
+"POT-Creation-Date: 2022-02-15 20:28-0700\n"
+"PO-Revision-Date: 2022-02-15 20:56-0700\n"
+"Last-Translator: Forever XML <foreverxml@tuta.io>\n"
 "Language-Team: \n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "X-Generator: Poedit 3.0.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: translatable=\"true\";\"\n"
@@ -30,7 +30,7 @@ msgstr "Случайный"
 
 #: data/page.codeberg.foreverxml.Random.desktop.in:10
 msgid "Random;Roulette;Coin;Number;"
-msgstr ""
+msgstr "Random;Roulette;Coin;Number;Случайный;Случайная;рулетка;монета;число;"
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:8
 msgid "Make randomization easy"
@@ -45,115 +45,120 @@ msgstr ""
 "списка. Выберите чем вам заняться, число от 1 до 100, попрыгать ли на "
 "маминой кровати, и т. д."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:32
-msgid "Version 1.2 \"Flipped\":"
-msgstr ""
-
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:33
+msgid "Version 1.2 \"Flipped\":"
+msgstr "Версия 1.2 \"Перевернутая\":"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:34
 msgid "A completely revamped UI is the star of this release."
 msgstr ""
-
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:39
-msgid "Version 1.1 \"Fix-Behind\":"
-msgstr ""
+"Полностью обновленный пользовательский интерфейс - главная звезда этого "
+"выпуска."
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:40
+msgid "Version 1.1 \"Fix-Behind\":"
+msgstr "Версия 1.1 \"Фикс-Бехинд\":"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:41
 msgid ""
 "A much better Spanish translation, a new icon, and many more improvements "
 "from the past 3 months are included."
 msgstr ""
-
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:46
-msgid "Version 1.0 \"Adapting\":"
-msgstr ""
+"Улучшенный перевод на испанский язык, новая иконка и многие другие "
+"улучшения, сделанные за последние 3 месяца."
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:47
+msgid "Version 1.0 \"Adapting\":"
+msgstr "Версия 1.0 \"Адаптация\":"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:48
 msgid ""
 "Adds a new Spanish translation, help docs, revamps keyboard shortcuts, and "
 "makes the UI more adaptive."
 msgstr ""
-
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:53
-msgid "Version 0.9 \"Global\":"
-msgstr ""
+"Добавляет новый испанский перевод, справочную документацию, изменяет "
+"сочетания клавиш и делает пользовательский интерфейс более адаптивным."
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:54
-msgid "Translated into German and Russian."
-msgstr ""
+msgid "Version 0.9 \"Global\":"
+msgstr "Версия 0.9 \"Глобально\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:59
-msgid "Version 0.8 \"Sync\":"
-msgstr ""
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:55
+msgid "Translated into German and Russian."
+msgstr "Переведена на немецкий и русский языки."
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:60
+msgid "Version 0.8 \"Sync\":"
+msgstr "Версия 0.8 \"Синхронизация\":"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:61
 msgid ""
 "Removes the random colors for a noticable identity, and uses the latest "
 "GNOME 41 things, that came out on the same day as this."
 msgstr ""
-
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:65
-msgid "Version 0.7 \"Circus\":"
-msgstr ""
+"Убирает случайные цвета для заметной идентичности и использует последнюю "
+"версию GNOME 41, которая вышла в тот же день, что и эта."
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:66
-msgid "Adds some nice random colors."
-msgstr ""
+msgid "Version 0.7 \"Circus\":"
+msgstr "Версия 0.7 \"Цирк\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:71
-msgid "Version 0.6 \"Advancing\":"
-msgstr ""
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:67
+msgid "Adds some nice random colors."
+msgstr "Добавляет несколько красивых случайных цветов."
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:72
-msgid "Adds tons of new actions and keyboard shortcuts too."
-msgstr ""
+msgid "Version 0.6 \"Advancing\":"
+msgstr "Версия 0.6 \"Продвижение\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:77
-msgid "Version 0.5 \"Caterpillar\":"
-msgstr ""
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:73
+msgid "Adds tons of new actions and keyboard shortcuts too."
+msgstr "Добавляет множество новых действий и сочетаний клавиш."
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:78
-msgid "Adds a menu and some bugfixes."
-msgstr ""
+msgid "Version 0.5 \"Caterpillar\":"
+msgstr "Версия 0.5 \"Гусеница\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:83
-msgid "Version 0.4 \"Flat\":"
-msgstr ""
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:79
+msgid "Adds a menu and some bugfixes."
+msgstr "Добавляет меню и некоторые исправления."
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:84
-msgid "First Flathub release with GTK 4."
-msgstr ""
+msgid "Version 0.4 \"Flat\":"
+msgstr "Версия 0.4 \"Флэт\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:89
-msgid "Version 0.3 \"Penny\":"
-msgstr ""
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:85
+msgid "First Flathub release with GTK 4."
+msgstr "Первый выпуск Flathub с GTK 4."
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:90
+msgid "Version 0.3 \"Penny\":"
+msgstr "Версия 0.3 \"Пенни\":"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:91
 msgid "Adds a coin flip view and an improved UI."
 msgstr ""
-
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:95
-msgid "Version 0.2 \"Makeover\":"
-msgstr ""
+"Добавляет вид подбрасывания монет и улучшенный пользовательский интерфейс."
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:96
-msgid "Follows the GNOME HIG and uses libhandy."
-msgstr ""
+msgid "Version 0.2 \"Makeover\":"
+msgstr "Версия 0.2 \"Обновление\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:101
-msgid "Version 0.1 \"Beginning\":"
-msgstr ""
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:97
+msgid "Follows the GNOME HIG and uses libhandy."
+msgstr "Следует GNOME HIG и использует libhandy."
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:102
+msgid "Version 0.1 \"Beginning\":"
+msgstr "Версия 0.1 \"Начало\":"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:103
 msgid "The first release, welcome to the world!"
-msgstr ""
+msgstr "Первый выпуск, добро пожаловать в мир!"
 
 #: src/window.ui:42
 msgid "Number"
 msgstr "Число"
-
-#: src/window.ui:51
-msgid "5"
-msgstr "5"
 
 #: src/window.ui:83
 msgid "From:"
@@ -196,9 +201,8 @@ msgid "Tails"
 msgstr "Решка"
 
 #: src/window.ui:237
-#, fuzzy
 msgid "Flip the coin"
-msgstr "Подбросить монетку."
+msgstr "Подбросить монетку"
 
 #. Translators: Remember to add a mnemonic and use header case here.
 #: src/window.ui:270
@@ -228,7 +232,7 @@ msgstr "_Помощь ↗"
 #. Translators: Remember to add a mnemonic and use header case here.
 #: src/window.ui:297
 msgid "_About Random"
-msgstr "_О Приложении"
+msgstr "_О Случайный"
 
 #. coinflip
 #: src/window.vala:93
@@ -239,12 +243,12 @@ msgstr "Орёл"
 #: src/window.vala:104
 msgid "translator-credits"
 msgstr ""
-"Teackot <k.qovekt@gmail.com>\n"
-"Forever XML <foreverxml@tuta.io>"
+"Тикот <k.qovekt@gmail.com>\n"
+"Форевер XML <foreverxml@tuta.io>"
 
 #: src/window.vala:111
-msgid "Flipped and changed all around."
-msgstr ""
+msgid "Randomizing made easy."
+msgstr "Рандомизация стала проще."
 
 #: src/window.vala:118
 msgid "Repository"
@@ -273,6 +277,9 @@ msgstr "Переключить режимы"
 #: src/shortcut.ui:37
 msgid "Copy result"
 msgstr "Копировать Результат"
+
+#~ msgid "5"
+#~ msgstr "5"
 
 #, fuzzy
 #~| msgid "Switch views"

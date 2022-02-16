@@ -25,81 +25,82 @@
     </screenshot>
   </screenshots>
   <url type="homepage">https://foreverxml.codeberg.page</url>
+  <url type="contact">https://matrix.to/#/#randomgtk:matrix.org</url>
   <url type="bugtracker">https://codeberg.org/foreverxml/random/issues</url>
   <releases>
       <release version="1.2" date="2022-01-14">
       <description>
-        <p>Version 1.2 "Flipped":</p>
-        <p>A completely revamped UI is the star of this release.</p>
+        <p translatable="yes">Version 1.2 "Flipped":</p>
+        <p translatable="yes">A completely revamped UI is the star of this release.</p>
       </description>
     </release>
 
       <release version="1.1" date="2022-01-08">
       <description>
-        <p>Version 1.1 "Fix-Behind":</p>
-        <p>A much better Spanish translation, a new icon, and many more improvements from the past 3 months are included.</p>
+        <p translatable="yes">Version 1.1 "Fix-Behind":</p>
+        <p translatable="yes">A much better Spanish translation, a new icon, and many more improvements from the past 3 months are included.</p>
       </description>
     </release>
 
     <release version="1.0" date="2021-09-30">
       <description>
-        <p>Version 1.0 "Adapting":</p>
-        <p>Adds a new Spanish translation, help docs, revamps keyboard shortcuts, and makes the UI more adaptive.</p>
+        <p translatable="yes">Version 1.0 "Adapting":</p>
+        <p translatable="yes">Adds a new Spanish translation, help docs, revamps keyboard shortcuts, and makes the UI more adaptive.</p>
       </description>
     </release>
 
     <release version="0.9" date="2021-09-23">
       <description>
-        <p>Version 0.9 "Global":</p>
-        <p>Translated into German and Russian.</p>
+        <p translatable="yes">Version 0.9 "Global":</p>
+        <p translatable="yes">Translated into German and Russian.</p>
       </description>
     </release>
     <release version="0.8" date="2021-09-22">
       <description>
-        <p>Version 0.8 "Sync":</p>
-        <p>Removes the random colors for a noticable identity, and uses the latest GNOME 41 things, that came out on the same day as this.</p>
+        <p translatable="yes">Version 0.8 "Sync":</p>
+        <p translatable="yes">Removes the random colors for a noticable identity, and uses the latest GNOME 41 things, that came out on the same day as this.</p>
       </description>
     </release>
     <release version="0.7" date="2021-09-09">
       <description>
-        <p>Version 0.7 "Circus":</p>
-        <p>Adds some nice random colors.</p>
+        <p translatable="yes">Version 0.7 "Circus":</p>
+        <p translatable="yes">Adds some nice random colors.</p>
       </description>
     </release>
     <release version="0.6" date="2021-08-29">
       <description>
-        <p>Version 0.6 "Advancing":</p>
-        <p>Adds tons of new actions and keyboard shortcuts too.</p>
+        <p translatable="yes">Version 0.6 "Advancing":</p>
+        <p translatable="yes">Adds tons of new actions and keyboard shortcuts too.</p>
       </description>
     </release>
     <release version="0.5" date="2021-08-23">
       <description>
-        <p>Version 0.5 "Caterpillar":</p>
-        <p>Adds a menu and some bugfixes.</p>
+        <p translatable="yes">Version 0.5 "Caterpillar":</p>
+        <p translatable="yes">Adds a menu and some bugfixes.</p>
       </description>
     </release>
     <release version="0.4" date="2021-08-15">
       <description>
-        <p>Version 0.4 "Flat":</p>
-        <p>First Flathub release with GTK 4.</p>
+        <p translatable="yes">Version 0.4 "Flat":</p>
+        <p translatable="yes">First Flathub release with GTK 4.</p>
       </description>
     </release>
     <release version="0.3" date="2021-08-15">
       <description>
-        <p>Version 0.3 "Penny":</p>
-        <p>Adds a coin flip view and an improved UI.</p>
+        <p translatable="yes">Version 0.3 "Penny":</p>
+        <p translatable="yes">Adds a coin flip view and an improved UI.</p>
       </description>
     </release>
     <release version="0.2" date="2021-07-31">
       <description>
-        <p>Version 0.2 "Makeover":</p>
-        <p>Follows the GNOME HIG and uses libhandy.</p>
+        <p translatable="yes">Version 0.2 "Makeover":</p>
+        <p translatable="yes">Follows the GNOME HIG and uses libhandy.</p>
       </description>
     </release>
     <release version="0.1" date="2021-07-31">
       <description>
-        <p>Version 0.1 "Beginning":</p>
-        <p>The first release, welcome to the world!</p>
+        <p translatable="yes">Version 0.1 "Beginning":</p>
+        <p translatable="yes">The first release, welcome to the world!</p>
       </description>
     </release>
   </releases>
