@@ -1,0 +1,162 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the randomgtk package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Random\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-13 18:13-0700\n"
+"PO-Revision-Date: 2022-02-14 18:46-0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: hu_HU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: src/func.vala\n"
+"X-Poedit-SearchPath-1: src/main.vala\n"
+"X-Poedit-SearchPath-2: src/shortcut.ui\n"
+"X-Poedit-SearchPath-3: src/window.ui\n"
+"X-Poedit-SearchPath-4: src/window.vala\n"
+"X-Poedit-SearchPath-5: data/page.codeberg.foreverxml.Random.desktop.in\n"
+"X-Poedit-SearchPath-6: data/page.codeberg.foreverxml.Random.gschema.xml\n"
+"X-Poedit-SearchPath-7: data/page.codeberg.foreverxml.Random.metainfo.xml.in\n"
+
+#: src/shortcut.ui:9
+msgid "Controls"
+msgstr "Vezérlők"
+
+#: src/shortcut.ui:13
+msgid "Convert from Number to Roulette"
+msgstr "Számokból konvertáljon rulettre"
+
+#: src/shortcut.ui:19
+msgid "Spin Roulette and delete selected"
+msgstr "Dobd fel a rulettet, és töröld a kiválasztottakat"
+
+#: src/shortcut.ui:25
+msgid "Pick, spin, or flip"
+msgstr "Válassz, pörgess vagy fordíts"
+
+#: src/shortcut.ui:31
+msgid "Switch views"
+msgstr "Nézetváltás"
+
+#: src/shortcut.ui:37
+msgid "Copy result"
+msgstr "Eredmény másolása"
+
+#. Translators: This is a noun and not a verb.
+#: src/window.ui:4 src/window.ui:20 src/window.vala:110
+#: data/page.codeberg.foreverxml.Random.desktop.in:2
+#: data/page.codeberg.foreverxml.Random.metainfo.xml:7
+msgid "Random"
+msgstr "Véletlen"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml:8
+msgid "Make randomization easy"
+msgstr "Tegye egyszerűvé a véletlenszerűsítést"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml:12
+msgid ""
+"A tool to pick a random number or list item. Pick what chore to do, a number "
+"between 1 and 100, whether or not to jump on your mom's bed, etc."
+msgstr ""
+"Egy véletlenszerű szám vagy listaelem kiválasztására szolgáló eszköz. "
+"Válassza ki, hogy milyen házimunkát szeretne elvégezni, egy 1 és 100 közötti "
+"számot, hogy felugorjon-e az anyja ágyára vagy sem, stb."
+
+#: src/window.ui:42
+msgid "Number"
+msgstr "Szám"
+
+#: src/window.ui:51
+msgid "5"
+msgstr "5"
+
+#: src/window.ui:83
+msgid "From:"
+msgstr "Legkisebb:"
+
+#: src/window.ui:109
+msgid "To:"
+msgstr "Legnagyobb:"
+
+#: src/window.ui:146
+msgid "Generate"
+msgstr "Generál"
+
+#: src/window.ui:167
+msgid "Roulette"
+msgstr "Rulett"
+
+#: src/window.ui:177
+msgid "Waiting..."
+msgstr "Várakozás..."
+
+#: src/window.ui:195
+msgid "Example: Layla/Rose/Cleveland/Lampy"
+msgstr "Példa: Layla/Rose/Cleveland/Lampy"
+
+#: src/window.ui:196
+msgid "Type a list, seperating values with /"
+msgstr "Írjon be egy listát, és válassza el az értékeket / jellel"
+
+#: src/window.ui:201
+msgid "Pick"
+msgstr "Csákány"
+
+#: src/window.ui:219
+msgid "Coin"
+msgstr "Érme"
+
+#: src/window.ui:229 src/window.vala:93
+msgid "Tails"
+msgstr "Farok"
+
+#: src/window.ui:237
+msgid "Flip the coin"
+msgstr "Fordítsa meg az érmét"
+
+#. Translators: Remember to add a mnemonic and use header case here.
+#: src/window.ui:270
+msgid "Number to _Roulette"
+msgstr "Szám a _Ruletthez"
+
+#. Translators: Remember to add a mnemonic and use header case here.
+#: src/window.ui:275
+msgid "_Delete Picked Item"
+msgstr "_Kiválasztott Tétel Törlése"
+
+#. Translators: Remember to add a mnemonic and use header case here.
+#: src/window.ui:280
+msgid "_Copy Item"
+msgstr "_Elem másolása"
+
+#. Translators: Remember to add a mnemonic and use header case here.
+#: src/window.ui:287
+msgid "_Keyboard Shortcuts"
+msgstr "_Gyorsbillentyűket"
+
+#. Translators: Remember to add a mnemonic and use header case here.
+#: src/window.ui:292
+msgid "_Help ↗"
+msgstr "_Segítség ↗"
+
+#. Translators: Remember to add a mnemonic and use header case here.
+#: src/window.ui:297
+msgid "_About Random"
+msgstr "_A Randomról"
+
+#: src/window.vala:93
+msgid "Heads"
+msgstr "Fejek"
+
+#: src/window.vala:120
+msgid "Repository"
+msgstr "Adattár"
