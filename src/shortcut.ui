@@ -9,13 +9,13 @@
             <property name="title" translatable="yes">Controls</property>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;R</property>
+                <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;C</property>
                 <property name="title" translatable="yes">Convert from Number to Roulette</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="accelerator">&lt;Primary&gt;D</property>
+                <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;G</property>
                 <property name="title" translatable="yes">Spin Roulette and delete selected</property>
               </object>
             </child>
@@ -33,7 +33,7 @@
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;C</property>
+                <property name="accelerator">&lt;Primary&gt;C</property>
                 <property name="title" translatable="yes">Copy result</property>
               </object>
             </child>
