@@ -64,14 +64,14 @@ namespace Random {
             actionc.add_action_entries (actions, this);
             insert_action_group ("app", actionc);
 
-            app.set_accels_for_action ("app.number", {"<Primary><Shift>r"});
-            app.set_accels_for_action ("app.remove", {"<Primary>d"});
+            app.set_accels_for_action ("app.number", {"<Primary><Shift>c"});
+            app.set_accels_for_action ("app.remove", {"<Primary><Shift>g"});
             app.set_accels_for_action ("app.generate", {"<Primary>g"});
             app.set_accels_for_action ("app.shortcuts", {"<Primary>question"});
             app.set_accels_for_action ("app.quit", {"<Primary>q", "<Primary>w"});
             app.set_accels_for_action ("app.change", {"<Primary>Tab"});
             app.set_accels_for_action ("app.menuopener", {"F10"});
-            app.set_accels_for_action ("app.copy", {"<Primary><Shift>c"});
+            app.set_accels_for_action ("app.copy", {"<Primary>c"});
 
             // number
 		    genn.clicked.connect (() => {
