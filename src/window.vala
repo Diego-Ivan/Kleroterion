@@ -41,10 +41,7 @@ namespace Random {
 
 
 		public Window (Gtk.Application app) {
-			Object (
-			    application: app,
-			    app: app
-			);
+			Object ( application: app );
 		}
 
 		construct {
@@ -94,7 +91,7 @@ namespace Random {
 	        });
 	        this.present ();
 
-	        string txt = Randomize.NumberString (num1.get_value_as_int ().to_string (), num2.get_value_as_int ().to_string ()).to_string ();
+	        string txt = Randomize.Number (1, 10).to_string ();
 	        endn.set_label (txt);
 	    }
 
