@@ -41,7 +41,10 @@ namespace Random {
 
 
 		public Window (Gtk.Application app) {
-			Object ( application: app );
+			Object (
+			    application: app,
+			    app: app
+			);
 		}
 
 		construct {
@@ -154,7 +157,7 @@ namespace Random {
                 shortcuts_window.set_transient_for (this);
                 shortcuts_window.show ();
             } catch (Error e) {
-                critical ("An error occured while loading shortcuts window: %s", e.message);
+                critical ("An error occurred while loading shortcuts window: %s", e.message);
             }
 
         }

@@ -20,16 +20,6 @@ namespace Random {
     class Func : Object {
         private Rand rand = new Rand ();
         
-        public int NumberString (string int1, string int2) {
-            int numb1 = int.parse (int1);
-            int numb2 = int.parse (int2);
-            if (numb1 > numb2) {
-                return rand.int_range (numb2, (numb1 + 1));
-            } else {
-                return rand.int_range (numb1, (numb2 + 1));
-            }
-        }
-        
         public int Number (int numb1, int numb2) {
             if (numb1 > numb2) {
                 return rand.int_range (numb2, (numb1 + 1));
