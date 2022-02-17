@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: randomgtk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-15 00:42+0100\n"
-"PO-Revision-Date: 2022-02-15 00:48+0100\n"
-"Last-Translator: Óscar Fernández Díaz <oscfdezdz@tuta.io>\n"
+"POT-Creation-Date: 2022-02-15 20:28-0700\n"
+"PO-Revision-Date: 2022-02-16 21:36-0700\n"
+"Last-Translator: Forever XML <foreverxml@tuta.io>\n"
 "Language-Team: \n"
 "Language: es_MX\n"
 "MIME-Version: 1.0\n"
@@ -43,21 +43,21 @@ msgstr ""
 "manera aleatoria. Elegir algún deber, escoger un número entre el 1 o el 100, "
 "decidir si usted debería o no saltar sobre la cama de su mamá, etc."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:32
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:33
 msgid "Version 1.2 \"Flipped\":"
 msgstr "Version 1.2 \"Volteada\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:33
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:34
 msgid "A completely revamped UI is the star of this release."
 msgstr ""
 "Una interfaz de usuario completamente renovada es la protagonista de esta "
 "versión."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:39
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:40
 msgid "Version 1.1 \"Fix-Behind\":"
 msgstr "Version 1.1 \"Post-Corrección\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:40
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:41
 msgid ""
 "A much better Spanish translation, a new icon, and many more improvements "
 "from the past 3 months are included."
@@ -65,11 +65,11 @@ msgstr ""
 "Se incluye una traducción al español mucho mejor, un icono nuevo y muchas "
 "más mejoras de los últimos 3 meses."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:46
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:47
 msgid "Version 1.0 \"Adapting\":"
 msgstr "Versión 1.0 \"Adaptación\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:47
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:48
 msgid ""
 "Adds a new Spanish translation, help docs, revamps keyboard shortcuts, and "
 "makes the UI more adaptive."
@@ -77,19 +77,19 @@ msgstr ""
 "Añade una nueva traducción al español, documentos de ayuda, renueva los "
 "atajos del teclado y hace que la interfaz de usuario sea más adaptable."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:53
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:54
 msgid "Version 0.9 \"Global\":"
 msgstr "Versión 0.9 \"Global\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:54
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:55
 msgid "Translated into German and Russian."
 msgstr "Traducido al alemán y al ruso."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:59
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:60
 msgid "Version 0.8 \"Sync\":"
 msgstr "Version 0.8 \"Sincronización\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:60
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:61
 msgid ""
 "Removes the random colors for a noticable identity, and uses the latest "
 "GNOME 41 things, that came out on the same day as this."
@@ -97,60 +97,60 @@ msgstr ""
 "Elimina los colores aleatorios para una identidad notable, y usa las últimas "
 "cosas de GNOME 41, que salieron el mismo día que esto."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:65
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:66
 msgid "Version 0.7 \"Circus\":"
 msgstr "Version 0.7 \"Circo\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:66
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:67
 msgid "Adds some nice random colors."
 msgstr "Añade unos bonitos colores aleatorios."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:71
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:72
 msgid "Version 0.6 \"Advancing\":"
 msgstr "Versión 0.6 \"Avanzando\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:72
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:73
 msgid "Adds tons of new actions and keyboard shortcuts too."
 msgstr "Añade toneladas de nuevas acciones y atajos del teclado."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:77
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:78
 msgid "Version 0.5 \"Caterpillar\":"
 msgstr "Versión 0.5 \"Oruga\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:78
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:79
 msgid "Adds a menu and some bugfixes."
 msgstr "Añade un menú y algunas correcciones de errores."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:83
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:84
 msgid "Version 0.4 \"Flat\":"
 msgstr "Versión 0.4 \"Plana\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:84
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:85
 msgid "First Flathub release with GTK 4."
 msgstr "Primera versión de Flathub con GTK 4."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:89
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:90
 msgid "Version 0.3 \"Penny\":"
 msgstr "Versión 0.3 \"Penny\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:90
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:91
 msgid "Adds a coin flip view and an improved UI."
 msgstr ""
 "Añade una vista de lanzamiento de monedas y una interfaz de usuario mejorada."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:95
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:96
 msgid "Version 0.2 \"Makeover\":"
 msgstr "Versión 0.2 \"Renovación\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:96
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:97
 msgid "Follows the GNOME HIG and uses libhandy."
 msgstr "Sigue el HIG de GNOME y usa libhandy."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:101
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:102
 msgid "Version 0.1 \"Beginning\":"
 msgstr "Versión 0.1 \"Inicio\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:102
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:103
 msgid "The first release, welcome to the world!"
 msgstr "La primera versión, ¡bienvenida al mundo!"
 
@@ -246,8 +246,8 @@ msgstr ""
 "Óscar Fernández Díaz <oscfdezdz@tuta.io>"
 
 #: src/window.vala:111
-msgid "Flipped and changed all around."
-msgstr "Volteada y cambiada por todos lados."
+msgid "Randomizing made easy."
+msgstr "Simplifica la aleatorización."
 
 #: src/window.vala:118
 msgid "Repository"
@@ -276,3 +276,6 @@ msgstr "Cambiar vistas"
 #: src/shortcut.ui:37
 msgid "Copy result"
 msgstr "Copiar resultado"
+
+#~ msgid "Flipped and changed all around."
+#~ msgstr "Volteada y cambiada por todos lados."

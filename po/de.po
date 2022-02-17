@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Random v0.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-15 20:28-0700\n"
-"PO-Revision-Date: 2022-02-15 20:40-0700\n"
+"PO-Revision-Date: 2022-02-16 21:35-0700\n"
 "Last-Translator: Forever XML <foreverxml@tuta.io>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -243,8 +243,8 @@ msgid "translator-credits"
 msgstr "Forever XML <foreverxml@tuta.io>"
 
 #: src/window.vala:111
-msgid "Flipped and changed all around."
-msgstr "Die erste Veröffentlichung, willkommen in der Welt!"
+msgid "Randomizing made easy."
+msgstr "Machen Sie die Randomisierung einfach."
 
 #: src/window.vala:118
 msgid "Repository"
@@ -273,6 +273,9 @@ msgstr "Ansichten wechseln"
 #: src/shortcut.ui:37
 msgid "Copy result"
 msgstr "Ergebnis kopieren"
+
+#~ msgid "Flipped and changed all around."
+#~ msgstr "Die erste Veröffentlichung, willkommen in der Welt!"
 
 #~ msgid "5"
 #~ msgstr "5"
