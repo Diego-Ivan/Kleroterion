@@ -198,7 +198,7 @@ namespace Random {
         }
 
         private void help () {
-            show_uri (this, "https://codeberg.org/foreverxml/random/src/branch/main/help/README.md", Gdk.CURRENT_TIME);
+            show_uri (this, "https://foreverxml.codeberg.page/random/help", Gdk.CURRENT_TIME);
         }
 	}
 }

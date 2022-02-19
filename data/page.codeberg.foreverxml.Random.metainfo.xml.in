@@ -24,31 +24,34 @@
       <image>https://codeberg.org/foreverxml/random/raw/branch/main/screenshots/coin.png</image>
     </screenshot>
   </screenshots>
-  <url type="homepage">https://foreverxml.codeberg.page</url>
+  <url type="homepage">https://foreverxml.codeberg.page/random</url><url type="help">https://foreverxml.codeberg.page/random/help</url><url type="faq">https://foreverxml.codeberg.page/random#faq</url>
   <url type="contact">https://matrix.to/#/#randomgtk:matrix.org</url>
-  <url type="bugtracker">https://codeberg.org/foreverxml/random/issues</url>
+  <url type="bugtracker">https://codeberg.org/foreverxml/random/issues</url><translation type="gettext">randomgtk</translation>
   <releases>
-      <release version="1.2" date="2022-01-14">
+      <release version="1.3" date="2022-01-20">
+      <description>
+        <p translatable="yes">Version 1.3 "Copier":</p>
+        <p translatable="yes">New shortcuts, new docs, new life.</p>
+      </description>
+    </release>
+      <release version="1.2" date="2022-02-13">
       <description>
         <p translatable="yes">Version 1.2 "Flipped":</p>
         <p translatable="yes">A completely revamped UI is the star of this release.</p>
       </description>
     </release>
-
       <release version="1.1" date="2022-01-08">
       <description>
         <p translatable="yes">Version 1.1 "Fix-Behind":</p>
         <p translatable="yes">A much better Spanish translation, a new icon, and many more improvements from the past 3 months are included.</p>
       </description>
     </release>
-
     <release version="1.0" date="2021-09-30">
       <description>
         <p translatable="yes">Version 1.0 "Adapting":</p>
         <p translatable="yes">Adds a new Spanish translation, help docs, revamps keyboard shortcuts, and makes the UI more adaptive.</p>
       </description>
     </release>
-
     <release version="0.9" date="2021-09-23">
       <description>
         <p translatable="yes">Version 0.9 "Global":</p>
@@ -108,7 +111,7 @@
     <binary>randomgtk</binary>
   </provides>
   <requires>
-    <display_length compare="ge">416</display_length>
+    <display_length compare="ge">360</display_length>
   </requires>
   <reccomends>
     <control>touch</control>
