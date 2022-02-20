@@ -77,27 +77,13 @@ Check out the [po folder](https://codeberg.org/foreverxml/random/src/branch/main
     - Something too advanced for this simple app And don't forget to test before your PR! Have a great day.
 #### 🤓 EditorConfig
 Make sure to follow the EditorConfig guidelines specified in the `.editorconfig` file. And check the [EditorConfig website](https://editorconfig.org/) to see if your IDE is compatible!
-
+#### 😖 I don't have a Codeberg account...
+No worries! Contact me on [Matrix](https://matrix.to/#/@foreverxmld:matrix.org) and we'll work it out.
 </details>
 </details>
 
 ## 🤝 Conduct
 This project follows the [GNOME Code of Conduct](https://wiki.gnome.org/Foundation/CodeOfConduct).
-
-## 👥 Contributors to Random
-<details>
-<summary>See the Contributors</summary>
-
-### 👥 The Contributors
-
-- [foreverxml](https://codeberg.org/foreverxml) - 🐛🎨🤔🚧👀🌍⚠️💻
-- [teackot](https://codeberg.org/teackot) - 🐛🌍⚠️💻
-- [dimmednerd](https://codeberg.org/DiegoIvan) - 🐛🌍⚠️💻
-- [oscfdezdz](https://codeberg.org/oscfdezdz) - 🐛⚠️💻
-- [jimmac](https://codeberg.org/jimmac) - 🎨
-
-Uses the [All Contributors Emoji Key](https://allcontributors.org/docs/en/emoji-key).
-</details>
 
 ## 🖥️ Supported OS?
 
