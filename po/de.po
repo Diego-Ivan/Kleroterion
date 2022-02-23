@@ -24,15 +24,15 @@ msgstr ""
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:7 src/window.ui:4
 #: src/window.ui:20 src/window.vala:108
 msgid "Random"
-msgstr "Zufällig"
+msgstr "Zufall"
 
 #: data/page.codeberg.foreverxml.Random.desktop.in:10
 msgid "Random;Roulette;Coin;Number;"
-msgstr "Random;Roulette;Coin;Number;Zufällig;Roulette;Münze;Zahl;"
+msgstr "Random;Roulette;Coin;Number;Zufall;Roulette;Münze;Zahl;"
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:8
 msgid "Make randomization easy"
-msgstr "Machen Sie die Randomisierung einfach"
+msgstr "Randomisierung leicht gemacht"
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:11
 msgid ""
@@ -40,8 +40,9 @@ msgid ""
 "between 1 and 100, whether or not to jump on your mom's bed, etc."
 msgstr ""
 "Ein Werkzeug zum Auswählen einer Zufallszahl oder eines Listenelements. "
-"Wählen Sie aus, was Sie tun möchten, eine Zahl zwischen 1 und 100, ob Sie "
-"auf das Bett Ihrer Mutter springen oder nicht, usw."
+"Lassen Sie den Zufall entscheiden, welche Hausarbeit Sie erledigen, "
+"erzeugen Sie Zufallswerte zwischen 1 und 100, werfen Sie eine Münze, "
+"ob Sie auf dem Bett Ihrer Mutter herumspringen oder nicht etc."
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:33
 msgid "Version 1.3 \"Copier\":"
@@ -192,11 +193,11 @@ msgstr "Beispiel: Layla/Rose/Cleveland/Lampy"
 
 #: src/window.ui:196
 msgid "Type a list, seperating values with /"
-msgstr "Geben Sie eine Liste ein und trennen Sie die Werte mit /"
+msgstr "Geben Sie eine Liste ein, Trennung der einzelnen Elemente durch /"
 
 #: src/window.ui:201
 msgid "Pick"
-msgstr "Wählen"
+msgstr "Zufällige Auswahl"
 
 #: src/window.ui:219
 msgid "Coin"
@@ -204,31 +205,31 @@ msgstr "Münze"
 
 #: src/window.ui:229 src/window.vala:93
 msgid "Tails"
-msgstr "Schwänze"
+msgstr "Zahl"
 
 #: src/window.ui:237
 msgid "Flip the coin"
-msgstr "Die Münze umdrehen"
+msgstr "Münze werfen"
 
 #. Translators: Remember to add a mnemonic and use header case here.
 #: src/window.ui:270
 msgid "Number to _Roulette"
-msgstr "Nummer zum _Roulette"
+msgstr "Zahl zum _Roulette"
 
 #. Translators: Remember to add a mnemonic and use header case here.
 #: src/window.ui:275
 msgid "_Delete Picked Item"
-msgstr "Ausgewählten Artikel _entfernen"
+msgstr "Ausgewähltes Element _entfernen"
 
 #. Translators: Remember to add a mnemonic and use header case here.
 #: src/window.ui:280
 msgid "_Copy Item"
-msgstr "Artikel _Kopieren"
+msgstr "Element _kopieren"
 
 #. Translators: Remember to add a mnemonic and use header case here.
 #: src/window.ui:287
 msgid "_Keyboard Shortcuts"
-msgstr "_Tastatürkürzel"
+msgstr "_Tastaturkürzel"
 
 #. Translators: Remember to add a mnemonic and use header case here.
 #: src/window.ui:292
@@ -238,21 +239,22 @@ msgstr "_Hilfe ↗"
 #. Translators: Remember to add a mnemonic and use header case here.
 #: src/window.ui:297
 msgid "_About Random"
-msgstr "Über _Zufällig"
+msgstr "Über _Zufall"
 
 #. coinflip
 #: src/window.vala:93
 msgid "Heads"
-msgstr "Köpfe"
+msgstr "Kopf"
 
 #. Translators: add your names and emails to this table, one per line as shown
 #: src/window.vala:104
 msgid "translator-credits"
 msgstr "Forever XML <foreverxml@tuta.io>"
+"Karl Welbert <k.welbert@protonmail.com>"
 
 #: src/window.vala:111
 msgid "Randomizing made easy."
-msgstr "Machen Sie die Randomisierung einfach."
+msgstr "Randomisierung leicht gemacht."
 
 #: src/window.vala:118
 msgid "Repository"
@@ -260,7 +262,7 @@ msgstr "Repository"
 
 #: src/shortcut.ui:9
 msgid "Controls"
-msgstr "Kontrollen"
+msgstr "Einstellungen"
 
 #: src/shortcut.ui:13
 msgid "Convert from Number to Roulette"
@@ -268,15 +270,15 @@ msgstr "Von Nummer in Roulette umwandeln"
 
 #: src/shortcut.ui:19
 msgid "Spin Roulette and delete selected"
-msgstr "Roulette drehen und ausgewählte löschen"
+msgstr "Roulette drehen und gewähltes Element löschen"
 
 #: src/shortcut.ui:25
 msgid "Pick, spin, or flip"
-msgstr "Wählen, drehen oder umdrehen"
+msgstr "Wählen, drehen oder werfen"
 
 #: src/shortcut.ui:31
 msgid "Switch views"
-msgstr "Ansichten wechseln"
+msgstr "Ansicht wechseln"
 
 #: src/shortcut.ui:37
 msgid "Copy result"
@@ -289,10 +291,10 @@ msgstr "Ergebnis kopieren"
 #~ msgstr "5"
 
 #~ msgid "Switch between views"
-#~ msgstr "Ansichten wechseln"
+#~ msgstr "Ansicht wechseln"
 
 #~ msgid "Open the Menu"
-#~ msgstr "Öffnen Sie das Menü"
+#~ msgstr "Menü öffnen"
 
 #~ msgid ""
 #~ "Put the lower number in your number range here (for example, put a 1 here "
@@ -314,10 +316,10 @@ msgstr "Ergebnis kopieren"
 #~ msgstr "Generieren Sie eine Zufallszahl"
 
 #~ msgid "You haven't generated yet!"
-#~ msgstr "Sie haben noch nicht generiert!"
+#~ msgstr "Sie haben noch keine Zahl generiert!"
 
 #~ msgid "Write your options below. Separate them with:"
-#~ msgstr "Schreiben Sie Ihre Optionen unten. Trennen Sie sie mit:"
+#~ msgstr "Tragen Sie Ihre Optionen unten ein. Trennen Sie diese mit:"
 
 #~ msgid ""
 #~ "Type your separator here (for example, “/” for list “GNOME/KDE/XFCE”.)"
@@ -341,22 +343,22 @@ msgstr "Ergebnis kopieren"
 #~ msgstr "Drehen"
 
 #~ msgid "You haven't rolled yet!"
-#~ msgstr "Du hast noch nicht gewürfelt!"
+#~ msgstr "Sie haben noch nicht gewürfelt!"
 
 #~ msgid "Click the button to flip the coin!"
 #~ msgstr "Klicken Sie auf die Schaltfläche, um die Münze zu werfen!"
 
 #~ msgid "Flip"
-#~ msgstr "Umdrehen"
+#~ msgstr "Münzwurf"
 
 #~ msgid "You haven't flipped yet!"
-#~ msgstr "Du hast noch nicht umgedreht!"
+#~ msgstr "Sie haben noch keine Münze geworfen!"
 
 #~ msgid "You got heads!"
-#~ msgstr "Du hast Köpfe!"
+#~ msgstr "Ihre Münze zeigt Kopf!"
 
 #~ msgid "You got tails!"
-#~ msgstr "Du hast Schwänze!"
+#~ msgstr "Ihre Münze zeigt Zahl!"
 
 #~ msgid ""
 #~ "Switch between picking a number, spinning a wheel, or flipping a coin."
