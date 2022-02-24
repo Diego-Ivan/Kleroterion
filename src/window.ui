@@ -147,8 +147,17 @@
                                                                         <property name="halign">center</property>
                                                                         <style>
                                                                             <class name="pill" />
-                                                                            <class name="suggested" />
+                                                                            <class name="suggested-action" />
                                                                         </style>
+                                                                    </object>
+                                                                </child>
+                                                                <child>
+                                                                    <object class="GtkButton" id="nrou">
+                                                                        <property name="halign">center</property>
+                                                                        <style>
+                                                                            <class name="pill" />
+                                                                        </style>
+                                                                        <child><object class="GtkImage"><property name="icon-name">user-trash-symbolic</property></object></child>
                                                                     </object>
                                                                 </child>
                                                             </object>
@@ -200,7 +209,7 @@
                                                             <object class="GtkButton" id="genc">
                                                                 <property name="label" translatable="yes">Pick</property><property name="halign">center</property>
                                                                 <property name="receives-default">1</property>
-                                                                <style><class name="suggested" /><class name="pill" /></style>
+                                                                <style><class name="suggested-action" /><class name="pill" /></style>
                                                             </object>
                                                         </child>
 
@@ -240,7 +249,7 @@
 
                                                     <style>
                                                         <class name="pill" />
-                                                        <class name="suggested" />
+                                                        <class name="suggested-action" />
                                                     </style>
                                                 </object>
                                             </child>
