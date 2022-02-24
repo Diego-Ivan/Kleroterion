@@ -87,6 +87,17 @@ namespace Random {
 	            });
 	        });
 
+	        stack1.notify["visible-child"].connect (() => {
+	            if (stack1.get_visible_child () == rou.get_child ()) {
+                    this.set_default_widget (genc);
+                } else if (stack1.get_visible_child () == coinpage.get_child ()) {
+                    this.set_default_widget (cf);
+                } else {
+                    this.set_default_widget (genn);
+                }
+	        });
+	        this.set_default_widget (genn);
+
 	        // roulette
 	        genc.clicked.connect (() => {
                 rourev.set_reveal_child (false);
@@ -117,6 +128,7 @@ namespace Random {
 	        });
 
 	        this.present ();
+	        this.set_default_widget (genn);
 
 	        string txt = Randomize.Number (1, 10).to_string ();
 	        endn.set_label (txt);

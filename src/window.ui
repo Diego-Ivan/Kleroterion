@@ -191,7 +191,7 @@
                                                         <property name="orientation">vertical</property>
                                                         <child>
                                                             <object class="GtkEntry" id="ctxt">
-                                                                <style><class name="margins" /></style>
+                                                                <style><class name="margins" /></style><property name="activates-default">True</property>
                                                                 <property name="tooltip-text" translatable="yes">Example: Layla/Rose/Cleveland/Lampy</property>
                                                                 <property name="placeholder-text" translatable="yes">Type a list, seperating values with /</property>
                                                             </object>
