@@ -46,14 +46,14 @@
                                         <property name="spacing">6</property>
                                         <property name="orientation">vertical</property>
                                         <child>
-                                            <object class="GtkLabel" id="endn">
+                                            <object class="GtkRevealer" id="numrev"><property name="transition-type">crossfade</property><property name="transition-duration">250</property><property name="reveal-child">true</property><child><object class="GtkLabel" id="endn">
                                                 <property name="vexpand">1</property>
                                                 <property name="label" translatable="yes">5</property>
                                                 <style>
                                                     <class name="number" />
                                                     <class name="numeric" />
                                                 </style>
-                                            </object>
+                                            </object></child></object>
                                         </child>
                                         <child>
                                             <object class="GtkBox">
@@ -80,7 +80,7 @@
                                                                         <property name="selection-mode">none</property>
                                                                         <child>
                                                                             <object class="AdwActionRow">
-                                                                                <property name="title" translatable="yes">From</property>
+                                                                                <property name="title" translatable="yes">_From</property><property name="use-underline">true</property>
                                                                                 <child>
                                                                                     <object class="GtkSpinButton" id="num1">
                                                                                         <property name="vexpand">0</property>
@@ -106,7 +106,7 @@
                                                                         </child>
                                                                         <child>
                                                                             <object class="AdwActionRow">
-                                                                                <property name="title" translatable="yes">To</property>
+                                                                                <property name="title" translatable="yes">_To</property><property name="use-underline">true</property>
                                                                                 <child>
                                                                                     <object class="GtkSpinButton" id="num2">
                                                                                         <property name="vexpand">0</property>
@@ -151,15 +151,6 @@
                                                                         </style>
                                                                     </object>
                                                                 </child>
-                                                                <child>
-                                                                    <object class="GtkButton" id="nrou">
-                                                                        <property name="halign">center</property>
-                                                                        <style>
-                                                                            <class name="pill" />
-                                                                        </style>
-                                                                        <child><object class="GtkImage"><property name="icon-name">user-trash-symbolic</property></object></child>
-                                                                    </object>
-                                                                </child>
                                                             </object>
                                                         </child>
                                                     </object>
@@ -180,14 +171,14 @@
                                         <property name="spacing">6</property>
                                         <property name="orientation">vertical</property>
                                         <child>
-                                            <object class="GtkLabel" id="endc">
+                                            <object class="GtkRevealer" id="rourev"><property name="transition-type">crossfade</property><property name="transition-duration">250</property><property name="reveal-child">true</property><child><object class="GtkLabel" id="endc">
                                                 <property name="vexpand">1</property>
                                                 <property name="wrap">1</property>
                                                 <property name="label" translatable="yes">Waiting...</property>
                                                 <style>
                                                     <class name="rl"/>
                                                 </style>
-                                            </object>
+                                          </object></child></object>
                                         </child>
                                         <child>
                                             <object class="GtkBox">
@@ -205,14 +196,22 @@
                                                                 <property name="placeholder-text" translatable="yes">Type a list, seperating values with /</property>
                                                             </object>
                                                         </child>
-                                                        <child>
+                                                        <child><object class="GtkBox"><property name="halign">center</property><property name="spacing">6</property><child>
                                                             <object class="GtkButton" id="genc">
                                                                 <property name="label" translatable="yes">Pick</property><property name="halign">center</property>
                                                                 <property name="receives-default">1</property>
                                                                 <style><class name="suggested-action" /><class name="pill" /></style>
                                                             </object>
                                                         </child>
-
+                                                      <child>
+                                                                    <object class="GtkButton" id="dels">
+                                                                        <property name="halign">center</property>
+                                                                        <style>
+                                                                            <class name="pill" />
+                                                                        </style>
+                                                                        <child><object class="GtkImage"><property name="icon-name">user-trash-symbolic</property></object></child>
+                                                                    </object>
+                                                                </child></object></child>
                                                     </object>
                                                 </child>
                                             </object>
@@ -233,13 +232,13 @@
                                         <property name="orientation">vertical</property>
 
                                             <child>
-                                                <object class="GtkLabel" id="cl">
+                                                <object class="GtkRevealer" id="coinrev"><property name="transition-type">crossfade</property><property name="transition-duration">250</property><property name="reveal-child">true</property><child><object class="GtkLabel" id="cl">
                                                     <property name="vexpand">1</property>
                                                     <property name="label" translatable="yes">Tails</property>
                                                     <style>
                                                         <class name="number"/>
                                                     </style>
-                                                </object>
+                                              </object></child></object>
                                             </child>
                                             <child>
                                                 <object class="GtkButton" id="cf">
@@ -277,11 +276,6 @@
                 <attribute name="action">app.number</attribute>
                 <!-- Translators: Remember to add a mnemonic and use header case here. -->
                 <attribute name="label" translatable="yes">Number to _Roulette</attribute>
-            </item>
-            <item>
-                <attribute name="action">app.remove</attribute>
-                <!-- Translators: Remember to add a mnemonic and use header case here. -->
-                <attribute name="label" translatable="yes">_Delete Picked Item</attribute>
             </item>
             <item>
                 <attribute name="action">app.copy</attribute>

@@ -26,6 +26,7 @@ namespace Random {
 		[GtkChild] private unowned SpinButton num2;
         [GtkChild] private unowned Entry ctxt;
         [GtkChild] private unowned Button genc;
+        [GtkChild] private unowned Button dels;
         [GtkChild] private unowned Label endc;
         [GtkChild] private unowned Button cf;
         [GtkChild] private unowned Label cl;
@@ -34,6 +35,9 @@ namespace Random {
         [GtkChild] private unowned Adw.ViewStackPage coinpage;
         [GtkChild] private unowned Adw.ViewStack stack1;
         [GtkChild] private unowned MenuButton menus;
+        [GtkChild] private unowned Revealer numrev;
+        [GtkChild] private unowned Revealer rourev;
+        [GtkChild] private unowned Revealer coinrev;
         private Random.Func Randomize = new Random.Func ();
         private ActionEntry[] actions;
         private SimpleActionGroup actionc = new SimpleActionGroup ();
@@ -75,23 +79,43 @@ namespace Random {
 
             // number
 		    genn.clicked.connect (() => {
+		        numrev.set_reveal_child (false);
+		        Timeout.add (250, () => {
 	            string txt = Randomize.Number (num1.get_value_as_int (), num2.get_value_as_int ()).to_string ();
 	            endn.set_label (txt);
+	            numrev.set_reveal_child (true);
+	            });
 	        });
 
 	        // roulette
 	        genc.clicked.connect (() => {
+                rourev.set_reveal_child (false);
+	            Timeout.add (250, () => {
 	            string txt = Randomize.Roulette (ctxt.get_text (), "/");
 	            if (txt == "Hey adora") {
 	                txt = "Catra!? What are you doing here?";
 	            }
                 endc.set_label (txt);
+                rourev.set_reveal_child (true);
+                });
 	        });
+
+	        dels.clicked.connect (() => {
+                string[] enda = Randomize.DeleteRoulette (ctxt.get_text (), "/");
+                endc.set_label (enda[0]);
+                ctxt.set_text (enda[1]);
+            });
 
 	        // coinflip
 	        cf.clicked.connect (() => {
-	            cl.set_label (Randomize.Coin (_("Heads"), _("Tails")));
+	            coinrev.set_reveal_child (false);
+	            Timeout.add(250, () => {
+	            string cnr = Randomize.Coin (_("Heads"), _("Tails"));
+	            cl.set_label (cnr);
+	            coinrev.set_reveal_child (true);
+	            });
 	        });
+
 	        this.present ();
 
 	        string txt = Randomize.Number (1, 10).to_string ();

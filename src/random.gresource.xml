@@ -4,5 +4,6 @@
     <file>window.ui</file>
     <file>shortcut.ui</file>
     <file>style.css</file>
+    <file>style-dark.css</file>
   </gresource>
 </gresources>
