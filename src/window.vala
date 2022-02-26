@@ -98,6 +98,15 @@ namespace Random {
 	        });
 	        this.set_default_widget (genn);
 
+	        title.notify["title-visible"].connect (() => {
+	            if (title.get_title_visible () == true) {
+	                bar.set_reveal (true);
+	            } else {
+	                bar.set_reveal (false);
+	            }
+	        });
+	        bar.set_reveal (true);
+
 	        // roulette
 	        genc.clicked.connect (() => {
                 rourev.set_reveal_child (false);
