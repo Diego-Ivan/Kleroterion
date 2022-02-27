@@ -252,10 +252,14 @@
                                                         <child>
                                                           <object class="GtkScrolledWindow">
                                                             <style><class name="margins" /></style>
-                                                            <property name="max-content-height">500</property>
+                                                            <property name="max-content-height">300</property>
                                                             <property name="propagate-natural-height">true</property>
                                                             <child>
                                                               <object class="GtkListBox" id="robox">
+                                                                <style>
+                                                                            <class name="boxed-list" />
+                                                                        </style>
+                                                                        <property name="selection-mode">none</property>
                                                               </object>
                                                             </child>
                                                           </object>

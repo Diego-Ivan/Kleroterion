@@ -117,7 +117,7 @@ namespace Random {
 	        genc.clicked.connect (() => {
                 rourev.set_reveal_child (false);
 	            Timeout.add (250, () => {
-	            string txt = Randomize.Roulette (ctxt.get_text (), "/");
+	            string txt = Randomize.Roulette (strings ());
 	            if (txt == "Hey adora") {
 	                txt = "Catra!? What are you doing here?";
 	            }
@@ -127,17 +127,24 @@ namespace Random {
 	        });
 
 	        dels.clicked.connect (() => {
-                string[] enda = Randomize.DeleteRoulette (ctxt.get_text (), "/");
+	            rourev.set_reveal_child (false);
+	            Timeout.add (250, () => {
+                string[] enda = Randomize.DeleteRoulette (strings ());
                 endc.set_label (enda[0]);
-                ctxt.set_text (enda[1]);
-                refactor ();
+                for (uint i = 0; i < rlet.get_n_items (); i++) {
+                    if (rlet.get_string (i) == enda[0]) {
+                        rlet.remove (i);
+                    }
+                }
+                rourev.set_reveal_child (true);
+                });
             });
 
             numr.clicked.connect (() => {
 	            string list = Randomize.NumberRoulette (num1.get_value_as_int (), num2.get_value_as_int ());
 	            ctxt.set_text (list);
+	            refresh (list.split ("/"));
                 stack1.set_visible_child (rou.get_child ());
-                refactor ();
             });
 
 	        // coinflip
@@ -150,8 +157,28 @@ namespace Random {
 	            });
 	        });
 
-	        ctxt.set_text ("Layla/Rose/Cleveland/Lampy");
-	        refactor ();
+
+	        ListBoxCreateWidgetFunc acts = (item) => {
+	            Adw.ActionRow actor = new Adw.ActionRow ();
+	            string strung;
+	            item.@get ("string", strung, null);
+	            actor.set_title (strung);
+	            Button button = new Button ();
+	            button.set_hexpand (false);
+	            button.clicked.connect (() => {
+	                for (uint i = 0; i < rlet.get_n_items (); i++) {
+                        if (rlet.get_string (i) == strung) {
+                            rlet.remove (i);
+                        }
+                    }
+	            });
+	            Image del = new Image ();
+	            del.set_from_icon_name ("user-trash-symbolic");
+	            button.set_child (del);
+	            actor.set_child (button);
+	            return actor;
+	        };
+	        robox.bind_model (rlet, acts);
 
 	        this.present ();
 	        this.set_default_widget (genn);
@@ -160,65 +187,13 @@ namespace Random {
 	        endn.set_label (txt);
 	    }
 
-	    public void refactor () throws Error {
-	        int i = 0;
-	        try {
-	            ListBoxRow? remover = null;
-                while (robox.get_row_at_index (i) != null) {
-                    remover = robox.get_row_at_index (i);
-                    robox.remove (remover);
-                    remover.unrealize ();
-                    i = i + 1;
-                }
-                string load = ctxt.get_text ();
-                if (load == "") { return; }
-                string[] loader = load.split ("/");
-                for (int j = 0; j < loader.length; j++) {
-                    addrow (loader[j]);
-                }
-            } catch (Error e) {
-                critical ("Whoops! Something happened. Here's what happened: %s", e.message);
-            }
-	    }
-
-	    public void addrow (string titled) {
-	        Adw.ActionRow newrow = new Adw.ActionRow ();
-	        newrow.set_title (titled);
-	        Button button = new Button ();
-	        button.set_hexpand (false);
-	        button.clicked.connect (() => {
-	            string edit = ctxt.get_text ();
-	            string[] texa = edit.split ("/");
-	            // roulette string reassembly
-	            for (int t = 0; t < texa.length; t++) {
-                    if (texa[t] == titled) {
-                            for (int k = t; k < texa.length - 1; k++) {
-                            texa[k] = texa[k+1];
-                            texa[k+1] = null;
-                        }
-                        break;
-                    }
-                }
-                if (texa.length == 1) {
-                    texa[0] = null;
-                    ctxt.set_text ("");
-                    refactor ();
-                    return;
-                }
-                texa.resize (texa.length-1);
-                edit = texa[0];
-                for (int j = 1; j < texa.length; j++) {
-                    edit = edit + "/" + texa[j];
-                }
-                ctxt.set_text (edit);
-                refactor ();
-                return;
-	        });
-	        Image del = new Image ();
-	        del.set_from_icon_name ("user-trash-symbolic");
-	        button.set_child (del);
-	        newrow.set_child (button);
-	        robox.append (newrow);
+	    private void refresh (string[] news) {
+	        for (uint i = 0; i < rlet.get_n_items (); i++) {
+	            rlet.remove (i);
+	        }
+	        for (int j = 0; j < news.length; j++) {
+	            rlet.append (news[j]);
+	        }
 	    }
 
 	    private void about () {
@@ -248,18 +223,28 @@ namespace Random {
 	            string list = Randomize.NumberRoulette (num1.get_value_as_int (), num2.get_value_as_int ());
 	            ctxt.set_text (list);
                 stack1.set_visible_child (rou.get_child ());
-                refactor ();
             }
+        }
+
+        private string[] strings () {
+            string[] returnstring = {};
+            for (uint i = 0; i < rlet.get_n_items (); i++) {
+                returnstring[i] = rlet.get_string (i);
+            }
+            return returnstring;
         }
 
         private void remove () {
             if (stack1.get_visible_child () != rou.get_child ()) {
                 stack1.set_visible_child (rou.get_child ());
             } else {
-                string[] enda = Randomize.DeleteRoulette (ctxt.get_text (), "/");
+                string[] enda = Randomize.DeleteRoulette (strings ());
                 endc.set_label (enda[0]);
-                ctxt.set_text (enda[1]);
-                refactor ();
+                for (uint i = 0; i < rlet.get_n_items (); i++) {
+                    if (rlet.get_string (i) == enda[0]) {
+                        rlet.remove (i);
+                    }
+                }
             }
         }
 
