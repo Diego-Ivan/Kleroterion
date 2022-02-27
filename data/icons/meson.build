@@ -26,6 +26,21 @@ install_data(
 )
 
 install_data(
+  join_paths(symbolic_dir, 'number-roulette-symbolic.svg'),
+  install_dir: join_paths(get_option('datadir'), 'icons', symbolic_dir)
+)
+
+install_data(
+  join_paths(symbolic_dir, 'plus-symbolic.svg'),
+  install_dir: join_paths(get_option('datadir'), 'icons', symbolic_dir)
+)
+
+install_data(
+  join_paths(symbolic_dir, 'arrow-into-box-symbolic.svg'),
+  install_dir: join_paths(get_option('datadir'), 'icons', symbolic_dir)
+)
+
+install_data(
   join_paths(symbolic_dir, 'menu-symbolic.svg'),
   install_dir: join_paths(get_option('datadir'), 'icons', symbolic_dir)
 )

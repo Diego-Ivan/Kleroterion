@@ -27,6 +27,7 @@ namespace Random {
         [GtkChild] private unowned Entry ctxt;
         [GtkChild] private unowned Button genc;
         [GtkChild] private unowned Button dels;
+        [GtkChild] private unowned Button numr;
         [GtkChild] private unowned Label endc;
         [GtkChild] private unowned Button cf;
         [GtkChild] private unowned Label cl;
@@ -38,7 +39,12 @@ namespace Random {
         [GtkChild] private unowned Revealer numrev;
         [GtkChild] private unowned Revealer rourev;
         [GtkChild] private unowned Revealer coinrev;
+        [GtkChild] private unowned Adw.ViewSwitcherTitle title;
+        [GtkChild] private unowned Adw.ViewSwitcherBar bar;
+        [GtkChild] private unowned ListBox robox;
         private Random.Func Randomize = new Random.Func ();
+        // Translators: If the language is in Latin, leave these be. If it is not, insert names here, and don't translate the strings.
+        private StringList rlet = new StringList ({_("Layla"), _("Rose"), _("Cleveland"), _("Lampy")});
         private ActionEntry[] actions;
         private SimpleActionGroup actionc = new SimpleActionGroup ();
         public Gtk.Application app { get; construct; }
@@ -124,6 +130,14 @@ namespace Random {
                 string[] enda = Randomize.DeleteRoulette (ctxt.get_text (), "/");
                 endc.set_label (enda[0]);
                 ctxt.set_text (enda[1]);
+                refactor ();
+            });
+
+            numr.clicked.connect (() => {
+	            string list = Randomize.NumberRoulette (num1.get_value_as_int (), num2.get_value_as_int ());
+	            ctxt.set_text (list);
+                stack1.set_visible_child (rou.get_child ());
+                refactor ();
             });
 
 	        // coinflip
@@ -136,11 +150,75 @@ namespace Random {
 	            });
 	        });
 
+	        ctxt.set_text ("Layla/Rose/Cleveland/Lampy");
+	        refactor ();
+
 	        this.present ();
 	        this.set_default_widget (genn);
 
 	        string txt = Randomize.Number (1, 10).to_string ();
 	        endn.set_label (txt);
+	    }
+
+	    public void refactor () throws Error {
+	        int i = 0;
+	        try {
+	            ListBoxRow? remover = null;
+                while (robox.get_row_at_index (i) != null) {
+                    remover = robox.get_row_at_index (i);
+                    robox.remove (remover);
+                    remover.unrealize ();
+                    i = i + 1;
+                }
+                string load = ctxt.get_text ();
+                if (load == "") { return; }
+                string[] loader = load.split ("/");
+                for (int j = 0; j < loader.length; j++) {
+                    addrow (loader[j]);
+                }
+            } catch (Error e) {
+                critical ("Whoops! Something happened. Here's what happened: %s", e.message);
+            }
+	    }
+
+	    public void addrow (string titled) {
+	        Adw.ActionRow newrow = new Adw.ActionRow ();
+	        newrow.set_title (titled);
+	        Button button = new Button ();
+	        button.set_hexpand (false);
+	        button.clicked.connect (() => {
+	            string edit = ctxt.get_text ();
+	            string[] texa = edit.split ("/");
+	            // roulette string reassembly
+	            for (int t = 0; t < texa.length; t++) {
+                    if (texa[t] == titled) {
+                            for (int k = t; k < texa.length - 1; k++) {
+                            texa[k] = texa[k+1];
+                            texa[k+1] = null;
+                        }
+                        break;
+                    }
+                }
+                if (texa.length == 1) {
+                    texa[0] = null;
+                    ctxt.set_text ("");
+                    refactor ();
+                    return;
+                }
+                texa.resize (texa.length-1);
+                edit = texa[0];
+                for (int j = 1; j < texa.length; j++) {
+                    edit = edit + "/" + texa[j];
+                }
+                ctxt.set_text (edit);
+                refactor ();
+                return;
+	        });
+	        Image del = new Image ();
+	        del.set_from_icon_name ("user-trash-symbolic");
+	        button.set_child (del);
+	        newrow.set_child (button);
+	        robox.append (newrow);
 	    }
 
 	    private void about () {
@@ -170,6 +248,7 @@ namespace Random {
 	            string list = Randomize.NumberRoulette (num1.get_value_as_int (), num2.get_value_as_int ());
 	            ctxt.set_text (list);
                 stack1.set_visible_child (rou.get_child ());
+                refactor ();
             }
         }
 
@@ -180,6 +259,7 @@ namespace Random {
                 string[] enda = Randomize.DeleteRoulette (ctxt.get_text (), "/");
                 endc.set_label (enda[0]);
                 ctxt.set_text (enda[1]);
+                refactor ();
             }
         }
 
