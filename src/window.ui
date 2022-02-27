@@ -215,56 +215,14 @@
                                                         <property name="spacing">6</property>
                                                         <property name="orientation">vertical</property>
                                                         <child>
-                                                          <object class="GtkBox">
-                                                            <property name="spacing">6</property>
-                                                            <property name="orientation">horizontal</property>
-                                                            <style><class name="margins" /></style>
-                                                            <child>
-                                                              <object class="GtkLabel">
-                                                                <property name="hexpand">1</property>
-                                                                <property name="xalign">0</property>
-                                                                <property name="label" translatable="yes">Choices</property>
-                                                                <style><class name="title-3" /></style>
-                                                              </object>
-                                                            </child>
-                                                            <child>
-                                                              <object class="GtkButton" id="inex">
-                                                                <property name="vexpand">0</property>
-                                                                <child>
-                                                                  <object class="GtkImage">
-                                                                    <property name="icon-name">arrow-into-box-symbolic</property>
-                                                                  </object>
-                                                                </child>
-                                                              </object>
-                                                            </child>
-                                                            <child>
-                                                              <object class="GtkButton" id="add">
-                                                              <property name="vexpand">0</property>
-                                                                <child>
-                                                                  <object class="GtkImage">
-                                                                    <property name="icon-name">plus-symbolic</property>
-                                                                  </object>
-                                                                </child>
-                                                              </object>
-                                                            </child>
-                                                          </object>
-                                                        </child>
-                                                        <child>
-                                                          <object class="GtkScrolledWindow">
-                                                            <style><class name="margins" /></style>
-                                                            <property name="max-content-height">500</property>
-                                                            <property name="propagate-natural-height">true</property>
-                                                            <child>
-                                                              <object class="GtkListBox" id="robox">
-                                                              </object>
-                                                            </child>
-                                                          </object>
-                                                        </child>
-                                                        <child>
-                                                          <object class="GtkEntry"  id="ctxt">
-                                                            <property name="activates-default">true</property>
-                                                            <style><class name="margins" /></style>
-                                                          </object>
+                                                          <object class="GtkEntry" id="ctxt">
+                                                                <style>
+                                                                    <class name="margins" />
+                                                                </style>
+                                                                <property name="activates-default">True</property>
+                                                                <property name="tooltip-text" translatable="yes">Example: Layla/Rose/Cleveland/Lampy</property>
+                                                                <property name="placeholder-text" translatable="yes">Type a list, seperating values with /</property>
+                                                            </object>
                                                         </child>
                                                         <child>
                                                             <object class="GtkBox">

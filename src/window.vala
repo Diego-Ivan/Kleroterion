@@ -151,34 +151,11 @@ namespace Random {
 	        });
 
 	        ctxt.set_text ("Layla/Rose/Cleveland/Lampy");
-	        refactor ();
-
 	        this.present ();
 	        this.set_default_widget (genn);
 
 	        string txt = Randomize.Number (1, 10).to_string ();
 	        endn.set_label (txt);
-	    }
-
-	    public void refactor () throws Error {
-	        int i = 0;
-	        try {
-	            ListBoxRow? remover = null;
-                while (robox.get_row_at_index (i) != null) {
-                    remover = robox.get_row_at_index (i);
-                    robox.remove (remover);
-                    remover.unrealize ();
-                    i = i + 1;
-                }
-                string load = ctxt.get_text ();
-                if (load == "") { return; }
-                string[] loader = load.split ("/");
-                for (int j = 0; j < loader.length; j++) {
-                    addrow (loader[j]);
-                }
-            } catch (Error e) {
-                critical ("Whoops! Something happened. Here's what happened: %s", e.message);
-            }
 	    }
 
 	    public void addrow (string titled) {
@@ -202,7 +179,6 @@ namespace Random {
                 if (texa.length == 1) {
                     texa[0] = null;
                     ctxt.set_text ("");
-                    refactor ();
                     return;
                 }
                 texa.resize (texa.length-1);
@@ -211,7 +187,6 @@ namespace Random {
                     edit = edit + "/" + texa[j];
                 }
                 ctxt.set_text (edit);
-                refactor ();
                 return;
 	        });
 	        Image del = new Image ();
