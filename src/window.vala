@@ -228,8 +228,10 @@ namespace Random {
 
         private string[] strings () {
             string[] returnstring = {};
+            int intr;
             for (uint i = 0; i < rlet.get_n_items (); i++) {
-                returnstring[i] = rlet.get_string (i);
+                intr = int.parse (i.to_string ());
+                rlet.get_item (i).@get ("string", returnstring[intr], null);
             }
             return returnstring;
         }
