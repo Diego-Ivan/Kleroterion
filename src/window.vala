@@ -24,7 +24,7 @@ namespace Random {
 		[GtkChild] private unowned SpinButton num1;
 		[GtkChild] private unowned Button genn;
 		[GtkChild] private unowned SpinButton num2;
-        [GtkChild] private unowned Entry ctxt;
+        // [GtkChild] private unowned Entry ctxt;
         [GtkChild] private unowned Button genc;
         [GtkChild] private unowned Button dels;
         [GtkChild] private unowned Button numr;
@@ -41,7 +41,8 @@ namespace Random {
         [GtkChild] private unowned Revealer coinrev;
         [GtkChild] private unowned Adw.ViewSwitcherTitle title;
         [GtkChild] private unowned Adw.ViewSwitcherBar bar;
-        [GtkChild] private unowned ListBox robox;
+        // [GtkChild] private unowned ListBox robox;
+        [GtkChild] private unowned RouletteList roulette_list;
         private Random.Func Randomize = new Random.Func ();
         // Translators: If the language is in Latin, leave these be. If it is not, insert names here, and don't translate the strings.
         private StringList rlet = new StringList ({_("Layla"), _("Rose"), _("Cleveland"), _("Lampy")});
@@ -117,7 +118,7 @@ namespace Random {
 	        genc.clicked.connect (() => {
                 rourev.set_reveal_child (false);
 	            Timeout.add (250, () => {
-	            string txt = Randomize.Roulette (strings ());
+	            string txt = roulette_list.pick_random ();
 	            if (txt == "Hey adora") {
 	                txt = "Catra!? What are you doing here?";
 	            }
@@ -142,7 +143,7 @@ namespace Random {
 
             numr.clicked.connect (() => {
 	            string list = Randomize.NumberRoulette (num1.get_value_as_int (), num2.get_value_as_int ());
-	            ctxt.set_text (list);
+	            // ctxt.set_text (list);
 	            refresh (list.split ("/"));
                 stack1.set_visible_child (rou.get_child ());
             });
@@ -178,7 +179,7 @@ namespace Random {
 	            actor.set_child (button);
 	            return actor;
 	        };
-	        robox.bind_model (rlet, acts);
+	        // robox.bind_model (rlet, acts);
 
 	        this.present ();
 	        this.set_default_widget (genn);
@@ -221,7 +222,7 @@ namespace Random {
                 stack1.set_visible_child (numstack.get_child ()); // TODO bigger menu btn
             } else {
 	            string list = Randomize.NumberRoulette (num1.get_value_as_int (), num2.get_value_as_int ());
-	            ctxt.set_text (list);
+	            // ctxt.set_text (list);
                 stack1.set_visible_child (rou.get_child ());
             }
         }
@@ -294,11 +295,11 @@ namespace Random {
         }
 
         private void copy () {
-            if (num1.has_focus ||
-                num2.has_focus ||
-                ctxt.has_focus ) {
-                    return;
-            }
+            // if (num1.has_focus ||
+            //     num2.has_focus ||
+            //     ctxt.has_focus ) {
+            //         return;
+            // }
             Gdk.Clipboard clip = get_clipboard ();
             if (stack1.get_visible_child () == rou.get_child ()) {
                 clip.set_text (endc.get_label ());
