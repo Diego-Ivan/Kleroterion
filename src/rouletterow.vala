@@ -35,16 +35,24 @@ namespace Random {
         public signal void remove_request (RouletteRow r);
 
         construct {
+            activatable = false;
             var box = new Gtk.Box (HORIZONTAL, 12) {
                 hexpand = true,
                 margin_top = 12,
                 margin_bottom = 12,
             };
 
+            text_entry = new Gtk.Entry () {
+                hexpand = true,
+                margin_start = 12
+            };
+            box.append (text_entry);
+
             remove_button = new Gtk.Button () {
                 icon_name = "user-trash-symbolic",
                 vexpand = false,
                 valign = CENTER,
+                halign = END,
                 margin_start = 6
             };
             remove_button.add_css_class ("flat");
@@ -53,12 +61,6 @@ namespace Random {
             });
 
             box.append (remove_button);
-
-            text_entry = new Gtk.Entry () {
-                hexpand = true,
-                margin_end = 6
-            };
-            box.append (text_entry);
 
             child = box;
         }

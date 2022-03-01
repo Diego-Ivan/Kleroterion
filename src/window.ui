@@ -232,7 +232,7 @@
                                                                 <property name="vexpand">0</property>
                                                                 <child>
                                                                   <object class="GtkImage">
-                                                                    <property name="icon-name">arrow-into-box-symbolic</property>
+                                                                    <property name="icon-name">edit-paste-symbolic</property>
                                                                   </object>
                                                                 </child>
                                                               </object>
