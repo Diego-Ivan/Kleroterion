@@ -217,7 +217,7 @@
                                                         <child>
                                                           <object class="GtkBox">
                                                             <property name="spacing">6</property>
-                                                            <property name="orientation">vertical</property>
+                                                            <property name="orientation">horizontal</property>
                                                             <style><class name="margins" /></style>
                                                             <child>
                                                               <object class="GtkLabel">
@@ -227,31 +227,31 @@
                                                                 <style><class name="title-3" /></style>
                                                               </object>
                                                             </child>
-
                                                             <child>
-                                                              <object class="RandomRouletteList" id="roulette_list"></object>
+                                                              <object class="GtkButton" id="paste">
+                                                                <property name="vexpand">0</property>
+                                                                <child>
+                                                                  <object class="GtkImage">
+                                                                    <property name="icon-name">arrow-into-box-symbolic</property>
+                                                                  </object>
+                                                                </child>
+                                                              </object>
                                                             </child>
-                                                            <!-- <child> -->
-                                                            <!--   <object class="GtkButton" id="inex"> -->
-                                                            <!--     <property name="vexpand">0</property> -->
-                                                            <!--     <child> -->
-                                                            <!--       <object class="GtkImage"> -->
-                                                            <!--         <property name="icon-name">arrow-into-box-symbolic</property> -->
-                                                            <!--       </object> -->
-                                                            <!--     </child> -->
-                                                            <!--   </object> -->
-                                                            <!-- </child> -->
-                                                            <!-- <child> -->
-                                                            <!--   <object class="GtkButton" id="add"> -->
-                                                            <!--   <property name="vexpand">0</property> -->
-                                                            <!--     <child> -->
-                                                            <!--       <object class="GtkImage"> -->
-                                                            <!--         <property name="icon-name">plus-symbolic</property> -->
-                                                            <!--       </object> -->
-                                                            <!--     </child> -->
-                                                            <!--   </object> -->
-                                                            <!-- </child> -->
+                                                            <child>
+                                                              <object class="GtkButton" id="add">
+                                                              <property name="vexpand">0</property>
+                                                                <child>
+                                                                  <object class="GtkImage">
+                                                                    <property name="icon-name">plus-symbolic</property>
+                                                                  </object>
+                                                                </child>
+                                                              </object>
+                                                            </child>
                                                           </object>
+                                                        </child>
+
+                                                        <child>
+                                                          <object class="RandomRouletteList" id="roulette_list"></object>
                                                         </child>
                                                         <!-- <child> -->
                                                         <!--   <object class="GtkScrolledWindow"> -->

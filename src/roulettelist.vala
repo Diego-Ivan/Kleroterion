@@ -21,29 +21,14 @@
 
 namespace Random {
     public class RouletteList : Adw.Bin {
-        private Adw.PreferencesRow new_item_row;
         private Gtk.ListBox listbox;
 
         construct {
-            new_item_row = new Adw.PreferencesRow () {
-                child = new Gtk.Label ("Add a new item") {
-                    margin_top = 12,
-                    margin_bottom = 12,
-                }
-            };
-
             listbox = new Gtk.ListBox () {
                 valign = START,
                 selection_mode = NONE
             };
             listbox.add_css_class ("boxed-list");
-            listbox.append (new_item_row);
-
-            listbox.row_activated.connect ((r) => {
-                if (r != new_item_row)
-                    return;
-                add_new_item ();
-            });
 
             var scrolledwindow = new Gtk.ScrolledWindow () {
                 propagate_natural_height = true,
@@ -54,14 +39,10 @@ namespace Random {
             child = scrolledwindow;
         }
 
-        private void add_new_item () {
-            listbox.remove (new_item_row);
-
+        public void add_new_item () {
             var n_row = new RouletteRow ();
             n_row.remove_request.connect (remove_row);
             listbox.append (n_row);
-
-            listbox.append (new_item_row);
         }
 
         private void remove_row (RouletteRow r) {
@@ -74,9 +55,6 @@ namespace Random {
             Gtk.ListBoxRow? current_row = listbox.get_row_at_index (i);
 
             while (current_row != null) {
-                if (current_row == new_item_row)
-                    break;
-
                 var r = current_row as RouletteRow;
                 if (r.content == "") {
                     warning ("Item at %i is empty", i);
@@ -92,5 +70,13 @@ namespace Random {
             return items [GLib.Random.int_range (0, items.length)];
         }
 
+        public void remove_all_items () {
+            Gtk.ListBoxRow? current_row = listbox.get_row_at_index (0);
+
+            while (current_row != null) {
+                listbox.remove (current_row);
+                current_row = listbox.get_row_at_index (0);
+            }
+        }
     }
 }
