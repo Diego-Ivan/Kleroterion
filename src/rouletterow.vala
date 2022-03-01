@@ -44,12 +44,23 @@ namespace Random {
             remove_button = new Gtk.Button () {
                 icon_name = "user-trash-symbolic",
                 vexpand = false,
-                valign = CENTER
+                valign = CENTER,
+                margin_start = 6
             };
+            remove_button.add_css_class ("flat");
+            remove_button.clicked.connect (() => {
+                remove_request (this);
+            });
+
             box.append (remove_button);
 
-            text_entry = new Gtk.Entry ();
+            text_entry = new Gtk.Entry () {
+                hexpand = true,
+                margin_end = 6
+            };
             box.append (text_entry);
+
+            child = box;
         }
     }
 }

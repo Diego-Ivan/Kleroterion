@@ -33,7 +33,8 @@ namespace Random {
             };
 
             listbox = new Gtk.ListBox () {
-                valign = START
+                valign = START,
+                selection_mode = NONE
             };
             listbox.add_css_class ("boxed-list");
             listbox.append (new_item_row);
@@ -41,6 +42,7 @@ namespace Random {
             listbox.row_activated.connect ((r) => {
                 if (r != new_item_row)
                     return;
+                add_new_item ();
             });
 
             var scrolledwindow = new Gtk.ScrolledWindow () {
@@ -57,6 +59,9 @@ namespace Random {
 
             var n_row = new RouletteRow ();
             n_row.remove_request.connect (remove_row);
+            listbox.append (n_row);
+
+            listbox.append (new_item_row);
         }
 
         private void remove_row (RouletteRow r) {
