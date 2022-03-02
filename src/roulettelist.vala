@@ -73,12 +73,8 @@ namespace Random {
 
             selected_index = GLib.Random.int_range (0, items.length);
 
-            if (settings.get_boolean ("remove-drawn")) {
-                GLib.Timeout.add (100, (() => {
-                    listbox.remove (listbox.get_row_at_index (selected_index));
-                    return false;
-                }));
-            }
+            if (settings.get_boolean ("remove-drawn"))
+                listbox.remove (listbox.get_row_at_index (selected_index));
 
             return items [selected_index];
         }
