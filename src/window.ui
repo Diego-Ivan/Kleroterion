@@ -185,131 +185,140 @@
                                 <property name="name">Roulette</property>
                                 <property name="title" translatable="yes">Roulette</property>
                                 <property name="icon-name">roulette-symbolic</property>
-                                <property name="child">
-                                    <object class="GtkBox" id="clampbox2">
-                                        <property name="spacing">6</property>
-                                        <property name="orientation">vertical</property>
-                                        <child>
-                                            <object class="GtkRevealer" id="rourev">
-                                                <property name="transition-type">crossfade</property>
-                                                <property name="transition-duration">250</property>
-                                                <property name="reveal-child">true</property>
-                                                <child>
-                                                    <object class="GtkLabel" id="endc">
-                                                        <property name="vexpand">1</property>
-                                                        <property name="wrap">1</property>
-                                                        <property name="label" translatable="yes">Waiting...</property>
-                                                        <style>
-                                                            <class name="rl"/>
-                                                        </style>
-                                                    </object>
-                                                </child>
-                                            </object>
-                                        </child>
-                                        <child>
-                                            <object class="GtkBox">
-                                                <property name="spacing">6</property>
-                                                <property name="orientation">vertical</property>
-                                                <child>
-                                                    <object class="GtkBox">
-                                                        <property name="spacing">6</property>
-                                                        <property name="orientation">vertical</property>
-                                                        <child>
-                                                          <object class="GtkBox">
-                                                            <property name="spacing">6</property>
-                                                            <property name="orientation">horizontal</property>
-                                                            <style><class name="margins" /></style>
-                                                            <child>
-                                                              <object class="GtkLabel">
-                                                                <property name="hexpand">1</property>
-                                                                <property name="xalign">0</property>
-                                                                <property name="label" translatable="yes">Choices</property>
-                                                                <style><class name="title-3" /></style>
-                                                              </object>
-                                                            </child>
-                                                            <child>
-                                                              <object class="GtkButton" id="paste">
-                                                                <property name="vexpand">0</property>
-                                                                <child>
-                                                                  <object class="GtkImage">
-                                                                    <property name="icon-name">edit-paste-symbolic</property>
-                                                                  </object>
-                                                                </child>
-                                                              </object>
-                                                            </child>
-                                                            <child>
-                                                              <object class="GtkButton" id="add">
-                                                              <property name="vexpand">0</property>
-                                                                <child>
-                                                                  <object class="GtkImage">
-                                                                    <property name="icon-name">plus-symbolic</property>
-                                                                  </object>
-                                                                </child>
-                                                              </object>
-                                                            </child>
-                                                          </object>
-                                                        </child>
 
-                                                        <child>
-                                                          <object class="RandomRouletteList" id="roulette_list"></object>
-                                                        </child>
-                                                        <!-- <child> -->
-                                                        <!--   <object class="GtkScrolledWindow"> -->
-                                                        <!--     <style><class name="margins" /></style> -->
-                                                        <!--     <property name="max-content-height">300</property> -->
-                                                        <!--     <property name="propagate-natural-height">true</property> -->
-                                                        <!--     <child> -->
-                                                        <!--       <object class="GtkListBox" id="robox"> -->
-                                                        <!--         <style> -->
-                                                        <!--                     <class name="boxed-list" /> -->
-                                                        <!--                 </style> -->
-                                                        <!--                 <property name="selection-mode">none</property> -->
-                                                        <!--       </object> -->
-                                                        <!--     </child> -->
-                                                        <!--   </object> -->
-                                                        <!-- </child> -->
-                                                        <!-- <child> -->
-                                                        <!--   <object class="GtkEntry"  id="ctxt"> -->
-                                                        <!--     <property name="activates-default">true</property> -->
-                                                        <!--     <style><class name="margins" /></style> -->
-                                                        <!--   </object> -->
-                                                        <!-- </child> -->
-                                                        <child>
+                              <property name="child">
+                                <object class="AdwClamp">
+                                    <property name="child">
+                                      <object class="GtkBox" id="clampbox2">
+                                          <property name="spacing">6</property>
+                                          <property name="orientation">vertical</property>
+                                          <child>
+                                              <object class="GtkRevealer" id="rourev">
+                                                  <property name="transition-type">crossfade</property>
+                                                  <property name="transition-duration">250</property>
+                                                  <property name="reveal-child">true</property>
+                                                  <child>
+                                                      <object class="GtkLabel" id="endc">
+                                                          <property name="vexpand">false</property>
+                                                          <property name="margin-top">12</property>
+                                                          <property name="margin-bottom">12</property>
+                                                          <property name="wrap">1</property>
+                                                          <property name="label" translatable="yes">Waiting...</property>
+                                                          <style>
+                                                              <class name="rl"/>
+                                                          </style>
+                                                      </object>
+                                                  </child>
+                                              </object>
+                                          </child>
+                                          <child>
+                                              <object class="GtkBox">
+                                                  <property name="spacing">6</property>
+                                                  <property name="orientation">vertical</property>
+                                                  <child>
+                                                      <object class="GtkBox">
+                                                          <property name="spacing">6</property>
+                                                          <property name="orientation">vertical</property>
+                                                          <child>
                                                             <object class="GtkBox">
-                                                                <property name="halign">center</property>
-                                                                <property name="spacing">6</property>
-                                                                <child>
-                                                                    <object class="GtkButton" id="genc">
-                                                                        <property name="label" translatable="yes">Pick</property>
-                                                                        <property name="halign">center</property>
-                                                                        <property name="receives-default">1</property>
-                                                                        <style>
-                                                                            <class name="suggested-action" />
-                                                                            <class name="pill" />
-                                                                        </style>
+                                                              <property name="spacing">6</property>
+                                                              <property name="orientation">horizontal</property>
+                                                              <style><class name="margins" /></style>
+                                                              <child>
+                                                                <object class="GtkLabel">
+                                                                  <property name="hexpand">1</property>
+                                                                  <property name="xalign">0</property>
+                                                                  <property name="label" translatable="yes">Choices</property>
+                                                                  <style><class name="title-3" /></style>
+                                                                </object>
+                                                              </child>
+                                                              <child>
+                                                                <object class="GtkButton" id="paste">
+                                                                  <property name="vexpand">0</property>
+                                                                  <child>
+                                                                    <object class="GtkImage">
+                                                                      <property name="icon-name">edit-paste-symbolic</property>
                                                                     </object>
-                                                                </child>
-                                                                <child>
-                                                                    <object class="GtkButton" id="dels">
-                                                                        <property name="halign">center</property>
-                                                                        <style>
-                                                                            <class name="pill" />
-                                                                        </style>
-                                                                        <child>
-                                                                            <object class="GtkImage">
-                                                                                <property name="icon-name">user-trash-symbolic</property>
-                                                                            </object>
-                                                                        </child>
+                                                                  </child>
+                                                                </object>
+                                                              </child>
+                                                              <child>
+                                                                <object class="GtkButton" id="add">
+                                                                <property name="vexpand">0</property>
+                                                                  <child>
+                                                                    <object class="GtkImage">
+                                                                      <property name="icon-name">plus-symbolic</property>
                                                                     </object>
-                                                                </child>
+                                                                  </child>
+                                                                </object>
+                                                              </child>
                                                             </object>
-                                                        </child>
-                                                    </object>
-                                                </child>
-                                            </object>
-                                        </child>
-                                    </object>
-                                </property>
+                                                          </child>
+
+                                                          <child>
+                                                            <object class="RandomRouletteList" id="roulette_list"></object>
+                                                          </child>
+                                                          <!-- <child> -->
+                                                          <!--   <object class="GtkScrolledWindow"> -->
+                                                          <!--     <style><class name="margins" /></style> -->
+                                                          <!--     <property name="max-content-height">300</property> -->
+                                                          <!--     <property name="propagate-natural-height">true</property> -->
+                                                          <!--     <child> -->
+                                                          <!--       <object class="GtkListBox" id="robox"> -->
+                                                          <!--         <style> -->
+                                                          <!--                     <class name="boxed-list" /> -->
+                                                          <!--                 </style> -->
+                                                          <!--                 <property name="selection-mode">none</property> -->
+                                                          <!--       </object> -->
+                                                          <!--     </child> -->
+                                                          <!--   </object> -->
+                                                          <!-- </child> -->
+                                                          <!-- <child> -->
+                                                          <!--   <object class="GtkEntry"  id="ctxt"> -->
+                                                          <!--     <property name="activates-default">true</property> -->
+                                                          <!--     <style><class name="margins" /></style> -->
+                                                          <!--   </object> -->
+                                                          <!-- </child> -->
+                                                          <child>
+                                                              <object class="GtkBox">
+                                                                  <property name="halign">center</property>
+                                                                  <property name="vexpand">true</property>
+                                                                  <property name="valign">end</property>
+                                                                  <property name="spacing">6</property>
+                                                                  <child>
+                                                                      <object class="GtkButton" id="genc">
+                                                                          <property name="label" translatable="yes">Pick</property>
+                                                                          <property name="halign">center</property>
+                                                                          <property name="receives-default">1</property>
+                                                                          <style>
+                                                                              <class name="suggested-action" />
+                                                                              <class name="pill" />
+                                                                          </style>
+                                                                      </object>
+                                                                  </child>
+                                                                  <child>
+                                                                      <object class="GtkButton" id="dels">
+                                                                          <property name="halign">center</property>
+                                                                          <style>
+                                                                              <class name="pill" />
+                                                                          </style>
+                                                                          <child>
+                                                                              <object class="GtkImage">
+                                                                                  <property name="icon-name">user-trash-symbolic</property>
+                                                                              </object>
+                                                                          </child>
+                                                                      </object>
+                                                                  </child>
+                                                              </object>
+                                                          </child>
+                                                      </object>
+                                                  </child>
+                                              </object>
+                                          </child>
+                                      </object>
+                                  </property>
+                                </object>
+                              </property>
                             </object>
                         </child>
                         <child>
