@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="random">
 	<schema id="page.codeberg.foreverxml.Random" path="/page/codeberg/foreverxml/Random/">
+	  <key name="remove-drawn" type="b">
+	    <summary>Remove drawn roulette items</summary>
+	    <description>Whether or not remove drawn items from the roulette</description>
+	    <default>false</default>
+	  </key>
 	</schema>
 </schemalist>
