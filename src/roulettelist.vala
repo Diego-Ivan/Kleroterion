@@ -46,11 +46,38 @@ namespace Random {
             n_row.remove_request.connect (remove_row);
             listbox.append (n_row);
 
-            n_row.text_entry.grab_focus ();
+            n_row.opacity = 0;
+            var target = new Adw.CallbackAnimationTarget ((v) => {
+                n_row.opacity = v;
+            });
+
+            var animation = new Adw.TimedAnimation (n_row,
+                0, 1, 250,
+                target
+            );
+
+            animation.easing = EASE_IN_OUT_CUBIC;
+            animation.play ();
+            animation.done.connect (() => {
+                n_row.text_entry.grab_focus ();
+            });
         }
 
         private void remove_row (RouletteRow r) {
-            listbox.remove (r);
+            var target = new Adw.CallbackAnimationTarget ((v) => {
+                r.opacity = 1 - v;
+            });
+
+            var animation = new Adw.TimedAnimation (r,
+                0, 1, 250,
+                target
+            );
+
+            animation.easing = EASE_IN_OUT_CUBIC;
+            animation.play ();
+            animation.done.connect (() => {
+                listbox.remove (r);
+            });
         }
 
         public string pick_random () {
@@ -80,12 +107,27 @@ namespace Random {
         }
 
         public void remove_all_items () {
-            Gtk.ListBoxRow? current_row = listbox.get_row_at_index (0);
 
-            while (current_row != null) {
-                listbox.remove (current_row);
-                current_row = listbox.get_row_at_index (0);
-            }
+            var target = new Adw.CallbackAnimationTarget ((v) => {
+                listbox.opacity = v;
+
+                if (v == 0) {
+                    Gtk.ListBoxRow? current_row = listbox.get_row_at_index (0);
+                    while (current_row != null) {
+                        listbox.remove (current_row);
+                        current_row = listbox.get_row_at_index (0);
+                    }
+                }
+            });
+
+            var out_animation = new Adw.TimedAnimation (listbox,
+                0, 1, 400,
+                target
+            );
+            out_animation.alternate = true;
+            out_animation.repeat_count = 2;
+            out_animation.reverse = true;
+            out_animation.play ();
         }
 
         private void get_items_from_clipboard () {
