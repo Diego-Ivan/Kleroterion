@@ -20,29 +20,28 @@
  */
 
 namespace Random {
-    public class RouletteList : Adw.Bin {
-        private Gtk.ListBox listbox;
+    [GtkTemplate (ui = "/page/codeberg/foreverxml/Random/roulettelist.ui")]
+    public class RouletteList : Adw.PreferencesGroup {
+        [GtkChild] private unowned Gtk.ListBox listbox;
+
+        private const ActionEntry[] actions = {
+            { "remove_all", remove_all_items }
+        };
 
         construct {
-            listbox = new Gtk.ListBox () {
-                valign = START,
-                selection_mode = NONE
-            };
-            listbox.add_css_class ("boxed-list");
+            var action_group = new SimpleActionGroup ();
+            action_group.add_action_entries (actions, this);
 
-            var scrolledwindow = new Gtk.ScrolledWindow () {
-                propagate_natural_height = true,
-                propagate_natural_width = true,
-                child = listbox
-            };
-
-            child = scrolledwindow;
+            insert_action_group ("roulette", action_group);
         }
 
+        [GtkCallback]
         public void add_new_item () {
             var n_row = new RouletteRow ();
             n_row.remove_request.connect (remove_row);
             listbox.append (n_row);
+
+            n_row.text_entry.grab_focus ();
         }
 
         private void remove_row (RouletteRow r) {
@@ -77,6 +76,9 @@ namespace Random {
                 listbox.remove (current_row);
                 current_row = listbox.get_row_at_index (0);
             }
+        }
+
+        private void get_items_from_clipboard () {
         }
     }
 }

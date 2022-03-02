@@ -2,6 +2,7 @@
 <gresources>
   <gresource prefix="/page/codeberg/foreverxml/Random">
     <file>window.ui</file>
+    <file>roulettelist.ui</file>
     <file>shortcut.ui</file>
     <file>style.css</file>
     <file>style-dark.css</file>

@@ -21,7 +21,7 @@
 
 namespace Random {
     public class RouletteRow : Adw.PreferencesRow {
-        private Gtk.Entry text_entry;
+        public Gtk.Entry text_entry { get; private set; }
         private Gtk.Button remove_button;
         public string content {
             get {
@@ -44,7 +44,8 @@ namespace Random {
 
             text_entry = new Gtk.Entry () {
                 hexpand = true,
-                margin_start = 12
+                margin_start = 12,
+                focusable = true
             };
             box.append (text_entry);
 

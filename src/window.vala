@@ -26,7 +26,6 @@ namespace Random {
 		[GtkChild] private unowned SpinButton num2;
         // [GtkChild] private unowned Entry ctxt;
         [GtkChild] private unowned Button genc;
-        [GtkChild] private unowned Button dels;
         [GtkChild] private unowned Button numr;
         [GtkChild] private unowned Label endc;
         [GtkChild] private unowned Button cf;
@@ -43,8 +42,6 @@ namespace Random {
         [GtkChild] private unowned Adw.ViewSwitcherBar bar;
         // [GtkChild] private unowned ListBox robox;
         [GtkChild] private unowned RouletteList roulette_list;
-        [GtkChild] private unowned Gtk.Button add;
-        [GtkChild] private unowned Gtk.Button paste;
         private Random.Func Randomize = new Random.Func ();
         // Translators: If the language is in Latin, leave these be. If it is not, insert names here, and don't translate the strings.
         private StringList rlet = new StringList ({_("Layla"), _("Rose"), _("Cleveland"), _("Lampy")});
@@ -128,18 +125,6 @@ namespace Random {
                 rourev.set_reveal_child (true);
                 });
 	        });
-
-	        dels.clicked.connect (() => {
-	            roulette_list.remove_all_items ();
-	            rourev.set_reveal_child (false);
-	            Timeout.add (250, () => {
-                rourev.set_reveal_child (true);
-                });
-            });
-
-            add.clicked.connect (() => {
-                roulette_list.add_new_item ();
-            });
 
             numr.clicked.connect (() => {
 	            string list = Randomize.NumberRoulette (num1.get_value_as_int (), num2.get_value_as_int ());

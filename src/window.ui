@@ -219,41 +219,6 @@
                                                       <object class="GtkBox">
                                                           <property name="spacing">6</property>
                                                           <property name="orientation">vertical</property>
-                                                          <child>
-                                                            <object class="GtkBox">
-                                                              <property name="spacing">6</property>
-                                                              <property name="orientation">horizontal</property>
-                                                              <style><class name="margins" /></style>
-                                                              <child>
-                                                                <object class="GtkLabel">
-                                                                  <property name="hexpand">1</property>
-                                                                  <property name="xalign">0</property>
-                                                                  <property name="label" translatable="yes">Choices</property>
-                                                                  <style><class name="title-3" /></style>
-                                                                </object>
-                                                              </child>
-                                                              <child>
-                                                                <object class="GtkButton" id="paste">
-                                                                  <property name="vexpand">0</property>
-                                                                  <child>
-                                                                    <object class="GtkImage">
-                                                                      <property name="icon-name">edit-paste-symbolic</property>
-                                                                    </object>
-                                                                  </child>
-                                                                </object>
-                                                              </child>
-                                                              <child>
-                                                                <object class="GtkButton" id="add">
-                                                                <property name="vexpand">0</property>
-                                                                  <child>
-                                                                    <object class="GtkImage">
-                                                                      <property name="icon-name">plus-symbolic</property>
-                                                                    </object>
-                                                                  </child>
-                                                                </object>
-                                                              </child>
-                                                            </object>
-                                                          </child>
 
                                                           <child>
                                                             <object class="RandomRouletteList" id="roulette_list"></object>
@@ -280,35 +245,16 @@
                                                           <!--   </object> -->
                                                           <!-- </child> -->
                                                           <child>
-                                                              <object class="GtkBox">
+                                                              <object class="GtkButton" id="genc">
+                                                                  <property name="label" translatable="yes">Pick</property>
                                                                   <property name="halign">center</property>
-                                                                  <property name="vexpand">true</property>
                                                                   <property name="valign">end</property>
-                                                                  <property name="spacing">6</property>
-                                                                  <child>
-                                                                      <object class="GtkButton" id="genc">
-                                                                          <property name="label" translatable="yes">Pick</property>
-                                                                          <property name="halign">center</property>
-                                                                          <property name="receives-default">1</property>
-                                                                          <style>
-                                                                              <class name="suggested-action" />
-                                                                              <class name="pill" />
-                                                                          </style>
-                                                                      </object>
-                                                                  </child>
-                                                                  <child>
-                                                                      <object class="GtkButton" id="dels">
-                                                                          <property name="halign">center</property>
-                                                                          <style>
-                                                                              <class name="pill" />
-                                                                          </style>
-                                                                          <child>
-                                                                              <object class="GtkImage">
-                                                                                  <property name="icon-name">user-trash-symbolic</property>
-                                                                              </object>
-                                                                          </child>
-                                                                      </object>
-                                                                  </child>
+                                                                  <property name="vexpand">true</property>
+                                                                  <property name="receives-default">1</property>
+                                                                  <style>
+                                                                      <class name="suggested-action" />
+                                                                      <class name="pill" />
+                                                                  </style>
                                                               </object>
                                                           </child>
                                                       </object>
