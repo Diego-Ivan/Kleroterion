@@ -48,6 +48,7 @@
     <section>
       <item>
         <attribute name="label" translatable="yes">_Delete drawn items</attribute>
+        <attribute name="action">roulette.remove-drawn</attribute>
       </item>
     </section>
 

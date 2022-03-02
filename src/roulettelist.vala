@@ -24,13 +24,18 @@ namespace Random {
     public class RouletteList : Adw.PreferencesGroup {
         [GtkChild] private unowned Gtk.ListBox listbox;
 
-        private const ActionEntry[] actions = {
+        private int selected_index;
+
+        private ActionEntry[] actions = {
             { "remove_all", remove_all_items }
         };
 
         construct {
+            Action action = settings.create_action ("remove-drawn");
+
             var action_group = new SimpleActionGroup ();
             action_group.add_action_entries (actions, this);
+            action_group.add_action (action);
 
             insert_action_group ("roulette", action_group);
         }
@@ -66,7 +71,16 @@ namespace Random {
                 current_row = listbox.get_row_at_index (i);
             }
 
-            return items [GLib.Random.int_range (0, items.length)];
+            selected_index = GLib.Random.int_range (0, items.length);
+
+            if (settings.get_boolean ("remove-drawn")) {
+                GLib.Timeout.add (100, (() => {
+                    listbox.remove (listbox.get_row_at_index (selected_index));
+                    return false;
+                }));
+            }
+
+            return items [selected_index];
         }
 
         public void remove_all_items () {
