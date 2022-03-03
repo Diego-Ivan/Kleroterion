@@ -25,6 +25,7 @@ namespace Random {
         [GtkChild] private unowned Gtk.ListBox listbox;
 
         private int selected_index;
+        private string separator;
 
         private ActionEntry[] actions = {
             { "remove_all", remove_all_items },
@@ -65,20 +66,7 @@ namespace Random {
         }
 
         private void remove_row (RouletteRow r) {
-            var target = new Adw.CallbackAnimationTarget ((v) => {
-                r.opacity = 1 - v;
-            });
-
-            var animation = new Adw.TimedAnimation (r,
-                0, 1, 200,
-                target
-            );
-
-            animation.easing = EASE_IN_OUT_CUBIC;
-            animation.play ();
-            animation.done.connect (() => {
-                listbox.remove (r);
-            });
+            listbox.remove (r);
         }
 
         public string pick_random () {
@@ -134,6 +122,72 @@ namespace Random {
                 );
                 animation2.play ();
             });
+        }
+
+        private void add_items_from_array (string[] array) {
+            foreach (var item in array) {
+                var n_row = new RouletteRow () {
+                    content = item
+                };
+
+                n_row.remove_request.connect (remove_row);
+                listbox.append (n_row);
+            }
+        }
+
+        private void get_items_from_clipboard () {
+            var dialog = new Gtk.MessageDialog ( get_native () as Gtk.Window,
+                MODAL | DESTROY_WITH_PARENT,
+                QUESTION,
+                NONE,
+                _("Paste from Clipboard")
+            );
+            dialog.secondary_text = _("Select a separator…");
+
+            dialog.add_buttons (
+                _("Cancel"), Gtk.ResponseType.CANCEL,
+                _("Add"), Gtk.ResponseType.OK
+            );
+
+            var entry = new Gtk.Entry ();
+
+            var box = dialog.message_area as Gtk.Box;
+            box.append (entry);
+
+            dialog.response.connect ((res) => {
+                if (res == Gtk.ResponseType.OK) {
+                    var display = Gdk.Display.get_default ();
+                    var clipboard = display.get_clipboard ();
+
+                    separator = entry.text;
+                    string? text = null;
+
+                    clipboard.read_text_async.begin (null, ((obj, res) => {
+                        try {
+                            text = clipboard.read_text_async.end (res);
+                            string?[] array = text.split (separator);
+
+                            Gtk.ListBoxRow? current_row = listbox.get_row_at_index (0);
+                            while (current_row != null) {
+                                listbox.remove (current_row);
+                                current_row = listbox.get_row_at_index (0);
+                            }
+
+                            add_items_from_array (array);
+                        }
+                        catch (Error e) {
+                            critical (e.message);
+                        }
+                    }));
+                }
+
+                dialog.close ();
+            });
+
+            dialog.show ();
+        }
+
+        private void dialog_response (int res) {
         }
     }
 }

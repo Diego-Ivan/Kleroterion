@@ -55,6 +55,7 @@
     <section>
       <item>
         <attribute name="label" translatable="yes">_Paste from clipboard</attribute>
+        <attribute name="action">roulette.from-clipboard</attribute>
       </item>
       <item>
         <attribute name="label" translatable="yes">_Remove all items</attribute>
