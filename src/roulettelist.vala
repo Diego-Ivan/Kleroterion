@@ -27,7 +27,8 @@ namespace Random {
         private int selected_index;
 
         private ActionEntry[] actions = {
-            { "remove_all", remove_all_items }
+            { "remove_all", remove_all_items },
+            { "from-clipboard", get_items_from_clipboard }
         };
 
         construct {
@@ -52,7 +53,7 @@ namespace Random {
             });
 
             var animation = new Adw.TimedAnimation (n_row,
-                0, 1, 250,
+                0, 1, 200,
                 target
             );
 
@@ -69,7 +70,7 @@ namespace Random {
             });
 
             var animation = new Adw.TimedAnimation (r,
-                0, 1, 250,
+                0, 1, 200,
                 target
             );
 
@@ -110,27 +111,29 @@ namespace Random {
 
             var target = new Adw.CallbackAnimationTarget ((v) => {
                 listbox.opacity = v;
-
-                if (v == 0) {
-                    Gtk.ListBoxRow? current_row = listbox.get_row_at_index (0);
-                    while (current_row != null) {
-                        listbox.remove (current_row);
-                        current_row = listbox.get_row_at_index (0);
-                    }
-                }
             });
 
             var out_animation = new Adw.TimedAnimation (listbox,
-                0, 1, 400,
+                0, 1, 200,
                 target
             );
             out_animation.alternate = true;
-            out_animation.repeat_count = 2;
             out_animation.reverse = true;
             out_animation.play ();
-        }
 
-        private void get_items_from_clipboard () {
+            out_animation.done.connect (() => {
+                Gtk.ListBoxRow? current_row = listbox.get_row_at_index (0);
+                while (current_row != null) {
+                    listbox.remove (current_row);
+                    current_row = listbox.get_row_at_index (0);
+                }
+
+                var animation2 = new Adw.TimedAnimation (listbox,
+                    0, 1, 150,
+                    target
+                );
+                animation2.play ();
+            });
         }
     }
 }
