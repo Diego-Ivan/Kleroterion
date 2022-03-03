@@ -127,9 +127,7 @@ namespace Random {
 	        });
 
             numr.clicked.connect (() => {
-	            string list = Randomize.NumberRoulette (num1.get_value_as_int (), num2.get_value_as_int ());
-	            // ctxt.set_text (list);
-	            refresh (list.split ("/"));
+	            roulette_list.add_items_from_range ((int) num1.value, (int) num2.value);
                 stack1.set_visible_child (rou.get_child ());
             });
 

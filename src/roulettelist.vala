@@ -96,7 +96,6 @@ namespace Random {
         }
 
         public void remove_all_items () {
-
             var target = new Adw.CallbackAnimationTarget ((v) => {
                 listbox.opacity = v;
             });
@@ -122,6 +121,17 @@ namespace Random {
                 );
                 animation2.play ();
             });
+        }
+
+        public void add_items_from_range (int start, int end) {
+            for (int i = start; i <= end; i++) {
+                var n_row = new RouletteRow () {
+                    content = i.to_string ()
+                };
+
+                n_row.remove_request.connect (remove_row);
+                listbox.append (n_row);
+            }
         }
 
         private void add_items_from_array (string[] array) {
