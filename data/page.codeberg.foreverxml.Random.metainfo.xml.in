@@ -28,6 +28,12 @@
   <url type="contact">https://matrix.to/#/#randomgtk:matrix.org</url>
   <url type="bugtracker">https://codeberg.org/foreverxml/random/issues</url><translation type="gettext">randomgtk</translation>
   <releases>
+      <release version="1.4" date="2022-01-20">
+      <description>
+        <p translatable="yes">Version 1.4 "Circled":</p>
+        <p translatable="yes">The Roulette UI recieves a large revamp! Many other improvements are here, too.</p>
+      </description>
+    </release>
       <release version="1.3" date="2022-01-20">
       <description>
         <p translatable="yes">Version 1.3 "Copier":</p>

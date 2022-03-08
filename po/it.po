@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Random\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-07 20:01-0700\n"
+"POT-Creation-Date: 2022-03-07 20:05-0700\n"
 "PO-Revision-Date: 2022-02-20 21:30+0100\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian\n"
@@ -51,28 +51,39 @@ msgstr ""
 "di tua madre, ecc."
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:33
+#, fuzzy
+msgid "Version 1.4 \"Circled\":"
+msgstr "Versione 0.7 \"Circo\":"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:34
+msgid ""
+"The Roulette UI recieves a large revamp! Many other improvements are here, "
+"too."
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:39
 msgid "Version 1.3 \"Copier\":"
 msgstr "Versione 1.3 \"Copiatrice\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:34
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:40
 msgid "New shortcuts, new docs, new life."
 msgstr "Nuove scorciatoie, nuovi documenti, nuova vita."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:39
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:45
 msgid "Version 1.2 \"Flipped\":"
 msgstr "Versione 1.2 \"Capovolto\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:40
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:46
 msgid "A completely revamped UI is the star of this release."
 msgstr ""
 "Un'interfaccia utente completamente rinnovata è la protagonista di questa "
 "versione."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:45
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:51
 msgid "Version 1.1 \"Fix-Behind\":"
 msgstr "Versione 1.1 \"Fix-Behind\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:46
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:52
 msgid ""
 "A much better Spanish translation, a new icon, and many more improvements "
 "from the past 3 months are included."
@@ -80,11 +91,11 @@ msgstr ""
 "Una traduzione spagnola migliorata, una nuova icona e molti altri "
 "miglioramenti sono stati inclusi gli ultimi 3 mesi."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:51
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:57
 msgid "Version 1.0 \"Adapting\":"
 msgstr "Versione 1.0 \"Adattamento\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:52
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:58
 msgid ""
 "Adds a new Spanish translation, help docs, revamps keyboard shortcuts, and "
 "makes the UI more adaptive."
@@ -92,19 +103,19 @@ msgstr ""
 "Aggiunge una nuova traduzione spagnola, documenti di aiuto, rinnova le "
 "scorciatoie da tastiera e rende l'interfaccia utente più adattiva."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:57
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:63
 msgid "Version 0.9 \"Global\":"
 msgstr "Versione 0.9 \"Globale\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:58
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:64
 msgid "Translated into German and Russian."
 msgstr "Tradotto in tedesco e russo."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:63
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:69
 msgid "Version 0.8 \"Sync\":"
 msgstr "Versione 0.8 \"Sync\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:64
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:70
 msgid ""
 "Removes the random colors for a noticable identity, and uses the latest "
 "GNOME 41 things, that came out on the same day as this."
@@ -112,65 +123,65 @@ msgstr ""
 "Rimuove i colori casuali per un'identità notevole e utilizza l'ultimo GNOME "
 "41, che è uscito lo stesso giorno di questo."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:69
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:75
 msgid "Version 0.7 \"Circus\":"
 msgstr "Versione 0.7 \"Circo\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:70
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:76
 msgid "Adds some nice random colors."
 msgstr "Aggiunge dei bei colori casuali."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:75
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:81
 msgid "Version 0.6 \"Advancing\":"
 msgstr "Versione 0.6 \"Avanzando\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:76
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:82
 msgid "Adds tons of new actions and keyboard shortcuts too."
 msgstr "Aggiunge anche tonnellate di nuove azioni e scorciatoie da tastiera."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:81
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:87
 msgid "Version 0.5 \"Caterpillar\":"
 msgstr "Versione 0.5 \"Caterpillar\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:82
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:88
 msgid "Adds a menu and some bugfixes."
 msgstr "Aggiunge un menu e alcune correzioni di bug."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:87
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:93
 msgid "Version 0.4 \"Flat\":"
 msgstr "Versione 0.4 \"Flat\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:88
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:94
 msgid "First Flathub release with GTK 4."
 msgstr "Prima versione di Flathub con GTK 4."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:93
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:99
 msgid "Version 0.3 \"Penny\":"
 msgstr "Versione 0.3 \"Penny\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:94
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:100
 msgid "Adds a coin flip view and an improved UI."
 msgstr ""
 "Aggiunge una visualizzazione del lancio della moneta e un'interfaccia utente "
 "migliorata."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:99
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:105
 msgid "Version 0.2 \"Makeover\":"
 msgstr "Versione 0.2 \"Makeover\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:100
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:106
 msgid "Follows the GNOME HIG and uses libhandy."
 msgstr "Segue GNOME HIG e usa libhandy."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:105
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:111
 msgid "Version 0.1 \"Beginning\":"
 msgstr "Version 0.1 \"Inizio\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:106
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:112
 msgid "The first release, welcome to the world!"
 msgstr "La prima versione, benvenuta nel mondo!"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:121
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:127
 msgid "Forever XML"
 msgstr ""
 
