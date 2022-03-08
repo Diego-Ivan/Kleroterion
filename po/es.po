@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: randomgtk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-15 20:28-0700\n"
+"POT-Creation-Date: 2022-03-07 20:01-0700\n"
 "PO-Revision-Date: 2022-02-19 14:40-0700\n"
 "Last-Translator: Forever XML <foreverxml@tuta.io>\n"
 "Language-Team: \n"
@@ -22,7 +22,7 @@ msgstr ""
 #. Translators: This is a noun and not a verb.
 #: data/page.codeberg.foreverxml.Random.desktop.in:3
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:7 src/window.ui:4
-#: src/window.ui:20 src/window.vala:108
+#: src/window.ui:19 src/window.vala:190
 msgid "Random"
 msgstr "Aleatorio"
 
@@ -162,102 +162,149 @@ msgstr "Versión 0.1 \"Inicio\":"
 msgid "The first release, welcome to the world!"
 msgstr "La primera versión, ¡bienvenida al mundo!"
 
-#: src/window.ui:42
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:121
+msgid "Forever XML"
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.gschema.xml:5
+msgid "Remove drawn roulette items"
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.gschema.xml:6
+msgid "Whether or not remove drawn items from the roulette"
+msgstr ""
+
+#: src/window.ui:41
 msgid "Number"
 msgstr "Número"
 
-#: src/window.ui:83
-msgid "From:"
+#: src/window.ui:55
+msgid "5"
+msgstr ""
+
+#: src/window.ui:89
+#, fuzzy
+msgid "_From"
 msgstr "Del:"
 
-#: src/window.ui:109
-msgid "To:"
+#: src/window.ui:115
+#, fuzzy
+msgid "_To"
 msgstr "Al:"
 
-#: src/window.ui:146
+#: src/window.ui:152
 msgid "Generate"
 msgstr "Generar"
 
-#: src/window.ui:167
+#: src/window.ui:186
 msgid "Roulette"
 msgstr "Ruleta"
 
-#: src/window.ui:177
+#: src/window.ui:206
 msgid "Waiting..."
 msgstr "Esperando..."
 
-#: src/window.ui:195
-msgid "Example: Layla/Rose/Cleveland/Lampy"
-msgstr "Ejemplo: Layla/Rose/Cleveland/Lampy"
-
-#: src/window.ui:196
-msgid "Type a list, seperating values with /"
-msgstr "Escriba una lista, separando los valores con /"
-
-#: src/window.ui:201
+#: src/window.ui:249
 msgid "Pick"
 msgstr "Escoger"
 
-#: src/window.ui:219
+#: src/window.ui:273
 msgid "Coin"
 msgstr "Moneda"
 
-#: src/window.ui:229 src/window.vala:93
+#: src/window.ui:287 src/window.vala:138
 msgid "Tails"
 msgstr "Cruz"
 
-#: src/window.ui:237
-msgid "Flip the coin"
+#: src/window.ui:297
+#, fuzzy
+msgid "Flip the Coin"
 msgstr "Lanzar la moneda"
 
 #. Translators: Remember to add a mnemonic and use header case here.
-#: src/window.ui:270
-msgid "Number to _Roulette"
-msgstr "Número a _ruleta"
-
-#. Translators: Remember to add a mnemonic and use header case here.
-#: src/window.ui:275
-msgid "_Delete Picked Item"
-msgstr "_Borrar el elemento elegido"
-
-#. Translators: Remember to add a mnemonic and use header case here.
-#: src/window.ui:280
+#: src/window.ui:325
 msgid "_Copy Item"
 msgstr "_Copiar elemento"
 
 #. Translators: Remember to add a mnemonic and use header case here.
-#: src/window.ui:287
+#: src/window.ui:332
 msgid "_Keyboard Shortcuts"
 msgstr "Atajos del _teclado"
 
 #. Translators: Remember to add a mnemonic and use header case here.
-#: src/window.ui:292
+#: src/window.ui:337
 msgid "_Help ↗"
 msgstr "Ayu_da ↗"
 
 #. Translators: Remember to add a mnemonic and use header case here.
-#: src/window.ui:297
+#: src/window.ui:342
 msgid "_About Random"
 msgstr "_Acerca de Aleatorio"
 
-#. coinflip
-#: src/window.vala:93
+#: src/roulettelist.vala:153
+msgid "Paste from Clipboard"
+msgstr ""
+
+#: src/roulettelist.vala:155
+msgid "Select a separator…"
+msgstr ""
+
+#: src/roulettelist.vala:158
+msgid "Cancel"
+msgstr ""
+
+#: src/roulettelist.vala:159
+msgid "Add"
+msgstr ""
+
+#: src/roulettelist.ui:50
+#, fuzzy
+msgid "_Delete drawn items"
+msgstr "_Borrar el elemento elegido"
+
+#: src/roulettelist.ui:57
+msgid "_Paste from clipboard"
+msgstr ""
+
+#: src/roulettelist.ui:61
+msgid "_Remove all items"
+msgstr ""
+
+#. Translators: If the language is in Latin, leave these be. If it is not, insert names here, and don't translate the strings.
+#: src/window.vala:47
+msgid "Layla"
+msgstr ""
+
+#: src/window.vala:47
+msgid "Rose"
+msgstr ""
+
+#: src/window.vala:47
+msgid "Cleveland"
+msgstr ""
+
+#: src/window.vala:47
+msgid "Lampy"
+msgstr ""
+
+#: src/window.vala:138
 msgid "Heads"
 msgstr "Cara"
 
 #. Translators: add your names and emails to this table, one per line as shown
-#: src/window.vala:104
+#: src/window.vala:186
 msgid "translator-credits"
 msgstr ""
 "Diego Iván <diegoivan.mae@gmail.com>\n"
 "Forever XML <foreverxml@tuta.io>\n"
 "Óscar Fernández Díaz <oscfdezdz@tuta.io>"
 
-#: src/window.vala:111
-msgid "Randomizing made easy."
+#: src/window.vala:193
+#, fuzzy
+msgid "Randomizing made easy"
 msgstr "Simplifica la aleatorización."
 
-#: src/window.vala:118
+#: src/window.vala:200
 msgid "Repository"
 msgstr "Repositorio"
 
@@ -284,6 +331,15 @@ msgstr "Cambiar vistas"
 #: src/shortcut.ui:37
 msgid "Copy result"
 msgstr "Copiar resultado"
+
+#~ msgid "Example: Layla/Rose/Cleveland/Lampy"
+#~ msgstr "Ejemplo: Layla/Rose/Cleveland/Lampy"
+
+#~ msgid "Type a list, seperating values with /"
+#~ msgstr "Escriba una lista, separando los valores con /"
+
+#~ msgid "Number to _Roulette"
+#~ msgstr "Número a _ruleta"
 
 #~ msgid "Flipped and changed all around."
 #~ msgstr "Volteada y cambiada por todos lados."

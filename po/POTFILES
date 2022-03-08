@@ -2,6 +2,8 @@ data/page.codeberg.foreverxml.Random.desktop.in
 data/page.codeberg.foreverxml.Random.metainfo.xml.in
 data/page.codeberg.foreverxml.Random.gschema.xml
 src/window.ui
+src/roulettelist.vala
+src/roulettelist.ui
 src/main.vala
 src/window.vala
 src/shortcut.ui

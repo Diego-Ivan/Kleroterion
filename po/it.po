@@ -7,10 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Random\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-15 20:28-0700\n"
+"POT-Creation-Date: 2022-03-07 20:01-0700\n"
 "PO-Revision-Date: 2022-02-20 21:30+0100\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,7 +29,7 @@ msgstr ""
 #. Translators: This is a noun and not a verb.
 #: data/page.codeberg.foreverxml.Random.desktop.in:3
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:7 src/window.ui:4
-#: src/window.ui:20 src/window.vala:108
+#: src/window.ui:19 src/window.vala:190
 msgid "Random"
 msgstr "Random"
 
@@ -45,8 +46,9 @@ msgid ""
 "A tool to pick a random number or list item. Pick what chore to do, a number "
 "between 1 and 100, whether or not to jump on your mom's bed, etc."
 msgstr ""
-"Uno strumento per scegliere un numero casuale o un elemento dell'elenco. Scegli che lavoro fare, un numero "
-"tra 1 e 100, se saltare o meno sul letto di tua madre, ecc."
+"Uno strumento per scegliere un numero casuale o un elemento dell'elenco. "
+"Scegli che lavoro fare, un numero tra 1 e 100, se saltare o meno sul letto "
+"di tua madre, ecc."
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:33
 msgid "Version 1.3 \"Copier\":"
@@ -62,7 +64,9 @@ msgstr "Versione 1.2 \"Capovolto\":"
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:40
 msgid "A completely revamped UI is the star of this release."
-msgstr "Un'interfaccia utente completamente rinnovata è la protagonista di questa versione."
+msgstr ""
+"Un'interfaccia utente completamente rinnovata è la protagonista di questa "
+"versione."
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:45
 msgid "Version 1.1 \"Fix-Behind\":"
@@ -73,8 +77,8 @@ msgid ""
 "A much better Spanish translation, a new icon, and many more improvements "
 "from the past 3 months are included."
 msgstr ""
-"Una traduzione spagnola migliorata, una nuova icona e molti altri miglioramenti "
-"sono stati inclusi gli ultimi 3 mesi."
+"Una traduzione spagnola migliorata, una nuova icona e molti altri "
+"miglioramenti sono stati inclusi gli ultimi 3 mesi."
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:51
 msgid "Version 1.0 \"Adapting\":"
@@ -85,8 +89,8 @@ msgid ""
 "Adds a new Spanish translation, help docs, revamps keyboard shortcuts, and "
 "makes the UI more adaptive."
 msgstr ""
-"Aggiunge una nuova traduzione spagnola, documenti di aiuto, rinnova le scorciatoie da tastiera e "
-"rende l'interfaccia utente più adattiva."
+"Aggiunge una nuova traduzione spagnola, documenti di aiuto, rinnova le "
+"scorciatoie da tastiera e rende l'interfaccia utente più adattiva."
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:57
 msgid "Version 0.9 \"Global\":"
@@ -105,8 +109,8 @@ msgid ""
 "Removes the random colors for a noticable identity, and uses the latest "
 "GNOME 41 things, that came out on the same day as this."
 msgstr ""
-"Rimuove i colori casuali per un'identità notevole e utilizza l'ultimo "
-"GNOME 41, che è uscito lo stesso giorno di questo."
+"Rimuove i colori casuali per un'identità notevole e utilizza l'ultimo GNOME "
+"41, che è uscito lo stesso giorno di questo."
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:69
 msgid "Version 0.7 \"Circus\":"
@@ -146,7 +150,9 @@ msgstr "Versione 0.3 \"Penny\":"
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:94
 msgid "Adds a coin flip view and an improved UI."
-msgstr "Aggiunge una visualizzazione del lancio della moneta e un'interfaccia utente migliorata."
+msgstr ""
+"Aggiunge una visualizzazione del lancio della moneta e un'interfaccia utente "
+"migliorata."
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:99
 msgid "Version 0.2 \"Makeover\":"
@@ -164,99 +170,146 @@ msgstr "Version 0.1 \"Inizio\":"
 msgid "The first release, welcome to the world!"
 msgstr "La prima versione, benvenuta nel mondo!"
 
-#: src/window.ui:42
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:121
+msgid "Forever XML"
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.gschema.xml:5
+msgid "Remove drawn roulette items"
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.gschema.xml:6
+msgid "Whether or not remove drawn items from the roulette"
+msgstr ""
+
+#: src/window.ui:41
 msgid "Number"
 msgstr "Numero"
 
-#: src/window.ui:83
-msgid "From:"
+#: src/window.ui:55
+msgid "5"
+msgstr ""
+
+#: src/window.ui:89
+#, fuzzy
+msgid "_From"
 msgstr "Da:"
 
-#: src/window.ui:109
-msgid "To:"
+#: src/window.ui:115
+#, fuzzy
+msgid "_To"
 msgstr "A:"
 
-#: src/window.ui:146
+#: src/window.ui:152
 msgid "Generate"
 msgstr "Genera"
 
-#: src/window.ui:167
+#: src/window.ui:186
 msgid "Roulette"
 msgstr "Roulette"
 
-#: src/window.ui:177
+#: src/window.ui:206
 msgid "Waiting..."
 msgstr "In attesa..."
 
-#: src/window.ui:195
-msgid "Example: Layla/Rose/Cleveland/Lampy"
-msgstr "Esempio: Layla/Rose/Cleveland/Lampy"
-
-#: src/window.ui:196
-msgid "Type a list, seperating values with /"
-msgstr "Digitare un elenco, separando i valori con /"
-
-#: src/window.ui:201
+#: src/window.ui:249
 msgid "Pick"
 msgstr "Scegli"
 
-#: src/window.ui:219
+#: src/window.ui:273
 msgid "Coin"
 msgstr "Moneta"
 
-#: src/window.ui:229 src/window.vala:93
+#: src/window.ui:287 src/window.vala:138
 msgid "Tails"
 msgstr "Croce"
 
-#: src/window.ui:237
-msgid "Flip the coin"
+#: src/window.ui:297
+#, fuzzy
+msgid "Flip the Coin"
 msgstr "Lancia la moneta"
 
 #. Translators: Remember to add a mnemonic and use header case here.
-#: src/window.ui:270
-msgid "Number to _Roulette"
-msgstr "Numero a _Roulette"
-
-#. Translators: Remember to add a mnemonic and use header case here.
-#: src/window.ui:275
-msgid "_Delete Picked Item"
-msgstr "_Elimina elemento prelevato"
-
-#. Translators: Remember to add a mnemonic and use header case here.
-#: src/window.ui:280
+#: src/window.ui:325
 msgid "_Copy Item"
 msgstr "_Copia elemento"
 
 #. Translators: Remember to add a mnemonic and use header case here.
-#: src/window.ui:287
+#: src/window.ui:332
 msgid "_Keyboard Shortcuts"
 msgstr "_Scorciatoie da tastiera"
 
 #. Translators: Remember to add a mnemonic and use header case here.
-#: src/window.ui:292
+#: src/window.ui:337
 msgid "_Help ↗"
 msgstr "_Aiuto ↗"
 
 #. Translators: Remember to add a mnemonic and use header case here.
-#: src/window.ui:297
+#: src/window.ui:342
 msgid "_About Random"
 msgstr "_Informazioni su Random"
 
-#. coinflip
-#: src/window.vala:93
+#: src/roulettelist.vala:153
+msgid "Paste from Clipboard"
+msgstr ""
+
+#: src/roulettelist.vala:155
+msgid "Select a separator…"
+msgstr ""
+
+#: src/roulettelist.vala:158
+msgid "Cancel"
+msgstr ""
+
+#: src/roulettelist.vala:159
+msgid "Add"
+msgstr ""
+
+#: src/roulettelist.ui:50
+#, fuzzy
+msgid "_Delete drawn items"
+msgstr "_Elimina elemento prelevato"
+
+#: src/roulettelist.ui:57
+msgid "_Paste from clipboard"
+msgstr ""
+
+#: src/roulettelist.ui:61
+msgid "_Remove all items"
+msgstr ""
+
+#. Translators: If the language is in Latin, leave these be. If it is not, insert names here, and don't translate the strings.
+#: src/window.vala:47
+msgid "Layla"
+msgstr ""
+
+#: src/window.vala:47
+msgid "Rose"
+msgstr ""
+
+#: src/window.vala:47
+msgid "Cleveland"
+msgstr ""
+
+#: src/window.vala:47
+msgid "Lampy"
+msgstr ""
+
+#: src/window.vala:138
 msgid "Heads"
 msgstr "Testa"
 
 #. Translators: add your names and emails to this table, one per line as shown
-#: src/window.vala:104
+#: src/window.vala:186
 msgid "translator-credits"
 msgstr "Albano Battistella <albano_battistella@hotmail.com>"
 
-#: src/window.vala:111
-msgid "Randomizing made easy."
+#: src/window.vala:193
+#, fuzzy
+msgid "Randomizing made easy"
 msgstr "La randomizzazione fatta facile."
 
-#: src/window.vala:118
+#: src/window.vala:200
 msgid "Repository"
 msgstr "Repository"
 
@@ -283,3 +336,12 @@ msgstr "Cambia vista"
 #: src/shortcut.ui:37
 msgid "Copy result"
 msgstr "Copia risultato"
+
+#~ msgid "Example: Layla/Rose/Cleveland/Lampy"
+#~ msgstr "Esempio: Layla/Rose/Cleveland/Lampy"
+
+#~ msgid "Type a list, seperating values with /"
+#~ msgstr "Digitare un elenco, separando i valori con /"
+
+#~ msgid "Number to _Roulette"
+#~ msgstr "Numero a _Roulette"

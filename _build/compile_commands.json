@@ -1,0 +1,50 @@
+[
+  {
+    "directory": "/home/forever/Projects/random/_build",
+    "command": "valac -C --debug --debug --pkg libadwaita-1 --pkg gtk4 --pkg gobject-introspection-1.0 --pkg gdk-pixbuf-2.0 --pkg gio-2.0 --target-glib ' 2.66' --pkg glib-2.0 --color=always --directory src/randomgtk.p --basedir ../src --gresources=../src/random.gresource.xml --target-glib=2.50 ../src/config.vapi ../src/main.vala ../src/window.vala ../src/roulettelist.vala ../src/rouletterow.vala ../src/sp.vala ../src/func.vala",
+    "file": "../src/config.vapi",
+    "output": "src/randomgtk.p/main.c"
+  },
+  {
+    "directory": "/home/forever/Projects/random/_build",
+    "command": "ccache cc -Isrc/randomgtk.p -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/gobject-introspection-1.0 -I/app/include/gtk-4.0 -I/app/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/gio-unix-2.0 -I/app/include/libadwaita-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -g -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 '-DGETTEXT_PACKAGE=\"randomgtk\"' '-DLOCALEDIR=\"/usr/share/locale\"' -MD -MQ src/randomgtk.p/meson-generated_.._random-resources.c.o -MF src/randomgtk.p/meson-generated_.._random-resources.c.o.d -o src/randomgtk.p/meson-generated_.._random-resources.c.o -c src/random-resources.c",
+    "file": "src/random-resources.c",
+    "output": "src/randomgtk.p/meson-generated_.._random-resources.c.o"
+  },
+  {
+    "directory": "/home/forever/Projects/random/_build",
+    "command": "ccache cc -Isrc/randomgtk.p -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/gobject-introspection-1.0 -I/app/include/gtk-4.0 -I/app/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/gio-unix-2.0 -I/app/include/libadwaita-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -w -g -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 '-DGETTEXT_PACKAGE=\"randomgtk\"' '-DLOCALEDIR=\"/usr/share/locale\"' -MD -MQ src/randomgtk.p/meson-generated_main.c.o -MF src/randomgtk.p/meson-generated_main.c.o.d -o src/randomgtk.p/meson-generated_main.c.o -c src/randomgtk.p/main.c",
+    "file": "src/randomgtk.p/main.c",
+    "output": "src/randomgtk.p/meson-generated_main.c.o"
+  },
+  {
+    "directory": "/home/forever/Projects/random/_build",
+    "command": "ccache cc -Isrc/randomgtk.p -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/gobject-introspection-1.0 -I/app/include/gtk-4.0 -I/app/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/gio-unix-2.0 -I/app/include/libadwaita-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -w -g -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 '-DGETTEXT_PACKAGE=\"randomgtk\"' '-DLOCALEDIR=\"/usr/share/locale\"' -MD -MQ src/randomgtk.p/meson-generated_window.c.o -MF src/randomgtk.p/meson-generated_window.c.o.d -o src/randomgtk.p/meson-generated_window.c.o -c src/randomgtk.p/window.c",
+    "file": "src/randomgtk.p/window.c",
+    "output": "src/randomgtk.p/meson-generated_window.c.o"
+  },
+  {
+    "directory": "/home/forever/Projects/random/_build",
+    "command": "ccache cc -Isrc/randomgtk.p -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/gobject-introspection-1.0 -I/app/include/gtk-4.0 -I/app/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/gio-unix-2.0 -I/app/include/libadwaita-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -w -g -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 '-DGETTEXT_PACKAGE=\"randomgtk\"' '-DLOCALEDIR=\"/usr/share/locale\"' -MD -MQ src/randomgtk.p/meson-generated_roulettelist.c.o -MF src/randomgtk.p/meson-generated_roulettelist.c.o.d -o src/randomgtk.p/meson-generated_roulettelist.c.o -c src/randomgtk.p/roulettelist.c",
+    "file": "src/randomgtk.p/roulettelist.c",
+    "output": "src/randomgtk.p/meson-generated_roulettelist.c.o"
+  },
+  {
+    "directory": "/home/forever/Projects/random/_build",
+    "command": "ccache cc -Isrc/randomgtk.p -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/gobject-introspection-1.0 -I/app/include/gtk-4.0 -I/app/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/gio-unix-2.0 -I/app/include/libadwaita-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -w -g -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 '-DGETTEXT_PACKAGE=\"randomgtk\"' '-DLOCALEDIR=\"/usr/share/locale\"' -MD -MQ src/randomgtk.p/meson-generated_rouletterow.c.o -MF src/randomgtk.p/meson-generated_rouletterow.c.o.d -o src/randomgtk.p/meson-generated_rouletterow.c.o -c src/randomgtk.p/rouletterow.c",
+    "file": "src/randomgtk.p/rouletterow.c",
+    "output": "src/randomgtk.p/meson-generated_rouletterow.c.o"
+  },
+  {
+    "directory": "/home/forever/Projects/random/_build",
+    "command": "ccache cc -Isrc/randomgtk.p -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/gobject-introspection-1.0 -I/app/include/gtk-4.0 -I/app/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/gio-unix-2.0 -I/app/include/libadwaita-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -w -g -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 '-DGETTEXT_PACKAGE=\"randomgtk\"' '-DLOCALEDIR=\"/usr/share/locale\"' -MD -MQ src/randomgtk.p/meson-generated_sp.c.o -MF src/randomgtk.p/meson-generated_sp.c.o.d -o src/randomgtk.p/meson-generated_sp.c.o -c src/randomgtk.p/sp.c",
+    "file": "src/randomgtk.p/sp.c",
+    "output": "src/randomgtk.p/meson-generated_sp.c.o"
+  },
+  {
+    "directory": "/home/forever/Projects/random/_build",
+    "command": "ccache cc -Isrc/randomgtk.p -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/gobject-introspection-1.0 -I/app/include/gtk-4.0 -I/app/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/gio-unix-2.0 -I/app/include/libadwaita-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -w -g -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 '-DGETTEXT_PACKAGE=\"randomgtk\"' '-DLOCALEDIR=\"/usr/share/locale\"' -MD -MQ src/randomgtk.p/meson-generated_func.c.o -MF src/randomgtk.p/meson-generated_func.c.o.d -o src/randomgtk.p/meson-generated_func.c.o -c src/randomgtk.p/func.c",
+    "file": "src/randomgtk.p/func.c",
+    "output": "src/randomgtk.p/meson-generated_func.c.o"
+  }
+]

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Random\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-15 20:28-0700\n"
+"POT-Creation-Date: 2022-03-07 20:01-0700\n"
 "PO-Revision-Date: 2022-02-19 14:41-0700\n"
 "Last-Translator: Forever XML <foreverxml@tuta.io>\n"
 "Language-Team: \n"
@@ -30,7 +30,7 @@ msgstr ""
 #. Translators: This is a noun and not a verb.
 #: data/page.codeberg.foreverxml.Random.desktop.in:3
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:7 src/window.ui:4
-#: src/window.ui:20 src/window.vala:108
+#: src/window.ui:19 src/window.vala:190
 msgid "Random"
 msgstr "Véletlen"
 
@@ -170,99 +170,146 @@ msgstr "0.1-es verzió \"Kezdet\":"
 msgid "The first release, welcome to the world!"
 msgstr "Az első kiadás, üdvözöljük a világban!"
 
-#: src/window.ui:42
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:121
+msgid "Forever XML"
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.gschema.xml:5
+msgid "Remove drawn roulette items"
+msgstr ""
+
+#: data/page.codeberg.foreverxml.Random.gschema.xml:6
+msgid "Whether or not remove drawn items from the roulette"
+msgstr ""
+
+#: src/window.ui:41
 msgid "Number"
 msgstr "Szám"
 
-#: src/window.ui:83
-msgid "From:"
+#: src/window.ui:55
+msgid "5"
+msgstr "5"
+
+#: src/window.ui:89
+#, fuzzy
+msgid "_From"
 msgstr "Legkisebb:"
 
-#: src/window.ui:109
-msgid "To:"
+#: src/window.ui:115
+#, fuzzy
+msgid "_To"
 msgstr "Legnagyobb:"
 
-#: src/window.ui:146
+#: src/window.ui:152
 msgid "Generate"
 msgstr "Generál"
 
-#: src/window.ui:167
+#: src/window.ui:186
 msgid "Roulette"
 msgstr "Rulett"
 
-#: src/window.ui:177
+#: src/window.ui:206
 msgid "Waiting..."
 msgstr "Várakozás..."
 
-#: src/window.ui:195
-msgid "Example: Layla/Rose/Cleveland/Lampy"
-msgstr "Példa: Layla/Rose/Cleveland/Lampy"
-
-#: src/window.ui:196
-msgid "Type a list, seperating values with /"
-msgstr "Írjon be egy listát, és válassza el az értékeket / jellel"
-
-#: src/window.ui:201
+#: src/window.ui:249
 msgid "Pick"
 msgstr "Csákány"
 
-#: src/window.ui:219
+#: src/window.ui:273
 msgid "Coin"
 msgstr "Érme"
 
-#: src/window.ui:229 src/window.vala:93
+#: src/window.ui:287 src/window.vala:138
 msgid "Tails"
 msgstr "Farok"
 
-#: src/window.ui:237
-msgid "Flip the coin"
+#: src/window.ui:297
+#, fuzzy
+msgid "Flip the Coin"
 msgstr "Fordítsa meg az érmét"
 
 #. Translators: Remember to add a mnemonic and use header case here.
-#: src/window.ui:270
-msgid "Number to _Roulette"
-msgstr "Szám a _Ruletthez"
-
-#. Translators: Remember to add a mnemonic and use header case here.
-#: src/window.ui:275
-msgid "_Delete Picked Item"
-msgstr "_Kiválasztott Tétel Törlése"
-
-#. Translators: Remember to add a mnemonic and use header case here.
-#: src/window.ui:280
+#: src/window.ui:325
 msgid "_Copy Item"
 msgstr "_Elem másolása"
 
 #. Translators: Remember to add a mnemonic and use header case here.
-#: src/window.ui:287
+#: src/window.ui:332
 msgid "_Keyboard Shortcuts"
 msgstr "_Gyorsbillentyűket"
 
 #. Translators: Remember to add a mnemonic and use header case here.
-#: src/window.ui:292
+#: src/window.ui:337
 msgid "_Help ↗"
 msgstr "_Segítség ↗"
 
 #. Translators: Remember to add a mnemonic and use header case here.
-#: src/window.ui:297
+#: src/window.ui:342
 msgid "_About Random"
 msgstr "_A Véletlen"
 
-#. coinflip
-#: src/window.vala:93
+#: src/roulettelist.vala:153
+msgid "Paste from Clipboard"
+msgstr ""
+
+#: src/roulettelist.vala:155
+msgid "Select a separator…"
+msgstr ""
+
+#: src/roulettelist.vala:158
+msgid "Cancel"
+msgstr ""
+
+#: src/roulettelist.vala:159
+msgid "Add"
+msgstr ""
+
+#: src/roulettelist.ui:50
+#, fuzzy
+msgid "_Delete drawn items"
+msgstr "_Kiválasztott Tétel Törlése"
+
+#: src/roulettelist.ui:57
+msgid "_Paste from clipboard"
+msgstr ""
+
+#: src/roulettelist.ui:61
+msgid "_Remove all items"
+msgstr ""
+
+#. Translators: If the language is in Latin, leave these be. If it is not, insert names here, and don't translate the strings.
+#: src/window.vala:47
+msgid "Layla"
+msgstr ""
+
+#: src/window.vala:47
+msgid "Rose"
+msgstr ""
+
+#: src/window.vala:47
+msgid "Cleveland"
+msgstr ""
+
+#: src/window.vala:47
+msgid "Lampy"
+msgstr ""
+
+#: src/window.vala:138
 msgid "Heads"
 msgstr "Fejek"
 
 #. Translators: add your names and emails to this table, one per line as shown
-#: src/window.vala:104
+#: src/window.vala:186
 msgid "translator-credits"
 msgstr "Forever XML <foreverxml@tuta.io>"
 
-#: src/window.vala:111
-msgid "Randomizing made easy."
+#: src/window.vala:193
+#, fuzzy
+msgid "Randomizing made easy"
 msgstr "Tegye egyszerűvé a véletlenszerűsítést."
 
-#: src/window.vala:118
+#: src/window.vala:200
 msgid "Repository"
 msgstr "Adattár"
 
@@ -290,5 +337,11 @@ msgstr "Nézetváltás"
 msgid "Copy result"
 msgstr "Eredmény másolása"
 
-#~ msgid "5"
-#~ msgstr "5"
+#~ msgid "Example: Layla/Rose/Cleveland/Lampy"
+#~ msgstr "Példa: Layla/Rose/Cleveland/Lampy"
+
+#~ msgid "Type a list, seperating values with /"
+#~ msgstr "Írjon be egy listát, és válassza el az értékeket / jellel"
+
+#~ msgid "Number to _Roulette"
+#~ msgstr "Szám a _Ruletthez"
