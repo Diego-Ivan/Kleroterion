@@ -16,6 +16,7 @@
  */
 using GLib;
 namespace Random {
+    GLib.Settings settings;
     public class Application : Adw.Application {
         public static Window win = null;
 
@@ -32,6 +33,8 @@ namespace Random {
 	        Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
 	        Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 	        Intl.textdomain (GETTEXT_PACKAGE);
+
+	        settings = new GLib.Settings ("page.codeberg.foreverxml.Random");
         }
 
         protected override void activate () {
@@ -40,6 +43,12 @@ namespace Random {
                 return;
             }
             win = new Random.Window (this);
+            settings.delay ();
+        }
+
+        protected override void shutdown () {
+            settings.apply ();
+            base.shutdown ();
         }
 
         public static int main (string[] args) {

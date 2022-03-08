@@ -1,0 +1,67 @@
+<interface>
+  <template class="RandomRouletteList" parent="AdwPreferencesGroup">
+    <property name="title">Choices</property>
+
+    <child type="header-suffix">
+      <object class="GtkBox">
+        <property name="orientation">horizontal</property>
+        <property name="spacing">6</property>
+
+        <child>
+          <object class="GtkMenuButton" id="options_button">
+            <property name="icon-name">view-more-symbolic</property>
+            <property name="menu-model">options_model</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkButton" id="add_button">
+            <property name="icon-name">list-add-symbolic</property>
+            <signal name="clicked" handler="add_new_item" swapped="no"/>
+          </object>
+        </child>
+      </object>
+    </child>
+
+    <child>
+      <object class="GtkScrolledWindow">
+        <property name="propagate-natural-height">true</property>
+        <property name="propagate-natural-width">true</property>
+
+        <child>
+          <object class="GtkListBox" id="listbox">
+            <property name="margin-start">6</property>
+            <property name="valign">start</property>
+            <property name="margin-end">6</property>
+            <property name="selection-mode">none</property>
+            <style>
+              <class name="boxed-list"/>
+            </style>
+          </object>
+        </child>
+      </object>
+    </child>
+
+  </template>
+
+  <menu id="options_model">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Delete drawn items</attribute>
+        <attribute name="action">roulette.remove-drawn</attribute>
+      </item>
+    </section>
+
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Paste from clipboard</attribute>
+        <attribute name="action">roulette.from-clipboard</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_Remove all items</attribute>
+        <attribute name="action">roulette.remove_all</attribute>
+      </item>
+    </section>
+
+  </menu>
+</interface>

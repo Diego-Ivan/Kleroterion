@@ -28,14 +28,39 @@ namespace Random {
             }
         }
         
-        public string Roulette (string list, string sep = "/") {
+        public string Roulette (string[] list) {
+            string txt = list[rand.int_range (0, list.length)];
+            return txt;
+        }
+
+        public string RouletteString (string list, string sep = "/") {
             string[] texa = list.split (sep);
             string txt = texa[rand.int_range (0, texa.length)];
             return txt;
         }
         
-        public string[] DeleteRoulette (string tex, string split = "/") {
-            string end = this.Roulette (tex, split);
+        public string[] DeleteRoulette (string[] texin) {
+            string[] end = { this.Roulette (texin) };
+            string[]? texa = texin;
+            string enda;
+            for (int t = 0; t < texa.length; t++) {
+                if (texa[t] == end[0]) {
+                    for (int k = t; k < texa.length - 1; k++) {
+                        texa[k] = texa[k+1];
+                        texa[k+1] = null;
+                    }
+                    break;
+                }
+            }
+            for (int j = texa.length; j > 0; j--) {
+                texa[j] = texa[j-1];
+            }
+            texa[0] = end[0];
+            return texa;
+        }
+
+        public string[] DeleteRouletteString (string tex, string split = "/") {
+            string end = this.RouletteString (tex, split);
             string[] texa = tex.split (split);
             string enda;
             for (int t = 0; t < texa.length; t++) {
@@ -73,6 +98,21 @@ namespace Random {
                 list = list + sep + i.to_string ();
             }
             return list;
+        }
+
+        public string Stringify (string[] ins, bool ignorefirst = false) {
+            if (ignorefirst) {
+                string outs = ins[2];
+                for (int i = 2; i < ins.length; i++) {
+                    outs = outs + "/" + ins[i];
+                }
+                return outs;
+            }
+            string outs = ins[0];
+            for (int i = 1; i < ins.length; i++) {
+                outs = outs + "/" + ins[i];
+            }
+            return outs;
         }
     }
 }
