@@ -36,7 +36,7 @@
             <property name="margin-end">6</property>
             <property name="selection-mode">none</property>
             <style>
-              <class name="boxed-list"/>
+              <class name="boxed-list"/> <class name="inwindow" />
             </style>
           </object>
         </child>

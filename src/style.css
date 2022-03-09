@@ -20,3 +20,7 @@ GtkScrolledWindow {
 .rightmargin {
   margin-right: 12px;
 }
+.inwindow {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
