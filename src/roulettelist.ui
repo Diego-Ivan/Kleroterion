@@ -1,5 +1,6 @@
 <interface>
   <template class="RandomRouletteList" parent="AdwPreferencesGroup">
+    <style><class name="margins" /></style>
     <property name="title">Choices</property>
 
     <child type="header-suffix">

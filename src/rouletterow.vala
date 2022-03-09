@@ -57,6 +57,7 @@ namespace Random {
                 margin_start = 6
             };
             remove_button.add_css_class ("flat");
+            remove_button.add_css_class ("rightmargin");
             remove_button.clicked.connect (() => {
                 remove_request (this);
             });
