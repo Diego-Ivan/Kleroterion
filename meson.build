@@ -1,4 +1,4 @@
-project('random', ['c', 'vala'],
+project('random', 'vala',
           version: '1.3',
     meson_version: '>= 0.59.0',
   default_options: [ 'warning_level=2',
