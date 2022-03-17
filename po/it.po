@@ -57,7 +57,7 @@ msgstr "Versione 0.7 \"Circo\":"
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:34
 msgid ""
-"The Roulette UI recieves a large revamp! Many other improvements are here, "
+"The Roulette UI receives a large revamp! Many other improvements are here, "
 "too."
 msgstr ""
 
