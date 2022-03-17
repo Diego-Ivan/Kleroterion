@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Random\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-07 20:05-0700\n"
-"PO-Revision-Date: 2022-02-19 14:41-0700\n"
+"PO-Revision-Date: 2022-03-17 16:46+0100\n"
 "Last-Translator: Forever XML <foreverxml@tuta.io>\n"
 "Language-Team: \n"
 "Language: hu_HU\n"
@@ -52,15 +52,16 @@ msgstr ""
 "számot, hogy felugorjon-e az anyja ágyára vagy sem, stb."
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:33
-#, fuzzy
 msgid "Version 1.4 \"Circled\":"
-msgstr "0.7-es verzió \"Circus\":"
+msgstr "1.4-es verzió \"Karikás\":"
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:34
 msgid ""
 "The Roulette UI recieves a large revamp! Many other improvements are here, "
 "too."
 msgstr ""
+"A Rulett felhasználói felülete hatalmas változásokkal! Sok más fejlesztés "
+"is van itt."
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:39
 msgid "Version 1.3 \"Copier\":"
@@ -187,11 +188,11 @@ msgstr ""
 
 #: data/page.codeberg.foreverxml.Random.gschema.xml:5
 msgid "Remove drawn roulette items"
-msgstr ""
+msgstr "Távolítsa el a kihúzott rulett elemeket"
 
 #: data/page.codeberg.foreverxml.Random.gschema.xml:6
 msgid "Whether or not remove drawn items from the roulette"
-msgstr ""
+msgstr "Legyen-e eltávolítva a kiválasztott elem"
 
 #: src/window.ui:41
 msgid "Number"
@@ -202,14 +203,12 @@ msgid "5"
 msgstr "5"
 
 #: src/window.ui:89
-#, fuzzy
 msgid "_From"
-msgstr "Legkisebb:"
+msgstr "Legkisebb"
 
 #: src/window.ui:115
-#, fuzzy
 msgid "_To"
-msgstr "Legnagyobb:"
+msgstr "Legnagyobb"
 
 #: src/window.ui:152
 msgid "Generate"
@@ -225,7 +224,7 @@ msgstr "Várakozás..."
 
 #: src/window.ui:249
 msgid "Pick"
-msgstr "Csákány"
+msgstr "Válassz"
 
 #: src/window.ui:273
 msgid "Coin"
@@ -233,12 +232,11 @@ msgstr "Érme"
 
 #: src/window.ui:287 src/window.vala:138
 msgid "Tails"
-msgstr "Farok"
+msgstr "Írás"
 
 #: src/window.ui:297
-#, fuzzy
 msgid "Flip the Coin"
-msgstr "Fordítsa meg az érmét"
+msgstr "Érme feldobása"
 
 #. Translators: Remember to add a mnemonic and use header case here.
 #: src/window.ui:325
@@ -262,32 +260,31 @@ msgstr "_A Véletlen"
 
 #: src/roulettelist.vala:153
 msgid "Paste from Clipboard"
-msgstr ""
+msgstr "Másolás vágólapról"
 
 #: src/roulettelist.vala:155
 msgid "Select a separator…"
-msgstr ""
+msgstr "Válasszon elválasztót…"
 
 #: src/roulettelist.vala:158
 msgid "Cancel"
-msgstr ""
+msgstr "Mégsem"
 
 #: src/roulettelist.vala:159
 msgid "Add"
-msgstr ""
+msgstr "Hozzáad"
 
 #: src/roulettelist.ui:50
-#, fuzzy
 msgid "_Delete drawn items"
-msgstr "_Kiválasztott Tétel Törlése"
+msgstr "_Kiválasztott elem törlése"
 
 #: src/roulettelist.ui:57
 msgid "_Paste from clipboard"
-msgstr ""
+msgstr "_Másolás vágólapról"
 
 #: src/roulettelist.ui:61
 msgid "_Remove all items"
-msgstr ""
+msgstr "_Minden elem törlése"
 
 #. Translators: If the language is in Latin, leave these be. If it is not, insert names here, and don't translate the strings.
 #: src/window.vala:47
@@ -308,7 +305,7 @@ msgstr ""
 
 #: src/window.vala:138
 msgid "Heads"
-msgstr "Fejek"
+msgstr "Fej"
 
 #. Translators: add your names and emails to this table, one per line as shown
 #: src/window.vala:186
@@ -316,9 +313,8 @@ msgid "translator-credits"
 msgstr "Forever XML <foreverxml@tuta.io>"
 
 #: src/window.vala:193
-#, fuzzy
 msgid "Randomizing made easy"
-msgstr "Tegye egyszerűvé a véletlenszerűsítést."
+msgstr "Tegye egyszerűvé a véletlenszerűsítést"
 
 #: src/window.vala:200
 msgid "Repository"
@@ -334,11 +330,11 @@ msgstr "Számokból konvertáljon rulettre"
 
 #: src/shortcut.ui:19
 msgid "Spin Roulette and delete selected"
-msgstr "Dobd fel a rulettet, és töröld a kiválasztottakat"
+msgstr "Pörgesd meg a rulettet, és töröld a kiválasztott elemet"
 
 #: src/shortcut.ui:25
 msgid "Pick, spin, or flip"
-msgstr "Válassz, pörgess vagy fordíts"
+msgstr "Válassz, pörgess vagy dombdj fel egy érmét"
 
 #: src/shortcut.ui:31
 msgid "Switch views"
