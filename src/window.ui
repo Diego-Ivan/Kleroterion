@@ -193,7 +193,23 @@
                                           <property name="spacing">6</property>
                                           <property name="orientation">vertical</property>
                                           <child>
-                                              <object class="GtkRevealer" id="rourev">
+                                              <object class="GtkBox">
+                                                  <property name="spacing">6</property>
+                                                  <property name="orientation">vertical</property>
+                                                  <child>
+                                                      <object class="GtkBox">
+                                                          <property name="spacing">6</property>
+                                                          <property name="orientation">vertical</property>
+                                                          <child>
+                                                            <object class="GtkScrolledWindow">
+                                                            <property name="propagate-natural-height">true</property>
+                                                              <property name="propagate-natural-width">true</property>
+                                                              <child>
+                                                                <object class="GtkBox">
+                                                          <property name="spacing">6</property>
+                                                          <property name="orientation">vertical</property>
+                                                          <child>
+                                                                <object class="GtkRevealer" id="rourev">
                                                   <property name="transition-type">crossfade</property>
                                                   <property name="transition-duration">250</property>
                                                   <property name="reveal-child">true</property>
@@ -203,26 +219,21 @@
                                                           <property name="margin-top">12</property>
                                                           <property name="margin-bottom">12</property>
                                                           <property name="wrap">1</property>
-                                                          <property name="label" translatable="yes">Waiting...</property>
+                                                          <property name="label" translatable="yes">Roulette</property>
                                                           <style>
                                                               <class name="rl"/>
                                                           </style>
                                                       </object>
                                                   </child>
                                               </object>
-                                          </child>
-                                          <child>
-                                              <object class="GtkBox">
-                                                  <property name="spacing">6</property>
-                                                  <property name="orientation">vertical</property>
-                                                  <child>
-                                                      <object class="GtkBox">
-                                                          <property name="spacing">6</property>
-                                                          <property name="orientation">vertical</property>
-
-                                                          <child>
-                                                            <object class="RandomRouletteList" id="roulette_list"></object>
+                                                              </child>
+                                                              <child>
+                                                                <object class="RandomRouletteList" id="roulette_list"></object>
+                                                              </child>
+                                                            </object>
                                                           </child>
+                                                        </object>
+                                                        </child>
                                                           <!-- <child> -->
                                                           <!--   <object class="GtkScrolledWindow"> -->
                                                           <!--     <style><class name="margins" /></style> -->

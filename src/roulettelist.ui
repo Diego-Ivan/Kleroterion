@@ -3,6 +3,7 @@
     <style><class name="margins" /></style>
     <property name="title">Choices</property>
 
+
     <child type="header-suffix">
       <object class="GtkBox">
         <property name="orientation">horizontal</property>
@@ -25,11 +26,6 @@
     </child>
 
     <child>
-      <object class="GtkScrolledWindow">
-        <property name="propagate-natural-height">true</property>
-        <property name="propagate-natural-width">true</property>
-
-        <child>
           <object class="GtkListBox" id="listbox">
             <property name="margin-start">6</property>
             <property name="valign">start</property>
@@ -40,8 +36,6 @@
             </style>
           </object>
         </child>
-      </object>
-    </child>
 
   </template>
 
