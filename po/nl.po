@@ -1,0 +1,335 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the randomgtk package.
+#
+# Heimen Stoffels <vistausss@fastmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: randomgtk\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-07 20:05-0700\n"
+"PO-Revision-Date: 2022-06-30 20:21+0200\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
+"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.04.2\n"
+
+#. Translators: This is a noun and not a verb.
+#: data/page.codeberg.foreverxml.Random.desktop.in:3
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:7 src/window.ui:4
+#: src/window.ui:19 src/window.vala:190
+msgid "Random"
+msgstr "Willekeurig"
+
+#: data/page.codeberg.foreverxml.Random.desktop.in:10
+msgid "Random;Roulette;Coin;Number;"
+msgstr "Willekeurig;Roulette;Muntje;Getal;"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:8
+msgid "Make randomization easy"
+msgstr "Doe willekeurige dingen"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:11
+msgid ""
+"A tool to pick a random number or list item. Pick what chore to do, a number "
+"between 1 and 100, whether or not to jump on your mom's bed, etc."
+msgstr ""
+"Een hulpmiddel om een willekeurig getal of lijstitem te kiezen. Kies een"
+" taak, een getal tussen 1 en 100 en of je je moeders bed als trampoline wilt"
+" gebruiken, etc."
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:33
+msgid "Version 1.4 \"Circled\":"
+msgstr "Versie 1.4 ‘Cirkels’:"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:34
+msgid ""
+"The Roulette UI receives a large revamp! Many other improvements are here, "
+"too."
+msgstr ""
+"De vormgeving van de roulette is sterk verbeterd! Maar ook andere dingen zijn"
+" aangepakt."
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:39
+msgid "Version 1.3 \"Copier\":"
+msgstr "Versie 1.3 ‘Na-aper’:"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:40
+msgid "New shortcuts, new docs, new life."
+msgstr "Nieuwe sneltoetsen, nieuwe documentatie en hernieuwde levenslust."
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:45
+msgid "Version 1.2 \"Flipped\":"
+msgstr "Versie 1.2 ‘Gooien maar’:"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:46
+msgid "A completely revamped UI is the star of this release."
+msgstr "De vormgeving is sterk verbeterd."
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:51
+msgid "Version 1.1 \"Fix-Behind\":"
+msgstr "Version 1.1 ‘Van achteren’:"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:52
+msgid ""
+"A much better Spanish translation, a new icon, and many more improvements "
+"from the past 3 months are included."
+msgstr ""
+"Een sterk verbeterde Spaanse vertaling, een nieuw pictogram en vele andere"
+" verbeteringen van de afgelopen 3 maanden."
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:57
+msgid "Version 1.0 \"Adapting\":"
+msgstr "Version 1.0 ‘Aanpassingsgericht’:"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:58
+msgid ""
+"Adds a new Spanish translation, help docs, revamps keyboard shortcuts, and "
+"makes the UI more adaptive."
+msgstr ""
+"Nieuw: Spaanse vertaling, documentatie, betere sneltoetsen en een aanpasbare"
+" vormgeving."
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:63
+msgid "Version 0.9 \"Global\":"
+msgstr "Version 0.9 ‘Wereldkunde’:"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:64
+msgid "Translated into German and Russian."
+msgstr "Nieuw: Duitse en Russische vertalingen."
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:69
+msgid "Version 0.8 \"Sync\":"
+msgstr "Version 0.8 ‘Synchronisatie’:"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:70
+msgid ""
+"Removes the random colors for a noticable identity, and uses the latest "
+"GNOME 41 things, that came out on the same day as this."
+msgstr ""
+"De willekeurige kleuren van opvallende identiteiten zijn verwijderd en er"
+" wordt gebruikgemaakt van GNOME 41-verbeteringen."
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:75
+msgid "Version 0.7 \"Circus\":"
+msgstr "Version 0.7 ‘Circus’:"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:76
+msgid "Adds some nice random colors."
+msgstr "Nieuw: leuke, willekeurige kleuren."
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:81
+msgid "Version 0.6 \"Advancing\":"
+msgstr "Version 0.6 ‘Vooruitgang’:"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:82
+msgid "Adds tons of new actions and keyboard shortcuts too."
+msgstr "Nieuw: tig nieuwe acties en sneltoetsen."
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:87
+msgid "Version 0.5 \"Caterpillar\":"
+msgstr "Version 0.5 ‘Rups’:"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:88
+msgid "Adds a menu and some bugfixes."
+msgstr "Nieuw: menu en enkele bugs opgelost."
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:93
+msgid "Version 0.4 \"Flat\":"
+msgstr "Version 0.4 ‘Flat’:"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:94
+msgid "First Flathub release with GTK 4."
+msgstr "Eerste uitgave op Flathub met GTK 4."
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:99
+msgid "Version 0.3 \"Penny\":"
+msgstr "Version 0.3 ‘Dubbeltje’:"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:100
+msgid "Adds a coin flip view and an improved UI."
+msgstr ""
+"Nieuw: mogelijkheid om een muntje op te gooien en een verbeterde vormgeving."
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:105
+msgid "Version 0.2 \"Makeover\":"
+msgstr "Version 0.2 ‘Make-over’:"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:106
+msgid "Follows the GNOME HIG and uses libhandy."
+msgstr ""
+"De GNOME HIG wordt voortaan gevolgd en er wordt voortaan gebruikgemaakt van"
+" libhandy."
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:111
+msgid "Version 0.1 \"Beginning\":"
+msgstr "Version 0.1 ‘Het prille begin’:"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:112
+msgid "The first release, welcome to the world!"
+msgstr "De eerste uitgave. Welkom op deze wereld!"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:127
+msgid "Forever XML"
+msgstr "Forever XML"
+
+#: data/page.codeberg.foreverxml.Random.gschema.xml:5
+msgid "Remove drawn roulette items"
+msgstr "Eerdere roulette-items verwijderen"
+
+#: data/page.codeberg.foreverxml.Random.gschema.xml:6
+msgid "Whether or not remove drawn items from the roulette"
+msgstr "Of eerdere roulette-items verwijderd moeten worden"
+
+#: src/window.ui:41
+msgid "Number"
+msgstr "Getal"
+
+#: src/window.ui:55
+msgid "5"
+msgstr "5"
+
+#: src/window.ui:89
+msgid "_From"
+msgstr "_Van"
+
+#: src/window.ui:115
+msgid "_To"
+msgstr "_Tot"
+
+#: src/window.ui:152
+msgid "Generate"
+msgstr "Genereren"
+
+#: src/window.ui:186
+msgid "Roulette"
+msgstr "Roulette"
+
+#: src/window.ui:206
+msgid "Waiting..."
+msgstr "Bezig met wachten…"
+
+#: src/window.ui:249
+msgid "Pick"
+msgstr "Kiezen"
+
+#: src/window.ui:273
+msgid "Coin"
+msgstr "Muntje"
+
+#: src/window.ui:287 src/window.vala:138
+msgid "Tails"
+msgstr "Munt"
+
+#: src/window.ui:297
+msgid "Flip the Coin"
+msgstr "Muntje opgooien"
+
+#. Translators: Remember to add a mnemonic and use header case here.
+#: src/window.ui:325
+msgid "_Copy Item"
+msgstr "Item _kopiëren"
+
+#. Translators: Remember to add a mnemonic and use header case here.
+#: src/window.ui:332
+msgid "_Keyboard Shortcuts"
+msgstr "_Sneltoetsen"
+
+#. Translators: Remember to add a mnemonic and use header case here.
+#: src/window.ui:337
+msgid "_Help ↗"
+msgstr "_Hulp ↗"
+
+#. Translators: Remember to add a mnemonic and use header case here.
+#: src/window.ui:342
+msgid "_About Random"
+msgstr "_Over Willekeurig"
+
+#: src/roulettelist.vala:153
+msgid "Paste from Clipboard"
+msgstr "Plakken van klembord"
+
+#: src/roulettelist.vala:155
+msgid "Select a separator…"
+msgstr "Kies een scheidingsteken…"
+
+#: src/roulettelist.vala:158
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: src/roulettelist.vala:159
+msgid "Add"
+msgstr "Toevoegen"
+
+#: src/roulettelist.ui:50
+msgid "_Delete drawn items"
+msgstr "Eerdere items verwij_deren"
+
+#: src/roulettelist.ui:57
+msgid "_Paste from clipboard"
+msgstr "_Plakken van klembord"
+
+#: src/roulettelist.ui:61
+msgid "_Remove all items"
+msgstr "Alle items ve_rwijderen"
+
+#. Translators: If the language is in Latin, leave these be. If it is not, insert names here, and don't translate the strings.
+#: src/window.vala:47
+msgid "Layla"
+msgstr "Layla"
+
+#: src/window.vala:47
+msgid "Rose"
+msgstr "Rose"
+
+#: src/window.vala:47
+msgid "Cleveland"
+msgstr "Cleveland"
+
+#: src/window.vala:47
+msgid "Lampy"
+msgstr "Lampy"
+
+#: src/window.vala:138
+msgid "Heads"
+msgstr "Kop"
+
+#. Translators: add your names and emails to this table, one per line as shown
+#: src/window.vala:186
+msgid "translator-credits"
+msgstr "Heimen Stoffels <vistausss@fastmail.com>"
+
+#: src/window.vala:193
+msgid "Randomizing made easy"
+msgstr "Doe willekeurige dingen"
+
+#: src/window.vala:200
+msgid "Repository"
+msgstr "Broncode"
+
+#: src/shortcut.ui:9
+msgid "Controls"
+msgstr "Bediening"
+
+#: src/shortcut.ui:13
+msgid "Convert from Number to Roulette"
+msgstr "Omzetten van getal naar roulette"
+
+#: src/shortcut.ui:19
+msgid "Spin Roulette and delete selected"
+msgstr "Roulette spinnen en selectie verwijderen"
+
+#: src/shortcut.ui:25
+msgid "Pick, spin, or flip"
+msgstr "Kiezen, spinnen of opgooien"
+
+#: src/shortcut.ui:31
+msgid "Switch views"
+msgstr "Overschakelen naar andere weergave"
+
+#: src/shortcut.ui:37
+msgid "Copy result"
+msgstr "Resultaat kopiëren"
