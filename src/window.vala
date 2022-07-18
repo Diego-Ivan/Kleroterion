@@ -181,23 +181,30 @@ namespace Random {
 	    }
 
 	    private void about () {
-	        string[] authors = {"Forever XML <foreverxml@tuta.io>"};
+	        string[] authors = {"Forever <forever@aroace.space>"};
 	        // Translators: add your names and emails to this table, one per line as shown
 	        string translators = _("translator-credits");
-	        string[] artists = {"Forever XML <foreverxml@tuta.io>", "Jakub Steiner <jimmac@gmail.com>"};
-	        show_about_dialog (this,
+	        string[] artists = {"Forever <forever@aroace.space>", "Jakub Steiner <jimmac@gmail.com>"};
+	        var win = new Adw.AboutWindow () {
 	            // Translators: This is a noun and not a verb.
-                program_name: _("Random"),
-                logo_icon_name: "page.codeberg.foreverxml.Random",
-                version: "1.4",
-                comments: _("Randomizing made easy"),
-                copyright: "Copyright © 2021 Forever XML",
-                license_type: License.AGPL_3_0,
-                authors: authors,
-                artists: artists,
-                translator_credits: translators,
-                website: "https://codeberg.org/foreverxml/random",
-                website_label: _("Repository"));
+                application_name = _("Random"),
+                application_icon = "page.codeberg.foreverxml.Random",
+                version = "1.5",
+                comments = _("Randomizing made easy") + ": " + _("A tool to pick a random number or list item. Pick what chore to do, a number between 1 and 100, whether or not to jump on your mom's bed, etc."),
+                copyright = "Copyright © 2021-2022 Forever",
+                license_type = License.AGPL_3_0,
+                developer_name = "Forever",
+                developers = authors,
+                artists = artists,
+                translator_credits = translators,
+                website = "https://random.amongtech.cc",
+                issue_url = "https://codeberg.org/foreverxml/random/issues",
+                release_notes = "<p>" + _("Random recieves more translations and a migration to AdwAboutWindow in this quality-of-life release.") + "</p>"
+            };
+            win.add_link (_("Random on the Fediverse"), "https://fedi.aroace.space/@random");
+
+            win.set_transient_for (this);
+            win.show ();
         }
 
         private void number () {
