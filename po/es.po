@@ -8,16 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: randomgtk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-24 09:17+0100\n"
-"PO-Revision-Date: 2022-03-24 09:24+0100\n"
-"Last-Translator: Forever XML <foreverxml@tuta.io>\n"
+"POT-Creation-Date: 2022-09-02 15:55+0200\n"
+"PO-Revision-Date: 2022-09-02 15:59+0200\n"
+"Last-Translator: Óscar Fernández Díaz <oscfdezdz@tuta.io>\n"
 "Language-Team: \n"
-"Language: es_MX\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Generator: Gtranslator 42.0\n"
 
 #. Translators: This is a noun and not a verb.
 #: data/page.codeberg.foreverxml.Random.desktop.in:3
@@ -34,20 +34,32 @@ msgstr "Random;Roulette;Coin;Number;Aleatorio;Ruleta;Moneda;Número;"
 msgid "Make randomization easy"
 msgstr "Simplifica la aleatorización"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:11
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:11 src/window.vala:193
 msgid ""
 "A tool to pick a random number or list item. Pick what chore to do, a number "
 "between 1 and 100, whether or not to jump on your mom's bed, etc."
 msgstr ""
 "Una herramienta que permite elegir un número o un elemento de una lista de "
 "manera aleatoria. Elegir algún deber, escoger un número entre el 1 o el 100, "
-"decidir si usted debería o no saltar sobre la cama de su mamá, etc."
+"decidir si debería o no saltar sobre la cama de su mamá, etc."
 
 #: data/page.codeberg.foreverxml.Random.metainfo.xml.in:33
+msgid "Version 1.5 \"Quality\":"
+msgstr "Versión 1.5 \"Calidad\":"
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:34 src/window.vala:202
+msgid ""
+"Random recieves more translations and a migration to AdwAboutWindow in this "
+"quality-of-life release."
+msgstr ""
+"Random recibe más traducciones y una migración a AdwAboutWindow en esta "
+"versión de calidad."
+
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:39
 msgid "Version 1.4 \"Circled\":"
 msgstr "Versión 1.4 \"Rodeado\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:34
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:40
 msgid ""
 "The Roulette UI receives a large revamp! Many other improvements are here, "
 "too."
@@ -55,29 +67,29 @@ msgstr ""
 "La interfaz de usuario de la ruleta recibe una gran renovación. También hay "
 "muchas otras mejoras."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:39
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:45
 msgid "Version 1.3 \"Copier\":"
 msgstr "Versión 1.3 \"Copiadora\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:40
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:46
 msgid "New shortcuts, new docs, new life."
 msgstr "Nuevos atajos, nuevos documentos, nueva vida."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:45
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:51
 msgid "Version 1.2 \"Flipped\":"
 msgstr "Version 1.2 \"Volteada\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:46
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:52
 msgid "A completely revamped UI is the star of this release."
 msgstr ""
 "Una interfaz de usuario completamente renovada es la protagonista de esta "
 "versión."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:51
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:57
 msgid "Version 1.1 \"Fix-Behind\":"
 msgstr "Version 1.1 \"Post-Corrección\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:52
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:58
 msgid ""
 "A much better Spanish translation, a new icon, and many more improvements "
 "from the past 3 months are included."
@@ -85,11 +97,11 @@ msgstr ""
 "Se incluye una traducción al español mucho mejor, un icono nuevo y muchas "
 "más mejoras de los últimos 3 meses."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:57
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:63
 msgid "Version 1.0 \"Adapting\":"
 msgstr "Versión 1.0 \"Adaptación\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:58
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:64
 msgid ""
 "Adds a new Spanish translation, help docs, revamps keyboard shortcuts, and "
 "makes the UI more adaptive."
@@ -97,19 +109,19 @@ msgstr ""
 "Añade una nueva traducción al español, documentos de ayuda, renueva los "
 "atajos del teclado y hace que la interfaz de usuario sea más adaptable."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:63
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:69
 msgid "Version 0.9 \"Global\":"
 msgstr "Versión 0.9 \"Global\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:64
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:70
 msgid "Translated into German and Russian."
 msgstr "Traducido al alemán y al ruso."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:69
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:75
 msgid "Version 0.8 \"Sync\":"
 msgstr "Version 0.8 \"Sincronización\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:70
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:76
 msgid ""
 "Removes the random colors for a noticable identity, and uses the latest "
 "GNOME 41 things, that came out on the same day as this."
@@ -117,60 +129,60 @@ msgstr ""
 "Elimina los colores aleatorios para una identidad notable, y usa las últimas "
 "cosas de GNOME 41, que salieron el mismo día que esto."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:75
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:81
 msgid "Version 0.7 \"Circus\":"
 msgstr "Version 0.7 \"Circo\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:76
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:82
 msgid "Adds some nice random colors."
 msgstr "Añade unos bonitos colores aleatorios."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:81
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:87
 msgid "Version 0.6 \"Advancing\":"
 msgstr "Versión 0.6 \"Avanzando\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:82
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:88
 msgid "Adds tons of new actions and keyboard shortcuts too."
 msgstr "Añade toneladas de nuevas acciones y atajos del teclado."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:87
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:93
 msgid "Version 0.5 \"Caterpillar\":"
 msgstr "Versión 0.5 \"Oruga\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:88
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:94
 msgid "Adds a menu and some bugfixes."
 msgstr "Añade un menú y algunas correcciones de errores."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:93
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:99
 msgid "Version 0.4 \"Flat\":"
 msgstr "Versión 0.4 \"Plana\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:94
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:100
 msgid "First Flathub release with GTK 4."
 msgstr "Primera versión de Flathub con GTK 4."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:99
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:105
 msgid "Version 0.3 \"Penny\":"
 msgstr "Versión 0.3 \"Penny\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:100
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:106
 msgid "Adds a coin flip view and an improved UI."
 msgstr ""
 "Añade una vista de lanzamiento de monedas y una interfaz de usuario mejorada."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:105
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:111
 msgid "Version 0.2 \"Makeover\":"
 msgstr "Versión 0.2 \"Renovación\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:106
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:112
 msgid "Follows the GNOME HIG and uses libhandy."
 msgstr "Sigue el HIG de GNOME y usa libhandy."
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:111
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:117
 msgid "Version 0.1 \"Beginning\":"
 msgstr "Versión 0.1 \"Inicio\":"
 
-#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:112
+#: data/page.codeberg.foreverxml.Random.metainfo.xml.in:118
 msgid "The first release, welcome to the world!"
 msgstr "La primera versión, ¡bienvenida al mundo!"
 
@@ -202,47 +214,43 @@ msgstr "_Al"
 msgid "Generate"
 msgstr "Generar"
 
-#: src/window.ui:186
+#: src/window.ui:186 src/window.ui:222
 msgid "Roulette"
 msgstr "Ruleta"
 
-#: src/window.ui:206
-msgid "Waiting..."
-msgstr "Esperando..."
-
-#: src/window.ui:249
+#: src/window.ui:260
 msgid "Pick"
 msgstr "Escoger"
 
-#: src/window.ui:273
+#: src/window.ui:284
 msgid "Coin"
 msgstr "Moneda"
 
-#: src/window.ui:287 src/window.vala:138
+#: src/window.ui:298 src/window.vala:138
 msgid "Tails"
 msgstr "Cruz"
 
-#: src/window.ui:297
+#: src/window.ui:308
 msgid "Flip the Coin"
 msgstr "Lanzar la moneda"
 
 #. Translators: Remember to add a mnemonic and use header case here.
-#: src/window.ui:325
+#: src/window.ui:336
 msgid "_Copy Item"
 msgstr "_Copiar elemento"
 
 #. Translators: Remember to add a mnemonic and use header case here.
-#: src/window.ui:332
+#: src/window.ui:343
 msgid "_Keyboard Shortcuts"
 msgstr "Atajos del _teclado"
 
 #. Translators: Remember to add a mnemonic and use header case here.
-#: src/window.ui:337
+#: src/window.ui:348
 msgid "_Help ↗"
 msgstr "Ayu_da ↗"
 
 #. Translators: Remember to add a mnemonic and use header case here.
-#: src/window.ui:342
+#: src/window.ui:353
 msgid "_About Random"
 msgstr "_Acerca de Aleatorio"
 
@@ -262,15 +270,15 @@ msgstr "Cancelar"
 msgid "Add"
 msgstr "Añadir"
 
-#: src/roulettelist.ui:51
+#: src/roulettelist.ui:45
 msgid "_Delete drawn items"
 msgstr "_Eliminar elementos dibujados"
 
-#: src/roulettelist.ui:58
+#: src/roulettelist.ui:52
 msgid "_Paste from clipboard"
 msgstr "_Pegar desde el portapapeles"
 
-#: src/roulettelist.ui:62
+#: src/roulettelist.ui:56
 msgid "_Remove all items"
 msgstr "_Quitar todos los elementos"
 
@@ -307,9 +315,9 @@ msgstr ""
 msgid "Randomizing made easy"
 msgstr "Aleatorización simplificada"
 
-#: src/window.vala:200
-msgid "Repository"
-msgstr "Repositorio"
+#: src/window.vala:204
+msgid "Random on the Fediverse"
+msgstr "Aleatorio en el Fediverso"
 
 #: src/shortcut.ui:9
 msgid "Controls"
