@@ -38,7 +38,7 @@ namespace Random {
         [GtkChild] private unowned Revealer numrev;
         [GtkChild] private unowned Revealer rourev;
         [GtkChild] private unowned Revealer coinrev;
-        [GtkChild] private unowned Adw.ViewSwitcherTitle title;
+        [GtkChild] private new unowned Adw.ViewSwitcherTitle title;
         [GtkChild] private unowned Adw.ViewSwitcherBar bar;
         // [GtkChild] private unowned ListBox robox;
         [GtkChild] private unowned RouletteList roulette_list;
@@ -171,15 +171,6 @@ namespace Random {
 	        endn.set_label (txt);
 	    }
 
-	    private void refresh (string[] news) {
-	        for (uint i = 0; i < rlet.get_n_items (); i++) {
-	            rlet.remove (i);
-	        }
-	        for (int j = 0; j < news.length; j++) {
-	            rlet.append (news[j]);
-	        }
-	    }
-
 	    private void about () {
 	        string[] authors = {"Forever <forever@aroace.space>"};
 	        // Translators: add your names and emails to this table, one per line as shown
@@ -211,8 +202,6 @@ namespace Random {
             if (stack1.get_visible_child () != numstack.get_child ()) {
                 stack1.set_visible_child (numstack.get_child ()); // TODO bigger menu btn
             } else {
-	            string list = Randomize.NumberRoulette (num1.get_value_as_int (), num2.get_value_as_int ());
-	            // ctxt.set_text (list);
                 stack1.set_visible_child (rou.get_child ());
             }
         }

@@ -1,6 +1,6 @@
 /* roulettelist.vala
  *
- * Copyright 2022 Diego Iván <diegoivan.mae@gmail.com>
+ * Copyright 2022-2023 Diego Iván <diegoivan.mae@gmail.com>
  * Copyright 2021-2022 Forever XML
  *
  * This program is free software: you can redistribute it and/or modify
@@ -195,9 +195,6 @@ namespace Random {
             });
 
             dialog.show ();
-        }
-
-        private void dialog_response (int res) {
         }
     }
 }

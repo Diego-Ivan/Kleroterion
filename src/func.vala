@@ -32,17 +32,10 @@ namespace Random {
             string txt = list[rand.int_range (0, list.length)];
             return txt;
         }
-
-        public string RouletteString (string list, string sep = "/") {
-            string[] texa = list.split (sep);
-            string txt = texa[rand.int_range (0, texa.length)];
-            return txt;
-        }
         
         public string[] DeleteRoulette (string[] texin) {
             string[] end = { this.Roulette (texin) };
             string[]? texa = texin;
-            string enda;
             for (int t = 0; t < texa.length; t++) {
                 if (texa[t] == end[0]) {
                     for (int k = t; k < texa.length - 1; k++) {
@@ -59,60 +52,12 @@ namespace Random {
             return texa;
         }
 
-        public string[] DeleteRouletteString (string tex, string split = "/") {
-            string end = this.RouletteString (tex, split);
-            string[] texa = tex.split (split);
-            string enda;
-            for (int t = 0; t < texa.length; t++) {
-                if (texa[t] == end) {
-                    for (int k = t; k < texa.length - 1; k++) {
-                        texa[k] = texa[k+1];
-                        texa[k+1] = null;
-                    }
-                    break;
-                }
-            }
-            if (texa.length == 1) {
-                texa[0] = null;
-                return { end, "" };
-            }
-            texa.resize (texa.length-1);
-            enda = texa[0];
-            for (int j = 1; j < texa.length; j++) {
-                enda = enda + split + texa[j];
-            }
-            return { end, enda };
-        }
-        
         public string Coin (string string1 = "Heads", string string2 = "Tails") {
             int hey = this.Number(0, 1);
             if (hey == 1) {
                 return string2;
             }
             return string1;
-        }
-        
-        public string NumberRoulette (int num1, int num2, string sep = "/") {
-            string list = num1.to_string ();
-            for (int i = num1 + 1; i <= num2; i++) {
-                list = list + sep + i.to_string ();
-            }
-            return list;
-        }
-
-        public string Stringify (string[] ins, bool ignorefirst = false) {
-            if (ignorefirst) {
-                string outs = ins[2];
-                for (int i = 2; i < ins.length; i++) {
-                    outs = outs + "/" + ins[i];
-                }
-                return outs;
-            }
-            string outs = ins[0];
-            for (int i = 1; i < ins.length; i++) {
-                outs = outs + "/" + ins[i];
-            }
-            return outs;
         }
     }
 }
