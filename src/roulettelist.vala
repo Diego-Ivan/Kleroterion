@@ -24,9 +24,6 @@ namespace Random {
     public class RouletteList : Adw.PreferencesGroup {
         [GtkChild] private unowned Gtk.ListBox listbox;
 
-        private int selected_index;
-        private string separator;
-
         private ActionEntry[] actions = {
             { "remove_all", remove_all_items },
             { "from-clipboard", get_items_from_clipboard }
@@ -87,7 +84,7 @@ namespace Random {
                 current_row = listbox.get_row_at_index (i);
             }
 
-            selected_index = GLib.Random.int_range (0, items.length);
+            int selected_index = GLib.Random.int_range (0, items.length);
 
             if (settings.get_boolean ("remove-drawn"))
                 listbox.remove (listbox.get_row_at_index (selected_index));
@@ -145,56 +142,47 @@ namespace Random {
             }
         }
 
-        private void get_items_from_clipboard () {
-            var dialog = new Gtk.MessageDialog ( get_native () as Gtk.Window,
-                MODAL | DESTROY_WITH_PARENT,
-                QUESTION,
-                NONE,
-                _("Paste from Clipboard")
-            );
-            dialog.secondary_text = _("Select a separator…");
+        private async void paste_from_clipboard () {
+            var dialog = new Adw.MessageDialog ((Gtk.Window) root, _("Paste from clipboard"),
+                                                _("Select a separator…"));
 
-            dialog.add_buttons (
-                _("Cancel"), Gtk.ResponseType.CANCEL,
-                _("Add"), Gtk.ResponseType.OK
-            );
+            dialog.add_response ("cancel", _("Cancel"));
+            dialog.add_response ("add", _("Add"));
 
-            var entry = new Gtk.Entry ();
+            dialog.close_response = "cancel";
+            dialog.default_response = "cancel";
 
-            var box = dialog.message_area as Gtk.Box;
-            box.append (entry);
-
-            dialog.response.connect ((res) => {
-                if (res == Gtk.ResponseType.OK) {
-                    var display = Gdk.Display.get_default ();
-                    var clipboard = display.get_clipboard ();
-
-                    separator = entry.text;
-                    string? text = null;
-
-                    clipboard.read_text_async.begin (null, ((obj, res) => {
-                        try {
-                            text = clipboard.read_text_async.end (res);
-                            string?[] array = text.split (separator);
-
-                            Gtk.ListBoxRow? current_row = listbox.get_row_at_index (0);
-                            while (current_row != null) {
-                                listbox.remove (current_row);
-                                current_row = listbox.get_row_at_index (0);
-                            }
-
-                            add_items_from_array (array);
-                        }
-                        catch (Error e) {
-                            critical (e.message);
-                        }
-                    }));
-                }
-
-                dialog.close ();
-            });
+            var separator_entry = new Gtk.Entry ();
+            dialog.extra_child = separator_entry;
 
             dialog.show ();
+
+            string response = yield dialog.choose (null);
+            if (response == "cancel" || separator_entry.text == "") {
+                return;
+            }
+
+            try {
+                unowned var clipboard = Gdk.Display.get_default ().get_clipboard ();
+                string clipboard_text = yield clipboard.read_text_async (null);
+
+                // Remove all elements
+                Gtk.ListBoxRow? iter = listbox.get_row_at_index (0);
+                while (iter != null) {
+                    listbox.remove (iter);
+                    iter = listbox.get_row_at_index (0);
+                }
+
+                string[] elements = clipboard_text.split (separator_entry.text);
+                add_items_from_array (elements);
+            }
+            catch (Error e) {
+                critical (e.message);
+            }
+        }
+
+        private void get_items_from_clipboard () {
+            paste_from_clipboard.begin ();
         }
     }
 }
