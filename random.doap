@@ -12,22 +12,29 @@
   <description xml:lang="en">
       A tool to pick a random number or list item. Pick what chore to do, a number between 1 and 100, whether or not to jump on your mom's bed, etc.
   </description>
-  <homepage rdf:resource="https://codeberg.org/foreverxml/random" />
-  <bug-database rdf:resource="https://codeberg.org/foreverxml/random/issues" />
+  <homepage rdf:resource="https://gitlab.gnome.org/DiegoIvanME/random" />
+  <bug-database rdf:resource="https://gitlab.gnome.org/DiegoIvanME/random/-/issues" />
   <category rdf:resource="http://api.gnome.org/doap-extensions#apps" />
   <programming-language>Vala</programming-language>
 
   <maintainer>
-    <foaf:Person>
-      <foaf:name>Forever XML</foaf:name>
-      <foaf:mbox rdf:resource="mailto:foreverxml@tuta.io" />
-      <foaf:account>
-        <foaf:OnlineAccount>
-          <foaf:accountServiceHomepage rdf:resource="https://codeberg.org"/>
-          <foaf:accountName>foreverxml</foaf:accountName>
-        </foaf:OnlineAccount>
-      </foaf:account>
-    </foaf:Person>
+
+      <foaf:Person>
+          <foaf:name>Diego Iván</foaf:name>
+          <foaf:mbox rdf:resource="mailto:diegoivan.mae@gmail.com"></foaf:mbox>
+      </foaf:Person>
+
+     <!-- TODO: I don't know much about DOAP file format, and there's probably a former mantainer tag, but I'll have took into it -->
+    <!-- <foaf:Person> -->
+    <!--   <foaf:name>Forever XML</foaf:name> -->
+    <!--   <foaf:mbox rdf:resource="mailto:foreverxml@tuta.io" /> -->
+    <!--   <foaf:account> -->
+    <!--     <foaf:OnlineAccount> -->
+    <!--       <foaf:accountServiceHomepage rdf:resource="https://codeberg.org"/> -->
+    <!--       <foaf:accountName>foreverxml</foaf:accountName> -->
+    <!--     </foaf:OnlineAccount> -->
+    <!--   </foaf:account> -->
+    <!-- </foaf:Person> -->
   </maintainer>
 </Project>
 
