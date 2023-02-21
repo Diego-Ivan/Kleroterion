@@ -6,6 +6,8 @@ random_sources = [
   'sp.vala',
   'func.vala',
   'config.vapi',
+
+  'Page.vala',
 ]
 
 random_deps = [
