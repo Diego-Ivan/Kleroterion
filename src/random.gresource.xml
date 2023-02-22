@@ -6,5 +6,8 @@
     <file>shortcut.ui</file>
     <file>style.css</file>
     <file>style-dark.css</file>
+
+   <!-- Pages  -->
+    <file>pages/numberpage.ui</file>
   </gresource>
 </gresources>

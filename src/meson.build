@@ -8,6 +8,7 @@ random_sources = [
   'config.vapi',
 
   'Page.vala',
+  'NumberPage.vala',
 ]
 
 random_deps = [

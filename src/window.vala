@@ -20,13 +20,7 @@ using GLib;
 namespace Random {
 	[GtkTemplate (ui = "/page/codeberg/foreverxml/Random/window.ui")]
 	public class Window : Adw.ApplicationWindow {
-		[GtkChild] private unowned Label endn;
-		[GtkChild] private unowned SpinButton num1;
-		[GtkChild] private unowned Button genn;
-		[GtkChild] private unowned SpinButton num2;
-        // [GtkChild] private unowned Entry ctxt;
         [GtkChild] private unowned Button genc;
-        [GtkChild] private unowned Button numr;
         [GtkChild] private unowned Label endc;
         [GtkChild] private unowned Button cf;
         [GtkChild] private unowned Label cl;
@@ -35,7 +29,6 @@ namespace Random {
         [GtkChild] private unowned Adw.ViewStackPage coinpage;
         [GtkChild] private unowned Adw.ViewStack stack1;
         [GtkChild] private unowned MenuButton menus;
-        [GtkChild] private unowned Revealer numrev;
         [GtkChild] private unowned Revealer rourev;
         [GtkChild] private unowned Revealer coinrev;
         [GtkChild] private new unowned Adw.ViewSwitcherTitle title;
@@ -56,6 +49,10 @@ namespace Random {
 			    app: app
 			);
 		}
+
+		static construct {
+            typeof (NumberPage).ensure ();
+        }
 
 		construct {
             // actions
@@ -83,26 +80,14 @@ namespace Random {
             app.set_accels_for_action ("app.menuopener", {"F10"});
             app.set_accels_for_action ("app.copy", {"<Primary>c"});
 
-            // number
-		    genn.clicked.connect (() => {
-		        numrev.set_reveal_child (false);
-		        Timeout.add (250, () => {
-	            string txt = Randomize.Number (num1.get_value_as_int (), num2.get_value_as_int ()).to_string ();
-	            endn.set_label (txt);
-	            numrev.set_reveal_child (true);
-	            });
-	        });
-
 	        stack1.notify["visible-child"].connect (() => {
 	            if (stack1.get_visible_child () == rou.get_child ()) {
                     this.set_default_widget (genc);
                 } else if (stack1.get_visible_child () == coinpage.get_child ()) {
                     this.set_default_widget (cf);
                 } else {
-                    this.set_default_widget (genn);
                 }
 	        });
-	        this.set_default_widget (genn);
 
 	        title.notify["title-visible"].connect (() => {
 	            if (title.get_title_visible () == true) {
@@ -126,10 +111,6 @@ namespace Random {
                 });
 	        });
 
-            numr.clicked.connect (() => {
-	            roulette_list.add_items_from_range ((int) num1.value, (int) num2.value);
-                stack1.set_visible_child (rou.get_child ());
-            });
 
 	        // coinflip
 	        cf.clicked.connect (() => {
@@ -162,13 +143,10 @@ namespace Random {
 	            actor.set_child (button);
 	            return actor;
 	        };
-	        // robox.bind_model (rlet, acts);
 
 	        this.present ();
-	        this.set_default_widget (genn);
 
 	        string txt = Randomize.Number (1, 10).to_string ();
-	        endn.set_label (txt);
 	    }
 
 	    private void about () {
@@ -234,7 +212,6 @@ namespace Random {
             if (stack1.get_visible_child () == rou.get_child ()) {
                 genc.activate ();
             } else if (stack1.get_visible_child () == numstack.get_child ()) {
-                genn.activate ();
             } else {
                 cf.activate ();
             }
@@ -285,7 +262,6 @@ namespace Random {
             } else if (stack1.get_visible_child () == coinpage.get_child ()) {
                 clip.set_text (cl.get_label ());
             } else {
-                clip.set_text (endn.get_label ());
             }
         }
 

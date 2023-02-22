@@ -6,9 +6,9 @@
  */
 
 public interface Random.Page : Gtk.Widget {
-    public abstract string content { get; }
-    public abstract string title { get; }
-    public abstract string name { get; }
+    public abstract string content { owned get; }
+    public abstract string title { owned get; }
+    public abstract string name { owned get; }
     public abstract void generate ();
 
     public virtual void copy_to_clipboard () {
