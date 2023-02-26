@@ -8,7 +8,6 @@
 [GtkTemplate (ui = "/page/codeberg/foreverxml/Random/pages/page.ui")]
 public abstract class Random.Page : Adw.Bin {
     public abstract string content { owned get; }
-    public abstract string title { owned get; }
     public abstract void generate ();
 
     construct {
@@ -23,7 +22,7 @@ public abstract class Random.Page : Adw.Bin {
 
     public virtual void copy_to_clipboard () {
         message ("Copying..");
-        unowned Gdk.Clipboard clipboard = Gdk.Display.get_default ().get_clipboard ();
+        unowned Gdk.Clipboard clipboard = get_clipboard ();
         clipboard.set_text (content);
     }
 }

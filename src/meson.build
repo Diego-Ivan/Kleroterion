@@ -9,6 +9,7 @@ random_sources = [
 
   'Page.vala',
   'NumberPage.vala',
+  'CoinPage.vala',
 ]
 
 random_deps = [

@@ -22,15 +22,15 @@ namespace Random {
 	public class Window : Adw.ApplicationWindow {
         [GtkChild] private unowned Button genc;
         [GtkChild] private unowned Label endc;
-        [GtkChild] private unowned Button cf;
-        [GtkChild] private unowned Label cl;
+        // [GtkChild] private unowned Button cf;
+        // [GtkChild] private unowned Label cl;
         [GtkChild] private unowned Adw.ViewStackPage rou;
         [GtkChild] private unowned Adw.ViewStackPage numstack;
         [GtkChild] private unowned Adw.ViewStackPage coinpage;
         [GtkChild] private unowned Adw.ViewStack stack1;
         [GtkChild] private unowned MenuButton menus;
         [GtkChild] private unowned Revealer rourev;
-        [GtkChild] private unowned Revealer coinrev;
+        // [GtkChild] private unowned Revealer coinrev;
         [GtkChild] private new unowned Adw.ViewSwitcherTitle title;
         [GtkChild] private unowned Adw.ViewSwitcherBar bar;
         // [GtkChild] private unowned ListBox robox;
@@ -52,6 +52,7 @@ namespace Random {
 
 		static construct {
             typeof (NumberPage).ensure ();
+            typeof (CoinPage).ensure ();
         }
 
 		construct {
@@ -82,7 +83,7 @@ namespace Random {
 	            if (stack1.get_visible_child () == rou.get_child ()) {
                     this.set_default_widget (genc);
                 } else if (stack1.get_visible_child () == coinpage.get_child ()) {
-                    this.set_default_widget (cf);
+                    // this.set_default_widget (cf);
                 } else {
                 }
 	        });
@@ -111,14 +112,14 @@ namespace Random {
 
 
 	        // coinflip
-	        cf.clicked.connect (() => {
-	            coinrev.set_reveal_child (false);
-	            Timeout.add(250, () => {
-	            string cnr = Randomize.Coin (_("Heads"), _("Tails"));
-	            cl.set_label (cnr);
-	            coinrev.set_reveal_child (true);
-	            });
-	        });
+	        // cf.clicked.connect (() => {
+	        //     coinrev.set_reveal_child (false);
+	        //     Timeout.add(250, () => {
+	        //     string cnr = Randomize.Coin (_("Heads"), _("Tails"));
+	        //     cl.set_label (cnr);
+	        //     coinrev.set_reveal_child (true);
+	        //     });
+	        // });
 
 
 	        ListBoxCreateWidgetFunc acts = (item) => {
@@ -211,7 +212,7 @@ namespace Random {
                 genc.activate ();
             } else if (stack1.get_visible_child () == numstack.get_child ()) {
             } else {
-                cf.activate ();
+                // cf.activate ();
             }
         }
 
@@ -258,7 +259,7 @@ namespace Random {
             if (stack1.get_visible_child () == rou.get_child ()) {
                 clip.set_text (endc.get_label ());
             } else if (stack1.get_visible_child () == coinpage.get_child ()) {
-                clip.set_text (cl.get_label ());
+                // clip.set_text (cl.get_label ());
             } else {
             }
         }

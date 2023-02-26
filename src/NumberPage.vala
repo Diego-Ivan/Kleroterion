@@ -13,13 +13,8 @@ public class Random.NumberPage : Page {
     private unowned NumberRow max_row;
     [GtkChild]
     private unowned Gtk.Label number_label;
-    public signal void send_to_roulette (int min, int max);
 
-    public override string title {
-        owned get {
-            return _("Number");
-        }
-    }
+    public signal void send_to_roulette (int min, int max);
 
     public override string content {
         owned get {
@@ -40,7 +35,7 @@ public class Random.NumberPage : Page {
             upper++;
         }
 
-        int generated_number = GLib.Random.int_range (lower, upper);
+        int generated_number = GLib.Random.int_range (lower, upper + 1);
         display_number (generated_number);
     }
 

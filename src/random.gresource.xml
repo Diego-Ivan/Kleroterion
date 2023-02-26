@@ -10,5 +10,6 @@
    <!-- Pages  -->
     <file>pages/page.ui</file>
     <file>pages/numberpage.ui</file>
+    <file>pages/coinpage.ui</file>
   </gresource>
 </gresources>

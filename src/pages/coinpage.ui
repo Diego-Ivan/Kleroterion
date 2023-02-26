@@ -1,0 +1,35 @@
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <template class="RandomCoinPage" parent="RandomPage">
+    <child>
+      <object class="GtkBox">
+        <property name="orientation">vertical</property>
+        <property name="valign">center</property>
+
+        <child>
+          <object class="GtkLabel" id="flipped_label">
+            <property name="label" translatable="yes">Tails</property>
+            <property name="margin-top">24</property>
+            <property name="margin-bottom">24</property>
+
+            <style>
+              <class name="number"/>
+            </style>
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkButton" id="generate_button">
+            <property name="label" translatable="yes">Flip the Coin</property>
+            <property name="action-name">page.generate</property>
+            <property name="halign">center</property>
+            <style>
+              <class name="pill"/>
+              <class name="suggested-action"/>
+            </style>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>
