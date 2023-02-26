@@ -8,6 +8,7 @@
     <file>style-dark.css</file>
 
    <!-- Pages  -->
+    <file>pages/page.ui</file>
     <file>pages/numberpage.ui</file>
   </gresource>
 </gresources>

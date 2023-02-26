@@ -1,0 +1,23 @@
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <template class="RandomPage" parent="AdwBin">
+    <child>
+      <object class="GtkShortcutController">
+        <property name="propagation-phase">capture</property>
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">&lt;Control&gt;g</property>
+            <property name="action">action(page.generate)</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">&lt;Control&gt;c</property>
+            <property name="action">action(page.copy)</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

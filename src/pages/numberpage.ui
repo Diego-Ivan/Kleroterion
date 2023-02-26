@@ -1,6 +1,6 @@
 <interface>
   <requires lib="gtk" version="4.0"/>
-  <template class="RandomNumberPage" parent="AdwBin">
+  <template class="RandomNumberPage" parent="RandomPage">
     <child>
       <object class="AdwClamp">
         <property name="maximum-size">300</property>
@@ -47,7 +47,7 @@
               <object class="GtkButton" id="generate_button">
                 <property name="label" translatable="yes">Generate</property>
                 <property name="halign">center</property>
-                <property name="action-name">number.generate</property>
+                <property name="action-name">page.generate</property>
                 <style>
                   <class name="pill"/>
                   <class name="suggested-action"/>

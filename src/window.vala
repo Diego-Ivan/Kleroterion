@@ -73,12 +73,10 @@ namespace Random {
 
             app.set_accels_for_action ("app.number", {"<Primary><Shift>c"});
             app.set_accels_for_action ("app.remove", {"<Primary><Shift>g"});
-            app.set_accels_for_action ("app.generate", {"<Primary>g"});
             app.set_accels_for_action ("app.shortcuts", {"<Primary>question"});
             app.set_accels_for_action ("app.quit", {"<Primary>q", "<Primary>w"});
             app.set_accels_for_action ("app.change", {"<Primary>Tab"});
             app.set_accels_for_action ("app.menuopener", {"F10"});
-            app.set_accels_for_action ("app.copy", {"<Primary>c"});
 
 	        stack1.notify["visible-child"].connect (() => {
 	            if (stack1.get_visible_child () == rou.get_child ()) {

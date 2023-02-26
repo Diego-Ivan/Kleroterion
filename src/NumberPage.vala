@@ -6,44 +6,28 @@
  */
 
 [GtkTemplate (ui = "/page/codeberg/foreverxml/Random/pages/numberpage.ui")]
-public class Random.NumberPage : Adw.Bin, Page {
+public class Random.NumberPage : Page {
     [GtkChild]
     private unowned NumberRow min_row;
     [GtkChild]
     private unowned NumberRow max_row;
     [GtkChild]
     private unowned Gtk.Label number_label;
-
     public signal void send_to_roulette (int min, int max);
 
-    public string title {
+    public override string title {
         owned get {
             return _("Number");
         }
     }
 
-    public new string name {
-        owned get {
-            return _("number");
-        }
-    }
-
-    public string content {
+    public override string content {
         owned get {
             return number_label.label;
         }
     }
 
-    construct {
-        ActionEntry[] actions = {
-            { "generate", generate },
-        };
-        var action_group = new SimpleActionGroup ();
-        action_group.add_action_entries (actions, this);
-        insert_action_group ("number", action_group);
-    }
-
-    public void generate () {
+    public override void generate () {
         int lower = (int) min_row.value;
         int upper = (int) max_row.value;
 
@@ -93,5 +77,9 @@ public class Random.NumberRow : Adw.ActionRow {
     construct {
         spin_button.valign = CENTER;
         add_suffix (spin_button);
+    }
+
+    public override bool grab_focus () {
+        return spin_button.grab_focus ();
     }
 }
