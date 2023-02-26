@@ -35,9 +35,7 @@ namespace Random {
         [GtkChild] private unowned Adw.ViewSwitcherBar bar;
         // [GtkChild] private unowned ListBox robox;
         [GtkChild] private unowned RouletteList roulette_list;
-        private Random.Func Randomize = new Random.Func ();
         // Translators: If the language is in Latin, leave these be. If it is not, insert names here, and don't translate the strings.
-        private StringList rlet = new StringList ({_("Layla"), _("Rose"), _("Cleveland"), _("Lampy")});
         private ActionEntry[] actions;
         private SimpleActionGroup actionc = new SimpleActionGroup ();
         public Gtk.Application app { get; construct; }
@@ -59,34 +57,20 @@ namespace Random {
             // actions
 		    actions = {
                 {"about", about},
-                {"number", number},
-                {"remove", remove},
-                {"generate", generate},
                 {"shortcuts", shortcuts},
                 {"quit", quit},
                 {"change", change},
                 {"menuopener", menuopener},
                 {"help", help},
-                {"copy", copy}
             };
             actionc.add_action_entries (actions, this);
             insert_action_group ("app", actionc);
 
             app.set_accels_for_action ("app.number", {"<Primary><Shift>c"});
-            app.set_accels_for_action ("app.remove", {"<Primary><Shift>g"});
             app.set_accels_for_action ("app.shortcuts", {"<Primary>question"});
             app.set_accels_for_action ("app.quit", {"<Primary>q", "<Primary>w"});
             app.set_accels_for_action ("app.change", {"<Primary>Tab"});
             app.set_accels_for_action ("app.menuopener", {"F10"});
-
-	        stack1.notify["visible-child"].connect (() => {
-	            if (stack1.get_visible_child () == rou.get_child ()) {
-                    this.set_default_widget (genc);
-                } else if (stack1.get_visible_child () == coinpage.get_child ()) {
-                    // this.set_default_widget (cf);
-                } else {
-                }
-	        });
 
 	        title.notify["title-visible"].connect (() => {
 	            if (title.get_title_visible () == true) {
@@ -110,42 +94,7 @@ namespace Random {
                 });
 	        });
 
-
-	        // coinflip
-	        // cf.clicked.connect (() => {
-	        //     coinrev.set_reveal_child (false);
-	        //     Timeout.add(250, () => {
-	        //     string cnr = Randomize.Coin (_("Heads"), _("Tails"));
-	        //     cl.set_label (cnr);
-	        //     coinrev.set_reveal_child (true);
-	        //     });
-	        // });
-
-
-	        ListBoxCreateWidgetFunc acts = (item) => {
-	            Adw.ActionRow actor = new Adw.ActionRow ();
-	            string strung;
-	            item.@get ("string", strung, null);
-	            actor.set_title (strung);
-	            Button button = new Button ();
-	            button.set_hexpand (false);
-	            button.clicked.connect (() => {
-	                for (uint i = 0; i < rlet.get_n_items (); i++) {
-                        if (rlet.get_string (i) == strung) {
-                            rlet.remove (i);
-                        }
-                    }
-	            });
-	            Image del = new Image ();
-	            del.set_from_icon_name ("user-trash-symbolic");
-	            button.set_child (del);
-	            actor.set_child (button);
-	            return actor;
-	        };
-
 	        this.present ();
-
-	        string txt = Randomize.Number (1, 10).to_string ();
 	    }
 
 	    private void about () {
@@ -173,47 +122,6 @@ namespace Random {
 
             win.set_transient_for (this);
             win.show ();
-        }
-
-        private void number () {
-            if (stack1.get_visible_child () != numstack.get_child ()) {
-                stack1.set_visible_child (numstack.get_child ()); // TODO bigger menu btn
-            } else {
-                stack1.set_visible_child (rou.get_child ());
-            }
-        }
-
-        private string[] strings () {
-            string[] returnstring = {};
-            int intr;
-            for (uint i = 0; i < rlet.get_n_items (); i++) {
-                intr = int.parse (i.to_string ());
-                rlet.get_item (i).@get ("string", returnstring[intr], null);
-            }
-            return returnstring;
-        }
-
-        private void remove () {
-            if (stack1.get_visible_child () != rou.get_child ()) {
-                stack1.set_visible_child (rou.get_child ());
-            } else {
-                string[] enda = Randomize.DeleteRoulette (strings ());
-                endc.set_label (enda[0]);
-                for (uint i = 0; i < rlet.get_n_items (); i++) {
-                    if (rlet.get_string (i) == enda[0]) {
-                        rlet.remove (i);
-                    }
-                }
-            }
-        }
-
-        private void generate () {
-            if (stack1.get_visible_child () == rou.get_child ()) {
-                genc.activate ();
-            } else if (stack1.get_visible_child () == numstack.get_child ()) {
-            } else {
-                // cf.activate ();
-            }
         }
 
         private void shortcuts () {
@@ -247,21 +155,6 @@ namespace Random {
 
         private void menuopener () {
             menus.popup ();
-        }
-
-        private void copy () {
-            // if (num1.has_focus ||
-            //     num2.has_focus ||
-            //     ctxt.has_focus ) {
-            //         return;
-            // }
-            Gdk.Clipboard clip = get_clipboard ();
-            if (stack1.get_visible_child () == rou.get_child ()) {
-                clip.set_text (endc.get_label ());
-            } else if (stack1.get_visible_child () == coinpage.get_child ()) {
-                // clip.set_text (cl.get_label ());
-            } else {
-            }
         }
 
         private void help () {
