@@ -5,8 +5,8 @@
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 
-[GtkTemplate (ui = "/page/codeberg/foreverxml/Random/pages/numberpage.ui")]
-public class Random.NumberPage : Page {
+[GtkTemplate (ui = "/io/github/diegoivan/Kleroterion/pages/numberpage.ui")]
+public class Kleroterion.NumberPage : Page {
     [GtkChild]
     private unowned NumberRow min_row;
     [GtkChild]
@@ -57,7 +57,7 @@ public class Random.NumberPage : Page {
     }
 }
 
-public class Random.NumberRow : Adw.ActionRow {
+public class Kleroterion.NumberRow : Adw.ActionRow {
     private Gtk.SpinButton spin_button = new Gtk.SpinButton.with_range (-2000000, 2000000, 1);
 
     public double @value {

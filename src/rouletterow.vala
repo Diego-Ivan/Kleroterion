@@ -19,7 +19,7 @@
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 
-namespace Random {
+namespace Kleroterion {
     public class RouletteRow : Adw.PreferencesRow {
         public Gtk.Entry text_entry { get; private set; }
         private Gtk.Button remove_button;

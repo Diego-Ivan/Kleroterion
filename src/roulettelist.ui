@@ -1,5 +1,5 @@
 <interface>
-  <template class="RandomRouletteList" parent="AdwPreferencesGroup">
+  <template class="KleroterionRouletteList" parent="AdwPreferencesGroup">
     <style><class name="margins" /></style>
     <property name="title">Choices</property>
 

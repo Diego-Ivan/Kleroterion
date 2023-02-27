@@ -19,8 +19,8 @@
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 
-namespace Random {
-    [GtkTemplate (ui = "/page/codeberg/foreverxml/Random/roulettelist.ui")]
+namespace Kleroterion {
+    [GtkTemplate (ui = "/io/github/diegoivan/Kleroterion/roulettelist.ui")]
     public class RouletteList : Adw.PreferencesGroup {
         [GtkChild] private unowned Gtk.ListBox listbox;
 

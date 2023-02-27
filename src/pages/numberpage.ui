@@ -1,6 +1,6 @@
 <interface>
   <requires lib="gtk" version="4.0"/>
-  <template class="RandomNumberPage" parent="RandomPage">
+  <template class="KleroterionNumberPage" parent="KleroterionPage">
     <child>
       <object class="AdwClamp">
         <property name="maximum-size">300</property>
@@ -28,14 +28,14 @@
                 </style>
 
                 <child>
-                  <object class="RandomNumberRow" id="min_row">
+                  <object class="KleroterionNumberRow" id="min_row">
                     <property name="title" translatable="yes">From</property>
                     <property name="value">0</property>
                   </object>
                 </child>
 
                 <child>
-                  <object class="RandomNumberRow" id="max_row">
+                  <object class="KleroterionNumberRow" id="max_row">
                     <property name="title" translatable="yes">To</property>
                     <property name="value">10</property>
                   </object>

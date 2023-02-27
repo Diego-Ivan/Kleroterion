@@ -1,1 +1,1 @@
-i18n.gettext('randomgtk', preset: 'glib')
+i18n.gettext('kleroterion', preset: 'glib')

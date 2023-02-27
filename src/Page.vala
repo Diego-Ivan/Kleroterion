@@ -5,8 +5,8 @@
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 
-[GtkTemplate (ui = "/page/codeberg/foreverxml/Random/pages/page.ui")]
-public abstract class Random.Page : Adw.Bin {
+[GtkTemplate (ui = "/io/github/diegoivan/Kleroterion/pages/page.ui")]
+public abstract class Kleroterion.Page : Adw.Bin {
     public abstract string content { owned get; }
     public abstract void generate ();
 

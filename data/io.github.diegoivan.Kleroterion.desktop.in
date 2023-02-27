@@ -1,7 +1,7 @@
 [Desktop Entry]
-Name=Random
-Exec=randomgtk
-Icon=page.codeberg.foreverxml.Random
+Name=Kleroterion
+Exec=kleroterion
+Icon=io.github.diegoivan.kleroterion
 Terminal=false
 Type=Application
 Categories=GTK;GNOME;Utility;

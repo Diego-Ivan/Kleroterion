@@ -17,8 +17,8 @@
  */
 using Gtk;
 using GLib;
-namespace Random {
-	[GtkTemplate (ui = "/page/codeberg/foreverxml/Random/window.ui")]
+namespace Kleroterion {
+	[GtkTemplate (ui = "/io/github/diegoivan/Kleroterion/window.ui")]
 	public class Window : Adw.ApplicationWindow {
         [GtkChild] private unowned Button genc;
         [GtkChild] private unowned Label endc;
@@ -98,27 +98,27 @@ namespace Random {
 	    }
 
 	    private void about () {
-	        string[] authors = {"Forever <forever@aroace.space>"};
+	        string[] authors = {
+                "Forever <forever@aroace.space>",
+                "Diego Iván <diegoivan.mae@gmail.com>",
+            };
 	        // Translators: add your names and emails to this table, one per line as shown
 	        string translators = _("translator-credits");
 	        string[] artists = {"Forever <forever@aroace.space>", "Jakub Steiner <jimmac@gmail.com>"};
 	        var win = new Adw.AboutWindow () {
 	            // Translators: This is a noun and not a verb.
-                application_name = _("Random"),
-                application_icon = "page.codeberg.foreverxml.Random",
-                version = "1.5",
+                application_name = "Kleroterion",
+                application_icon = "io.github.diegoivan.Kleroterion",
+                version = "1.6",
                 comments = _("Randomizing made easy") + ": " + _("A tool to pick a random number or list item. Pick what chore to do, a number between 1 and 100, whether or not to jump on your mom's bed, etc."),
-                copyright = "Copyright © 2021-2022 Forever",
+                copyright = "Copyright © 2021-2022 Forever\nCopyright © 2023 Diego Iván",
                 license_type = License.AGPL_3_0,
-                developer_name = "Forever",
+                developer_name = "Forever; Diego Iván",
                 developers = authors,
                 artists = artists,
                 translator_credits = translators,
-                website = "https://random.amongtech.cc",
-                issue_url = "https://codeberg.org/foreverxml/random/issues",
-                release_notes = "<p>" + _("Random recieves more translations and a migration to AdwAboutWindow in this quality-of-life release.") + "</p>"
+                issue_url = "https://gitlab.gnome.org/diegoivanme/random/issues",
             };
-            win.add_link (_("Random on the Fediverse"), "https://fedi.aroace.space/@random");
 
             win.set_transient_for (this);
             win.show ();

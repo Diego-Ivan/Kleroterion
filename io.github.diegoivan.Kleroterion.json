@@ -1,9 +1,9 @@
 {
-  "app-id": "page.codeberg.foreverxml.Random",
+  "app-id": "io.github.diegoivan.Kleroterion",
   "runtime": "org.gnome.Platform",
   "runtime-version": "master",
   "sdk": "org.gnome.Sdk",
-  "command": "randomgtk",
+  "command": "kleroterion",
   "sdk-extensions": [
     "org.freedesktop.Sdk.Extension.vala"
   ],
@@ -31,7 +31,7 @@
   ],
   "modules": [
     {
-      "name": "random",
+      "name": "Kleroterion",
       "builddir": true,
       "buildsystem": "meson",
       "sources": [

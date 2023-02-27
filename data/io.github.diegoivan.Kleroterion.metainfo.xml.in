@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2021-2022 Forever XML -->
+<!-- Copyright 2023 Diego Iván -->
 <component type="desktop-application">
-	<id>page.codeberg.foreverxml.Random.desktop</id>
-  <launchable type="desktop-id">page.codeberg.foreverxml.Random.desktop</launchable>
+	<id>io.github.diegoivan.kleroterion.desktop</id>
+  <launchable type="desktop-id">io.github.diegoivan.kleroterion.desktop</launchable>
 	<metadata_license>CC0-1.0</metadata_license>
-  <name translatable="yes">Random</name>
+  <name translatable="no">Kleroterion</name>
   <summary>Make randomization easy</summary>
 	<project_license>AGPL-3.0-or-later</project_license>
 	<description>
@@ -24,9 +25,7 @@
       <image>https://codeberg.org/foreverxml/random/raw/branch/main/screenshots/coin.png</image>
     </screenshot>
   </screenshots>
-  <url type="homepage">https://random.amongtech.cc</url><url type="help">https://random.amongtech.cc/help</url><url type="faq">https://random.amongtech.cc#faq</url>
-  <url type="contact">https://matrix.to/#/#randomgtk:matrix.org</url>
-  <url type="bugtracker">https://codeberg.org/foreverxml/random/issues</url><translation type="gettext">randomgtk</translation>
+  <url type="bugtracker">https://gitlab.gnome.org/diegoivanme/random/issues</url>
   <releases>
        <release version="1.5" date="2022-07-19">
       <description>

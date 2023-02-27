@@ -1,6 +1,6 @@
 <interface>
   <requires lib="gtk" version="4.0"/>
-  <template class="RandomPage" parent="AdwBin">
+  <template class="KleroterionPage" parent="AdwBin">
     <child>
       <object class="GtkShortcutController">
         <property name="propagation-phase">capture</property>

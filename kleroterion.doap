@@ -5,7 +5,7 @@
          xmlns:gnome="http://api.gnome.org/doap-extensions#"
          xmlns="http://usefulinc.com/ns/doap#">
 
-  <name xml:lang="en">Random</name>
+  <name xml:lang="en">Kleroterion</name>
   <shortdesc xml:lang="en">
       Make randomization easy
   </shortdesc>

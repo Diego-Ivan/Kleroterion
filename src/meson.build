@@ -1,9 +1,8 @@
-random_sources = [
+kleroterion_sources = [
   'main.vala',
   'window.vala',
   'roulettelist.vala',
   'rouletterow.vala',
-  'sp.vala',
   'config.vapi',
 
   'Page.vala',
@@ -11,7 +10,7 @@ random_sources = [
   'CoinPage.vala',
 ]
 
-random_deps = [
+kleroterion_deps = [
   dependency('glib-2.0', version: '>= 2.66'),
   dependency('gio-2.0', version: '>= 2.66'),
   dependency('gdk-pixbuf-2.0'),
@@ -22,16 +21,16 @@ random_deps = [
 
 gnome = import('gnome')
 
-random_sources += gnome.compile_resources('random-resources',
-  'random.gresource.xml',
-  c_name: 'randomgtk'
+kleroterion_sources += gnome.compile_resources('random-resources',
+  'kleroterion.gresource.xml',
+  c_name: 'kleroterion'
 )
 
-executable('randomgtk', random_sources,
+executable('kleroterion', kleroterion_sources,
   c_args: [
-    '-DGETTEXT_PACKAGE="randomgtk"',
+    '-DGETTEXT_PACKAGE="kleroterion"',
     '-DLOCALEDIR="@0@"'.format(localedir),
   ],
-  vala_args: '--target-glib=2.50',  dependencies: random_deps,
+  vala_args: '--target-glib=2.50',  dependencies: kleroterion_deps,
   install: true,
 )

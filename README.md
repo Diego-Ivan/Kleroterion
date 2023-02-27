@@ -1,10 +1,10 @@
 <img align="left" style="vertical-align: middle;" width="160" height="160" src="https://codeberg.org/foreverxml/random/raw/branch/main/data/icons/hicolor/scalable/apps/page.codeberg.foreverxml.Random.svg">
 
-# Random
+# Kleroterion
 Make randomization easy
 
 [![Please do not theme this app](https://img.shields.io/badge/Theme-Do%20Not%20Theme-brightgreen)](https://stopthemingmy.app) [![License: AGPL v3](https://img.shields.io/badge/License-AGPLv3-blue)](https://codeberg.org/foreverxml/random/src/branch/main/COPYING)
-<p align="center"><img alt="A screenshot of the main chrome of Random" src="https://codeberg.org/foreverxml/random/raw/branch/main/screenshots/number.png" /></p>
+<p align="center"><img alt="A screenshot of the main chrome of Kleroterion" src="https://codeberg.org/foreverxml/random/raw/branch/main/screenshots/number.png" /></p>
 
 <p align="center"><a href='https://beta.flathub.org/apps/details/page.codeberg.foreverxml.Random'><img width='240' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.png'/></a></p>
 

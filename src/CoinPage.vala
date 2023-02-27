@@ -18,8 +18,8 @@
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 
-[GtkTemplate (ui = "/page/codeberg/foreverxml/Random/pages/coinpage.ui")]
-public class Random.CoinPage : Page {
+[GtkTemplate (ui = "/io/github/diegoivan/Kleroterion/pages/coinpage.ui")]
+public class Kleroterion.CoinPage : Page {
     [GtkChild]
     private unowned Gtk.Label flipped_label;
 

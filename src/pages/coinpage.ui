@@ -1,6 +1,6 @@
 <interface>
   <requires lib="gtk" version="4.0"/>
-  <template class="RandomCoinPage" parent="RandomPage">
+  <template class="KleroterionCoinPage" parent="KleroterionPage">
     <child>
       <object class="GtkBox">
         <property name="orientation">vertical</property>

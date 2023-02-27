@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 using GLib;
-namespace Random {
+namespace Kleroterion {
     GLib.Settings settings;
     public class Application : Adw.Application {
         public static Window win = null;
@@ -23,7 +23,7 @@ namespace Random {
         public Application () {
             Object (
                 flags: ApplicationFlags.FLAGS_NONE,
-                application_id: "page.codeberg.foreverxml.Random"
+                application_id: "io.github.diegoivan.Kleroterion"
             );
         }
 
@@ -34,7 +34,7 @@ namespace Random {
 	        Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 	        Intl.textdomain (GETTEXT_PACKAGE);
 
-	        settings = new GLib.Settings ("page.codeberg.foreverxml.Random");
+	        settings = new GLib.Settings ("io.github.diegoivan.Kleroterion");
         }
 
         protected override void activate () {
@@ -42,7 +42,7 @@ namespace Random {
                 win.present ();
                 return;
             }
-            win = new Random.Window (this);
+            win = new Kleroterion.Window (this);
             settings.delay ();
         }
 
@@ -52,7 +52,7 @@ namespace Random {
         }
 
         public static int main (string[] args) {
-            var app = new Random.Application ();
+            var app = new Kleroterion.Application ();
             return app.run (args);
         }
     }
