@@ -1,0 +1,47 @@
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <template class="KleroterionRoulettePage" parent="KleroterionPage">
+    <child>
+      <object class="GtkScrolledWindow">
+        <property name="propagate-natural-height">true</property>
+        <property name="propagate-natural-width">true</property>
+
+        <child>
+          <object class="AdwClamp">
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <property name="spacing">6</property>
+
+                <child>
+                  <object class="GtkLabel" id="picked_label">
+                    <property name="label" translatable="yes">Roulette</property>
+                    <style>
+                      <class name="rl"/>
+                    </style>
+                  </object>
+                </child>
+
+                <child>
+                  <object class="KleroterionRouletteList" id="roulette_list">
+                  </object>
+                </child>
+
+                <child>
+                  <object class="GtkButton">
+                    <property name="label" translatable="yes">Pick</property>
+                    <property name="action-name">page.generate</property>
+                    <style>
+                      <class name="pill"/>
+                      <class name="suggested-action"/>
+                    </style>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

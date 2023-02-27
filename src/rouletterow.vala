@@ -21,18 +21,26 @@
 
 namespace Kleroterion {
     public class RouletteRow : Adw.PreferencesRow {
-        public Gtk.Entry text_entry { get; private set; }
+        private Gtk.Entry text_entry { get; private set; default = new Gtk.Entry (); }
         private Gtk.Button remove_button;
-        public string content {
+
+        private unowned RouletteItem _item;
+        public unowned RouletteItem item {
             get {
-                return text_entry.text;
+                return _item;
             }
-            set {
-                text_entry.text = value;
+            construct {
+                _item = value;
+                item.bind_property ("item", text_entry, "text", SYNC_CREATE | BIDIRECTIONAL);
+                item.bind_property ("picked", this, "sensitive", SYNC_CREATE | INVERT_BOOLEAN);
             }
         }
 
-        public signal void remove_request (RouletteRow r);
+        public RouletteRow (RouletteItem item) {
+            Object (item: item);
+        }
+
+        public signal void delete_request ();
 
         construct {
             activatable = false;
@@ -42,11 +50,10 @@ namespace Kleroterion {
                 margin_bottom = 12,
             };
 
-            text_entry = new Gtk.Entry () {
-                hexpand = true,
-                margin_start = 12,
-                focusable = true
-            };
+            text_entry.hexpand = true;
+            text_entry.margin_start = 12;
+            text_entry.focusable = true;
+
             box.append (text_entry);
 
             remove_button = new Gtk.Button () {
@@ -56,11 +63,13 @@ namespace Kleroterion {
                 halign = END,
                 margin_start = 6
             };
+
+            remove_button.clicked.connect (() => {
+                delete_request ();
+            });
+
             remove_button.add_css_class ("flat");
             remove_button.add_css_class ("rightmargin");
-            remove_button.clicked.connect (() => {
-                remove_request (this);
-            });
 
             box.append (remove_button);
 
@@ -72,3 +81,4 @@ namespace Kleroterion {
         }
     }
 }
+

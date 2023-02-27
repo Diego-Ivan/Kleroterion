@@ -20,22 +20,13 @@ using GLib;
 namespace Kleroterion {
 	[GtkTemplate (ui = "/io/github/diegoivan/Kleroterion/window.ui")]
 	public class Window : Adw.ApplicationWindow {
-        [GtkChild] private unowned Button genc;
-        [GtkChild] private unowned Label endc;
-        // [GtkChild] private unowned Button cf;
-        // [GtkChild] private unowned Label cl;
         [GtkChild] private unowned Adw.ViewStackPage rou;
         [GtkChild] private unowned Adw.ViewStackPage numstack;
         [GtkChild] private unowned Adw.ViewStackPage coinpage;
         [GtkChild] private unowned Adw.ViewStack stack1;
         [GtkChild] private unowned MenuButton menus;
-        [GtkChild] private unowned Revealer rourev;
-        // [GtkChild] private unowned Revealer coinrev;
         [GtkChild] private new unowned Adw.ViewSwitcherTitle title;
         [GtkChild] private unowned Adw.ViewSwitcherBar bar;
-        // [GtkChild] private unowned ListBox robox;
-        [GtkChild] private unowned RouletteList roulette_list;
-        // Translators: If the language is in Latin, leave these be. If it is not, insert names here, and don't translate the strings.
         private ActionEntry[] actions;
         private SimpleActionGroup actionc = new SimpleActionGroup ();
         public Gtk.Application app { get; construct; }
@@ -51,6 +42,7 @@ namespace Kleroterion {
 		static construct {
             typeof (NumberPage).ensure ();
             typeof (CoinPage).ensure ();
+            typeof (RoulettePage).ensure ();
         }
 
 		construct {
@@ -80,19 +72,6 @@ namespace Kleroterion {
 	            }
 	        });
 	        bar.set_reveal (true);
-
-	        // roulette
-	        genc.clicked.connect (() => {
-                rourev.set_reveal_child (false);
-	            Timeout.add (250, () => {
-	            string txt = roulette_list.pick_random ();
-	            if (txt == "Hey adora") {
-	                txt = "Catra!? What are you doing here?";
-	            }
-                endc.set_label (txt);
-                rourev.set_reveal_child (true);
-                });
-	        });
 
 	        this.present ();
 	    }

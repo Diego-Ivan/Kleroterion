@@ -23,6 +23,7 @@ namespace Kleroterion {
     [GtkTemplate (ui = "/io/github/diegoivan/Kleroterion/roulettelist.ui")]
     public class RouletteList : Adw.PreferencesGroup {
         [GtkChild] private unowned Gtk.ListBox listbox;
+        private ListStore items = new ListStore (typeof (RouletteItem));
 
         private ActionEntry[] actions = {
             { "remove_all", remove_all_items },
@@ -37,109 +38,88 @@ namespace Kleroterion {
             action_group.add_action (action);
 
             insert_action_group ("roulette", action_group);
+
+            listbox.bind_model (items, on_item_bound);
+        }
+
+        private Gtk.Widget on_item_bound (Object item) {
+            var roulette_row = new RouletteRow ((RouletteItem) item);
+            roulette_row.delete_request.connect (on_item_removed);
+
+            Timeout.add (50, () => {
+                roulette_row.grab_focus ();
+                return Source.REMOVE;
+            });
+
+            return roulette_row;
+        }
+
+        private void on_item_removed (RouletteRow row) {
+            uint position;
+            bool found = items.find (row.item, out position);
+
+            if (!found) {
+                return;
+            }
+            items.remove (position);
         }
 
         [GtkCallback]
         public void add_new_item () {
-            var n_row = new RouletteRow ();
-            n_row.remove_request.connect (remove_row);
-            listbox.append (n_row);
-
-            n_row.opacity = 0;
-            var target = new Adw.CallbackAnimationTarget ((v) => {
-                n_row.opacity = v;
-            });
-
-            var animation = new Adw.TimedAnimation (n_row,
-                0, 1, 200,
-                target
-            );
-
-            animation.easing = EASE_IN_OUT_CUBIC;
-            animation.play ();
-            animation.done.connect (() => {
-                n_row.text_entry.grab_focus ();
-            });
+            items.append (new RouletteItem ());
         }
 
-        private void remove_row (RouletteRow r) {
-            listbox.remove (r);
-        }
+        public string? pick_random ()
+            requires (items.get_n_items () > 0)
+        {
+            RouletteItem[] pickable_items = {};
 
-        public string pick_random () {
-            string[] items = {};
-            int i = 0;
-            Gtk.ListBoxRow? current_row = listbox.get_row_at_index (i);
-
-            while (current_row != null) {
-                var r = current_row as RouletteRow;
-                if (r.content == "") {
-                    warning ("Item at %i is empty", i);
+            for (int i = 0; i < items.get_n_items (); i++) {
+                var item = (RouletteItem) items.get_object (i);
+                if (item.empty || item.picked) {
+                    continue;
                 }
-                else {
-                    items = items + r.content;
-                }
-
-                i++;
-                current_row = listbox.get_row_at_index (i);
+                pickable_items += item;
             }
 
-            int selected_index = GLib.Random.int_range (0, items.length);
+            if (pickable_items.length < 1) {
+                return null;
+            }
 
-            if (settings.get_boolean ("remove-drawn"))
-                listbox.remove (listbox.get_row_at_index (selected_index));
+            int selected_index = GLib.Random.int_range (0, pickable_items.length);
+            RouletteItem selected_item = pickable_items[selected_index];
 
-            return items [selected_index];
+            if (settings.get_boolean ("remove-drawn")) {
+                selected_item.picked = true;
+            }
+
+            return selected_item.item;
         }
 
         public void remove_all_items () {
-            var target = new Adw.CallbackAnimationTarget ((v) => {
-                listbox.opacity = v;
-            });
-
-            var out_animation = new Adw.TimedAnimation (listbox,
-                0, 1, 200,
-                target
-            );
-            out_animation.alternate = true;
-            out_animation.reverse = true;
-            out_animation.play ();
-
-            out_animation.done.connect (() => {
-                Gtk.ListBoxRow? current_row = listbox.get_row_at_index (0);
-                while (current_row != null) {
-                    listbox.remove (current_row);
-                    current_row = listbox.get_row_at_index (0);
-                }
-
-                var animation2 = new Adw.TimedAnimation (listbox,
-                    0, 1, 150,
-                    target
-                );
-                animation2.play ();
-            });
+            items.remove_all ();
         }
 
         public void add_items_from_range (int start, int end) {
             for (int i = start; i <= end; i++) {
-                var n_row = new RouletteRow () {
-                    content = i.to_string ()
+                var new_item = new RouletteItem () {
+                    item = i.to_string ()
                 };
-
-                n_row.remove_request.connect (remove_row);
-                listbox.append (n_row);
+                items.append (new_item);
             }
         }
 
         private void add_items_from_array (string[] array) {
             foreach (var item in array) {
-                var n_row = new RouletteRow () {
-                    content = item
+                var new_item = new RouletteItem () {
+                    item = item
                 };
-
-                n_row.remove_request.connect (remove_row);
-                listbox.append (n_row);
+                items.append (new_item);
             }
+        }
+
+        private void get_items_from_clipboard () {
+            paste_from_clipboard.begin ();
         }
 
         private async void paste_from_clipboard () {
@@ -166,12 +146,7 @@ namespace Kleroterion {
                 unowned var clipboard = Gdk.Display.get_default ().get_clipboard ();
                 string clipboard_text = yield clipboard.read_text_async (null);
 
-                // Remove all elements
-                Gtk.ListBoxRow? iter = listbox.get_row_at_index (0);
-                while (iter != null) {
-                    listbox.remove (iter);
-                    iter = listbox.get_row_at_index (0);
-                }
+                remove_all_items ();
 
                 string[] elements = clipboard_text.split (separator_entry.text);
                 add_items_from_array (elements);
@@ -180,9 +155,19 @@ namespace Kleroterion {
                 critical (e.message);
             }
         }
+    }
 
-        private void get_items_from_clipboard () {
-            paste_from_clipboard.begin ();
+    public class RouletteItem : Object {
+        public string item { get; set; default = ""; }
+        public bool picked { get; set; default = false; }
+        public bool empty {
+            get {
+                return item == "";
+            }
+        }
+
+        ~RouletteItem () {
+            message ("Destructing");
         }
     }
 }

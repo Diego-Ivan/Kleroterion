@@ -11,6 +11,7 @@
     <file>pages/page.ui</file>
     <file>pages/numberpage.ui</file>
     <file>pages/coinpage.ui</file>
+    <file>pages/roulettepage.ui</file>
   </gresource>
 </gresources>
 

@@ -8,6 +8,7 @@ kleroterion_sources = [
   'Page.vala',
   'NumberPage.vala',
   'CoinPage.vala',
+  'RoulettePage.vala',
 ]
 
 kleroterion_deps = [
