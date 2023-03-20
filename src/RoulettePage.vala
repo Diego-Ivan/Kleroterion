@@ -52,4 +52,8 @@ public class Kleroterion.RoulettePage : Page {
             reverse_animation.play ();
         });
     }
+
+    public void add_from_range (int min, int max) {
+        roulette_list.add_items_from_range (min, max);
+    }
 }

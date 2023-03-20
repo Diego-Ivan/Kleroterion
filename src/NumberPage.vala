@@ -55,6 +55,19 @@ public class Kleroterion.NumberPage : Page {
             reverse_animation.play ();
         });
     }
+
+    [GtkCallback]
+    private void on_to_roulette_button_clicked () {
+        int min = (int) min_row.value;
+        int max = (int) max_row.value;
+
+        if (min > max) {
+            min = (int) max_row.value;
+            max = (int) min_row.value;
+        }
+
+        send_to_roulette (min, max);
+    }
 }
 
 public class Kleroterion.NumberRow : Adw.ActionRow {

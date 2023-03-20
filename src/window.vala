@@ -20,15 +20,22 @@ using GLib;
 namespace Kleroterion {
 	[GtkTemplate (ui = "/io/github/diegoivan/Kleroterion/window.ui")]
 	public class Window : Adw.ApplicationWindow {
-        [GtkChild] private unowned Adw.ViewStackPage rou;
-        [GtkChild] private unowned Adw.ViewStackPage numstack;
-        [GtkChild] private unowned Adw.ViewStackPage coinpage;
-        [GtkChild] private unowned Adw.ViewStack stack1;
-        [GtkChild] private unowned MenuButton menus;
-        [GtkChild] private new unowned Adw.ViewSwitcherTitle title;
-        [GtkChild] private unowned Adw.ViewSwitcherBar bar;
-        private ActionEntry[] actions;
-        private SimpleActionGroup actionc = new SimpleActionGroup ();
+        [GtkChild]
+        private unowned Adw.ViewStackPage rou;
+        [GtkChild]
+        private unowned Adw.ViewStackPage numstack;
+        [GtkChild]
+        private unowned Adw.ViewStackPage coinpage;
+        [GtkChild]
+        private unowned Adw.ViewStack stack1;
+        [GtkChild]
+        private unowned MenuButton menus;
+        [GtkChild]
+        private new unowned Adw.ViewSwitcherTitle title;
+        [GtkChild]
+        private unowned Adw.ViewSwitcherBar bar;
+        [GtkChild]
+        private unowned RoulettePage roulette_page;
         public Gtk.Application app { get; construct; }
 
 
@@ -47,7 +54,7 @@ namespace Kleroterion {
 
 		construct {
             // actions
-		    actions = {
+		    ActionEntry[] actions = {
                 {"about", about},
                 {"shortcuts", shortcuts},
                 {"quit", quit},
@@ -55,7 +62,9 @@ namespace Kleroterion {
                 {"menuopener", menuopener},
                 {"help", help},
             };
+            var actionc = new SimpleActionGroup ();
             actionc.add_action_entries (actions, this);
+
             insert_action_group ("app", actionc);
 
             app.set_accels_for_action ("app.number", {"<Primary><Shift>c"});
@@ -115,6 +124,12 @@ namespace Kleroterion {
                 critical ("An error occurred while loading shortcuts window: %s", e.message);
             }
 
+        }
+
+        [GtkCallback]
+        private void on_send_number_to_roulette (int min, int max) {
+            roulette_page.add_from_range (min, max);
+            stack1.set_visible_child (roulette_page);
         }
 
         private void quit () {

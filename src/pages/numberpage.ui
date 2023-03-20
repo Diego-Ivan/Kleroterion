@@ -44,16 +44,37 @@
             </child>
 
             <child>
-              <object class="GtkButton" id="generate_button">
-                <property name="label" translatable="yes">Generate</property>
+              <object class="GtkBox">
+                <property name="orientation">horizontal</property>
+                <property name="hexpand">true</property>
                 <property name="halign">center</property>
-                <property name="action-name">page.generate</property>
-                <style>
-                  <class name="pill"/>
-                  <class name="suggested-action"/>
-                </style>
+                <property name="spacing">6</property>
+
+                <child>
+                  <object class="GtkButton" id="generate_button">
+                    <property name="label" translatable="yes">Generate</property>
+                    <property name="halign">center</property>
+                    <property name="action-name">page.generate</property>
+                    <style>
+                      <class name="pill"/>
+                      <class name="suggested-action"/>
+                    </style>
+                  </object>
+                </child>
+
+                <child>
+                  <object class="GtkButton" id="to_roulette_button">
+                    <property name="halign">center</property>
+                    <property name="icon-name">number-roulette-symbolic</property>
+                    <signal name="clicked" handler="on_to_roulette_button_clicked"/>
+                    <style>
+                      <class name="pill"/>
+                    </style>
+                  </object>
+                </child>
               </object>
             </child>
+
           </object>
         </child>
       </object>

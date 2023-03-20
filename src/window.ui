@@ -41,7 +41,9 @@
                                 <property name="title" translatable="yes">Number</property>
                                 <property name="icon-name">dialpad-symbolic</property>
                                 <property name="child">
-                                  <object class="KleroterionNumberPage"></object>
+                                  <object class="KleroterionNumberPage">
+                                    <signal name="send-to-roulette" handler="on_send_number_to_roulette"/>
+                                  </object>
                                 </property>
                             </object>
                         </child>
@@ -52,7 +54,7 @@
                                 <property name="icon-name">roulette-symbolic</property>
 
                                 <property name="child">
-                                  <object class="KleroterionRoulettePage"></object>
+                                  <object class="KleroterionRoulettePage" id="roulette_page"></object>
                                 </property>
                             </object>
                         </child>
