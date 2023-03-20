@@ -30,6 +30,9 @@
                 <child>
                   <object class="GtkButton">
                     <property name="label" translatable="yes">Pick</property>
+                    <property name="halign">center</property>
+                    <property name="vexpand">true</property>
+                    <property name="valign">end</property>
                     <property name="action-name">page.generate</property>
                     <style>
                       <class name="pill"/>

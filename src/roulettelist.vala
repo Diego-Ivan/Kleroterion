@@ -22,12 +22,17 @@
 namespace Kleroterion {
     [GtkTemplate (ui = "/io/github/diegoivan/Kleroterion/roulettelist.ui")]
     public class RouletteList : Adw.PreferencesGroup {
-        [GtkChild] private unowned Gtk.ListBox listbox;
+        [GtkChild]
+        private unowned Gtk.ListBox listbox;
+        [GtkChild]
+        private unowned Gtk.Revealer listbox_revealer;
+
         private ListStore items = new ListStore (typeof (RouletteItem));
 
         private ActionEntry[] actions = {
             { "remove_all", remove_all_items },
-            { "from-clipboard", get_items_from_clipboard }
+            { "from-clipboard", get_items_from_clipboard },
+            { "remove-drawn", remove_drawn_items },
         };
 
         construct {
@@ -38,6 +43,8 @@ namespace Kleroterion {
             action_group.add_action (action);
 
             insert_action_group ("roulette", action_group);
+
+            items.items_changed.connect (on_items_changed);
 
             listbox.bind_model (items, on_item_bound);
         }
@@ -55,13 +62,28 @@ namespace Kleroterion {
         }
 
         private void on_item_removed (RouletteRow row) {
+            remove_item (row.item);
+        }
+
+        private void remove_item (RouletteItem item) {
             uint position;
-            bool found = items.find (row.item, out position);
+            bool found = items.find (item, out position);
 
             if (!found) {
                 return;
             }
             items.remove (position);
+        }
+
+        private void on_items_changed () {
+            if (items.get_n_items () == 0) {
+                listbox_revealer.reveal_child = false;
+                return;
+            }
+            if (listbox_revealer.child_revealed) {
+                return;
+            }
+            listbox_revealer.reveal_child = true;
         }
 
         [GtkCallback]
@@ -98,6 +120,15 @@ namespace Kleroterion {
 
         public void remove_all_items () {
             items.remove_all ();
+        }
+
+        private void remove_drawn_items () {
+            for (int i = 0; i < items.get_n_items (); i++) {
+                var item = (RouletteItem) items.get_object (i);
+                if (item.picked) {
+                    remove_item (item);
+                }
+            }
         }
 
         public void add_items_from_range (int start, int end) {

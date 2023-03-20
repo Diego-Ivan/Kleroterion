@@ -26,6 +26,10 @@
     </child>
 
     <child>
+      <object class="GtkRevealer" id="listbox_revealer">
+        <property name="transition-type">crossfade</property>
+        <property name="reveal-child">false</property>
+        <child>
           <object class="GtkListBox" id="listbox">
             <property name="margin-start">6</property>
             <property name="valign">start</property>
@@ -36,6 +40,8 @@
             </style>
           </object>
         </child>
+      </object>
+    </child>
 
   </template>
 
