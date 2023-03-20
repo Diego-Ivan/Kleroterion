@@ -73,6 +73,7 @@
                 <child>
                     <object class="AdwViewSwitcherBar" id="bar">
                         <property name="stack">stack1</property>
+                        <property name="reveal" bind-source="title" bind-property="title-visible" bind-flags="sync-create"></property>
                     </object>
                 </child>
             </object>

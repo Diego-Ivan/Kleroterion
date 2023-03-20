@@ -15,38 +15,26 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-using Gtk;
-using GLib;
+
 namespace Kleroterion {
 	[GtkTemplate (ui = "/io/github/diegoivan/Kleroterion/window.ui")]
 	public class Window : Adw.ApplicationWindow {
         [GtkChild]
-        private unowned Adw.ViewStackPage rou;
-        [GtkChild]
-        private unowned Adw.ViewStackPage numstack;
-        [GtkChild]
-        private unowned Adw.ViewStackPage coinpage;
-        [GtkChild]
         private unowned Adw.ViewStack stack1;
         [GtkChild]
-        private unowned MenuButton menus;
-        [GtkChild]
-        private new unowned Adw.ViewSwitcherTitle title;
-        [GtkChild]
-        private unowned Adw.ViewSwitcherBar bar;
+        private unowned Gtk.MenuButton menus;
         [GtkChild]
         private unowned RoulettePage roulette_page;
         public Gtk.Application app { get; construct; }
 
+        public Window (Gtk.Application app) {
+            Object (
+                application: app,
+                app: app
+            );
+        }
 
-		public Window (Gtk.Application app) {
-			Object (
-			    application: app,
-			    app: app
-			);
-		}
-
-		static construct {
+        static construct {
             typeof (NumberPage).ensure ();
             typeof (CoinPage).ensure ();
             typeof (RoulettePage).ensure ();
@@ -60,7 +48,6 @@ namespace Kleroterion {
                 {"quit", quit},
                 {"change", change},
                 {"menuopener", menuopener},
-                {"help", help},
             };
             var actionc = new SimpleActionGroup ();
             actionc.add_action_entries (actions, this);
@@ -73,15 +60,6 @@ namespace Kleroterion {
             app.set_accels_for_action ("app.change", {"<Primary>Tab"});
             app.set_accels_for_action ("app.menuopener", {"F10"});
 
-	        title.notify["title-visible"].connect (() => {
-	            if (title.get_title_visible () == true) {
-	                bar.set_reveal (true);
-	            } else {
-	                bar.set_reveal (false);
-	            }
-	        });
-	        bar.set_reveal (true);
-
 	        this.present ();
 	    }
 
@@ -92,44 +70,43 @@ namespace Kleroterion {
             };
 	        // Translators: add your names and emails to this table, one per line as shown
 	        string translators = _("translator-credits");
+
 	        string[] artists = {"Forever <forever@aroace.space>", "Jakub Steiner <jimmac@gmail.com>"};
 	        var win = new Adw.AboutWindow () {
-	            // Translators: This is a noun and not a verb.
                 application_name = "Kleroterion",
                 application_icon = "io.github.diegoivan.Kleroterion",
                 version = "1.6",
                 comments = _("Randomizing made easy") + ": " + _("A tool to pick a random number or list item. Pick what chore to do, a number between 1 and 100, whether or not to jump on your mom's bed, etc."),
                 copyright = "Copyright © 2021-2022 Forever\nCopyright © 2023 Diego Iván",
-                license_type = License.AGPL_3_0,
+                license_type = Gtk.License.AGPL_3_0,
                 developer_name = "Forever; Diego Iván",
                 developers = authors,
                 artists = artists,
                 translator_credits = translators,
                 issue_url = "https://gitlab.gnome.org/diegoivanme/random/issues",
+                transient_for = this
             };
 
-            win.set_transient_for (this);
             win.show ();
         }
 
         private void shortcuts () {
-            try {
-                var ui_builder = new Gtk.Builder ();
-                ui_builder.add_from_resource ("/page/codeberg/foreverxml/Random/shortcut.ui");
-                var shortcuts_window = ui_builder.get_object ("shortcutting") as ShortcutsWindow;
+            var ui_builder = new Gtk.Builder.from_resource ("/page/codeberg/foreverxml/Random/shortcut.ui");
+            var shortcuts_window = ui_builder.get_object ("shortcutting") as Gtk.ShortcutsWindow;
 
-                shortcuts_window.set_transient_for (this);
-                shortcuts_window.show ();
-            } catch (Error e) {
-                critical ("An error occurred while loading shortcuts window: %s", e.message);
+            if (shortcuts_window == null) {
+                critical ("Failed to load shortcuts window");
+                return;
             }
 
+            shortcuts_window.transient_for = this;
+            shortcuts_window.show ();
         }
 
         [GtkCallback]
         private void on_send_number_to_roulette (int min, int max) {
             roulette_page.add_from_range (min, max);
-            stack1.set_visible_child (roulette_page);
+            stack1.visible_child = roulette_page;
         }
 
         private void quit () {
@@ -138,21 +115,22 @@ namespace Kleroterion {
         }
 
         private void change () {
-            if (stack1.get_visible_child () == rou.get_child ()) {
-                stack1.set_visible_child (coinpage.get_child ());
-            } else if (stack1.get_visible_child () == coinpage.get_child ()) {
-                stack1.set_visible_child (numstack.get_child ());
-            } else {
-                stack1.set_visible_child (rou.get_child ());
+            Gtk.SelectionModel pages_model = stack1.pages;
+
+            for (int i = 0; i < pages_model.get_n_items () - 1; i++) {
+                if (pages_model.is_selected (i)) {
+                    var next_page = (Adw.ViewStackPage) pages_model.get_object (i+1);
+                    stack1.visible_child = next_page.child;
+                    return;
+                }
             }
+
+            var first_page = (Adw.ViewStackPage) pages_model.get_object (0);
+            stack1.visible_child = first_page.child;
         }
 
         private void menuopener () {
             menus.popup ();
-        }
-
-        private void help () {
-            show_uri (this, "https://foreverxml.codeberg.page/random/help", Gdk.CURRENT_TIME);
         }
 	}
 }
