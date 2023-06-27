@@ -18,32 +18,28 @@ using GLib;
 namespace Kleroterion {
     GLib.Settings settings;
     public class Application : Adw.Application {
-        public static Window win = null;
+        private Window main_window;
 
         public Application () {
             Object (
                 flags: ApplicationFlags.FLAGS_NONE,
                 application_id: "io.github.diegoivan.Kleroterion"
             );
-        }
-
-        construct {
-            // Init gettext
-	        Intl.setlocale (LocaleCategory.ALL, "");
+            Intl.setlocale (LocaleCategory.ALL, "");
 	        Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
 	        Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 	        Intl.textdomain (GETTEXT_PACKAGE);
+        }
 
+        construct {
 	        settings = new GLib.Settings ("io.github.diegoivan.Kleroterion");
         }
 
         protected override void activate () {
-            if (win != null) {
-                win.present ();
-                return;
+            if (main_window == null) {
+                main_window = new Window (this);
             }
-            win = new Kleroterion.Window (this);
-            settings.delay ();
+            main_window.present ();
         }
 
         protected override void shutdown () {
