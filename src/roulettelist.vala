@@ -24,8 +24,9 @@ namespace Kleroterion {
     public class RouletteList : Adw.PreferencesGroup {
         [GtkChild]
         private unowned Gtk.ListBox listbox;
-        [GtkChild]
-        private unowned Gtk.Revealer listbox_revealer;
+
+        private Gtk.ListBoxRow empty_state_row;
+        public bool is_empty { get; private set; }
 
         private ListStore items = new ListStore (typeof (RouletteItem));
 
@@ -47,6 +48,7 @@ namespace Kleroterion {
             items.items_changed.connect (on_items_changed);
 
             listbox.bind_model (items, on_item_bound);
+            on_items_changed ();
         }
 
         private Gtk.Widget on_item_bound (Object item) {
@@ -77,13 +79,29 @@ namespace Kleroterion {
 
         private void on_items_changed () {
             if (items.get_n_items () == 0) {
-                listbox_revealer.reveal_child = false;
+                create_default_row ();
+                is_empty = true;
                 return;
             }
-            if (listbox_revealer.child_revealed) {
+
+            int i = 0;
+            Gtk.ListBoxRow? current_row;
+            while ((current_row = listbox.get_row_at_index (i)) != null) {
+                if (current_row == empty_state_row) {
+                    listbox.remove (empty_state_row);
+                    is_empty = false;
+                    break;
+                }
+                i++;
+            }
+        }
+
+        [GtkCallback]
+        private void on_row_activated (Gtk.ListBoxRow row_activated) {
+            if (row_activated != empty_state_row) {
                 return;
             }
-            listbox_revealer.reveal_child = true;
+            add_new_item ();
         }
 
         [GtkCallback]
@@ -185,6 +203,32 @@ namespace Kleroterion {
             catch (Error e) {
                 critical (e.message);
             }
+        }
+
+        private void create_default_row () {
+            var center_box = new Gtk.CenterBox ();
+
+            var label = new Gtk.Label (_("Add Keyword")) {
+                justify = CENTER,
+                wrap = true,
+                margin_top = 12,
+                margin_bottom = 12
+            };
+
+            center_box.center_widget = label;
+            center_box.start_widget = new Gtk.Image.from_icon_name ("list-add-symbolic") {
+                halign = END,
+                hexpand = true,
+                margin_end = 12
+            };
+
+            empty_state_row = new Adw.PreferencesRow () {
+                child = center_box,
+                activatable = true,
+                selectable = false
+            };
+
+            listbox.append (empty_state_row);
         }
     }
 
