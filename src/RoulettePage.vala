@@ -24,11 +24,22 @@ public class Kleroterion.RoulettePage : Page {
     private unowned Gtk.Label picked_label;
     [GtkChild]
     private unowned RouletteList roulette_list;
+    [GtkChild]
+    private unowned Gtk.Button pick_button;
 
     public override string content {
         owned get {
             return picked_label.label;
         }
+    }
+
+    construct {
+        // FIXME: Writing this binding either in the UI file or here won't work immediatly for some
+        // reason? We added a timeout so it worked as intended
+        Timeout.add (50, () => {
+            roulette_list.bind_property ("is-empty", pick_button, "sensitive", SYNC_CREATE | INVERT_BOOLEAN);
+            return Source.REMOVE;
+        });
     }
 
     public override void generate () {
