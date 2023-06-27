@@ -26,7 +26,7 @@ namespace Kleroterion {
         private unowned Gtk.ListBox listbox;
 
         private Gtk.ListBoxRow empty_state_row;
-        public bool is_empty { get; private set; }
+        public bool is_empty { get; private set; default = true; }
 
         private ListStore items = new ListStore (typeof (RouletteItem));
 
@@ -208,7 +208,7 @@ namespace Kleroterion {
         private void create_default_row () {
             var center_box = new Gtk.CenterBox ();
 
-            var label = new Gtk.Label (_("Add Keyword")) {
+            var label = new Gtk.Label (_("Add Item")) {
                 justify = CENTER,
                 wrap = true,
                 margin_top = 12,

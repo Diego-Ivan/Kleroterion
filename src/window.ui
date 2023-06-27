@@ -4,6 +4,7 @@
         <property name="title">Kleroterion</property>
         <property name="default-width">375</property>
         <property name="default-height">400</property>
+      <property name="width-request">320</property>
         <property name="icon-name">io.github.diegoivan.Kleroterion</property>
         <child>
             <object class="GtkBox">
@@ -54,7 +55,10 @@
                                 <property name="icon-name">roulette-symbolic</property>
 
                                 <property name="child">
-                                  <object class="KleroterionRoulettePage" id="roulette_page"></object>
+                                  <object class="KleroterionRoulettePage" id="roulette_page">
+                                    <property name="margin-start">12</property>
+                                    <property name="margin-end">12</property>
+                                  </object>
                                 </property>
                             </object>
                         </child>

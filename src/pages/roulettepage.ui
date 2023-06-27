@@ -33,7 +33,11 @@
                     <property name="halign">center</property>
                     <property name="vexpand">true</property>
                     <property name="valign">end</property>
+                    <property name="margin-top">18</property>
+                    <property name="margin-bottom">18</property>
                     <property name="action-name">page.generate</property>
+                    <property name="sensitive">false</property>
+                    <property name="sensitive" bind-source="roulette_list" bind-property="is-empty" bind-flags="sync-create | invert-boolean"/>
                     <style>
                       <class name="pill"/>
                       <class name="suggested-action"/>

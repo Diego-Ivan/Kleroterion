@@ -6,21 +6,3 @@
 .rl {
   font-size: 35pt;
 }
-GtkScrolledWindow {
-  border-radius: 18px;
-}
-.pill {
-  margin-top: 18px;
-  margin-bottom: 18px;
-}
-.margins {
-  margin-left: 18px;
-  margin-right: 18px;
-}
-.rightmargin {
-  margin-right: 12px;
-}
-.inwindow {
-  margin-top: 6px;
-  margin-bottom: 6px;
-}
