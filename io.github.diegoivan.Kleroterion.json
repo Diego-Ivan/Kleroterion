@@ -1,45 +1,46 @@
 {
-  "app-id": "io.github.diegoivan.Kleroterion",
-  "runtime": "org.gnome.Platform",
-  "runtime-version": "master",
-  "sdk": "org.gnome.Sdk",
-  "command": "kleroterion",
-  "sdk-extensions": [
-    "org.freedesktop.Sdk.Extension.vala"
-  ],
-  "build-options": {
-    "prepend-path": "/usr/lib/sdk/vala/bin/",
-    "prepend-ld-library-path": "/usr/lib/sdk/vala/lib"
-  },
-  "finish-args": [
-    "--share=ipc",
-    "--socket=fallback-x11",
-    "--socket=wayland",
-    "--device=dri"
-  ],
-  "cleanup": [
-    "/include",
-    "/lib/pkgconfig",
-    "/man",
-    "/share/doc",
-    "/share/gtk-doc",
-    "/share/man",
-    "/share/pkgconfig",
-    "/share/vala",
-    "*.la",
-    "*.a"
-  ],
-  "modules": [
-    {
-      "name": "Kleroterion",
-      "builddir": true,
-      "buildsystem": "meson",
-      "sources": [
+    "app-id" : "io.github.diegoivan.Kleroterion",
+    "runtime" : "org.gnome.Sdk",
+    "runtime-version" : "44",
+    "sdk" : "org.gnome.Sdk",
+    "command" : "kleroterion",
+    "sdk-extensions" : [
+        "org.freedesktop.Sdk.Extension.vala"
+    ],
+    "build-options" : {
+        "prepend-path" : "/usr/lib/sdk/vala/bin/",
+        "prepend-ld-library-path" : "/usr/lib/sdk/vala/lib",
+        "env" : {        }
+    },
+    "finish-args" : [
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--device=dri"
+    ],
+    "cleanup" : [
+        "/include",
+        "/lib/pkgconfig",
+        "/man",
+        "/share/doc",
+        "/share/gtk-doc",
+        "/share/man",
+        "/share/pkgconfig",
+        "/share/vala",
+        "*.la",
+        "*.a"
+    ],
+    "modules" : [
         {
-          "type": "dir",
-          "path": "."
+            "name" : "Kleroterion",
+            "builddir" : true,
+            "buildsystem" : "meson",
+            "sources" : [
+                {
+                    "type" : "dir",
+                    "path" : "."
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
