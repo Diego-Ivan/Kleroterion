@@ -22,6 +22,10 @@
       <foaf:Person>
           <foaf:name>Diego Iván</foaf:name>
           <foaf:mbox rdf:resource="mailto:diegoivan.mae@gmail.com"></foaf:mbox>
+          <foaf:account>
+              <foaf:accountServiceHomepage rdf:resource="https://github.com"/>
+              <foaf:accountName>Diego-Ivan</foaf:accountName>
+          </foaf:account>
       </foaf:Person>
 
      <!-- TODO: I don't know much about DOAP file format, and there's probably a former mantainer tag, but I'll have took into it -->

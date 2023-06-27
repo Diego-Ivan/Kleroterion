@@ -19,66 +19,27 @@
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 
-namespace Kleroterion {
-    public class RouletteRow : Adw.PreferencesRow {
-        private Gtk.Entry text_entry { get; private set; default = new Gtk.Entry (); }
-        private Gtk.Button remove_button;
-
-        private unowned RouletteItem _item;
-        public unowned RouletteItem item {
-            get {
-                return _item;
-            }
-            construct {
-                _item = value;
-                item.bind_property ("item", text_entry, "text", SYNC_CREATE | BIDIRECTIONAL);
-                item.bind_property ("picked", this, "sensitive", SYNC_CREATE | INVERT_BOOLEAN);
-            }
+[GtkTemplate (ui = "/io/github/diegoivan/Kleroterion/ui/roulette-row.ui")]
+public class Kleroterion.RouletteRow : Adw.EntryRow {
+    private unowned RouletteItem _item;
+    public unowned RouletteItem item {
+        get {
+            return _item;
         }
-
-        public RouletteRow (RouletteItem item) {
-            Object (item: item);
-        }
-
-        public signal void delete_request ();
-
         construct {
-            activatable = false;
-            var box = new Gtk.Box (HORIZONTAL, 12) {
-                hexpand = true,
-                margin_top = 12,
-                margin_bottom = 12,
-            };
-
-            text_entry.hexpand = true;
-            text_entry.margin_start = 12;
-            text_entry.focusable = true;
-
-            box.append (text_entry);
-
-            remove_button = new Gtk.Button () {
-                icon_name = "user-trash-symbolic",
-                vexpand = false,
-                valign = CENTER,
-                halign = END,
-                margin_start = 6
-            };
-
-            remove_button.clicked.connect (() => {
-                delete_request ();
-            });
-
-            remove_button.add_css_class ("flat");
-            remove_button.add_css_class ("rightmargin");
-
-            box.append (remove_button);
-
-            child = box;
-        }
-
-        public override bool grab_focus () {
-            return text_entry.grab_focus ();
+            _item = value;
+            item.bind_property ("item", this, "text", SYNC_CREATE | BIDIRECTIONAL);
+            item.bind_property ("picked", this, "sensitive", SYNC_CREATE | INVERT_BOOLEAN);
         }
     }
-}
+    public signal void delete_request ();
 
+    public RouletteRow (RouletteItem item) {
+        Object (item: item);
+    }
+
+    [GtkCallback]
+    private void on_delete_button_clicked () {
+        delete_request ();
+    }
+}

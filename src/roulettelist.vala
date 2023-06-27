@@ -196,9 +196,5 @@ namespace Kleroterion {
                 return item == "";
             }
         }
-
-        ~RouletteItem () {
-            message ("Destructing");
-        }
     }
 }

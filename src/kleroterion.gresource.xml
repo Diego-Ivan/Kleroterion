@@ -7,11 +7,16 @@
     <file>style.css</file>
     <file>style-dark.css</file>
 
+    <file>ui/roulette-row.ui</file>
+
    <!-- Pages  -->
     <file>pages/page.ui</file>
     <file>pages/numberpage.ui</file>
     <file>pages/coinpage.ui</file>
     <file>pages/roulettepage.ui</file>
   </gresource>
-</gresources>
 
+  <gresource prefix="/io/github/diegoivan/Kleroterion/icons/scalable/actions/">
+    <file preprocess="xml-stripblanks" alias="cross-symbolic.svg">icons/cross-symbolic.svg</file>
+  </gresource>
+</gresources>
