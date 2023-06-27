@@ -15,7 +15,6 @@
                 <property name="label">7</property>
                 <style>
                   <class name="number" />
-                  <class name="numeric" />
                 </style>
               </object>
             </child>
@@ -49,6 +48,8 @@
                 <property name="hexpand">true</property>
                 <property name="halign">center</property>
                 <property name="spacing">6</property>
+                <property name="margin-top">18</property>
+                <property name="margin-bottom">18</property>
 
                 <child>
                   <object class="GtkButton" id="generate_button">

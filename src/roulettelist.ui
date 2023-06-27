@@ -19,6 +19,7 @@
         <child>
           <object class="GtkButton" id="add_button">
             <property name="icon-name">list-add-symbolic</property>
+            <property name="visible" bind-source="KleroterionRouletteList" bind-property="is-empty" bind-flags="sync-create | invert-boolean"/>
             <signal name="clicked" handler="add_new_item" swapped="no"/>
           </object>
         </child>
@@ -26,20 +27,15 @@
     </child>
 
     <child>
-      <object class="GtkRevealer" id="listbox_revealer">
-        <property name="transition-type">crossfade</property>
-        <property name="reveal-child">false</property>
-        <child>
-          <object class="GtkListBox" id="listbox">
-            <property name="margin-start">6</property>
-            <property name="valign">start</property>
-            <property name="margin-end">6</property>
-            <property name="selection-mode">none</property>
-            <style>
-              <class name="boxed-list"/> <class name="inwindow" />
-            </style>
-          </object>
-        </child>
+      <object class="GtkListBox" id="listbox">
+        <property name="margin-start">6</property>
+        <property name="valign">start</property>
+        <property name="margin-end">6</property>
+        <property name="selection-mode">none</property>
+        <signal name="row-activated" handler="on_row_activated"/>
+        <style>
+          <class name="boxed-list"/> <class name="inwindow" />
+        </style>
       </object>
     </child>
 

@@ -1,0 +1,16 @@
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <template class="KleroterionRouletteRow" parent="AdwEntryRow">
+    <property name="title" translatable="yes">Item</property>
+    <child type="prefix">
+      <object class="GtkButton">
+        <property name="icon-name">cross-symbolic</property>
+        <property name="valign">center</property>
+        <signal name="clicked" handler="on_delete_button_clicked"/>
+        <style>
+          <class name="flat"/>
+        </style>
+      </object>
+    </child>
+  </template>
+</interface>
